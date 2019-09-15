@@ -7,7 +7,8 @@
 *.log
 *.sql
 *.sqlite
- /*DB.*
+*DB.*
+*.db*
 .DS_Store
 .DS_Store?
 ._*
