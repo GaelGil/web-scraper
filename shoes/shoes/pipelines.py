@@ -5,9 +5,21 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 import sqlite3
-from sqlalchemy import Table, Column, Text, String, MetaData, create_engine
+import sqlalchemy
+from sqlalchemy import Table, Column, Text, String, MetaData, create_engine, Integer
+from sqlalchemy.orm import sessionmaker
 
 
+# class ShoesPipeline(object):
+#     def __init__(self):
+#         engine = create_engine('sqlite:///test_db.db')
+#         session = sessionmaker(bind=engine)()
+        
+#         shoe_name = Column(String, primary_key=True)
+#         shoe_price = Column(Integer)
+
+
+#this one works
 class ShoesPipeline(object):
     def __init__(self):
         self.create_conncetion()
