@@ -25,10 +25,10 @@ class StockxSpider(scrapy.Spider):
 
             yield items
 
-        next_page = 'https://stockx.com/sneakers?page='+ str(StockxSpider.page_number) + '/'
-        if StockxSpider.page_number <= 25:
-            StockxSpider.page_number += 1
-            yield response.follow(next_page, callback = self.parse)
+        # next_page = 'https://stockx.com/sneakers?page='+ str(StockxSpider.page_number) + '/'
+        # if StockxSpider.page_number <= 25:
+        #     StockxSpider.page_number += 1
+        #     yield response.follow(next_page, callback = self.parse)
 
 
 class GoatSpider(scrapy.Spider):

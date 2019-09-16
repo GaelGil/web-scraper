@@ -1,19 +1,28 @@
-# from sqlalchemy import create_engine, Column, Table, ForeignKey
-# from sqlalchemy.ext.declarative import declarative_base
-# from sqlalchemy import Integer, String
-# from scrapy.utils.project import get_project_settings
+import sqlite3
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
+import sqlalchemy.dialects.sqlite
+from sqlalchemy import create_engine, Column, Table
+from sqlalchemy import Integer, String, Text
 
-# DeclarativeBase = declarative_base()
 
-# def db_connect():
-#     return create_engine(get_project_settings().get("CONNECTION_STRING"))
+DeclarativeBase = declarative_base()
 
-# def create_table(engine):
-#     DeclarativeBase.metadata.create_all(engine)
+def db_connect():
+    """
+    start the database
+    """
+    return create_engine('sqlite:///database.db')
 
-# class SneakersDB(DeclarativeBase):
-#     __tablename__ = "sneaker_table"
+def create_table(engine):
+    DeclarativeBase.metadata.create_all(engine)
 
-#     id = Column(Integer, primary_key=True)
-#     shoe = Column('shoe', String())
-#     price = Column('author', Integer())
+class SneakerDB(DeclarativeBase):
+    """
+    create the table and somecolumns
+    """
+    __tablename__ = "sneaker_table"
+
+    id = Column(Integer, primary_key=True)
+    sneaker = Column('sneaker', Text())
+    price = Column('price', Integer())
