@@ -26,8 +26,13 @@ class ShoesPipeline(object):
         """
         session = self.Session()
         sneakers = SneakerDB()
-        sneakers.sneaker = item['shoe']
-        sneakers.price = item['price']
+
+        # name of the shoe
+        sneakers.sneaker = str(item['shoe'])
+
+        #this converts '$219' into 219
+        sneakers.price = int(item['price'][0][1:])
+        print("************", type(item['price']))
 
         try:
             session.add(sneakers)

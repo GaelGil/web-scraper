@@ -21,8 +21,8 @@ class SneakerDB(DeclarativeBase):
     """
     create the table and somecolumns
     """
-    __tablename__ = "sneaker_table"
+    __tablename__ = "sneaker"
 
     id = Column(Integer, primary_key=True)
-    sneaker = Column('sneaker', Text())
-    price = Column('price', Integer())
+    sneaker = Column('sneaker', Text(200))
+    price = Column('price', Text(200))

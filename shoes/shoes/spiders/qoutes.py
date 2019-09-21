@@ -25,6 +25,12 @@ class StockxSpider(scrapy.Spider):
 
             yield items
 
+        # 1. read documentation to see whats up
+        # 2. google it: "scapy only scraping first page"
+        # 3. hack it: see below
+            # >>> url = 'https://stockx.com/sneakers?page='
+            # >>> urls = [url + str(i) for i in range(1, 25)]
+
         # next_page = 'https://stockx.com/sneakers?page='+ str(StockxSpider.page_number) + '/'
         # if StockxSpider.page_number <= 25:
         #     StockxSpider.page_number += 1
