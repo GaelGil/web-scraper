@@ -19,10 +19,12 @@ def create_table(engine):
 
 class SneakerDB(DeclarativeBase):
     """
-    create the table and somecolumns
+    create the table and columns for 
+    sneaker, price, brand
     """
-    __tablename__ = "sneaker"
+    __tablename__ = "sneakertable"
 
     id = Column(Integer, primary_key=True)
     sneaker = Column('sneaker', Text(200))
     price = Column('price', Text(200))
+    brand = Column('brand', Text(200))

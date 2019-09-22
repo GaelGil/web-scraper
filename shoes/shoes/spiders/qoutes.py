@@ -2,16 +2,21 @@ import scrapy
 from ..items import ShoesItem
 from scrapy.http import Request
 
-# from scrapy.spiders import Spider
+#The base url has the main url we scrape from
+#URLS is a list with the same url but with pages
+#1-25 so we can scrape  those pages
+base_url = 'https://stockx.com/sneakers?page='
+URLS = [base_url + str(i) for i in range(1, 25)]
 
 class StockxSpider(scrapy.Spider):
     name = 'stockx'
-    # allowed_domains = ]
     page_number = 2
     start_urls = [
-        'https://stockx.com/sneakers'
-        
+        'https://stockx.com/sneakers',
     ]
+    for i in range(len(URLS)):
+        start_urls.append(URLS[i])  
+
     def parse(self, response):
         items = ShoesItem()
         all_shoes = response.css('div.iCgYKH')
@@ -24,18 +29,6 @@ class StockxSpider(scrapy.Spider):
             items['price'] = shoe_price
 
             yield items
-
-        # 1. read documentation to see whats up
-        # 2. google it: "scapy only scraping first page"
-        # 3. hack it: see below
-            # >>> url = 'https://stockx.com/sneakers?page='
-            # >>> urls = [url + str(i) for i in range(1, 25)]
-
-        # next_page = 'https://stockx.com/sneakers?page='+ str(StockxSpider.page_number) + '/'
-        # if StockxSpider.page_number <= 25:
-        #     StockxSpider.page_number += 1
-        #     yield response.follow(next_page, callback = self.parse)
-
 
 class GoatSpider(scrapy.Spider):
     name = 'goat_shoes'

@@ -32,7 +32,13 @@ class ShoesPipeline(object):
 
         #this converts '$219' into 219
         sneakers.price = int(item['price'][0][1:])
-        print("************", type(item['price']))
+        
+        #Gets brand of shoe by getting first word of name.
+        #This will always work becuase the brand is always
+        #the first word in the name of the shoe
+        brand = str(item['shoe'][0])
+        brand = brand.partition(' ')[0]
+        sneakers.brand = brand
 
         try:
             session.add(sneakers)

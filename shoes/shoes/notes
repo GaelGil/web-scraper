@@ -1,0 +1,9 @@
+WORD     SPAM_COUNT     HAM_COUNT       SPAM_FRACTION
+the      1000           1000            0.5
+love     25             75              0.25
+free     500            5               0.99
+
+
+
+get     free    stuff!
+0.4     0.99    0.6        -> take the average, 0.64     if avg > threshold (0.5), then spam
