@@ -5,7 +5,7 @@ from scrapy.http import Request
 #The base url has the main url we scrape from
 #URLS is a list with the same url but with pages
 #1-25 so we can scrape  those pages
-base_url = 'https://stockx.com/sneakers?page='
+base_url = 'https://stockx.com/sneakers/page='
 URLS = [base_url + str(i) for i in range(1, 25)]
 
 class StockxSpider(scrapy.Spider):

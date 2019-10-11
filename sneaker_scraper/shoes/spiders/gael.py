@@ -15,4 +15,3 @@ def get_urls():
     return all_urls
 
 all_urls = get_urls()
-print(len(all_urls[0]))
