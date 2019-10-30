@@ -40,6 +40,8 @@ class ShoesPipeline(object):
         brand = brand.partition(' ')[0]
         sneakers.brand = brand
 
+        sneakers.date = str(item['date'])
+
         try:
             session.add(sneakers)
             session.commit()
@@ -52,7 +54,15 @@ class ShoesPipeline(object):
         return item
 
 
-
+#find better graph to visualize data
+#create read me
+#create notebook for cleaning data
+#create notebook for visualizing data
+#scraper by year 
+    #prices average year
+    #most expensive shoes by year
+    #graph price changes by year
+    #finish up project
 
 #this one works
 # class ShoesPipeline(object):

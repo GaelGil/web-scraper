@@ -12,7 +12,7 @@ def db_connect():
     """
     start the database
     """
-    return create_engine('sqlite:///database.db')
+    return create_engine('sqlite:///main_sneakers.db')
 
 def create_table(engine):
     DeclarativeBase.metadata.create_all(engine)
@@ -22,9 +22,10 @@ class SneakerDB(DeclarativeBase):
     create the table and columns for 
     sneaker, price, brand
     """
-    __tablename__ = "sneakertable"
+    __tablename__ = "year2003"
 
     id = Column(Integer, primary_key=True)
     sneaker = Column('sneaker', Text(200))
     price = Column('price', Text(200))
     brand = Column('brand', Text(200))
+    date = Column('date', Text(200))

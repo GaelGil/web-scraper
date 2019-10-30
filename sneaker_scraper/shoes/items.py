@@ -11,6 +11,7 @@ import scrapy
 class ShoesItem(scrapy.Item):
     shoe = scrapy.Field()
     price = scrapy.Field()
+    date = scrapy.Field()
     # define the fields for your item here like:
     # name = scrapy.Field()
     # pass

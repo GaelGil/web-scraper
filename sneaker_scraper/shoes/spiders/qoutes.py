@@ -12,10 +12,11 @@ class StockxSpider(scrapy.Spider):
     name = 'stockx'
     page_number = 2
     start_urls = [
-        'https://stockx.com/sneakers'
+        # 'https://stockx.com/sneakers'
+        'https://stockx.com/sneakers/release-date?years=2003&page=1',
+        'https://stockx.com/sneakers/release-date?years=2003&page=2',
+        'https://stockx.com/sneakers/release-date?years=2003&page=3'
     ]
-    # for i in range(len(URLS)):
-    #     start_urls.append(URLS[i])  
 
     def parse(self, response):
         items = ShoesItem()
@@ -24,24 +25,20 @@ class StockxSpider(scrapy.Spider):
         for shoe in all_shoes:
             show_name = shoe.css('.gMymmc::text').extract()
             shoe_price = shoe.css('.jwzdVc::text').extract()
+            release_date =shoe.css('.fygSsx::text').extract()
+            print(release_date[1])
                 
             items['shoe'] = show_name
             items['price'] = shoe_price
+            items['date'] = release_date[1]
 
             yield items
-        next_page = 'https://stockx.com/sneakers?page=' + str(StockxSpider.page_number) + '/'
-        if StockxSpider.page_number <= 25:
-            StockxSpider.page_number += 1
-            for i in range(len(URLS)):
-                yield scrapy.Request(URLS[i])
-        # next_page = response.css('ul.dyMfjb  a::attr(href)').extract_first()
-
-        # if next_page is not None:
-            # base_url = 'https://stockx.com/sneakers?page='
-            # URLS = [base_url + str(i) for i in range(1, 25)]
+        # next_page = 'https://stockx.com/sneakers?page=' + str(StockxSpider.page_number) + '/'
+        # if StockxSpider.page_number <= 25:
+        #     StockxSpider.page_number += 1
         #     for i in range(len(URLS)):
-        #         yield scrapy.Request(URLS[i], call_back=self.parse)
-            # yield scrapy.Request(response.urljoin(next_page))
+        #         yield scrapy.Request(URLS[i])
+
 
 class GoatSpider(scrapy.Spider):
     name = 'goat_shoes'
