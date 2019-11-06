@@ -13,9 +13,12 @@ class StockxSpider(scrapy.Spider):
     page_number = 2
     start_urls = [
         # 'https://stockx.com/sneakers'
-        'https://stockx.com/sneakers/release-date?years=2003&page=1',
-        'https://stockx.com/sneakers/release-date?years=2003&page=2',
-        'https://stockx.com/sneakers/release-date?years=2003&page=3'
+        # 'https://stockx.com/sneakers/release-date?years=2005&page=1',
+        'https://stockx.com/sneakers/release-date?years=2005&page=2',
+        'https://stockx.com/sneakers/release-date?years=2005&page=3',
+        'https://stockx.com/sneakers/release-date?years=2005&page=4',
+        'https://stockx.com/sneakers/release-date?years=2005&page=5',
+        'https://stockx.com/sneakers/release-date?years=2005&page=6',
     ]
 
     def parse(self, response):
