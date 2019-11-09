@@ -10,15 +10,9 @@ URLS = [base_url + str(i) for i in range(1, 25)]
 
 class StockxSpider(scrapy.Spider):
     name = 'stockx'
-    page_number = 2
+    page_number = 3
     start_urls = [
-        # 'https://stockx.com/sneakers'
-        # 'https://stockx.com/sneakers/release-date?years=2005&page=1',
-        'https://stockx.com/sneakers/release-date?years=2005&page=2',
-        'https://stockx.com/sneakers/release-date?years=2005&page=3',
-        'https://stockx.com/sneakers/release-date?years=2005&page=4',
-        'https://stockx.com/sneakers/release-date?years=2005&page=5',
-        'https://stockx.com/sneakers/release-date?years=2005&page=6',
+        'https://stockx.com/sneakers/release-date?years=2006&page=2',
     ]
 
     def parse(self, response):
@@ -36,8 +30,8 @@ class StockxSpider(scrapy.Spider):
             items['date'] = release_date[1]
 
             yield items
-        # next_page = 'https://stockx.com/sneakers?page=' + str(StockxSpider.page_number) + '/'
-        # if StockxSpider.page_number <= 25:
+        # next_page = 'https://stockx.com/sneakers/release-date?years=2006&page=' + str(StockxSpider.page_number) + '/'
+        # if StockxSpider.page_number <= 7:
         #     StockxSpider.page_number += 1
         #     for i in range(len(URLS)):
         #         yield scrapy.Request(URLS[i])

@@ -22,7 +22,7 @@ class SneakerDB(DeclarativeBase):
     create the table and columns for 
     sneaker, price, brand
     """
-    __tablename__ = "year2005"
+    __tablename__ = "year2006"
 
     id = Column(Integer, primary_key=True)
     sneaker = Column('sneaker', Text(200))

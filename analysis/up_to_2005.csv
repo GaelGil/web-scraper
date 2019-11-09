@@ -1,0 +1,144 @@
+,id,sneaker,price,brand,date
+0,1,['Jordan 15 OG Low Black Silver'],300,Jordan,release: 09/06/2000
+1,2,['Jordan 15 OG Low White Red'],300,Jordan,release: 01/01/2000
+2,3,['Jordan 15 OG Low Midnight Navy'],325,Jordan,release: 01/01/2000
+3,4,['Jordan 14 OG Low Ginger'],755,Jordan,release: 09/15/1999
+4,5,['Jordan 14 OG Low Columbia Blue'],399,Jordan,release: 08/04/1999
+5,6,['Jordan 14 OG Low Varsity Royal'],243,Jordan,release: 06/23/1999
+6,7,['Air Flightposite Black Metalic Silver (1999)'],494,Air,release: 01/01/1999
+7,8,['Jordan 13 Retro Low Navy (1998)'],250,Jordan,release: 06/01/1998
+8,9,['Jordan 13 Retro Low Chutney (1998)'],450,Jordan,release: 06/01/1998
+9,10,['Air Foamposite One Royal OG (1997)'],480,Air,release: 01/01/1997
+0,1,['Jordan 16 OG Low Black / Chrome'],265,Jordan,release: 09/29/2001
+1,2,['Jordan 11 Retro Low Pink Snakeskin (2001) (W)'],900,Jordan,release: 05/26/2001
+2,3,['Jordan 11 Retro Low Columbia Blue (2001)'],222,Jordan,release: 04/14/2001
+3,4,['Jordan 11 Retro Low Cherry (2001)'],280,Jordan,release: 04/14/2001
+4,5,['Jordan 11 Retro Low Metallic Silver (W)'],380,Jordan,release: 04/14/2001
+5,6,['Jordan 11 Retro Low Citrus (2001) (W)'],575,Jordan,release: 04/14/2001
+6,7,['Air Force 1 High Sheed Black Patent'],279,Air,release: 04/01/2001
+0,1,['Jordan 17 OG Low Black Chrome'],350,Jordan,release: 10/05/2002
+1,2,['Nike Dunk SB High Wheat'],475,Nike,release: 10/01/2002
+2,3,['Nike SB Dunk Low Shark'],717,Nike,release: 10/01/2002
+3,4,['Nike SB Dunk Low Orange Flash'],800,Nike,release: 10/01/2002
+4,5,['Jordan 9 Retro Low Blue Pearl'],250,Jordan,release: 09/21/2002
+5,6,['Jordan 9 Retro Low Chrome'],250,Jordan,release: 07/03/2002
+6,7,['Jordan 17 OG Low White Carolina'],300,Jordan,release: 06/01/2002
+7,8,['Air Trainer SC High Escape'],300,Air,release: 06/01/2002
+8,9,['Jordan 17 OG Low All-Star'],390,Jordan,release: 06/01/2002
+9,10,['Nike SB Dunk Low Gino Iannucci 2'],500,Nike,release: 05/01/2002
+10,11,['Jordan 6 Retro Low University Blue'],200,Jordan,release: 04/27/2002
+11,12,['Jordan 6 Retro Low Chrome (2002)'],230,Jordan,release: 04/27/2002
+12,13,['Jordan 6 Retro Low Coral Rose (W)'],500,Jordan,release: 04/27/2002
+13,14,['Nike Dunk SB Low Brown Pack'],285,Nike,release: 03/01/2002
+14,15,['Nike SB Dunk Low Gino Iannucci 1'],532,Nike,release: 03/01/2002
+0,1,['Nike Dunk SB Low Bison'],680,Nike,release: 03/01/2003
+1,2,['Nike Dunk Low Pro SB Futura'],998,Nike,release: 03/01/2003
+2,3,['Nike SB Zoom Air Angus Pabst Blue Ribbon'],115,Nike,release: 01/01/2003
+3,4,['Air Huarache Light Stussy Orange'],145,Air,release: 01/01/2003
+4,5,['Air Force 2 High Escape'],150,Air,release: 01/01/2003
+5,6,['Nike Vandal High Canvas Haight Street'],226,Nike,release: 01/01/2003
+6,7,['Air Huarache Light Stussy Green'],275,Air,release: 01/01/2003
+7,8,['Air Trainer SC High Curry'],399,Air,release: 01/01/2003
+8,9,['Nike Vandal High Canvas Jim Morrison'],499,Nike,release: 01/01/2003
+9,10,['Nike Dunk SB Low Bucks'],849,Nike,release: 01/01/2003
+10,11,['Air Flightposite White Uni Blue'],900,Air,release: 01/01/2003
+11,12,['Air Zoom Generation White Black'],210,Air,release: 12/20/2003
+12,13,['Air Zoom Generation First Game'],400,Air,release: 11/05/2003
+13,14,['Nike Dunk SB High Brown Pack'],228,Nike,release: 11/01/2003
+14,15,['Jordan 18 OG Low Melo'],135,Jordan,release: 09/06/2003
+15,16,['Nike SB Dunk High Iron'],423,Nike,release: 09/01/2003
+16,17,['Nike Dunk SB Low Barf'],445,Nike,release: 09/01/2003
+17,18,['Jordan Nu Retro Air Jordan 2 Black Chrome'],180,Jordan,release: 08/30/2003
+18,19,['Jordan 8 Retro Low Playoffs (2003)'],400,Jordan,release: 08/23/2003
+19,20,['Jordan Nu Retro Air Jordan 2 White Varsity Red'],150,Jordan,release: 07/12/2003
+20,21,['Nike Dunk SB Low Pure Blood'],592,Nike,release: 07/01/2003
+21,22,['Jordan 8 Retro Low White Metallic Silver'],165,Jordan,release: 06/21/2003
+22,23,['Jordan 18 OG Low Black Silver Chrome'],140,Jordan,release: 05/31/2003
+23,24,['Jordan 11 Retro Low IE Cobalt (2003)'],160,Jordan,release: 05/24/2003
+24,25,['Jordan 11 Retro Low IE Bred'],220,Jordan,release: 05/24/2003
+0,1,['Jordan 19 OG Low Cinder British Khaki'],455,Jordan,release: 12/01/2004
+1,2,['Nike SB Dunk Low Grit Team Red'],799,Nike,release: 12/01/2004
+2,3,['Nike LeBron Zoom 2 Black Crimson'],275,Nike,release: 11/06/2004
+3,4,['Nike Dunk SB Low Reese Forbes Hunter'],342,Nike,release: 11/01/2004
+4,5,['Jordan 19 OG Low Obsidian Vapor'],455,Jordan,release: 11/01/2004
+5,6,['Air Zoom Generation USA'],200,Air,release: 10/01/2004
+6,7,['Nike Dunk High Pro SB Tweed'],370,Nike,release: 09/01/2004
+7,8,['Air Zoom Generation White Metallic Silver'],150,Air,release: 09/01/2004
+8,9,['Nike Dunk SB Low Tweed'],323,Nike,release: 09/01/2004
+9,10,['Jordan 19 OG Low Black Red'],250,Jordan,release: 08/07/2004
+10,11,['Air Zoom Generation White Varsity Royal'],376,Air,release: 08/01/2004
+11,12,['Nike SB Dunk High Daniel Shimizu'],350,Nike,release: 07/01/2004
+12,13,['Nike Dunk SB Low Cali (2004)'],550,Nike,release: 07/01/2004
+13,14,['Nike SB Dunk Low Medicom 1'],800,Nike,release: 07/01/2004
+14,15,['Jordan 12 Retro Low Real Pink (GS)'],500,Jordan,release: 06/22/2004
+15,16,['Jordan 1 Retro Low White (2004)'],125,Jordan,release: 06/12/2004
+16,17,['Jordan 1 Retro Low Navy (2004)'],500,Jordan,release: 06/12/2004
+17,18,['Nike Dunk SB Low Carhartt'],667,Nike,release: 06/01/2004
+18,19,['Nike SB Dunk Low Carhartt Shale'],400,Nike,release: 06/01/2004
+0,1,['Jordan 20 OG 3/4 White Garnet'],123,Jordan,release: 12/01/2005
+1,2,['Nike Dunk SB High De La Soul (2005)'],499,Nike,release: 11/01/2005
+2,3,['Nike SB Paul Rodriguez Birch'],240,Nike,release: 11/01/2005
+3,4,['Nike SB Dunk High Kentucky (2005)'],300,Nike,release: 11/01/2005
+4,5,['Nike SB Dunk High Iowa'],400,Nike,release: 11/01/2005
+5,6,['Nike Dunk SB Low Avenger Purple Patent'],450,Nike,release: 11/01/2005
+6,7,['Nike Dunk SB Low Avenger Blue Patent'],565,Nike,release: 11/01/2005
+7,8,['Nike SB Dunk High Villanova (2005)'],650,Nike,release: 11/01/2005
+8,9,['Nike SB Dunk Low Black Pack Halloween'],275,Nike,release: 10/01/2005
+9,10,['Nike Dunk SB Low De La Soul (2005)'],355,Nike,release: 10/01/2005
+10,11,['Nike SB Dunk High Melvins (Black)'],451,Nike,release: 09/01/2005
+11,12,['Jordan 13 Retro Low Uni Blue (W)'],200,Jordan,release: 05/07/2005
+12,13,['Nike Dunk SB Low J Pack Royal'],260,Nike,release: 05/01/2005
+13,14,['Nike Dunk SB Low Cinco de Mayo'],300,Nike,release: 05/01/2005
+14,15,['Jordan 13 Retro Low Cherry (2005)'],190,Jordan,release: 04/23/2005
+15,16,['Jordan 13 Retro Low All White'],200,Jordan,release: 04/23/2005
+16,17,['Lebron Zoom 2 Low White'],200,Lebron,release: 04/01/2005
+17,18,['Nike Dunk SB Low Boca Juniors'],300,Nike,release: 04/01/2005
+18,19,['Nike SB Dunk Low Hawaii'],375,Nike,release: 02/02/2005
+19,20,['Nike Dunk SB High T19 Royal Blue'],200,Nike,release: 02/01/2005
+20,21,['Air Zoom Huarache 2K5 All-Star (2005)'],250,Air,release: 02/01/2005
+21,22,['Nike SB Dunk Low Raygun Home'],800,Nike,release: 02/01/2005
+22,23,['Air Trainer 1 SB Huf Gold Digger'],165,Air,release: 01/01/2005
+23,24,['Nike Dunk Low 1-Piece Laser Varsity Red Chartreuse'],226,Nike,release: 01/01/2005
+24,25,['adidas Superstar 35th Anniversary Expression adiColor White'],300,adidas,release: 01/01/2005
+25,26,['Nike SB Dunk High Black Midnight Fog'],309,Nike,release: 01/01/2005
+26,27,['adidas Superstar Captain Tsubasa'],386,adidas,release: 01/01/2005
+27,28,['Nike Dunk SB Low Pushead 1'],450,Nike,release: 01/01/2005
+28,29,['Nike Dunk Low NL Desert Clay'],475,Nike,release: 01/01/2005
+29,30,['adidas Superstar 1 Music Rocafella'],500,adidas,release: 01/01/2005
+30,31,['A Bathing Ape Bapesta Marvel Comics Human Torch'],543,A,release: 01/01/2005
+31,32,['Nike Dunk High 1-Piece Laser Spice'],612,Nike,release: 01/01/2005
+32,33,['Air Force 1 Low Supreme Ostrich Baroque Brown'],750,Air,release: 01/01/2005
+33,34,['A Bathing Ape Bapesta Marvel Comics Captain America'],799,A,release: 01/01/2005
+34,35,['Nike Dunk SB Low Shanghai 2'],564,Nike,release: 09/01/2005
+35,36,['Jordan 13 Retro Low Cuse'],250,Jordan,release: 08/20/2005
+36,37,['Air Zoom Huarache 2K5 Celtics (Sole Collector)'],666,Air,release: 08/20/2005
+37,38,['Air Zoom Huarache 2K5 Cowboy (Sole Collector)'],999,Air,release: 08/20/2005
+38,39,['Nike Dunk SB Low Stussy Cherry'],900,Nike,release: 07/01/2005
+39,40,['Nike SB Paul Rodriguez Dark Loden'],220,Nike,release: 07/01/2005
+40,41,['Jordan 20 OG Low White Navy'],160,Jordan,release: 06/04/2005
+41,42,['Air Zoom Huarache 2K5 Lakers Home'],250,Air,release: 06/01/2005
+42,43,['Nike Dunk SB Low Avenger Navy'],250,Nike,release: 06/01/2005
+43,44,['Nike SB Dunk High Dark Obsidian Shy Pink'],275,Nike,release: 06/01/2005
+44,45,['Nike Dunk SB Low Avenger Purple'],345,Nike,release: 06/01/2005
+45,46,['Jordan 2 Retro Low White Varsity Maize'],165,Jordan,release: 05/21/2005
+46,47,['Jordan 13 Retro Low Black Varsity Maize'],249,Jordan,release: 05/21/2005
+47,48,['Nike Dunk SB Low Shanghai 2'],564,Nike,release: 09/01/2005
+48,49,['Jordan 13 Retro Low Cuse'],250,Jordan,release: 08/20/2005
+49,50,['Air Zoom Huarache 2K5 Celtics (Sole Collector)'],666,Air,release: 08/20/2005
+50,51,['Air Zoom Huarache 2K5 Cowboy (Sole Collector)'],999,Air,release: 08/20/2005
+51,52,['Nike Dunk SB Low Stussy Cherry'],900,Nike,release: 07/01/2005
+52,53,['Nike SB Paul Rodriguez Dark Loden'],220,Nike,release: 07/01/2005
+53,54,['Jordan 20 OG Low White Navy'],160,Jordan,release: 06/04/2005
+54,55,['Air Zoom Huarache 2K5 Lakers Home'],250,Air,release: 06/01/2005
+55,56,['Nike Dunk SB Low Avenger Navy'],250,Nike,release: 06/01/2005
+56,57,['Nike SB Dunk High Dark Obsidian Shy Pink'],275,Nike,release: 06/01/2005
+57,58,['Nike Dunk SB Low Avenger Purple'],345,Nike,release: 06/01/2005
+58,59,['Jordan 2 Retro Low White Varsity Maize'],165,Jordan,release: 05/21/2005
+59,60,['Jordan 13 Retro Low Black Varsity Maize'],249,Jordan,release: 05/21/2005
+60,61,['Nike SB Paul Rodriguez Green Bean'],250,Nike,release: 12/01/2006
+61,62,['Nike Dunk SB Low Tokyo Blue Taxi'],275,Nike,release: 12/01/2006
+62,63,['Nike Dunk SB Low Tokyo Green Taxi'],310,Nike,release: 12/01/2006
+63,64,['Reebok Court Victory Pump Alife Ball Out Orange'],248,Reebok,release: 11/24/2006
+64,65,['Nike SB Dunk Low Mafia'],250,Nike,release: 11/01/2006
+65,66,['Nike SB Zoom Team Edition New York Taxi'],225,Nike,release: 10/01/2006
+66,67,['Nike SB Dunk Low Aqua Chalk'],450,Nike,release: 10/01/2006
