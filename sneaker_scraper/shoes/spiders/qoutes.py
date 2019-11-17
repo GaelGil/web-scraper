@@ -8,11 +8,37 @@ from scrapy.http import Request
 base_url = 'https://stockx.com/sneakers?page='
 URLS = [base_url + str(i) for i in range(1, 25)]
 
+
+
 class StockxSpider(scrapy.Spider):
     name = 'stockx'
-    page_number = 3
+    page_number = 2
     start_urls = [
-        'https://stockx.com/sneakers/release-date?years=2006&page=2',
+        'https://stockx.com/sneakers/release-date?page=1&years=2018',
+        'https://stockx.com/sneakers/release-date?page=2&years=2018',
+        'https://stockx.com/sneakers/release-date?page=3&years=2018',
+        'https://stockx.com/sneakers/release-date?page=4&years=2018',
+        'https://stockx.com/sneakers/release-date?page=5&years=2018',
+        'https://stockx.com/sneakers/release-date?page=6&years=2018',
+        'https://stockx.com/sneakers/release-date?page=7&years=2018',
+        'https://stockx.com/sneakers/release-date?page=8&years=2018',
+        'https://stockx.com/sneakers/release-date?page=9&years=2018',
+        'https://stockx.com/sneakers/release-date?page=10&years=2018',
+        'https://stockx.com/sneakers/release-date?page=11&years=2018',
+        'https://stockx.com/sneakers/release-date?page=12&years=2018',
+        'https://stockx.com/sneakers/release-date?page=13&years=2018',
+        'https://stockx.com/sneakers/release-date?page=14&years=2018',
+        'https://stockx.com/sneakers/release-date?page=15&years=2018',
+        'https://stockx.com/sneakers/release-date?page=16&years=2018',
+        'https://stockx.com/sneakers/release-date?page=17&years=2018',
+        'https://stockx.com/sneakers/release-date?page=18&years=2018',
+        'https://stockx.com/sneakers/release-date?page=19&years=2018',
+        'https://stockx.com/sneakers/release-date?page=20&years=2018',
+        'https://stockx.com/sneakers/release-date?page=21&years=2018',
+        # 'https://stockx.com/sneakers/release-date?page=22&years=2018',
+        # 'https://stockx.com/sneakers/release-date?page=23&years=2018',
+        # 'https://stockx.com/sneakers/release-date?page=24&years=2018',
+        # 'https://stockx.com/sneakers/release-date?page=25&years=2018',
     ]
 
     def parse(self, response):
@@ -30,11 +56,14 @@ class StockxSpider(scrapy.Spider):
             items['date'] = release_date[1]
 
             yield items
-        # next_page = 'https://stockx.com/sneakers/release-date?years=2006&page=' + str(StockxSpider.page_number) + '/'
-        # if StockxSpider.page_number <= 7:
+        # next_page = 'https://stockx.com/sneakers/release-date?page=' + str(StockxSpider.page_number) + ''
+        # years = '&years=2012,2013'
+        # if StockxSpider.page_number <= 25:
         #     StockxSpider.page_number += 1
         #     for i in range(len(URLS)):
-        #         yield scrapy.Request(URLS[i])
+        #         page_url  = str(URLS[i])
+        #         new_url = page_url + years
+        #         yield scrapy.Request(new_url)
 
 
 class GoatSpider(scrapy.Spider):
