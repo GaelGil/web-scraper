@@ -1,9 +1,9 @@
 ,id,sneaker,price,brand,date
-0,1,Jordan 15 OG Low Black Silver'],300,Jordan,release: 09/06/2000
-1,2,Jordan 15 OG Low White Red'],300,Jordan,release: 01/01/2000
-2,3,Jordan 15 OG Low Midnight Navy'],325,Jordan,release: 01/01/2000
-3,4,Jordan 14 OG Low Ginger'],755,Jordan,release: 09/15/1999
-4,5,Jordan 14 OG Low Columbia Blue'],399,Jordan,release: 08/04/1999
+0,1,['Jordan 15 OG Low Black Silver'],300,Jordan,release: 09/06/2000
+1,2,['Jordan 15 OG Low White Red'],300,Jordan,release: 01/01/2000
+2,3,['Jordan 15 OG Low Midnight Navy'],325,Jordan,release: 01/01/2000
+3,4,['Jordan 14 OG Low Ginger'],755,Jordan,release: 09/15/1999
+4,5,['Jordan 14 OG Low Columbia Blue'],399,Jordan,release: 08/04/1999
 5,6,['Jordan 14 OG Low Varsity Royal'],243,Jordan,release: 06/23/1999
 6,7,['Air Flightposite Black Metalic Silver (1999)'],494,Air,release: 01/01/1999
 7,8,['Jordan 13 Retro Low Navy (1998)'],250,Jordan,release: 06/01/1998
@@ -122,6 +122,19 @@
 44,45,['Nike Dunk SB Low Avenger Purple'],345,Nike,release: 06/01/2005
 45,46,['Jordan 2 Retro Low White Varsity Maize'],165,Jordan,release: 05/21/2005
 46,47,['Jordan 13 Retro Low Black Varsity Maize'],249,Jordan,release: 05/21/2005
+47,48,['Nike Dunk SB Low Shanghai 2'],564,Nike,release: 09/01/2005
+48,49,['Jordan 13 Retro Low Cuse'],250,Jordan,release: 08/20/2005
+49,50,['Air Zoom Huarache 2K5 Celtics (Sole Collector)'],666,Air,release: 08/20/2005
+50,51,['Air Zoom Huarache 2K5 Cowboy (Sole Collector)'],999,Air,release: 08/20/2005
+51,52,['Nike Dunk SB Low Stussy Cherry'],900,Nike,release: 07/01/2005
+52,53,['Nike SB Paul Rodriguez Dark Loden'],220,Nike,release: 07/01/2005
+53,54,['Jordan 20 OG Low White Navy'],160,Jordan,release: 06/04/2005
+54,55,['Air Zoom Huarache 2K5 Lakers Home'],250,Air,release: 06/01/2005
+55,56,['Nike Dunk SB Low Avenger Navy'],250,Nike,release: 06/01/2005
+56,57,['Nike SB Dunk High Dark Obsidian Shy Pink'],275,Nike,release: 06/01/2005
+57,58,['Nike Dunk SB Low Avenger Purple'],345,Nike,release: 06/01/2005
+58,59,['Jordan 2 Retro Low White Varsity Maize'],165,Jordan,release: 05/21/2005
+59,60,['Jordan 13 Retro Low Black Varsity Maize'],249,Jordan,release: 05/21/2005
 60,61,['Nike SB Paul Rodriguez Green Bean'],250,Nike,release: 12/01/2006
 61,62,['Nike Dunk SB Low Tokyo Blue Taxi'],275,Nike,release: 12/01/2006
 62,63,['Nike Dunk SB Low Tokyo Green Taxi'],310,Nike,release: 12/01/2006
@@ -129,6 +142,13 @@
 64,65,['Nike SB Dunk Low Mafia'],250,Nike,release: 11/01/2006
 65,66,['Nike SB Zoom Team Edition New York Taxi'],225,Nike,release: 10/01/2006
 66,67,['Nike SB Dunk Low Aqua Chalk'],450,Nike,release: 10/01/2006
+0,1,['Nike SB Paul Rodriguez Green Bean'],250,Nike,release: 12/01/2006
+1,2,['Nike Dunk SB Low Tokyo Blue Taxi'],275,Nike,release: 12/01/2006
+2,3,['Nike Dunk SB Low Tokyo Green Taxi'],310,Nike,release: 12/01/2006
+3,4,['Reebok Court Victory Pump Alife Ball Out Orange'],248,Reebok,release: 11/24/2006
+4,5,['Nike SB Dunk Low Mafia'],250,Nike,release: 11/01/2006
+5,6,['Nike SB Zoom Team Edition New York Taxi'],225,Nike,release: 10/01/2006
+6,7,['Nike SB Dunk Low Aqua Chalk'],450,Nike,release: 10/01/2006
 7,8,['Jordan 21 OG Low Bred'],250,Jordan,release: 09/02/2006
 8,9,['Nike SB Dunk Low Bic'],300,Nike,release: 09/01/2006
 9,10,['Nike Dunk SB High Mork & Mindy'],404,Nike,release: 09/01/2006
@@ -211,6 +231,12 @@
 68,69,['Jordan 1 Retro Low North Side'],159,Jordan,release: 05/26/2007
 69,70,['Jordan 1 Retro LS Stealth'],131,Jordan,release: 05/19/2007
 70,71,['Jordan 1 Retro Low Canvas White Denim (W)'],150,Jordan,release: 05/19/2007
+71,72,['Nike Dunk SB Low Border Blue'],325,Nike,release: 05/01/2007
+72,73,['Nike SB Dunk High Money Cat'],275,Nike,release: 04/15/2007
+73,74,['Nike Dunk SB Low Money Cat'],350,Nike,release: 04/01/2007
+74,75,['Nike Dunk SB High Pee Wee Herman'],375,Nike,release: 04/01/2007
+75,76,['Nike SB Dunk Mid Money Cat'],488,Nike,release: 04/01/2007
+76,77,['Air Force 1 Low Supreme New Six LeBron James'],300,Air,release: 03/10/2007
 0,1,['Nike SB Dunk High RESN (2009)'],249,Nike,release: 12/01/2009
 1,2,"['adidas Campus 80s House of Pain x Concepts ""Fine Malt Lyrics""']",400,adidas,release: 03/17/2009
 2,3,['Nike SB Dunk High Skate Mental'],300,Nike,release: 12/01/2009
@@ -298,6 +324,91 @@
 84,85,['Nike SB Dunk Mid Spider Man'],225,Nike,release: 11/01/2008
 85,86,['Nike SB Dunk High Venom (2008)'],250,Nike,release: 11/01/2008
 86,87,['Jordan 1 Phat Low Black Metallic'],325,Jordan,release: 11/01/2008
+87,88,['Jordan 1 Retro High Strap White Madeira Ginger'],420,Jordan,release: 08/01/2009
+88,89,['Nike SB Dunk High Pacman'],799,Nike,release: 08/01/2009
+89,90,['Nike SB Dunk High Miss Piggy'],250,Nike,release: 07/01/2009
+90,91,['Nike SB Dunk Mid Northern Lights'],442,Nike,release: 07/01/2009
+91,92,['Nike SB Dunk High RESN (2009)'],249,Nike,release: 12/01/2009
+92,93,['Nike SB Dunk High Skate Mental'],300,Nike,release: 12/01/2009
+93,94,['Jordan 1 Retro High Strap Black Orion Blue'],664,Jordan,release: 12/01/2009
+94,95,['Nike SB Dunk Low Gino Iannucci 3'],225,Nike,release: 06/01/2009
+95,96,['Air Max 90 Current Huarache DQM Bacon'],332,Air,release: 11/19/2009
+96,97,['Nike SB Dunk High Wet Floor'],225,Nike,release: 06/01/2009
+97,98,['Air Tech Challenge Hybrid Volt'],250,Air,release: 06/01/2009
+98,99,['Jordan 1 Retro High Premier Hyper Verde'],443,Jordan,release: 06/01/2009
+99,100,['Air Trainer SC High Raiders #34 (2009)'],425,Air,release: 11/19/2009
+100,101,['Jordan 1 Retro High Metallic Zinc'],553,Jordan,release: 11/14/2009
+101,102,['Air Max Swingman Remix Jackie Robinson'],200,Air,release: 05/30/2009
+102,103,['Nike SB Dunk High Bloody Gums'],400,Nike,release: 11/07/2009
+103,104,['Nike Trainer 1 Low Manny Pacquiao'],170,Nike,release: 11/07/2009
+104,105,['Nike Dunk SB Low Ms. Pacman'],900,Nike,release: 05/11/2009
+105,106,['Zoom Soldier III Army Camo'],159,Zoom,release: 05/11/2009
+106,107,['Nike SB Dunk Mid Sea Crystal/Ice Green'],175,Nike,release: 05/01/2009
+107,108,['Zoom Soldier III Playoffs'],500,Zoom,release: 04/20/2009
+108,109,['Zoom Soldier III Black White Red'],500,Zoom,release: 04/17/2009
+109,110,['New Balance 575J Fame City x mita'],275,New,release: 04/11/2009
+110,111,['Zoom Soldier III Dunkman'],350,Zoom,release: 04/11/2009
+111,112,['Nike SB Dunk Mid Nitraid'],220,Nike,release: 04/04/2009
+112,113,['Jordan 1 Phat Low Polka Dot White Chlorophyll'],200,Jordan,release: 04/01/2009
+113,114,['Nike SB Dunk Mid Justin Brock Workwear'],210,Nike,release: 04/01/2009
+114,115,['Nike SB Dunk Mid Workwear'],258,Nike,release: 04/01/2009
+115,116,['Nike Dunk SB High Quagmire'],410,Nike,release: 04/01/2009
+116,117,['Nike Blazer High Nintendo Wii'],500,Nike,release: 04/01/2009
+117,118,"['adidas Campus 80s House of Pain x Concepts ""Fine Malt Lyrics""']",400,adidas,release: 03/17/2009
+118,119,['Nike SB Dunk Low Angel and Death'],230,Nike,release: 03/01/2009
+119,120,['Nike SB Dunk Mid Cappuccino Silver'],275,Nike,release: 03/01/2009
+120,121,['New Balance 1300 Alife Rivington Club Grey'],441,New,release: 02/18/2009
+121,122,['Air Foamposite One Eggplant'],240,Air,release: 02/05/2009
+122,123,['Jordan 1 Retro High Pewter'],239,Jordan,release: 01/31/2009
+123,124,['Jordan 1 Phat Low Lakers'],443,Jordan,release: 01/24/2009
+124,125,['Nike Dunk SB Mid Beijing Triumvir Fly'],200,Nike,release: 01/10/2009
+125,126,['Nike Hypermax NFW Tennis Ball Yellow'],105,Nike,release: 01/01/2009
+126,127,['Air Force 1 High Eddie Cruz West Coast'],125,Air,release: 01/01/2009
+127,128,['Nike SB Blazer Elite Sub Pop'],174,Nike,release: 01/01/2009
+128,129,['Nike SB Paul Rodriguez 2 Black Forest Lemon Drop'],188,Nike,release: 01/01/2009
+129,130,"[""Air Force 1 Supreme All Star '08 TZ NBA All Star 2009""]",189,Air,release: 01/01/2009
+130,131,['adidas Conductor Hi Ewing'],205,adidas,release: 01/01/2009
+131,132,['Nike SB Dunk High Goofy Boy'],225,Nike,release: 01/01/2009
+132,133,['Nike SB Dunk High Twin Peaks'],230,Nike,release: 01/01/2009
+133,134,['Nike SB Zoom Air Harbor Black Mean Green'],250,Nike,release: 01/01/2009
+134,135,['Nike SB Dunk Mid Goofy Boy'],295,Nike,release: 01/01/2009
+135,136,['Nike Air Penny II Copper (2009)'],300,Nike,release: 01/01/2009
+136,137,['Air Force 2 High Nintendo Wii Pack'],300,Air,release: 01/01/2009
+137,138,['Jordan 1 Phat Low Taxi Purple'],443,Jordan,release: 01/01/2009
+138,139,['Nike Hyperdunk 08 Kobe Bryant Snakepool'],600,Nike,release: 11/01/2008
+139,140,['Air Flightposite Eggplant (2008)'],360,Air,release: 10/11/2008
+140,141,['Nike LeBron Zoom Soldier 2 SVSM Away'],255,Nike,release: 10/01/2008
+141,142,['Jordan 1 Phat Low Varsity Red'],266,Jordan,release: 10/01/2008
+142,143,['Jordan 1 Retro High Strap White Madeira Ginger'],420,Jordan,release: 08/01/2009
+143,144,['Nike SB Dunk High Pacman'],799,Nike,release: 08/01/2009
+144,145,['Nike SB Dunk High Miss Piggy'],250,Nike,release: 07/01/2009
+145,146,['Nike SB Dunk Mid Northern Lights'],442,Nike,release: 07/01/2009
+146,147,['Nike SB Dunk High RESN (2009)'],249,Nike,release: 12/01/2009
+147,148,['Nike SB Dunk High Skate Mental'],300,Nike,release: 12/01/2009
+148,149,['Jordan 1 Retro High Strap Black Orion Blue'],664,Jordan,release: 12/01/2009
+149,150,['Air Max 90 Current Huarache DQM Bacon'],332,Air,release: 11/19/2009
+150,151,['Air Trainer SC High Raiders #34 (2009)'],425,Air,release: 11/19/2009
+151,152,['Jordan 1 Retro High Metallic Zinc'],553,Jordan,release: 11/14/2009
+152,153,['Nike SB Dunk High Bloody Gums'],400,Nike,release: 11/07/2009
+153,154,['Nike Trainer 1 Low Manny Pacquiao'],170,Nike,release: 11/07/2009
+154,155,['Nike SB Dunk Low Gino Iannucci 3'],225,Nike,release: 06/01/2009
+155,156,['Nike SB Dunk High Wet Floor'],225,Nike,release: 06/01/2009
+156,157,['Air Tech Challenge Hybrid Volt'],250,Air,release: 06/01/2009
+157,158,['Jordan 1 Retro High Premier Hyper Verde'],443,Jordan,release: 06/01/2009
+158,159,['Air Max Swingman Remix Jackie Robinson'],200,Air,release: 05/30/2009
+159,160,['Nike Dunk SB Low Ms. Pacman'],900,Nike,release: 05/11/2009
+160,161,['Zoom Soldier III Army Camo'],159,Zoom,release: 05/11/2009
+161,162,['Nike SB Dunk Mid Sea Crystal/Ice Green'],175,Nike,release: 05/01/2009
+162,163,['Zoom Soldier III Playoffs'],500,Zoom,release: 04/20/2009
+163,164,['Zoom Soldier III Black White Red'],500,Zoom,release: 04/17/2009
+164,165,['New Balance 575J Fame City x mita'],275,New,release: 04/11/2009
+165,166,['Zoom Soldier III Dunkman'],350,Zoom,release: 04/11/2009
+166,167,['Nike SB Dunk Mid Nitraid'],220,Nike,release: 04/04/2009
+167,168,['Jordan 1 Phat Low Polka Dot White Chlorophyll'],200,Jordan,release: 04/01/2009
+168,169,['Nike SB Dunk Mid Justin Brock Workwear'],210,Nike,release: 04/01/2009
+169,170,['Nike SB Dunk Mid Workwear'],258,Nike,release: 04/01/2009
+170,171,['Nike Dunk SB High Quagmire'],410,Nike,release: 04/01/2009
+171,172,['Nike Blazer High Nintendo Wii'],500,Nike,release: 04/01/2009
 172,173,['Nike Dunk SB Low Gold Rail'],300,Nike,release: 10/01/2008
 173,174,['Air Structure Triax 91 White Purple Berry'],359,Air,release: 10/01/2008
 174,175,['Jordan 1 Phat Low Varsity White'],443,Jordan,release: 10/01/2008
@@ -305,6 +416,25 @@
 176,177,['Jordan 1 Phat Low Black Cement (2008)'],332,Jordan,release: 09/27/2008
 177,178,['Jordan 1 Low Velcro Varsity Red'],425,Jordan,release: 09/27/2008
 178,179,['Jordan 1 Phat Low Cement Grey'],443,Jordan,release: 09/27/2008
+179,180,['Jordan 1 Retro High Strap White Madeira Ginger'],420,Jordan,release: 08/01/2009
+180,181,['Nike SB Dunk High Pacman'],799,Nike,release: 08/01/2009
+181,182,['Nike SB Dunk High Miss Piggy'],250,Nike,release: 07/01/2009
+182,183,['Nike SB Dunk Mid Northern Lights'],442,Nike,release: 07/01/2009
+183,184,['Nike SB Dunk High RESN (2009)'],249,Nike,release: 12/01/2009
+184,185,['Nike SB Dunk High Skate Mental'],300,Nike,release: 12/01/2009
+185,186,['Jordan 1 Retro High Strap Black Orion Blue'],664,Jordan,release: 12/01/2009
+186,187,['Air Max 90 Current Huarache DQM Bacon'],332,Air,release: 11/19/2009
+187,188,['Air Trainer SC High Raiders #34 (2009)'],425,Air,release: 11/19/2009
+188,189,['Jordan 1 Retro High Metallic Zinc'],553,Jordan,release: 11/14/2009
+189,190,['Nike SB Dunk High Bloody Gums'],400,Nike,release: 11/07/2009
+190,191,['Nike Trainer 1 Low Manny Pacquiao'],170,Nike,release: 11/07/2009
+191,192,['Nike SB Dunk Low Gino Iannucci 3'],225,Nike,release: 06/01/2009
+192,193,['Nike SB Dunk High Wet Floor'],225,Nike,release: 06/01/2009
+193,194,['Air Tech Challenge Hybrid Volt'],250,Air,release: 06/01/2009
+194,195,['Jordan 1 Retro High Premier Hyper Verde'],443,Jordan,release: 06/01/2009
+195,196,['Air Max Swingman Remix Jackie Robinson'],200,Air,release: 05/30/2009
+196,197,['Nike Dunk SB Low Ms. Pacman'],900,Nike,release: 05/11/2009
+197,198,['Zoom Soldier III Army Camo'],159,Zoom,release: 05/11/2009
 198,199,['Air Force 1 Supreme Max Air Anthracite Zest'],190,Air,release: 01/19/2008
 199,200,['Air Jordan Force Taxi 12'],250,Air,release: 01/05/2008
 200,201,['Puma First Round Yo MTV Raps Pink'],200,Puma,release: 04/15/2008
@@ -361,6 +491,11 @@
 251,252,['Asics Gel-Lyte III A.R.C. Curry'],890,Asics,release: 06/01/2008
 252,253,['Nike Air Stab Premium Runnin Gunnin'],775,Nike,release: 05/29/2008
 253,254,['Jordan Countdown Pack 6/17 (GS)'],395,Jordan,release: 05/24/2008
+254,255,['Nike SB Verona Premium Cement'],475,Nike,release: 01/01/2008
+255,256,['Air Max 1 Premium Olympic Medal Bronze'],488,Air,release: 01/01/2008
+256,257,['A Bathing Ape Roadsta Spongebob (2008)'],599,A,release: 01/01/2008
+257,258,['adidas Stan Smith Mid Hellboy 2'],628,adidas,release: 01/01/2008
+258,259,['Nike SB Dunk High Marge Simpson'],900,Nike,release: 01/01/2008
 259,260,['Nike Zoom Rookie White Black'],190,Nike,release: 12/21/2011
 260,261,['Jordan 3 Retro Flip Cool Grey Blue Glow (GS)'],100,Jordan,release: 12/03/2011
 261,262,['Nike SB Dunk High Dark Oak Black Tar'],185,Nike,release: 12/01/2011
@@ -408,6 +543,16 @@
 303,304,['Air Foamposite Pro Electric Blue'],301,Air,release: 07/01/2011
 304,305,['Air Trainer SC High White Grey Lemon'],375,Air,release: 06/20/2011
 305,306,['LeBron 8 V/2 Low Sprite'],200,LeBron,release: 06/10/2011
+306,307,['Nike Zoom Rookie White Black'],190,Nike,release: 12/21/2011
+307,308,['Jordan 3 Retro Flip Cool Grey Blue Glow (GS)'],100,Jordan,release: 12/03/2011
+308,309,['Nike SB Dunk High Dark Oak Black Tar'],185,Nike,release: 12/01/2011
+309,310,['Nike Zoom Rookie HOH Black Orange'],270,Nike,release: 11/25/2011
+310,311,['Air Max Uptempo 2 Black White Dark Shadow'],175,Air,release: 11/20/2011
+311,312,"['ASICS Gel-Lyte III Ronnie Fieg ""Leatherbacks""']",799,ASICS,release: 11/18/2011
+312,313,['Air Force One High VT Premium Haystack'],190,Air,release: 11/13/2011
+313,314,['adidas Superstar 80s My adidas Run DMC 25th Anniversary'],450,adidas,release: 11/12/2011
+314,315,['Nike Zoom Air 94 Hi Supreme Wheat'],240,Nike,release: 11/10/2011
+315,316,['adidas Superstar II Kermit'],499,adidas,release: 11/07/2011
 316,317,['Nike SB Dunk Mid Black Silver'],135,Nike,release: 01/01/2011
 317,318,['Nike Dunk SB High Clay Black White'],150,Nike,release: 01/01/2011
 318,319,['New Balance 1500 Chianti Silver White'],188,New,release: 01/01/2011
@@ -438,6 +583,18 @@
 343,344,['Air Max 90 Premium Varsity'],197,Air,release: 12/09/2010
 344,345,['Nike Dunk SB High Premium Black Waterproof'],600,Nike,release: 12/08/2010
 345,346,['Nike Dunk Low 6.0 SE Delorean DMC-12'],350,Nike,release: 11/26/2010
+346,347,['Nike SB Dunk Mid Black Silver'],135,Nike,release: 01/01/2011
+347,348,['Nike Dunk SB High Clay Black White'],150,Nike,release: 01/01/2011
+348,349,['New Balance 1500 Chianti Silver White'],188,New,release: 01/01/2011
+349,350,['Air Max 90 Hyperfuse Midnight Fog Blue Glow'],209,Air,release: 01/01/2011
+350,351,['Nike SB Stefan Janoski Wino Blood Splatter'],215,Nike,release: 01/01/2011
+351,352,['Nike Air Trainer Huarache Black'],235,Nike,release: 01/01/2011
+352,353,['Air Trainer SC 2 Citron'],250,Air,release: 01/01/2011
+353,354,['Air Force 1 Supreme VT Kobe'],299,Air,release: 01/01/2011
+354,355,['Nike SB Dunk Low Black White (2011)'],340,Nike,release: 01/01/2011
+355,356,['New Balance 1500 Crooked Tongues Green'],398,New,release: 01/01/2011
+356,357,['Air Max 90 VT Premium QS Haystack'],499,Air,release: 01/01/2011
+357,358,['adidas EQT Running Support White Green Lead'],554,adidas,release: 01/01/2011
 358,359,['Nike Zoom Air 94 Hi Supreme Black'],299,Nike,release: 11/10/2010
 359,360,['Jordan 2 Retro QF Candy Pack Green'],299,Jordan,release: 11/06/2010
 360,361,['Jordan 2 Retro QF Candy Pack Red'],399,Jordan,release: 11/06/2010
@@ -496,6 +653,14 @@
 413,414,['Converse Poorman Weapon Hi Undefeated Tawny Burgundy'],250,Converse,release: 01/01/2010
 414,415,['Air Griffey Max 1 Grey Marina Blue'],150,Air,release: 02/20/2010
 415,416,['Air Foamposite One Copper'],199,Air,release: 02/13/2010
+416,417,['adidas Micropacer Star Wars'],300,adidas,release: 01/01/2010
+417,418,['Air Trainer SC High White Neutral Grey Varsity Red'],338,Air,release: 01/01/2010
+418,419,['Air Maxim 1+ Trainer Chlorophyll'],342,Air,release: 01/01/2010
+419,420,['Jordan 1 Retro High Velvet Brown'],375,Jordan,release: 01/01/2010
+420,421,['Air Structure Triax 91 Black Pink Orange'],425,Air,release: 01/01/2010
+421,422,['Nike All Court Mid Stussy Black'],440,Nike,release: 01/01/2010
+422,423,['Nike Dunk SB High Huxtable'],440,Nike,release: 01/01/2010
+423,424,['Air Force One Low 3M Metallic'],575,Air,release: 01/01/2010
 424,425,['Air Foamposite One Oregon Ducks'],525,Air,release: 12/30/2013
 425,426,['Nike Flyknit Racer Sail Volt'],264,Nike,release: 12/30/2013
 426,427,['Air Force 1 Low CMFT Penny Hardaway'],395,Air,release: 12/28/2013
@@ -506,6 +671,26 @@
 431,432,['adidas Torsion Integral S Sneaker Freaker Black'],193,adidas,release: 12/21/2013
 432,433,['adidas Torsion Integral S Sneaker Freaker Bliss'],200,adidas,release: 12/21/2013
 433,434,['adidas Superstar 80s Keith Haring Christmas In Holis'],300,adidas,release: 12/21/2013
+434,435,['Air Foamposite One Oregon Ducks'],525,Air,release: 12/30/2013
+435,436,['Nike Flyknit Racer Sail Volt'],264,Nike,release: 12/30/2013
+436,437,['Air Force 1 Low CMFT Penny Hardaway'],395,Air,release: 12/28/2013
+437,438,['Reebok Vulcanized Workout Low White'],190,Reebok,release: 12/27/2013
+438,439,['Nike Flyknit Max Black Atomic Orange Volt'],220,Nike,release: 12/27/2013
+439,440,['Air Force 1 Low CMFT Hologram'],285,Air,release: 12/26/2013
+440,441,['Li-Ning Way of Wade 2 Christmas'],300,Li-Ning,release: 12/25/2013
+441,442,['adidas Torsion Integral S Sneaker Freaker Black'],193,adidas,release: 12/21/2013
+442,443,['adidas Torsion Integral S Sneaker Freaker Bliss'],200,adidas,release: 12/21/2013
+443,444,['adidas Superstar 80s Keith Haring Christmas In Holis'],300,adidas,release: 12/21/2013
+444,445,['Air Foamposite One Oregon Ducks'],525,Air,release: 12/30/2013
+445,446,['Nike Flyknit Racer Sail Volt'],264,Nike,release: 12/30/2013
+446,447,['Air Force 1 Low CMFT Penny Hardaway'],395,Air,release: 12/28/2013
+447,448,['Reebok Vulcanized Workout Low White'],190,Reebok,release: 12/27/2013
+448,449,['Nike Flyknit Max Black Atomic Orange Volt'],220,Nike,release: 12/27/2013
+449,450,['Air Force 1 Low CMFT Hologram'],285,Air,release: 12/26/2013
+450,451,['Li-Ning Way of Wade 2 Christmas'],300,Li-Ning,release: 12/25/2013
+451,452,['adidas Torsion Integral S Sneaker Freaker Black'],193,adidas,release: 12/21/2013
+452,453,['adidas Torsion Integral S Sneaker Freaker Bliss'],200,adidas,release: 12/21/2013
+453,454,['adidas Superstar 80s Keith Haring Christmas In Holis'],300,adidas,release: 12/21/2013
 454,455,['Air Foamposite One Safari'],205,Air,release: 11/27/2013
 455,456,['Reebok Kamikaze II Sonics'],170,Reebok,release: 11/25/2013
 456,457,['Jordan Son of Mars Low Knicks'],259,Jordan,release: 11/23/2013
@@ -621,6 +806,20 @@
 566,567,['Li-Ning Way Of Wade Encore 1.5 Gold Rush'],400,Li-Ning,release: 08/24/2013
 567,568,['Converse Chuck Taylor All-Star 70s Ox Clot x UNDFTD Black'],190,Converse,release: 08/23/2013
 568,569,['Reebok Question Mid #1 Draft Pick'],198,Reebok,release: 08/23/2013
+569,570,['Reebok Shaqnosis Escape from LA'],125,Reebok,release: 10/18/2013
+570,571,['Reebok Question Mid Packer Shoes For Player Use Only LeBron'],165,Reebok,release: 10/14/2013
+571,572,['Reebok Question Mid Packer Shoes For Player Use Only Kobe'],145,Reebok,release: 10/14/2013
+572,573,['Air Force 1 High Tech Tuff Black'],94,Air,release: 10/12/2013
+573,574,['Jordan 1 Retro 95 Bred'],129,Jordan,release: 10/05/2013
+574,575,['Jordan Son of Mars Low Bel Air'],152,Jordan,release: 10/05/2013
+575,576,['Saucony Shadow 5000 BAU x The Distinct Life NOVEM Blue'],179,Saucony,release: 10/05/2013
+576,577,"[""Air Zoom Flight '98 The Glove Black/White OG""]",187,Air,release: 10/05/2013
+577,578,['Jordan 1 Retro 95 Concord'],190,Jordan,release: 10/05/2013
+578,579,['Air Max Hyperposite Glow-In-the-Dark'],220,Air,release: 10/05/2013
+579,580,['Saucony Shadow 5000 BAU x The Distinct Life NOVEM Tan'],350,Saucony,release: 10/05/2013
+580,581,['Reebok Shaq Attaq Big Shaqtus'],99,Reebok,release: 10/04/2013
+581,582,['Nike Flyknit Lunar1+ Supreme Black'],650,Nike,release: 10/03/2013
+582,583,['Jordan Prime Flight High Bel-Air (PS)'],45,Jordan,release: 10/01/2013
 583,584,['Jordan 1 Retro Mid Gym Red'],135,Jordan,release: 07/01/2013
 584,585,['Jordan 1 Retro Mid Game Royal'],187,Jordan,release: 07/01/2013
 585,586,['Nike Dunk SB Low Olive Atomic Red'],275,Nike,release: 07/01/2013
@@ -1358,6 +1557,19 @@
 1317,1318,['adidas Palace Pro Chewy Cannon'],150,adidas,release: 11/17/2017
 1318,1319,['Nike Zoom Vapor AJ3 Atmos Jade'],170,Nike,release: 11/17/2017
 1319,1320,['adidas ACE 16+ Ultra Boost Triple White'],179,adidas,release: 11/17/2017
+1320,1321,['adidas Crazy 8 Adv Sesame'],79,adidas,release: 11/23/2017
+1321,1322,['adidas Crazy 8 Adv Black'],85,adidas,release: 11/23/2017
+1322,1323,['adidas ADO CrazyTrain Talc'],89,adidas,release: 11/23/2017
+1323,1324,['adidas Crazy 8 Adv Night Cargo'],110,adidas,release: 11/23/2017
+1324,1325,['adidas ADO Terrex Agravic Light Onix'],111,adidas,release: 11/23/2017
+1325,1326,['adidas ADO Terrex Agravic Black White'],159,adidas,release: 11/23/2017
+1326,1327,['Air Foamposite One Legion Green'],160,Air,release: 11/22/2017
+1327,1328,['Diadora Intrepid Bait x Astro Boy'],120,Diadora,release: 11/22/2017
+1328,1329,['Diadora B. Elite Bait x Astro Boy'],122,Diadora,release: 11/22/2017
+1329,1330,['Air Foamposite One Legion Green (GS)'],160,Air,release: 11/22/2017
+1330,1331,['Nike SB Blazer Mid Pine Green'],99,Nike,release: 11/20/2017
+1331,1332,['adidas Accelerator Ultra Boost David Beckham Black'],130,adidas,release: 11/20/2017
+1332,1333,['adidas Ultra Boost Laceless White Scarlet'],140,adidas,release: 11/19/2017
 1333,1334,['adidas EQT Racing Adv Core Black Off White (W)'],69,adidas,release: 11/17/2017
 1334,1335,['adidas EQT Racing Adv Cream White (W)'],70,adidas,release: 11/17/2017
 1335,1336,['adidas EQT Racing Adv Off White (W)'],85,adidas,release: 11/17/2017
@@ -1876,6 +2088,29 @@
 1848,1849,['Nike Drop Type Mid Summit White Alabaster'],98,Nike,release: 10/01/2019
 1849,1850,['Nike LeBron Soldier 13 SFG Triple Black'],115,Nike,release: 10/01/2019
 1850,1851,['Converse Chuck Taylor All-Star 70s Hi Batman 80th Anniversary Black'],115,Converse,release: 10/01/2019
+1851,1852,['adidas Ultra Boost All Terrain Shock Red Yellow'],149,adidas,release: 10/02/2019
+1852,1853,['Air Force 1 Vandalized Sail Mystic Green (W)'],114,Air,release: 10/01/2019
+1853,1854,['Nike SB Dunk High Baroque Brown'],75,Nike,release: 10/01/2019
+1854,1855,['Nike Kyrie Low 2 Multi-Color'],112,Nike,release: 10/01/2019
+1855,1856,['Air Force 1 Winter Gore-tex Black Bright Ceramic Thunder Blue'],182,Air,release: 10/01/2019
+1856,1857,['Air Force 1 Vandalized Sail Chrome Yellow (W)'],99,Air,release: 10/01/2019
+1857,1858,['Air Force 1 High Flax (2019)'],109,Air,release: 10/01/2019
+1858,1859,['Nike Blazer Mid 77 Vintage White Snakeskin'],97,Nike,release: 10/01/2019
+1859,1860,['Air Max 270 React Hip Hop Triple Black'],106,Air,release: 10/01/2019
+1860,1861,['Jordan 1 Low Slip Shadow (W)'],75,Jordan,release: 10/01/2019
+1861,1862,['Nike Kyrie Low 2 Black Metallic Silver'],103,Nike,release: 10/01/2019
+1862,1863,['Nike React Presto Black Cat'],120,Nike,release: 10/01/2019
+1863,1864,['Air Max 97 Utility Black Cool Grey'],145,Air,release: 10/01/2019
+1864,1865,['Jordan 11 Crib Bootie 72-10 (TD)'],50,Jordan,release: 10/01/2019
+1865,1866,['Nike SB Nyjah Free Jade Horizon'],60,Nike,release: 10/01/2019
+1866,1867,['Nike SB Nyjah Free Black Tropical Twist'],65,Nike,release: 10/01/2019
+1867,1868,['Nike Drop Type Lx Bicycle Yellow'],75,Nike,release: 10/01/2019
+1868,1869,['Converse Chuck Taylor All-Star Ox Batman 80th Anniversary Joker'],80,Converse,release: 10/01/2019
+1869,1870,['Nike Drop Type Mid Bicycle Yellow'],85,Nike,release: 10/01/2019
+1870,1871,['Asics Gel-Quantum 360 5 Trail Graphite Grey'],90,Asics,release: 10/01/2019
+1871,1872,['Nike Drop Type Mid Summit White Alabaster'],98,Nike,release: 10/01/2019
+1872,1873,['Nike LeBron Soldier 13 SFG Triple Black'],115,Nike,release: 10/01/2019
+1873,1874,['Converse Chuck Taylor All-Star 70s Hi Batman 80th Anniversary Black'],115,Converse,release: 10/01/2019
 1874,1875,['Jordan Proto React Red Black'],120,Jordan,release: 10/01/2019
 1875,1876,['Air Max Tailwind 4 Black White'],130,Air,release: 10/01/2019
 1876,1877,['Nike LeBron Soldier 13 Voltage Purple'],130,Nike,release: 10/01/2019
@@ -2691,3 +2926,798 @@
 2686,2687,['Jordan 1 Retro Low Utility Pack (W)'],53,Jordan,release: 11/01/2018
 2687,2688,['Air Max 90 Ultra Mid Winter Black'],138,Air,release: 11/01/2018
 2688,2689,['Jordan Legacy 312 Lakers (GS)'],149,Jordan,release: 11/01/2018
+2689,2690,['adidas Harden Vol. 3 Core Black Active Blue'],90,adidas,release: 12/19/2018
+2690,2691,['Reebok Classic Leather Opening Ceremony Floral Satin Black'],59,Reebok,release: 12/17/2018
+2691,2692,['adidas Ultra Boost Uncaged White Multi'],115,adidas,release: 12/17/2018
+2692,2693,['Reebok Classic Leather Opening Ceremony Floral Satin Red'],125,Reebok,release: 12/17/2018
+2693,2694,['Jordan 12 Retro Winter Black'],170,Jordan,release: 12/15/2018
+2694,2695,['Air Fear Of God 1 Black'],670,Air,release: 12/15/2018
+2695,2696,['Air Force 1 Low Utility Spruce Fog Black'],64,Air,release: 12/15/2018
+2696,2697,['Air Terra Humara 18 Thunder Blue Team Red'],80,Air,release: 12/15/2018
+2697,2698,['Jordan 12 Retro Winter Black (GS)'],144,Jordan,release: 12/15/2018
+2698,2699,['Air Fear Of God 1 SA Black'],400,Air,release: 12/15/2018
+2699,2700,['Jordan 12 Retro Winter Black (TD)'],65,Jordan,release: 12/15/2018
+2700,2701,['adidas EQT Support Mid ADV Primeknit Dragon Ball Z Super Shenron'],96,adidas,release: 12/22/2018
+2701,2702,['Jordan 1 Retro High Aleali May Court Lux (W)'],212,Jordan,release: 12/22/2018
+2702,2703,['adidas EQT Support Mid ADV Primeknit Dragon Ball Z Shenron'],133,adidas,release: 12/22/2018
+2703,2704,['Air VaporMax Flyknit 2 Black Multi-Color (W)'],133,Air,release: 12/22/2018
+2704,2705,['Jordan 12 Retro Winter Black (PS)'],90,Jordan,release: 12/15/2018
+2705,2706,['Air Terra Humara 18 Olive Grey Deep Orange'],98,Air,release: 12/15/2018
+2706,2707,['Air Trainer Huarache Black Volt University Red'],62,Air,release: 12/22/2018
+2707,2708,['Air Force 1 High Atlanta Away (GS)'],74,Air,release: 12/22/2018
+2708,2709,['Converse Chuck Taylor All-Star 70s Ox Undefeated Varsity Jacket'],112,Converse,release: 12/15/2018
+2709,2710,['adidas Ultra Boost 2019 Cloud White Active Red'],130,adidas,release: 12/15/2018
+2710,2711,['Air Force 1 High Atlanta Away'],175,Air,release: 12/22/2018
+2711,2712,['adidas Terrex Fast GTX-Surround White Mountaineering'],135,adidas,release: 12/15/2018
+2712,2713,['Jordan 13 Retro Low Clot Black Red'],243,Jordan,release: 12/22/2018
+2713,2714,['Reebok Classic Nylon 24 Kilates F.C.V.K. II Green'],166,Reebok,release: 12/15/2018
+2714,2715,['adidas Ultra Boost 2019 Cloud White Active Red (W)'],180,adidas,release: 12/15/2018
+2715,2716,['Reebok Classic Nylon 24 Kilates F.C.V.K. II Red'],220,Reebok,release: 12/15/2018
+2716,2717,['adidas Tresc Run Asterisk Collective'],120,adidas,release: 12/20/2018
+2717,2718,['adidas Speedfactory AM4 AM4SADELLE Blue'],90,adidas,release: 12/20/2018
+2718,2719,['Nike SB Zoom Blazer Mid Velvet Brown'],100,Nike,release: 12/20/2018
+2719,2720,['Nike Epic React Flyknit Mink Brown'],105,Nike,release: 12/20/2018
+2720,2721,['Puma Clyde Court Disrupt Peace On Earth'],199,Puma,release: 12/20/2018
+2721,2722,['UGG Classic Short Boot mastermind World Chestnut'],320,UGG,release: 12/12/2018
+2722,2723,['Jordan 1 Retro High Spider-Man Origin Story'],299,Jordan,release: 12/14/2018
+2723,2724,['Air Foamposite One Obsidian Glitter (W)'],122,Air,release: 12/14/2018
+2724,2725,['Air Force 1 Low Retro DSM White'],215,Air,release: 12/20/2018
+2725,2726,['adidas Speedfactory AM4 AM4AARONKAI Red'],225,adidas,release: 12/20/2018
+2726,2727,['Nike Blazer High Timbuck2'],300,Nike,release: 12/20/2018
+2727,2728,['Nike Phantom Vision Elite Dynamic Fit FG EA Sports'],345,Nike,release: 12/12/2018
+2728,2729,['Nike Phantom Vision Elite Dynamic Fit MG EA Sports (GS)'],390,Nike,release: 12/12/2018
+2729,2730,['Jordan 1 Retro High Spider-Man Origin Story (TD)'],110,Jordan,release: 12/14/2018
+2730,2731,['Jordan 1 Retro High Spider-Man Origin Story (GS)'],260,Jordan,release: 12/14/2018
+2731,2732,['Crocs Dimitri Clog Post Malone Barbed Wire'],300,Crocs,release: 12/11/2018
+2732,2733,['adidas Ultra Boost 4.0 Clear Orange (W)'],75,adidas,release: 12/10/2018
+2733,2734,['Jordan 1 Retro High Spider-Man Origin Story (PS)'],174,Jordan,release: 12/14/2018
+2734,2735,['Air Force 1 Low Utility Carhartt WIP Camo'],79,Air,release: 12/06/2018
+2735,2736,['Nike Epic React Flyknit South Beach'],85,Nike,release: 12/06/2018
+2736,2737,['Nike SB Dunk Low Light Cream Thunderstorm'],180,Nike,release: 12/10/2018
+2737,2738,['Air VaporMax Flyknit 2 Black Metallic Silver Multi-Color'],145,Air,release: 12/10/2018
+2738,2739,['adidas Ultra Boost 4.0 Core Black True Green'],150,adidas,release: 12/06/2018
+2739,2740,['Jordan Westbrook 0.3 So Cal'],55,Jordan,release: 12/06/2018
+2740,2741,"[""Air Force 1 Low '07 Camper Green Gum""]",60,Air,release: 12/06/2018
+2741,2742,['Nike SB Dunk High Camo'],109,Nike,release: 12/10/2018
+2742,2743,['adidas Continental 80 TfL Elizabeth Line Grey Aqua Blue'],72,adidas,release: 12/10/2018
+2743,2744,['adidas Continental 80 TfL Elizabeth Line White Black Grey'],100,adidas,release: 12/10/2018
+2744,2745,['adidas Speedfactory AM4 Aaron Kai Black Blue'],70,adidas,release: 12/08/2018
+2745,2746,"[""Air Force 1 Low '07 Pewter Gum""]",75,Air,release: 12/06/2018
+2746,2747,['Nike Vandal High Supreme Carhartt WIP Black'],150,Nike,release: 12/06/2018
+2747,2748,['adidas Continental 80 TfL Elizabeth Line Beige Maroon Grey'],117,adidas,release: 12/10/2018
+2748,2749,['adidas Continental 80 TfL Elizabeth Line Black Scarlet Grey'],162,adidas,release: 12/10/2018
+2749,2750,['Converse One Star Platform Low MadeMe Pink (W)'],89,Converse,release: 12/08/2018
+2750,2751,['adidas Speedfactory AM4 AM4BROOKLYNBALLET'],90,adidas,release: 12/08/2018
+2751,2752,['Converse Chuck Taylor All-Star Ox Hello Kitty Fiery Red (W)'],35,Converse,release: 12/06/2018
+2752,2753,['Converse One Star Ox Hello Kitty Black (W)'],40,Converse,release: 12/06/2018
+2753,2754,['Diet Starts Monday x Rider Rnext'],180,Diet,release: 12/10/2018
+2754,2755,['Reebok Genetically Modified Sneaker Vetements Grey'],700,Reebok,release: 12/09/2018
+2755,2756,['adidas Speedfactory AM4 Aaron Kai Black'],94,adidas,release: 12/08/2018
+2756,2757,['adidas Samba Rose TfL Elizabeth Line (W)'],110,adidas,release: 12/08/2018
+2757,2758,['Under Armour Hovr Phantom White Steel'],119,Under,release: 12/08/2018
+2758,2759,"[""Air Force 1 Low '07 Monarch Gum""]",59,Air,release: 12/06/2018
+2759,2760,['Converse One Star Ox Hello Kitty Fiery Red (W)'],60,Converse,release: 12/06/2018
+2760,2761,['Nike SB Zoom Blazer Mid Stussy'],187,Nike,release: 12/08/2018
+2761,2762,['Nike SB Zoom Blazer Low Stussy'],130,Nike,release: 12/08/2018
+2762,2763,['adidas Speedfactory AM4 Aaron Kai Red Blue'],400,adidas,release: 12/08/2018
+2763,2764,['Converse Chuck Taylor All-Star Hi Hello Kitty Black (W)'],70,Converse,release: 12/06/2018
+2764,2765,['Puma Clyde Court Disrupt South Beach'],84,Puma,release: 12/08/2018
+2765,2766,['Converse Chuck Taylor All-Star 70s Hi Hello Kitty Black (W)'],75,Converse,release: 12/06/2018
+2766,2767,['Converse Chuck Taylor All-Star Hi Hello Kitty Black (TD)'],85,Converse,release: 12/06/2018
+2767,2768,['adidas ZX4000 OG Grey One Bright Cyan'],89,adidas,release: 12/08/2018
+2768,2769,['adidas Speedfactory AM4 AM4KWASI'],200,adidas,release: 12/08/2018
+2769,2770,['adidas Ultra Boost 2.0 Antique Brass'],110,adidas,release: 12/07/2018
+2770,2771,['adidas Ultra Boost Black Grey (W)'],97,adidas,release: 12/07/2018
+2771,2772,['Sperry Jolly Roger A/O Noah'],100,Sperry,release: 12/06/2018
+2772,2773,['adidas Ultra Boost Mid Light Granite Silver Metallic'],118,adidas,release: 12/06/2018
+2773,2774,['Converse One Star Platform Low MadeMe Brown (W)'],60,Converse,release: 12/08/2018
+2774,2775,['adidas Continental 80 Black Gum'],50,adidas,release: 12/07/2018
+2775,2776,['Jordan 1 Jester XX Black Sail (W)'],50,Jordan,release: 12/07/2018
+2776,2777,"[""Air Force 1 Low '07 Black Gum""]",130,Air,release: 12/06/2018
+2777,2778,['adidas Temper Run Raw Indigo'],78,adidas,release: 12/07/2018
+2778,2779,['adidas Crazy BYW Eric Emanuel'],89,adidas,release: 12/07/2018
+2779,2780,['Converse Chuck Taylor All-Star 70s Hi Shoe Palace Boom Box Black'],90,Converse,release: 12/07/2018
+2780,2781,"['Timberland GTX 6"" Super Boot Kith x Tommy Hilfiger']",250,Timberland,release: 12/31/2018
+2781,2782,['Converse Chuck Taylor All-Star 70s Hi Shoe Palace Boom Box White'],95,Converse,release: 12/07/2018
+2782,2783,['adidas Rivalry Hi Eric Emanuel'],150,adidas,release: 12/07/2018
+2783,2784,['Timberland Shearling 40 Below Super Boot Kith x Tommy Hilfiger'],375,Timberland,release: 12/31/2018
+2784,2785,['Jordan 3 Retro Explorer XX Black Sail (W)'],78,Jordan,release: 12/30/2018
+2785,2786,['adidas Ultra Boost 2.0 Clear Grey (W)'],194,adidas,release: 12/07/2018
+2786,2787,['adidas Yeezy 700 V2 Static'],515,adidas,release: 12/29/2018
+2787,2788,['adidas Trimm Star size? x Colnago'],181,adidas,release: 12/29/2018
+2788,2789,['VaporMax Flyknit 2 Fuchsia'],107,VaporMax,release: 12/28/2018
+2789,2790,['adidas Yeezy Boost 350 V2 Static (Non-Reflective)'],330,adidas,release: 12/27/2018
+2790,2791,['Jordan 1 Retro High Sports Illustrated (A Star Is Born)'],105,Jordan,release: 12/27/2018
+2791,2792,['Jordan 1 Retro High Sports Illustrated (A Star Is Born) (GS)'],131,Jordan,release: 12/27/2018
+2792,2793,['adidas Yeezy Boost 350 V2 Static Reflective'],365,adidas,release: 12/26/2018
+2793,2794,['adidas Terrex Skychaser Kith Tan'],130,adidas,release: 12/26/2018
+2794,2795,['adidas Terrex Free Hiker Kith Navy'],139,adidas,release: 12/26/2018
+2795,2796,['Under Armour Curry 6 Christmas in the Town'],250,Under,release: 12/26/2018
+2796,2797,['adidas Terrex Free Hiker Kith Black'],387,adidas,release: 12/26/2018
+2797,2798,['Reebok Daytona DMX Vainl Archive Green Grey'],65,Reebok,release: 12/25/2018
+2798,2799,['Nike SB Dunk Low Concepts Green Lobster (Special Box)'],495,Nike,release: 12/14/2018
+2799,2800,['Nike SB Dunk Low Concepts Purple Lobster (Special Box)'],614,Nike,release: 12/14/2018
+2800,2801,['Nike Zoom Rookie Glow-In-The-Dark (2018)'],98,Nike,release: 12/14/2018
+2801,2802,['Nike SB Dunk Low Concepts Purple Lobster'],498,Nike,release: 12/14/2018
+2802,2803,['Nike SB Dunk Low Doernbecher (2018)'],219,Nike,release: 12/14/2018
+2803,2804,['Puma Suede Classic Swarovski'],145,Puma,release: 12/13/2018
+2804,2805,['Air Huarache Run Zip Black White'],145,Air,release: 12/13/2018
+2805,2806,['Nike Classic Cortez Blazing Sun'],60,Nike,release: 12/13/2018
+2806,2807,['Air Huarache Run Zip Bright Citron'],92,Air,release: 12/13/2018
+2807,2808,['adidas Y-3 Ratio Racer Core Black'],179,adidas,release: 12/13/2018
+2808,2809,['Jordan 13 Retro Low Clot Sepia Stone'],347,Jordan,release: 12/13/2018
+2809,2810,['Nike Epic React Flyknit Multi-Color'],117,Nike,release: 12/12/2018
+2810,2811,['Jordan 1 Retro High Rox Brown (W)'],198,Jordan,release: 12/12/2018
+2811,2812,['Dr. Martens 1490 Bape Khaki Smooth Emboss'],200,Dr.,release: 12/12/2018
+2812,2813,['Dr. Martens 1490 Bape Black Smooth Emboss'],250,Dr.,release: 12/12/2018
+2813,2814,['Reebok Daytona DMX Skull Grey Shark Red'],45,Reebok,release: 12/12/2018
+2814,2815,['Air Force 1 Jester XX Rox Brown (W)'],79,Air,release: 12/12/2018
+2815,2816,['Dr. Martens 1461 Bape Khaki Smooth Emboss'],180,Dr.,release: 12/12/2018
+2816,2817,['Dr. Martens 1461 Bape Black Smooth Emboss'],250,Dr.,release: 12/12/2018
+2817,2818,['Nike Metcon Flyknit 3 Black Matte Silver'],90,Nike,release: 12/05/2018
+2818,2819,['Nike Metcon Flyknit 3 Black Matte Silver (W)'],138,Nike,release: 12/05/2018
+2819,2820,['adidas Ultra Boost 4.0 Cloud White Active Red'],114,adidas,release: 12/04/2018
+2820,2821,['adidas Ultra Boost 4.0 Chalk White Active Red (GS)'],69,adidas,release: 12/04/2018
+2821,2822,['adidas Ultra Boost 4.0 Chalk White Active Red (W)'],85,adidas,release: 12/04/2018
+2822,2823,['Air Zoom Pegasus 35 Floral'],100,Air,release: 12/04/2018
+2823,2824,['Nike Tech Trainer Russell Wilson'],145,Nike,release: 12/04/2018
+2824,2825,['Nike Mercurial Vapor 12 Elite FG Golden Touch'],300,Nike,release: 12/04/2018
+2825,2826,['Nike Mercurial Superfly 6 Elite FG Golden Touch'],340,Nike,release: 12/04/2018
+2826,2827,['Nike React Element 55 Triple Black'],70,Nike,release: 12/03/2018
+2827,2828,['adidas Ultra Boost 4.0 Triple Black Nubuck Cage'],162,adidas,release: 12/03/2018
+2828,2829,['adidas Ultra Boost 4.0 Miami Hurricanes'],84,adidas,release: 12/02/2018
+2829,2830,['adidas Ultra Boost 4 Power Red Core Black'],75,adidas,release: 12/02/2018
+2830,2831,['adidas Ultra Boost 4 Grey'],86,adidas,release: 12/02/2018
+2831,2832,['adidas Ultra Boost 4.0 Cloud White Maroon'],85,adidas,release: 12/02/2018
+2832,2833,['adidas T-Mac Millennium Collegiate Royal'],95,adidas,release: 12/02/2018
+2833,2834,['adidas Marquee Boost Raw White Cloud White'],75,adidas,release: 12/02/2018
+2834,2835,['adidas T-Mac Millennium Collegiate Red'],130,adidas,release: 12/02/2018
+2835,2836,['Balenciaga Triple S Clear Sole Grey'],564,Balenciaga,release: 11/25/2018
+2836,2837,['Balenciaga Triple S Clear Sole Black'],620,Balenciaga,release: 11/25/2018
+2837,2838,['Balenciaga Triple S Clear Sole White'],715,Balenciaga,release: 11/25/2018
+2838,2839,['adidas Ultra Tech Dragon Ball Z Vegeta'],86,adidas,release: 11/24/2018
+2839,2840,['Nike Blazer Royal Triple White'],80,Nike,release: 11/24/2018
+2840,2841,['FTP Reflective Logo Slides Black'],150,FTP,release: 11/24/2018
+2841,2842,['Li-Ning Way of Wade 7 Overtown'],158,Li-Ning,release: 11/24/2018
+2842,2843,['Air Force 1 High Magic Stick VIP Black'],178,Air,release: 11/24/2018
+2843,2844,['adidas Yeezy Boost 350 V2 Sesame'],260,adidas,release: 11/23/2018
+2844,2845,['Nike SB Air Force 2 Low Foamposite'],74,Nike,release: 11/23/2018
+2845,2846,['Nike SB Dunk High Bred'],115,Nike,release: 11/23/2018
+2846,2847,['Air VaporMax Flyknit 2 Dark Grey Chrome (W)'],123,Air,release: 11/23/2018
+2847,2848,['Clarks Wallabees Wu-Tang 36 Chambers 25th Anniversary Black'],103,Clarks,release: 11/23/2018
+2848,2849,['Clarks Wallabees Wu-Tang 36 Chambers 25th Anniversary Maple'],110,Clarks,release: 11/23/2018
+2849,2850,['SF Air Force 1 Premium Dark Russet'],115,SF,release: 11/23/2018
+2850,2851,"[""Air Force 1 '07 XX White (W)""]",166,Air,release: 11/23/2018
+2851,2852,['Timberland World Hiker Front Country Boot Supreme Black'],210,Timberland,release: 11/23/2018
+2852,2853,['Nike M2K Tekno Mesh University Red (W)'],59,Nike,release: 11/23/2018
+2853,2854,['Air VaporMax Flyknit 2 Cheetah (W)'],240,Air,release: 12/01/2018
+2854,2855,['Air Foamposite One Iridescent Purple (I)'],50,Air,release: 12/01/2018
+2855,2856,['adidas Pureboost Go Semi Solar Pink (GS)'],50,adidas,release: 12/01/2018
+2856,2857,['adidas Marquee Boost Gold Black Red'],50,adidas,release: 12/01/2018
+2857,2858,['Nike Rise React Flyknit Diffused Taupe (W)'],100,Nike,release: 12/01/2018
+2858,2859,['Vans Gilbert Crockett 2 Independent'],55,Vans,release: 12/01/2018
+2859,2860,['Nike React Element 55 Medium Olive'],100,Nike,release: 12/01/2018
+2860,2861,['Air Force 1 Rebel XX Gym Red (W)'],59,Air,release: 12/01/2018
+2861,2862,['Air Force 1 Rebel XX Praline (W)'],59,Air,release: 12/01/2018
+2862,2863,['adidas Marquee Boost Low Footwear White'],125,adidas,release: 12/01/2018
+2863,2864,['Nike SB Zoom Bruin NBA Pink'],60,Nike,release: 12/01/2018
+2864,2865,['Air Huarache City Anthracite Solar Red (GS)'],60,Air,release: 12/01/2018
+2865,2866,['Air Force 1 High Utility Wheat Gold (W)'],125,Air,release: 12/01/2018
+2866,2867,['adidas N3xt L3v3l Core Black Cloud White'],140,adidas,release: 12/01/2018
+2867,2868,['adidas Marquee Boost Kristaps Porzingis'],60,adidas,release: 12/01/2018
+2868,2869,['adidas Pro Vision Cloud White Core Black'],60,adidas,release: 12/01/2018
+2869,2870,['Air VaporMax Plus Light Silver Mica Green (W)'],150,Air,release: 12/01/2018
+2870,2871,['Asics Gel-Lyte III Limited Edt x SBTG Monsoon Patrol'],150,Asics,release: 12/01/2018
+2871,2872,['adidas Harden Vol. 3 Core Black Scarlet'],63,adidas,release: 12/01/2018
+2872,2873,['Air VaporMax Run Utility Black'],228,Air,release: 12/01/2018
+2873,2874,['Off-White Vulcanized Hi Top White Fuchsia'],329,Off-White,release: 12/01/2018
+2874,2875,['adidas Marquee Boost Low Core Black Cloud White'],75,adidas,release: 12/01/2018
+2875,2876,['Jordan Legacy 312 Black Gold Patent (GS)'],79,Jordan,release: 12/01/2018
+2876,2877,['Asics Gel-Yeti Tokyo Hi G-TX Nonnative'],600,Asics,release: 12/01/2018
+2877,2878,['Balenciaga Triple S Orange Grey Black (W)'],608,Balenciaga,release: 12/01/2018
+2878,2879,['Air Foamposite One Iridescent Purple (TD)'],84,Air,release: 12/01/2018
+2879,2880,['adidas Stan Smith Forever'],85,adidas,release: 12/01/2018
+2880,2881,['Air Foamposite One Iridescent Purple (PS)'],90,Air,release: 12/01/2018
+2881,2882,['Air Force 1 Sage High Lux Phantom (W)'],90,Air,release: 12/01/2018
+2882,2883,['Air Foamposite One Iridescent Purple (GS)'],99,Air,release: 12/01/2018
+2883,2884,['adidas Ultra Boost OG (2018)'],127,adidas,release: 12/01/2018
+2884,2885,['adidas Yeezy 500 Salt'],235,adidas,release: 11/30/2018
+2885,2886,['adidas Ultra Boost 4.0 Non Dye Cloud White'],94,adidas,release: 11/30/2018
+2886,2887,['adidas Marquee Boost White Grey'],50,adidas,release: 12/01/2018
+2887,2888,['Air Force 1 Flyleather Black'],68,Air,release: 11/23/2018
+2888,2889,"[""Air Force 1 '07 XX Oil Grey (W)""]",89,Air,release: 11/23/2018
+2889,2890,['Air Force 1 Winter Burgundy Crush'],90,Air,release: 11/23/2018
+2890,2891,['Jordan 1 Retro High Noise Cancelling Pack Nigel Sylvester'],108,Jordan,release: 11/30/2018
+2891,2892,['Air Force 1 Foamposite Cup University Red'],80,Air,release: 11/30/2018
+2892,2893,['adidas Ultra Boost 4.0 Legend Marine Hi Res Yellow'],104,adidas,release: 11/30/2018
+2893,2894,['adidas Marquee Boost Low Yellow Purple Black'],80,adidas,release: 12/01/2018
+2894,2895,['Clarks Wallabees Wu-Tang 36 Chambers 25th Anniversary Yellow'],142,Clarks,release: 11/23/2018
+2895,2896,['Nike Blazer Mid Rebel Off White (W)'],100,Nike,release: 12/01/2018
+2896,2897,['Air Force 1 Mid Utility Obsidian'],169,Air,release: 12/01/2018
+2897,2898,['Mizuno Wave Rider White Blue Yellow'],155,Mizuno,release: 11/23/2018
+2898,2899,['Asics Gel-Lyte III Atmos World Map'],172,Asics,release: 11/23/2018
+2899,2900,['Nike Zoom Vomero 5 A Cold Wall Sail'],195,Nike,release: 11/29/2018
+2900,2901,['adidas Marquee Boost White Black'],50,adidas,release: 12/01/2018
+2901,2902,['adidas Marquee Boost Black Purple Pink'],51,adidas,release: 12/01/2018
+2902,2903,['adidas Marquee Boost John Wall'],59,adidas,release: 12/01/2018
+2903,2904,['SF Air Force 1 Mid Premium Praline'],176,SF,release: 11/23/2018
+2904,2905,['Nike M2K Tekno Mesh Racer Blue (W)'],180,Nike,release: 11/23/2018
+2905,2906,['Timberland World Hiker Front Country Boot Supreme Anthracite'],198,Timberland,release: 11/23/2018
+2906,2907,['Nike Zoom Vomero 5 A Cold Wall Black'],158,Nike,release: 11/29/2018
+2907,2908,['Nike Huarache Edge Sneaker of the Gods'],60,Nike,release: 11/29/2018
+2908,2909,['Nike Huarache Edge Hyper Adapt'],110,Nike,release: 11/29/2018
+2909,2910,['Jordan Black Cat Black Concord'],70,Jordan,release: 12/01/2018
+2910,2911,['Timberland World Hiker Front Country Boot Supreme Orange'],200,Timberland,release: 11/23/2018
+2911,2912,['Air Max 270 Bowfin maharishi Black'],146,Air,release: 11/29/2018
+2912,2913,['Air Force 1 High maharishi Red'],194,Air,release: 11/29/2018
+2913,2914,['adidas Marquee Boost Low Lakers'],99,adidas,release: 12/01/2018
+2914,2915,['Air Presto Mid Utility Cargo Khaki'],100,Air,release: 12/01/2018
+2915,2916,['Air Max 270 Futura Black White Black'],100,Air,release: 12/01/2018
+2916,2917,['Nike React Element 55 size?'],195,Nike,release: 11/29/2018
+2917,2918,['Air Force 1 High maharishi Navy'],230,Air,release: 11/29/2018
+2918,2919,['Air Max 270 Bowfin maharishi Woodland'],275,Air,release: 11/29/2018
+2919,2920,['adidas Continental 80 Off White Gum'],50,adidas,release: 11/22/2018
+2920,2921,['adidas EQT Support Mid Adv Alphatype'],55,adidas,release: 11/22/2018
+2921,2922,['Air Force 1 Low Utility maharishi White'],300,Air,release: 11/29/2018
+2922,2923,['Air VaporMax Utility Moon Particle Black'],148,Air,release: 11/27/2018
+2923,2924,['adidas EQT Support 91/18 Alphatype'],70,adidas,release: 11/22/2018
+2924,2925,['LeBron Zoom Soldier 12 Air Raid'],60,LeBron,release: 11/27/2018
+2925,2926,['Reebok Answer 4.5 Black Coal'],185,Reebok,release: 11/27/2018
+2926,2927,['Air VaporMax Moc 2 Moon Particle (W)'],131,Air,release: 11/26/2018
+2927,2928,['adidas Crazy BYW X Alphatype'],120,adidas,release: 11/22/2018
+2928,2929,['Air VaporMax 2019 Club Gold Ember Glow'],92,Air,release: 11/26/2018
+2929,2930,['Converse One Star Ox Tyler The Creator x Foot Locker Oyvind Lauvdahl'],120,Converse,release: 11/26/2018
+2930,2931,['Air VaporMax Plus Overbranding Black'],208,Air,release: 11/21/2018
+2931,2932,['Nike React Runner Mid WR ISPA White Light Crimson'],72,Nike,release: 11/21/2018
+2932,2933,['Converse Chuck Taylor 70s Hi Tyler The Creator x Foot Locker Wyatt Navarro'],150,Converse,release: 11/26/2018
+2933,2934,['Converse Chuck Taylor 70s Hi Tyler The Creator x Foot Locker Wyatt & Oyvind'],160,Converse,release: 11/26/2018
+2934,2935,['Nike React Runner Mid WR ISPA Black'],70,Nike,release: 11/21/2018
+2935,2936,['Puma Clyde Court Disrupt Black Electric Purple'],87,Puma,release: 11/21/2018
+2936,2937,['Air VaporMax Plus Overbranding Bright Crimson'],135,Air,release: 11/21/2018
+2937,2938,['adidas Futurecraft 4D Onix Aero Green'],555,adidas,release: 11/21/2018
+2938,2939,['Nike React Element 55 Metallic Gold'],59,Nike,release: 11/21/2018
+2939,2940,['Under Armour Curry 5 Chef Curry'],150,Under,release: 11/16/2018
+2940,2941,['Nike Classic Cortez Overbranding Red Orbit'],65,Nike,release: 11/21/2018
+2941,2942,['Nike React Runner Mid WR ISPA Blue Void Team Orange'],69,Nike,release: 11/21/2018
+2942,2943,['New Balance 997S Kith nonnative'],225,New,release: 11/21/2018
+2943,2944,['Converse Chuck Taylor All-Star 70s Hi Golf Le Fleur Parchment'],150,Converse,release: 11/15/2018
+2944,2945,['Nike ACG Angels Rest Black'],70,Nike,release: 11/15/2018
+2945,2946,['New Balance 997S Fusion Kith x United Arrows and Sons Grey Pink'],300,New,release: 11/21/2018
+2946,2947,['Jordan Westbrook 0.3 Dazzle'],74,Jordan,release: 11/21/2018
+2947,2948,['Converse Chuck Taylor All-Star 70s Hi Golf Le Fleur Burlap'],94,Converse,release: 11/15/2018
+2948,2949,['Converse One Star Ox Golf Le Fleur Burlap'],79,Converse,release: 11/15/2018
+2949,2950,['Nike ACG Ruckel Ridge Light British Tan'],100,Nike,release: 11/15/2018
+2950,2951,['Air Zoom Spiridon 16 Overbranding Total Orange'],75,Air,release: 11/21/2018
+2951,2952,['Nike ACG Dog Mountain Black Oil Grey'],81,Nike,release: 11/15/2018
+2952,2953,['New Balance 997S Kith United Arrows and Sons'],180,New,release: 11/21/2018
+2953,2954,['New Balance 997 OG Kith United Arrows and Sons'],275,New,release: 11/21/2018
+2954,2955,['Nike Epic React Flyknit Black Gold (W)'],65,Nike,release: 11/15/2018
+2955,2956,['Air Force Max CB Black Metallic Gold'],75,Air,release: 11/15/2018
+2956,2957,['New Balance 997 OG Kith nonnative'],300,New,release: 11/21/2018
+2957,2958,['Nike ACG Angels Rest Parachute Beige'],82,Nike,release: 11/15/2018
+2958,2959,['Air Force 1 Utility Odell Beckham Jr'],118,Air,release: 11/19/2018
+2959,2960,['Nike ACG Okwahn 2 Sequoia Racer Blue Yellow Ochre'],90,Nike,release: 11/15/2018
+2960,2961,['Reebok Iverson Legacy Black White'],110,Reebok,release: 11/15/2018
+2961,2962,['adidas Marathon x 5923 Never Made Pack Triple White'],50,adidas,release: 11/19/2018
+2962,2963,['adidas Rising Star x R1 Never Made Pack Triple White'],59,adidas,release: 11/19/2018
+2963,2964,['adidas Boston Super x R1 Never Made Pack Triple White'],59,adidas,release: 11/19/2018
+2964,2965,['Nike ACG Okwahn 2 Desert'],135,Nike,release: 11/15/2018
+2965,2966,['adidas Country x Kamanda Never Made Pack Triple White'],59,adidas,release: 11/19/2018
+2966,2967,['adidas ZX 930 x EQT Never Made Pack Triple White'],73,adidas,release: 11/19/2018
+2967,2968,['adidas AW Turnout Trainer Alexander Wang Clear Mint Core Black'],185,adidas,release: 11/14/2018
+2968,2969,['adidas AW Turnout Bball Alexander Wang Triple Black'],74,adidas,release: 11/14/2018
+2969,2970,['adidas AW Puff Trainer Alexander Wang Core Black Solar Green'],237,adidas,release: 11/14/2018
+2970,2971,['adidas AW Skate Super Alexander Wang Black White'],170,adidas,release: 11/14/2018
+2971,2972,['Converse Chuck Taylor All-Star 70s Hi Fear of God Black'],200,Converse,release: 11/04/2018
+2972,2973,['Sandalboyz Slides Billionaire Boys Club Black Diamond & Dollar Sign'],110,Sandalboyz,release: 11/04/2018
+2973,2974,['Air Force 1 Utility Black Gum'],64,Air,release: 11/03/2018
+2974,2975,['adidas Ultra Boost 4.0 Orca'],99,adidas,release: 11/03/2018
+2975,2976,['Converse Chuck Taylor All-Star 70s Hi Fear of God Cream'],205,Converse,release: 11/03/2018
+2976,2977,['K-Swiss Classic 88 Knit 003 Gary Vee Black Clouds and Dirt'],85,K-Swiss,release: 11/03/2018
+2977,2978,['Nike Cortez Nylon DSM Black White'],120,Nike,release: 11/03/2018
+2978,2979,['Vans Sk8-Hi Notchback Pro Defcon Camo Black'],450,Vans,release: 11/10/2018
+2979,2980,['Nike Cortez Nylon DSM Forrest Gump'],200,Nike,release: 11/03/2018
+2980,2981,['Saucony Freedom ISO Hanon Granite'],210,Saucony,release: 11/03/2018
+2981,2982,['Air Max 270 Bowfin Mowabb'],79,Air,release: 11/10/2018
+2982,2983,['Reebok Answer 4.5 White Red Black'],80,Reebok,release: 11/10/2018
+2983,2984,['Air Force 1 Low Retro Cocoa Snake (2018)'],260,Air,release: 11/03/2018
+2984,2985,['Fila Grant Hill 2 Hall of Fame White'],320,Fila,release: 11/03/2018
+2985,2986,['Reebok Answer 4.5 Black Grey Red'],84,Reebok,release: 11/10/2018
+2986,2987,['Nike Vandal High Meant To Fly (W)'],110,Nike,release: 11/10/2018
+2987,2988,['Mizuno Wave Rider 1 24 Kilates King Kobra'],148,Mizuno,release: 11/10/2018
+2988,2989,['adidas EQT Cushion 2 Pusha T'],850,adidas,release: 11/03/2018
+2989,2990,['New Balance RC-1 nanamica Gore-tex Tan'],232,New,release: 11/10/2018
+2990,2991,['Air VaporMax Plus Black Metallic Gold Anthracite'],240,Air,release: 11/10/2018
+2991,2992,['Asics Gel-Lyte III Afew x Beams Orange Koi'],349,Asics,release: 11/10/2018
+2992,2993,['Asics Gel-Delva 1 Kiko Kostadinov Black'],500,Asics,release: 11/09/2018
+2993,2994,['Asics Gel-Lyte III Afew x Beams Orange Koi (Special Box)'],802,Asics,release: 11/10/2018
+2994,2995,['Palace Ralph Lauren Formal Slipper Engineered Equestrian Print'],600,Palace,release: 11/09/2018
+2995,2996,['Off-White Vulc Low Black (Updated Stripes)'],285,Off-White,release: 11/09/2018
+2996,2997,['adidas Ultra Boost Undefeated Performance Running Black'],103,adidas,release: 11/09/2018
+2997,2998,['Nike SB Dunk Low Diamond Supply Co Black Diamond'],194,Nike,release: 11/08/2018
+2998,2999,['Air VaporMax Run Utility Urban Bounce'],161,Air,release: 11/08/2018
+2999,3000,['Nike Odyssey React Shield Wet Hot'],78,Nike,release: 11/08/2018
+3000,3001,['Nike Zoom Rookie Black'],102,Nike,release: 11/09/2018
+3001,3002,['Clarks Wallabees Extra Butter x The Halal Guys Chili'],105,Clarks,release: 11/09/2018
+3002,3003,['Air Zoom Pegasus 35 Shield Wet Fly'],80,Air,release: 11/08/2018
+3003,3004,['Reebok Sole Fury White Black Lime'],120,Reebok,release: 11/08/2018
+3004,3005,['adidas Ultra Boost Undefeated Performance Running Grey'],111,adidas,release: 11/09/2018
+3005,3006,['Air Force 1 High NBA Black Metallic Gold'],78,Air,release: 11/09/2018
+3006,3007,['Jordan Why Not Zer0.1 Chaos Black'],130,Jordan,release: 11/08/2018
+3007,3008,['Air Huarache Gripp Black Team Orange'],150,Air,release: 11/08/2018
+3008,3009,['Jordan Why Not Zer0.1 Chaos White'],160,Jordan,release: 11/08/2018
+3009,3010,['adidas adiZero Adios 3 Undefeated Performance Running'],84,adidas,release: 11/09/2018
+3010,3011,['adidas adiZero XT Boost Undefeated Performance Running'],84,adidas,release: 11/09/2018
+3011,3012,['adidas Pure Boost RBL Undefeated Performance Running'],85,adidas,release: 11/09/2018
+3012,3013,['adidas Harden Vol. 3 Invader'],52,adidas,release: 11/02/2018
+3013,3014,['Converse Chuck Taylor All-Star 70s Ox Carhartt WIP Milner'],300,Converse,release: 11/08/2018
+3014,3015,"['Jordan 1 Retro High ""Not for Resale"" Varsity Red']",493,Jordan,release: 11/07/2018
+3015,3016,['Clarks Wallabees Extra Butter x The Halal Guys Cream'],90,Clarks,release: 11/09/2018
+3016,3017,['adidas Pure Boost LTD Undefeated Performance Running'],100,adidas,release: 11/09/2018
+3017,3018,['Asics Gel-Delva 1 Kiko Kostadinov Forest'],180,Asics,release: 11/09/2018
+3018,3019,['Air Force 1 High Utility Particle Beige (W)'],100,Air,release: 11/02/2018
+3019,3020,['Air Force 1 Mid Utility White Black (GS)'],260,Air,release: 11/02/2018
+3020,3021,['adidas Consortium 4D Kith Aspen'],400,adidas,release: 11/02/2018
+3021,3022,['adidas NMD R1 STLT Parley Core Black'],94,adidas,release: 11/07/2018
+3022,3023,['Jordan 1 Retro High Strap N7'],110,Jordan,release: 11/07/2018
+3023,3024,['Clarks Wallabees Ronnie Fieg Bordeaux'],229,Clarks,release: 11/09/2018
+3024,3025,['Clarks Wallabees Ronnie Fieg Sand'],230,Clarks,release: 11/09/2018
+3025,3026,['Clarks Wallabees Ronnie Fieg Forest Green'],245,Clarks,release: 11/09/2018
+3026,3027,['New Balance RC-1 Tokyo Design Studio Leather Tan'],125,New,release: 11/02/2018
+3027,3028,['Air Force 1 High Utility Olive Canvas (W)'],140,Air,release: 11/02/2018
+3028,3029,['adidas Temper Run Light Brown'],78,adidas,release: 11/07/2018
+3029,3030,['Jordan Why Not Zer0.1 Low N7'],108,Jordan,release: 11/07/2018
+3030,3031,['Asics Gel-Delva 1 Kiko Kostadinov Caramel'],272,Asics,release: 11/09/2018
+3031,3032,['Palace Ralph Lauren Formal Slipper Navy Velvet'],430,Palace,release: 11/09/2018
+3032,3033,['Air Force 1 High Utility White Light Cream (W)'],159,Air,release: 11/02/2018
+3033,3034,['Air VaporMax Flyknit 2 Gym Blue'],168,Air,release: 11/02/2018
+3034,3035,['Jordan Trainer ST G White Obsidian'],209,Jordan,release: 11/02/2018
+3035,3036,['Jordan Legacy 312 Rookie of the Year'],70,Jordan,release: 11/01/2018
+3036,3037,['Jordan 1 Retro High Paris Saint Germain'],126,Jordan,release: 11/06/2018
+3037,3038,['Air Force 1 Low Utility Team Orange'],205,Air,release: 11/05/2018
+3038,3039,['Jordan 1 Retro Low Utility Pack (W)'],53,Jordan,release: 11/01/2018
+3039,3040,['Air Max 90 Ultra Mid Winter Black'],138,Air,release: 11/01/2018
+3040,3041,['Air Huarache Premium Bordeaux'],80,Air,release: 11/05/2018
+3041,3042,['Air VaporMax Run Utility Desert Ore'],189,Air,release: 11/05/2018
+3042,3043,['Diadora B. Elite Rick and Morty'],84,Diadora,release: 11/19/2018
+3043,3044,['Jordan Legacy 312 Lakers (GS)'],149,Jordan,release: 11/01/2018
+3044,3045,['adidas Micropacer x R1 Never Made Pack Triple White'],126,adidas,release: 11/19/2018
+3045,3046,['Air VaporMax Run Utility White Black (W)'],220,Air,release: 11/18/2018
+3046,3047,['Jordan 1 Retro High Rookie of the Year'],200,Jordan,release: 11/17/2018
+3047,3048,['Air Foamposite Pro Black Metallic Gold'],210,Air,release: 11/17/2018
+3048,3049,"['Timberland 640 Below 6"" Just Don']",750,Timberland,release: 11/17/2018
+3049,3050,['adidas Crazy BYW Bristol Studio SharpShooter'],65,adidas,release: 11/17/2018
+3050,3051,['Air Foamposite Pro Black Metallic Gold (TD)'],80,Air,release: 11/17/2018
+3051,3052,['adidas Superstar 80s Slam Jam'],99,adidas,release: 11/17/2018
+3052,3053,['Air Foamposite Pro Black Metallic Gold (PS)'],99,Air,release: 11/17/2018
+3053,3054,['Asics Gel-Kayano 5 OG White Black'],119,Asics,release: 11/17/2018
+3054,3055,['adidas Crazy BYW 2 Bristol Studio SharpShooter'],125,adidas,release: 11/17/2018
+3055,3056,['Air Foamposite Pro Black Metallic Gold (GS)'],180,Air,release: 11/17/2018
+3056,3057,['Under Armour Curry 5 White Confetti'],96,Under,release: 11/16/2018
+3057,3058,['adidas Harden Vol. 3 Supernova'],165,adidas,release: 11/16/2018
+3058,3059,['Jordan Legacy 312 Rookie of the Year (PS)'],40,Jordan,release: 11/01/2018
+3059,3060,['Jordan 1 Retro High Zip Utility Pack (W)'],45,Jordan,release: 11/01/2018
+3060,3061,['Jordan Jumpman Hustle Olive Canvas'],48,Jordan,release: 11/01/2018
+3061,3062,['adidas Continental 80 Collegiate Navy'],55,adidas,release: 11/01/2018
+3062,3063,['adidas Continental 80 Grey'],55,adidas,release: 11/01/2018
+3063,3064,['adidas Crazy BYW X Black White Purple'],55,adidas,release: 11/01/2018
+3064,3065,['Nike Blazer Mid Rebel Burgundy Crush (W)'],56,Nike,release: 11/01/2018
+3065,3066,['adidas Dimension Lo Core Black Dark Plum'],60,adidas,release: 11/01/2018
+3066,3067,['adidas Crazy BYW Real Purple Core Black'],65,adidas,release: 11/01/2018
+3067,3068,['adidas Crazy BYW 2 Trace Maroon'],68,adidas,release: 11/01/2018
+3068,3069,['Jordan Legacy 312 Lakers'],70,Jordan,release: 11/01/2018
+3069,3070,['Jordan 1 Retro High Double Strap Gym Red'],70,Jordan,release: 11/01/2018
+3070,3071,['adidas Continental 80 Maroon'],71,adidas,release: 11/01/2018
+3071,3072,['Jordan Zoom Tenacity Triple Black'],75,Jordan,release: 11/01/2018
+3072,3073,['Jordan Zoom Tenacity Black White'],75,Jordan,release: 11/01/2018
+3073,3074,['Air Max 270 Bowfin Dark Russet'],75,Air,release: 11/01/2018
+3074,3075,['Air Force 1 Utility Sequoia'],75,Air,release: 11/01/2018
+3075,3076,['adidas NMD Racer Carbon Core Black'],80,adidas,release: 11/01/2018
+3076,3077,['Converse Chuck Taylor All-Star 70s Hi Gore-tex Orange'],80,Converse,release: 11/01/2018
+3077,3078,['Air Force 1 Sage High White (W)'],85,Air,release: 11/01/2018
+3078,3079,['Air Max 270 Bowfin Black Atomic Violet Amarillo'],85,Air,release: 11/01/2018
+3079,3080,['Air Force 1 Utility Volt'],88,Air,release: 11/01/2018
+3080,3081,['Jordan 1 Rebel XX Utility Pack (W)'],88,Jordan,release: 11/01/2018
+3081,3082,['Nike Rise React Flyknit Thunder Grey Sapphire'],90,Nike,release: 11/01/2018
+3082,3083,['Jordan Legacy 312 Knicks'],62,Jordan,release: 11/01/2018
+3083,3084,['Air Force 1 Low Sport NBA Black Blue Gale Laser Fuchsia'],70,Air,release: 11/01/2018
+3084,3085,['Air VaporMax Run Utility Burgundy Crush (W)'],89,Air,release: 11/01/2018
+3085,3086,['Jordan 1 Rebel XX Concord (W)'],99,Jordan,release: 11/01/2018
+3086,3087,['Jordan Legacy 312 Rookie of the Year (GS)'],145,Jordan,release: 11/01/2018
+3087,3088,['adidas EQT Support Mid Adv Camo Purple'],55,adidas,release: 11/01/2018
+3088,3089,['Air Force 270 Utility Volt'],59,Air,release: 11/01/2018
+3089,3090,['Air Force 270 Utility Black Sail'],70,Air,release: 11/01/2018
+3090,3091,['Air Force 1 Mid CMFT Victor Cruz'],70,Air,release: 11/01/2018
+3091,3092,['Jordan Legacy 312 Pistons'],77,Jordan,release: 11/01/2018
+3092,3093,['Air Force 270 Utility Sequoia'],80,Air,release: 11/01/2018
+3093,3094,['Air Zoom Pegasus 35 Vast Grey Metallic Platinum (W)'],85,Air,release: 11/01/2018
+3094,3095,['adidas Crazy BYW X Collegiate Navy Clear Orange'],85,adidas,release: 11/01/2018
+3095,3096,['Converse Chuck Taylor All-Star 70s Hi Gore-tex Black'],100,Converse,release: 11/01/2018
+3096,3097,['Jordan 1 Retro High Utility Pack (W)'],110,Jordan,release: 11/01/2018
+3097,3098,['Reebok Answer DMX White Red (2018)'],139,Reebok,release: 11/01/2018
+3098,3099,['Air VaporMax Run Utility Medium Olive'],153,Air,release: 11/01/2018
+3099,3100,['Air Force 1 Mid Utility University Red'],172,Air,release: 11/01/2018
+3100,3101,['Air Force 1 Utility Volt 2'],175,Air,release: 11/01/2018
+3101,3102,['Air Force 1 Mid Utility White Black'],178,Air,release: 11/01/2018
+3102,3103,['adidas Continental 80 Mist Sun'],35,adidas,release: 11/01/2018
+3103,3104,['Jordan Legacy 312 Rookie of the Year (TD)'],35,Jordan,release: 11/01/2018
+3104,3105,['Air Vapormax Flightknit 2 Dark Stucco'],125,Air,release: 11/14/2018
+3105,3106,['Nike SF Air Force 1 High Muslin'],140,Nike,release: 11/14/2018
+3106,3107,['adidas AW Skate Super Alexander Wang White Black'],180,adidas,release: 11/14/2018
+3107,3108,['Reebok Answer DMX Unik'],200,Reebok,release: 11/14/2018
+3108,3109,['adidas AW Turnout Bball Alexander Wang Cloud White Core Black'],240,adidas,release: 11/14/2018
+3109,3110,['Nike Metcon Flyknit 3 Adonis Creed'],250,Nike,release: 11/14/2018
+3110,3111,['adidas Copa Mid Turf GTX Core Black Legend Ink'],130,adidas,release: 11/13/2018
+3111,3112,['adidas Copa Mid Firm Ground GTX Cleat Core Black Legend Ink'],183,adidas,release: 11/13/2018
+3112,3113,['adidas Copa 19+ Firm Ground Cleat Off White Solar Red'],260,adidas,release: 11/13/2018
+3113,3114,['Under Armour Project Rock 1 Black Green'],105,Under,release: 11/11/2018
+3114,3115,['Li-Ning Way of Wade 7 Announcement'],170,Li-Ning,release: 11/11/2018
+3115,3116,"['Timberland 6"" Shearling Champion Wheat']",145,Timberland,release: 11/10/2018
+3116,3117,['adidas Ultra Boost Kinfolk'],104,adidas,release: 11/10/2018
+3117,3118,"['Timberland 6"" Shearling Champion Wheat (GS)']",115,Timberland,release: 11/10/2018
+3118,3119,['Nike SB Dunk Low Diamond Supply Co White Diamond'],210,Nike,release: 11/10/2018
+3119,3120,"['Timberland 6"" Shearling Champion Black (GS)']",119,Timberland,release: 11/10/2018
+3120,3121,['adidas Alphaedge 4D White (W)'],135,adidas,release: 11/10/2018
+3121,3122,"['Timberland 6"" Shearling Champion Black']",340,Timberland,release: 11/10/2018
+3122,3123,['adidas Speedfactory AM4 Aaron Kai Black Blue'],70,adidas,release: 12/08/2018
+3123,3124,['Converse One Star Platform Low MadeMe Pink (W)'],89,Converse,release: 12/08/2018
+3124,3125,['adidas Speedfactory AM4 AM4BROOKLYNBALLET'],90,adidas,release: 12/08/2018
+3125,3126,['adidas Speedfactory AM4 Aaron Kai Black'],94,adidas,release: 12/08/2018
+3126,3127,['adidas Samba Rose TfL Elizabeth Line (W)'],110,adidas,release: 12/08/2018
+3127,3128,['Under Armour Hovr Phantom White Steel'],119,Under,release: 12/08/2018
+3128,3129,['Nike SB Zoom Blazer Low Stussy'],130,Nike,release: 12/08/2018
+3129,3130,['adidas Speedfactory AM4 Aaron Kai Red Blue'],400,adidas,release: 12/08/2018
+3130,3131,['adidas Ultra Boost 2.0 Antique Brass'],110,adidas,release: 12/07/2018
+3131,3132,['adidas Ultra Boost Black Grey (W)'],97,adidas,release: 12/07/2018
+3132,3133,['adidas Continental 80 Black Gum'],50,adidas,release: 12/07/2018
+3133,3134,['Jordan 1 Jester XX Black Sail (W)'],50,Jordan,release: 12/07/2018
+3134,3135,['adidas Temper Run Raw Indigo'],78,adidas,release: 12/07/2018
+3135,3136,['adidas Crazy BYW Eric Emanuel'],89,adidas,release: 12/07/2018
+3136,3137,['Converse Chuck Taylor All-Star 70s Hi Shoe Palace Boom Box Black'],90,Converse,release: 12/07/2018
+3137,3138,"['Timberland GTX 6"" Super Boot Kith x Tommy Hilfiger']",250,Timberland,release: 12/31/2018
+3138,3139,['Converse Chuck Taylor All-Star 70s Hi Shoe Palace Boom Box White'],95,Converse,release: 12/07/2018
+3139,3140,['adidas Rivalry Hi Eric Emanuel'],150,adidas,release: 12/07/2018
+3140,3141,['Timberland Shearling 40 Below Super Boot Kith x Tommy Hilfiger'],375,Timberland,release: 12/31/2018
+3141,3142,['Jordan 3 Retro Explorer XX Black Sail (W)'],78,Jordan,release: 12/30/2018
+3142,3143,['adidas Ultra Boost 2.0 Clear Grey (W)'],194,adidas,release: 12/07/2018
+3143,3144,['Nike SB Dunk Low Concepts Green Lobster (Special Box)'],495,Nike,release: 12/14/2018
+3144,3145,['adidas Yeezy 700 V2 Static'],515,adidas,release: 12/29/2018
+3145,3146,['Nike SB Dunk Low Concepts Purple Lobster (Special Box)'],614,Nike,release: 12/14/2018
+3146,3147,['Nike Zoom Rookie Glow-In-The-Dark (2018)'],98,Nike,release: 12/14/2018
+3147,3148,['adidas Trimm Star size? x Colnago'],181,adidas,release: 12/29/2018
+3148,3149,['Nike SB Dunk Low Concepts Purple Lobster'],498,Nike,release: 12/14/2018
+3149,3150,['VaporMax Flyknit 2 Fuchsia'],107,VaporMax,release: 12/28/2018
+3150,3151,['adidas Yeezy Boost 350 V2 Static (Non-Reflective)'],330,adidas,release: 12/27/2018
+3151,3152,['Jordan 1 Retro High Sports Illustrated (A Star Is Born)'],105,Jordan,release: 12/27/2018
+3152,3153,['Jordan 1 Retro High Sports Illustrated (A Star Is Born) (GS)'],131,Jordan,release: 12/27/2018
+3153,3154,['Nike SB Dunk Low Doernbecher (2018)'],219,Nike,release: 12/14/2018
+3154,3155,['adidas Yeezy Boost 350 V2 Static Reflective'],365,adidas,release: 12/26/2018
+3155,3156,['Puma Suede Classic Swarovski'],145,Puma,release: 12/13/2018
+3156,3157,['Air Huarache Run Zip Black White'],145,Air,release: 12/13/2018
+3157,3158,['adidas Terrex Skychaser Kith Tan'],130,adidas,release: 12/26/2018
+3158,3159,['Nike Classic Cortez Blazing Sun'],60,Nike,release: 12/13/2018
+3159,3160,['Air Huarache Run Zip Bright Citron'],92,Air,release: 12/13/2018
+3160,3161,['adidas Terrex Free Hiker Kith Navy'],139,adidas,release: 12/26/2018
+3161,3162,['Under Armour Curry 6 Christmas in the Town'],250,Under,release: 12/26/2018
+3162,3163,['adidas Y-3 Ratio Racer Core Black'],179,adidas,release: 12/13/2018
+3163,3164,['Jordan 13 Retro Low Clot Sepia Stone'],347,Jordan,release: 12/13/2018
+3164,3165,['adidas Terrex Free Hiker Kith Black'],387,adidas,release: 12/26/2018
+3165,3166,['Nike Epic React Flyknit Multi-Color'],117,Nike,release: 12/12/2018
+3166,3167,['Jordan 1 Retro High Rox Brown (W)'],198,Jordan,release: 12/12/2018
+3167,3168,['Jordan 12 Retro Winter Black (PS)'],90,Jordan,release: 12/15/2018
+3168,3169,['Dr. Martens 1490 Bape Khaki Smooth Emboss'],200,Dr.,release: 12/12/2018
+3169,3170,['Dr. Martens 1490 Bape Black Smooth Emboss'],250,Dr.,release: 12/12/2018
+3170,3171,['Reebok Daytona DMX Skull Grey Shark Red'],45,Reebok,release: 12/12/2018
+3171,3172,['Reebok Daytona DMX Vainl Archive Green Grey'],65,Reebok,release: 12/25/2018
+3172,3173,['Air Terra Humara 18 Olive Grey Deep Orange'],98,Air,release: 12/15/2018
+3173,3174,['Converse Chuck Taylor All-Star 70s Ox Undefeated Varsity Jacket'],112,Converse,release: 12/15/2018
+3174,3175,['Air Force 1 Jester XX Rox Brown (W)'],79,Air,release: 12/12/2018
+3175,3176,['adidas Ultra Boost 2019 Cloud White Active Red'],130,adidas,release: 12/15/2018
+3176,3177,['Dr. Martens 1461 Bape Khaki Smooth Emboss'],180,Dr.,release: 12/12/2018
+3177,3178,['adidas Terrex Fast GTX-Surround White Mountaineering'],135,adidas,release: 12/15/2018
+3178,3179,['Reebok Classic Nylon 24 Kilates F.C.V.K. II Green'],166,Reebok,release: 12/15/2018
+3179,3180,['Dr. Martens 1461 Bape Black Smooth Emboss'],250,Dr.,release: 12/12/2018
+3180,3181,['adidas Ultra Boost 2019 Cloud White Active Red (W)'],180,adidas,release: 12/15/2018
+3181,3182,['Reebok Classic Nylon 24 Kilates F.C.V.K. II Red'],220,Reebok,release: 12/15/2018
+3182,3183,['UGG Classic Short Boot mastermind World Chestnut'],320,UGG,release: 12/12/2018
+3183,3184,['adidas Harden Vol. 3 Core Black Active Blue'],90,adidas,release: 12/19/2018
+3184,3185,['Nike Phantom Vision Elite Dynamic Fit FG EA Sports'],345,Nike,release: 12/12/2018
+3185,3186,['Nike Phantom Vision Elite Dynamic Fit MG EA Sports (GS)'],390,Nike,release: 12/12/2018
+3186,3187,['Air Force 1 Low Utility Carhartt WIP Camo'],79,Air,release: 12/06/2018
+3187,3188,['Nike Epic React Flyknit South Beach'],85,Nike,release: 12/06/2018
+3188,3189,['Crocs Dimitri Clog Post Malone Barbed Wire'],300,Crocs,release: 12/11/2018
+3189,3190,['adidas Ultra Boost 4.0 Core Black True Green'],150,adidas,release: 12/06/2018
+3190,3191,['Jordan 1 Retro High Spider-Man Origin Story'],299,Jordan,release: 12/14/2018
+3191,3192,['Air Foamposite One Obsidian Glitter (W)'],122,Air,release: 12/14/2018
+3192,3193,['Jordan 1 Retro High Spider-Man Origin Story (TD)'],110,Jordan,release: 12/14/2018
+3193,3194,['adidas Ultra Boost 4.0 Clear Orange (W)'],75,adidas,release: 12/10/2018
+3194,3195,['Nike SB Dunk Low Light Cream Thunderstorm'],180,Nike,release: 12/10/2018
+3195,3196,['Jordan Westbrook 0.3 So Cal'],55,Jordan,release: 12/06/2018
+3196,3197,"[""Air Force 1 Low '07 Camper Green Gum""]",60,Air,release: 12/06/2018
+3197,3198,['Jordan 1 Retro High Spider-Man Origin Story (GS)'],260,Jordan,release: 12/14/2018
+3198,3199,['Air VaporMax Flyknit 2 Black Metallic Silver Multi-Color'],145,Air,release: 12/10/2018
+3199,3200,"[""Air Force 1 Low '07 Pewter Gum""]",75,Air,release: 12/06/2018
+3200,3201,['Reebok Classic Leather Opening Ceremony Floral Satin Black'],59,Reebok,release: 12/17/2018
+3201,3202,['adidas Ultra Boost Uncaged White Multi'],115,adidas,release: 12/17/2018
+3202,3203,['Jordan 1 Retro High Spider-Man Origin Story (PS)'],174,Jordan,release: 12/14/2018
+3203,3204,['Nike SB Dunk High Camo'],109,Nike,release: 12/10/2018
+3204,3205,['adidas Continental 80 TfL Elizabeth Line Grey Aqua Blue'],72,adidas,release: 12/10/2018
+3205,3206,['adidas Continental 80 TfL Elizabeth Line White Black Grey'],100,adidas,release: 12/10/2018
+3206,3207,['Nike Vandal High Supreme Carhartt WIP Black'],150,Nike,release: 12/06/2018
+3207,3208,['Converse Chuck Taylor All-Star Ox Hello Kitty Fiery Red (W)'],35,Converse,release: 12/06/2018
+3208,3209,['Reebok Classic Leather Opening Ceremony Floral Satin Red'],125,Reebok,release: 12/17/2018
+3209,3210,['Jordan 12 Retro Winter Black'],170,Jordan,release: 12/15/2018
+3210,3211,['adidas Continental 80 TfL Elizabeth Line Beige Maroon Grey'],117,adidas,release: 12/10/2018
+3211,3212,['adidas Continental 80 TfL Elizabeth Line Black Scarlet Grey'],162,adidas,release: 12/10/2018
+3212,3213,['Diet Starts Monday x Rider Rnext'],180,Diet,release: 12/10/2018
+3213,3214,['Converse One Star Ox Hello Kitty Black (W)'],40,Converse,release: 12/06/2018
+3214,3215,"[""Air Force 1 Low '07 Monarch Gum""]",59,Air,release: 12/06/2018
+3215,3216,['Air Fear Of God 1 Black'],670,Air,release: 12/15/2018
+3216,3217,['Air Force 1 Low Utility Spruce Fog Black'],64,Air,release: 12/15/2018
+3217,3218,['adidas EQT Support Mid ADV Primeknit Dragon Ball Z Super Shenron'],96,adidas,release: 12/22/2018
+3218,3219,['Reebok Genetically Modified Sneaker Vetements Grey'],700,Reebok,release: 12/09/2018
+3219,3220,['Converse One Star Ox Hello Kitty Fiery Red (W)'],60,Converse,release: 12/06/2018
+3220,3221,['Air Terra Humara 18 Thunder Blue Team Red'],80,Air,release: 12/15/2018
+3221,3222,['Jordan 1 Retro High Aleali May Court Lux (W)'],212,Jordan,release: 12/22/2018
+3222,3223,['adidas EQT Support Mid ADV Primeknit Dragon Ball Z Shenron'],133,adidas,release: 12/22/2018
+3223,3224,['Converse Chuck Taylor All-Star Hi Hello Kitty Black (W)'],70,Converse,release: 12/06/2018
+3224,3225,['Converse Chuck Taylor All-Star 70s Hi Hello Kitty Black (W)'],75,Converse,release: 12/06/2018
+3225,3226,['Nike Metcon Flyknit 3 Black Matte Silver'],90,Nike,release: 12/05/2018
+3226,3227,['Nike Metcon Flyknit 3 Black Matte Silver (W)'],138,Nike,release: 12/05/2018
+3227,3228,['Jordan 12 Retro Winter Black (GS)'],144,Jordan,release: 12/15/2018
+3228,3229,['Air Fear Of God 1 SA Black'],400,Air,release: 12/15/2018
+3229,3230,['Air VaporMax Flyknit 2 Black Multi-Color (W)'],133,Air,release: 12/22/2018
+3230,3231,['Air Trainer Huarache Black Volt University Red'],62,Air,release: 12/22/2018
+3231,3232,['Nike SB Zoom Blazer Mid Stussy'],187,Nike,release: 12/08/2018
+3232,3233,['Puma Clyde Court Disrupt South Beach'],84,Puma,release: 12/08/2018
+3233,3234,['Converse Chuck Taylor All-Star Hi Hello Kitty Black (TD)'],85,Converse,release: 12/06/2018
+3234,3235,['Sperry Jolly Roger A/O Noah'],100,Sperry,release: 12/06/2018
+3235,3236,['adidas Ultra Boost 4.0 Cloud White Active Red'],114,adidas,release: 12/04/2018
+3236,3237,['adidas Ultra Boost 4.0 Chalk White Active Red (GS)'],69,adidas,release: 12/04/2018
+3237,3238,['adidas Ultra Boost 4.0 Chalk White Active Red (W)'],85,adidas,release: 12/04/2018
+3238,3239,['Jordan 12 Retro Winter Black (TD)'],65,Jordan,release: 12/15/2018
+3239,3240,['Air Force 1 High Atlanta Away (GS)'],74,Air,release: 12/22/2018
+3240,3241,['Air VaporMax Flyknit 2 Cheetah (W)'],240,Air,release: 12/01/2018
+3241,3242,['Air Foamposite One Iridescent Purple (I)'],50,Air,release: 12/01/2018
+3242,3243,['adidas ZX4000 OG Grey One Bright Cyan'],89,adidas,release: 12/08/2018
+3243,3244,['adidas Ultra Boost Mid Light Granite Silver Metallic'],118,adidas,release: 12/06/2018
+3244,3245,"[""Air Force 1 Low '07 Black Gum""]",130,Air,release: 12/06/2018
+3245,3246,['Air Zoom Pegasus 35 Floral'],100,Air,release: 12/04/2018
+3246,3247,['Nike Tech Trainer Russell Wilson'],145,Nike,release: 12/04/2018
+3247,3248,['Nike Mercurial Vapor 12 Elite FG Golden Touch'],300,Nike,release: 12/04/2018
+3248,3249,['Air Force 1 High Atlanta Away'],175,Air,release: 12/22/2018
+3249,3250,['Jordan 13 Retro Low Clot Black Red'],243,Jordan,release: 12/22/2018
+3250,3251,['adidas Pureboost Go Semi Solar Pink (GS)'],50,adidas,release: 12/01/2018
+3251,3252,['adidas Marquee Boost Gold Black Red'],50,adidas,release: 12/01/2018
+3252,3253,['Vans Gilbert Crockett 2 Independent'],55,Vans,release: 12/01/2018
+3253,3254,['adidas Speedfactory AM4 AM4KWASI'],200,adidas,release: 12/08/2018
+3254,3255,['Converse One Star Platform Low MadeMe Brown (W)'],60,Converse,release: 12/08/2018
+3255,3256,['Nike Mercurial Superfly 6 Elite FG Golden Touch'],340,Nike,release: 12/04/2018
+3256,3257,['Nike React Element 55 Triple Black'],70,Nike,release: 12/03/2018
+3257,3258,['Nike Rise React Flyknit Diffused Taupe (W)'],100,Nike,release: 12/01/2018
+3258,3259,['Air Force 1 Rebel XX Gym Red (W)'],59,Air,release: 12/01/2018
+3259,3260,['Air Force 1 Rebel XX Praline (W)'],59,Air,release: 12/01/2018
+3260,3261,['adidas Ultra Boost 4.0 Triple Black Nubuck Cage'],162,adidas,release: 12/03/2018
+3261,3262,['adidas Ultra Boost 4.0 Miami Hurricanes'],84,adidas,release: 12/02/2018
+3262,3263,['Nike React Element 55 Medium Olive'],100,Nike,release: 12/01/2018
+3263,3264,['adidas Tresc Run Asterisk Collective'],120,adidas,release: 12/20/2018
+3264,3265,['adidas Speedfactory AM4 AM4SADELLE Blue'],90,adidas,release: 12/20/2018
+3265,3266,['Nike SB Zoom Bruin NBA Pink'],60,Nike,release: 12/01/2018
+3266,3267,['Air Huarache City Anthracite Solar Red (GS)'],60,Air,release: 12/01/2018
+3267,3268,['adidas Ultra Boost 4 Power Red Core Black'],75,adidas,release: 12/02/2018
+3268,3269,['adidas Ultra Boost 4 Grey'],86,adidas,release: 12/02/2018
+3269,3270,['adidas Ultra Boost 4.0 Cloud White Maroon'],85,adidas,release: 12/02/2018
+3270,3271,['adidas Marquee Boost Low Footwear White'],125,adidas,release: 12/01/2018
+3271,3272,['Air Force 1 High Utility Wheat Gold (W)'],125,Air,release: 12/01/2018
+3272,3273,['Nike SB Zoom Blazer Mid Velvet Brown'],100,Nike,release: 12/20/2018
+3273,3274,['Nike Epic React Flyknit Mink Brown'],105,Nike,release: 12/20/2018
+3274,3275,['adidas Marquee Boost Kristaps Porzingis'],60,adidas,release: 12/01/2018
+3275,3276,['adidas Pro Vision Cloud White Core Black'],60,adidas,release: 12/01/2018
+3276,3277,['adidas T-Mac Millennium Collegiate Royal'],95,adidas,release: 12/02/2018
+3277,3278,['adidas Marquee Boost Raw White Cloud White'],75,adidas,release: 12/02/2018
+3278,3279,['adidas N3xt L3v3l Core Black Cloud White'],140,adidas,release: 12/01/2018
+3279,3280,['Air VaporMax Plus Light Silver Mica Green (W)'],150,Air,release: 12/01/2018
+3280,3281,['Puma Clyde Court Disrupt Peace On Earth'],199,Puma,release: 12/20/2018
+3281,3282,['Air Force 1 Low Retro DSM White'],215,Air,release: 12/20/2018
+3282,3283,['adidas Yeezy 500 Salt'],235,adidas,release: 11/30/2018
+3283,3284,['adidas Ultra Boost 4.0 Non Dye Cloud White'],94,adidas,release: 11/30/2018
+3284,3285,['adidas Harden Vol. 3 Core Black Scarlet'],63,adidas,release: 12/01/2018
+3285,3286,['adidas T-Mac Millennium Collegiate Red'],130,adidas,release: 12/02/2018
+3286,3287,['Asics Gel-Lyte III Limited Edt x SBTG Monsoon Patrol'],150,Asics,release: 12/01/2018
+3287,3288,['Air VaporMax Run Utility Black'],228,Air,release: 12/01/2018
+3288,3289,['adidas Speedfactory AM4 AM4AARONKAI Red'],225,adidas,release: 12/20/2018
+3289,3290,['Nike Blazer High Timbuck2'],300,Nike,release: 12/20/2018
+3290,3291,['Jordan 1 Retro High Noise Cancelling Pack Nigel Sylvester'],108,Jordan,release: 11/30/2018
+3291,3292,['Air Force 1 Foamposite Cup University Red'],80,Air,release: 11/30/2018
+3292,3293,['adidas Ultra Boost 4.0 Legend Marine Hi Res Yellow'],104,adidas,release: 11/30/2018
+3293,3294,['adidas Marquee Boost Low Core Black Cloud White'],75,adidas,release: 12/01/2018
+3294,3295,['Jordan Legacy 312 Black Gold Patent (GS)'],79,Jordan,release: 12/01/2018
+3295,3296,['Off-White Vulcanized Hi Top White Fuchsia'],329,Off-White,release: 12/01/2018
+3296,3297,['Asics Gel-Yeti Tokyo Hi G-TX Nonnative'],600,Asics,release: 12/01/2018
+3297,3298,['Air Foamposite One Iridescent Purple (TD)'],84,Air,release: 12/01/2018
+3298,3299,['adidas Stan Smith Forever'],85,adidas,release: 12/01/2018
+3299,3300,['Balenciaga Triple S Orange Grey Black (W)'],608,Balenciaga,release: 12/01/2018
+3300,3301,['Nike Zoom Vomero 5 A Cold Wall Sail'],195,Nike,release: 11/29/2018
+3301,3302,['Nike Zoom Vomero 5 A Cold Wall Black'],158,Nike,release: 11/29/2018
+3302,3303,['Air Foamposite One Iridescent Purple (PS)'],90,Air,release: 12/01/2018
+3303,3304,['Nike Huarache Edge Sneaker of the Gods'],60,Nike,release: 11/29/2018
+3304,3305,['Nike Huarache Edge Hyper Adapt'],110,Nike,release: 11/29/2018
+3305,3306,['Air Max 270 Bowfin maharishi Black'],146,Air,release: 11/29/2018
+3306,3307,['Air Force 1 Sage High Lux Phantom (W)'],90,Air,release: 12/01/2018
+3307,3308,['Air Foamposite One Iridescent Purple (GS)'],99,Air,release: 12/01/2018
+3308,3309,['Air Force 1 High maharishi Red'],194,Air,release: 11/29/2018
+3309,3310,['Nike React Element 55 size?'],195,Nike,release: 11/29/2018
+3310,3311,['Air Force 1 High maharishi Navy'],230,Air,release: 11/29/2018
+3311,3312,['Balenciaga Triple S Clear Sole Grey'],564,Balenciaga,release: 11/25/2018
+3312,3313,['Balenciaga Triple S Clear Sole Black'],620,Balenciaga,release: 11/25/2018
+3313,3314,['Balenciaga Triple S Clear Sole White'],715,Balenciaga,release: 11/25/2018
+3314,3315,['Air Force 1 Flyleather Black'],68,Air,release: 11/23/2018
+3315,3316,"[""Air Force 1 '07 XX Oil Grey (W)""]",89,Air,release: 11/23/2018
+3316,3317,['Air Force 1 Winter Burgundy Crush'],90,Air,release: 11/23/2018
+3317,3318,['Air Max 270 Bowfin maharishi Woodland'],275,Air,release: 11/29/2018
+3318,3319,['Air Force 1 Low Utility maharishi White'],300,Air,release: 11/29/2018
+3319,3320,['adidas Ultra Tech Dragon Ball Z Vegeta'],86,adidas,release: 11/24/2018
+3320,3321,['Clarks Wallabees Wu-Tang 36 Chambers 25th Anniversary Yellow'],142,Clarks,release: 11/23/2018
+3321,3322,['Air VaporMax Utility Moon Particle Black'],148,Air,release: 11/27/2018
+3322,3323,['LeBron Zoom Soldier 12 Air Raid'],60,LeBron,release: 11/27/2018
+3323,3324,['Nike Blazer Royal Triple White'],80,Nike,release: 11/24/2018
+3324,3325,['Air VaporMax Plus Overbranding Black'],208,Air,release: 11/21/2018
+3325,3326,['Nike React Runner Mid WR ISPA White Light Crimson'],72,Nike,release: 11/21/2018
+3326,3327,['Mizuno Wave Rider White Blue Yellow'],155,Mizuno,release: 11/23/2018
+3327,3328,['Asics Gel-Lyte III Atmos World Map'],172,Asics,release: 11/23/2018
+3328,3329,['Reebok Answer 4.5 Black Coal'],185,Reebok,release: 11/27/2018
+3329,3330,['Air VaporMax Moc 2 Moon Particle (W)'],131,Air,release: 11/26/2018
+3330,3331,['Air VaporMax 2019 Club Gold Ember Glow'],92,Air,release: 11/26/2018
+3331,3332,['adidas Ultra Boost OG (2018)'],127,adidas,release: 12/01/2018
+3332,3333,['FTP Reflective Logo Slides Black'],150,FTP,release: 11/24/2018
+3333,3334,['Nike React Runner Mid WR ISPA Black'],70,Nike,release: 11/21/2018
+3334,3335,['SF Air Force 1 Mid Premium Praline'],176,SF,release: 11/23/2018
+3335,3336,['Nike M2K Tekno Mesh Racer Blue (W)'],180,Nike,release: 11/23/2018
+3336,3337,['Converse One Star Ox Tyler The Creator x Foot Locker Oyvind Lauvdahl'],120,Converse,release: 11/26/2018
+3337,3338,['Converse Chuck Taylor 70s Hi Tyler The Creator x Foot Locker Wyatt Navarro'],150,Converse,release: 11/26/2018
+3338,3339,['adidas Marquee Boost White Grey'],50,adidas,release: 12/01/2018
+3339,3340,['Li-Ning Way of Wade 7 Overtown'],158,Li-Ning,release: 11/24/2018
+3340,3341,['Air Force 1 High Magic Stick VIP Black'],178,Air,release: 11/24/2018
+3341,3342,['Puma Clyde Court Disrupt Black Electric Purple'],87,Puma,release: 11/21/2018
+3342,3343,['Air VaporMax Plus Overbranding Bright Crimson'],135,Air,release: 11/21/2018
+3343,3344,['adidas Futurecraft 4D Onix Aero Green'],555,adidas,release: 11/21/2018
+3344,3345,['Timberland World Hiker Front Country Boot Supreme Anthracite'],198,Timberland,release: 11/23/2018
+3345,3346,['Timberland World Hiker Front Country Boot Supreme Orange'],200,Timberland,release: 11/23/2018
+3346,3347,['Converse Chuck Taylor 70s Hi Tyler The Creator x Foot Locker Wyatt & Oyvind'],160,Converse,release: 11/26/2018
+3347,3348,['adidas Marquee Boost Low Yellow Purple Black'],80,adidas,release: 12/01/2018
+3348,3349,['Nike Blazer Mid Rebel Off White (W)'],100,Nike,release: 12/01/2018
+3349,3350,['adidas Yeezy Boost 350 V2 Sesame'],260,adidas,release: 11/23/2018
+3350,3351,['Nike React Element 55 Metallic Gold'],59,Nike,release: 11/21/2018
+3351,3352,['Nike Classic Cortez Overbranding Red Orbit'],65,Nike,release: 11/21/2018
+3352,3353,['Air Force 1 Mid Utility Obsidian'],169,Air,release: 12/01/2018
+3353,3354,['adidas Marquee Boost White Black'],50,adidas,release: 12/01/2018
+3354,3355,['Nike SB Air Force 2 Low Foamposite'],74,Nike,release: 11/23/2018
+3355,3356,['Nike React Runner Mid WR ISPA Blue Void Team Orange'],69,Nike,release: 11/21/2018
+3356,3357,['New Balance 997S Kith nonnative'],225,New,release: 11/21/2018
+3357,3358,['New Balance 997S Fusion Kith x United Arrows and Sons Grey Pink'],300,New,release: 11/21/2018
+3358,3359,['adidas Continental 80 Off White Gum'],50,adidas,release: 11/22/2018
+3359,3360,['adidas Marquee Boost Black Purple Pink'],51,adidas,release: 12/01/2018
+3360,3361,['adidas Marquee Boost John Wall'],59,adidas,release: 12/01/2018
+3361,3362,['Nike SB Dunk High Bred'],115,Nike,release: 11/23/2018
+3362,3363,['Air VaporMax Flyknit 2 Dark Grey Chrome (W)'],123,Air,release: 11/23/2018
+3363,3364,['Clarks Wallabees Wu-Tang 36 Chambers 25th Anniversary Black'],103,Clarks,release: 11/23/2018
+3364,3365,['Jordan Westbrook 0.3 Dazzle'],74,Jordan,release: 11/21/2018
+3365,3366,['Air Zoom Spiridon 16 Overbranding Total Orange'],75,Air,release: 11/21/2018
+3366,3367,['Diadora B. Elite Rick and Morty'],84,Diadora,release: 11/19/2018
+3367,3368,['adidas EQT Support Mid Adv Alphatype'],55,adidas,release: 11/22/2018
+3368,3369,['adidas EQT Support 91/18 Alphatype'],70,adidas,release: 11/22/2018
+3369,3370,['Jordan Black Cat Black Concord'],70,Jordan,release: 12/01/2018
+3370,3371,['adidas Marquee Boost Low Lakers'],99,adidas,release: 12/01/2018
+3371,3372,['Clarks Wallabees Wu-Tang 36 Chambers 25th Anniversary Maple'],110,Clarks,release: 11/23/2018
+3372,3373,['SF Air Force 1 Premium Dark Russet'],115,SF,release: 11/23/2018
+3373,3374,"[""Air Force 1 '07 XX White (W)""]",166,Air,release: 11/23/2018
+3374,3375,['New Balance 997S Kith United Arrows and Sons'],180,New,release: 11/21/2018
+3375,3376,['adidas Micropacer x R1 Never Made Pack Triple White'],126,adidas,release: 11/19/2018
+3376,3377,['adidas Crazy BYW X Alphatype'],120,adidas,release: 11/22/2018
+3377,3378,['Air Presto Mid Utility Cargo Khaki'],100,Air,release: 12/01/2018
+3378,3379,['Air Max 270 Futura Black White Black'],100,Air,release: 12/01/2018
+3379,3380,['Timberland World Hiker Front Country Boot Supreme Black'],210,Timberland,release: 11/23/2018
+3380,3381,['Nike M2K Tekno Mesh University Red (W)'],59,Nike,release: 11/23/2018
+3381,3382,['New Balance 997 OG Kith United Arrows and Sons'],275,New,release: 11/21/2018
+3382,3383,['New Balance 997 OG Kith nonnative'],300,New,release: 11/21/2018
+3383,3384,['Air VaporMax Run Utility White Black (W)'],220,Air,release: 11/18/2018
+3384,3385,['Jordan 1 Retro High Rookie of the Year'],200,Jordan,release: 11/17/2018
+3385,3386,['Air Foamposite Pro Black Metallic Gold'],210,Air,release: 11/17/2018
+3386,3387,['Air Force 1 Utility Odell Beckham Jr'],118,Air,release: 11/19/2018
+3387,3388,['adidas Marathon x 5923 Never Made Pack Triple White'],50,adidas,release: 11/19/2018
+3388,3389,['adidas Rising Star x R1 Never Made Pack Triple White'],59,adidas,release: 11/19/2018
+3389,3390,"['Timberland 640 Below 6"" Just Don']",750,Timberland,release: 11/17/2018
+3390,3391,['adidas Boston Super x R1 Never Made Pack Triple White'],59,adidas,release: 11/19/2018
+3391,3392,['adidas Country x Kamanda Never Made Pack Triple White'],59,adidas,release: 11/19/2018
+3392,3393,['adidas Crazy BYW Bristol Studio SharpShooter'],65,adidas,release: 11/17/2018
+3393,3394,['adidas ZX 930 x EQT Never Made Pack Triple White'],73,adidas,release: 11/19/2018
+3394,3395,['Air Foamposite Pro Black Metallic Gold (TD)'],80,Air,release: 11/17/2018
+3395,3396,['adidas Superstar 80s Slam Jam'],99,adidas,release: 11/17/2018
+3396,3397,['Under Armour Curry 5 Chef Curry'],150,Under,release: 11/16/2018
+3397,3398,['Converse Chuck Taylor All-Star 70s Hi Golf Le Fleur Parchment'],150,Converse,release: 11/15/2018
+3398,3399,['Air Foamposite Pro Black Metallic Gold (PS)'],99,Air,release: 11/17/2018
+3399,3400,['Asics Gel-Kayano 5 OG White Black'],119,Asics,release: 11/17/2018
+3400,3401,['Nike ACG Angels Rest Black'],70,Nike,release: 11/15/2018
+3401,3402,['Converse Chuck Taylor All-Star 70s Hi Golf Le Fleur Burlap'],94,Converse,release: 11/15/2018
+3402,3403,['Vans Sk8-Hi Notchback Pro Defcon Camo Black'],450,Vans,release: 11/10/2018
+3403,3404,['adidas Crazy BYW 2 Bristol Studio SharpShooter'],125,adidas,release: 11/17/2018
+3404,3405,['Air Foamposite Pro Black Metallic Gold (GS)'],180,Air,release: 11/17/2018
+3405,3406,['Converse One Star Ox Golf Le Fleur Burlap'],79,Converse,release: 11/15/2018
+3406,3407,['Nike ACG Ruckel Ridge Light British Tan'],100,Nike,release: 11/15/2018
+3407,3408,['Air Max 270 Bowfin Mowabb'],79,Air,release: 11/10/2018
+3408,3409,['Reebok Answer 4.5 White Red Black'],80,Reebok,release: 11/10/2018
+3409,3410,['Under Armour Curry 5 White Confetti'],96,Under,release: 11/16/2018
+3410,3411,['Nike ACG Dog Mountain Black Oil Grey'],81,Nike,release: 11/15/2018
+3411,3412,['Nike Epic React Flyknit Black Gold (W)'],65,Nike,release: 11/15/2018
+3412,3413,['Reebok Answer 4.5 Black Grey Red'],84,Reebok,release: 11/10/2018
+3413,3414,['Nike Vandal High Meant To Fly (W)'],110,Nike,release: 11/10/2018
+3414,3415,['adidas Harden Vol. 3 Supernova'],165,adidas,release: 11/16/2018
+3415,3416,['Air Force Max CB Black Metallic Gold'],75,Air,release: 11/15/2018
+3416,3417,['Nike ACG Angels Rest Parachute Beige'],82,Nike,release: 11/15/2018
+3417,3418,['Mizuno Wave Rider 1 24 Kilates King Kobra'],148,Mizuno,release: 11/10/2018
+3418,3419,['New Balance RC-1 nanamica Gore-tex Tan'],232,New,release: 11/10/2018
+3419,3420,['Air VaporMax Plus Black Metallic Gold Anthracite'],240,Air,release: 11/10/2018
+3420,3421,['Air Vapormax Flightknit 2 Dark Stucco'],125,Air,release: 11/14/2018
+3421,3422,['Nike ACG Okwahn 2 Sequoia Racer Blue Yellow Ochre'],90,Nike,release: 11/15/2018
+3422,3423,['Asics Gel-Lyte III Afew x Beams Orange Koi'],349,Asics,release: 11/10/2018
+3423,3424,['Asics Gel-Lyte III Afew x Beams Orange Koi (Special Box)'],802,Asics,release: 11/10/2018
+3424,3425,['Nike SF Air Force 1 High Muslin'],140,Nike,release: 11/14/2018
+3425,3426,['adidas AW Skate Super Alexander Wang White Black'],180,adidas,release: 11/14/2018
+3426,3427,['Reebok Answer DMX Unik'],200,Reebok,release: 11/14/2018
+3427,3428,['Reebok Iverson Legacy Black White'],110,Reebok,release: 11/15/2018
+3428,3429,['Nike ACG Okwahn 2 Desert'],135,Nike,release: 11/15/2018
+3429,3430,['Off-White Vulc Low Black (Updated Stripes)'],285,Off-White,release: 11/09/2018
+3430,3431,['adidas AW Turnout Bball Alexander Wang Cloud White Core Black'],240,adidas,release: 11/14/2018
+3431,3432,['Nike Metcon Flyknit 3 Adonis Creed'],250,Nike,release: 11/14/2018
+3432,3433,['adidas AW Turnout Trainer Alexander Wang Clear Mint Core Black'],185,adidas,release: 11/14/2018
+3433,3434,['adidas Ultra Boost Undefeated Performance Running Black'],103,adidas,release: 11/09/2018
+3434,3435,['Nike Zoom Rookie Black'],102,Nike,release: 11/09/2018
+3435,3436,['adidas Copa Mid Turf GTX Core Black Legend Ink'],130,adidas,release: 11/13/2018
+3436,3437,['adidas Copa Mid Firm Ground GTX Cleat Core Black Legend Ink'],183,adidas,release: 11/13/2018
+3437,3438,['adidas Copa 19+ Firm Ground Cleat Off White Solar Red'],260,adidas,release: 11/13/2018
+3438,3439,['adidas AW Turnout Bball Alexander Wang Triple Black'],74,adidas,release: 11/14/2018
+3439,3440,['adidas AW Puff Trainer Alexander Wang Core Black Solar Green'],237,adidas,release: 11/14/2018
+3440,3441,['adidas AW Skate Super Alexander Wang Black White'],170,adidas,release: 11/14/2018
+3441,3442,['Clarks Wallabees Extra Butter x The Halal Guys Chili'],105,Clarks,release: 11/09/2018
+3442,3443,['adidas Ultra Boost Undefeated Performance Running Grey'],111,adidas,release: 11/09/2018
+3443,3444,['Air Force 1 High NBA Black Metallic Gold'],78,Air,release: 11/09/2018
+3444,3445,['adidas adiZero Adios 3 Undefeated Performance Running'],84,adidas,release: 11/09/2018
+3445,3446,['adidas adiZero XT Boost Undefeated Performance Running'],84,adidas,release: 11/09/2018
+3446,3447,['adidas Pure Boost RBL Undefeated Performance Running'],85,adidas,release: 11/09/2018
+3447,3448,['Under Armour Project Rock 1 Black Green'],105,Under,release: 11/11/2018
+3448,3449,['Li-Ning Way of Wade 7 Announcement'],170,Li-Ning,release: 11/11/2018
+3449,3450,['Clarks Wallabees Extra Butter x The Halal Guys Cream'],90,Clarks,release: 11/09/2018
+3450,3451,['adidas Pure Boost LTD Undefeated Performance Running'],100,adidas,release: 11/09/2018
+3451,3452,['Asics Gel-Delva 1 Kiko Kostadinov Forest'],180,Asics,release: 11/09/2018
+3452,3453,['Clarks Wallabees Ronnie Fieg Bordeaux'],229,Clarks,release: 11/09/2018
+3453,3454,['Clarks Wallabees Ronnie Fieg Sand'],230,Clarks,release: 11/09/2018
+3454,3455,"['Timberland 6"" Shearling Champion Wheat']",145,Timberland,release: 11/10/2018
+3455,3456,['adidas Ultra Boost Kinfolk'],104,adidas,release: 11/10/2018
+3456,3457,"['Timberland 6"" Shearling Champion Wheat (GS)']",115,Timberland,release: 11/10/2018
+3457,3458,['Clarks Wallabees Ronnie Fieg Forest Green'],245,Clarks,release: 11/09/2018
+3458,3459,['Asics Gel-Delva 1 Kiko Kostadinov Caramel'],272,Asics,release: 11/09/2018
+3459,3460,['Nike SB Dunk Low Diamond Supply Co White Diamond'],210,Nike,release: 11/10/2018
+3460,3461,"['Timberland 6"" Shearling Champion Black (GS)']",119,Timberland,release: 11/10/2018
+3461,3462,['Palace Ralph Lauren Formal Slipper Navy Velvet'],430,Palace,release: 11/09/2018
+3462,3463,['adidas Alphaedge 4D White (W)'],135,adidas,release: 11/10/2018
+3463,3464,"['Timberland 6"" Shearling Champion Black']",340,Timberland,release: 11/10/2018
+3464,3465,['Asics Gel-Delva 1 Kiko Kostadinov Black'],500,Asics,release: 11/09/2018
+3465,3466,['Palace Ralph Lauren Formal Slipper Engineered Equestrian Print'],600,Palace,release: 11/09/2018
+3466,3467,['Nike SB Dunk Low Diamond Supply Co Black Diamond'],194,Nike,release: 11/08/2018
+3467,3468,['Air VaporMax Run Utility Urban Bounce'],161,Air,release: 11/08/2018
+3468,3469,['Nike Odyssey React Shield Wet Hot'],78,Nike,release: 11/08/2018
+3469,3470,['Air Zoom Pegasus 35 Shield Wet Fly'],80,Air,release: 11/08/2018
+3470,3471,['Reebok Sole Fury White Black Lime'],120,Reebok,release: 11/08/2018
+3471,3472,['Jordan Why Not Zer0.1 Chaos Black'],130,Jordan,release: 11/08/2018
+3472,3473,['Air Huarache Gripp Black Team Orange'],150,Air,release: 11/08/2018
+3473,3474,['Jordan Why Not Zer0.1 Chaos White'],160,Jordan,release: 11/08/2018
+3474,3475,['Converse Chuck Taylor All-Star 70s Ox Carhartt WIP Milner'],300,Converse,release: 11/08/2018
+3475,3476,"['Jordan 1 Retro High ""Not for Resale"" Varsity Red']",493,Jordan,release: 11/07/2018
+3476,3477,['adidas NMD R1 STLT Parley Core Black'],94,adidas,release: 11/07/2018
+3477,3478,['Jordan 1 Retro High Strap N7'],110,Jordan,release: 11/07/2018
+3478,3479,['adidas Temper Run Light Brown'],78,adidas,release: 11/07/2018
+3479,3480,['Jordan Why Not Zer0.1 Low N7'],108,Jordan,release: 11/07/2018
+3480,3481,['Jordan 1 Retro High Paris Saint Germain'],126,Jordan,release: 11/06/2018
+3481,3482,['Air Force 1 Low Utility Team Orange'],205,Air,release: 11/05/2018
+3482,3483,['Air Huarache Premium Bordeaux'],80,Air,release: 11/05/2018
+3483,3484,['Air VaporMax Run Utility Desert Ore'],189,Air,release: 11/05/2018
