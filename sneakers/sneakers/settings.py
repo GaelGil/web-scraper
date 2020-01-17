@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for shoes project
+# Scrapy settings for sneakers project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,23 +9,25 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'shoes'
+BOT_NAME = 'sneakers'
 
-SPIDER_MODULES = ['shoes.spiders']
-NEWSPIDER_MODULE = 'shoes.spiders'
+SPIDER_MODULES = ['sneakers.spiders']
+NEWSPIDER_MODULE = 'sneakers.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'shoes (+http://www.yourdomain.com)'
-# USER_AGENT = "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36"
+#USER_AGENT = 'sneakers (+http://www.yourdomain.com)'
 USER_AGENT = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
+
+
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
 # PROXY_POOL_ENABLED = True
 
+
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-CONCURRENT_REQUESTS = 32
+#CONCURRENT_REQUESTS = 32
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
@@ -50,24 +52,27 @@ CONCURRENT_REQUESTS = 32
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'shoes.middlewares.ShoesSpiderMiddleware': 543,
+#    'sneakers.middlewares.SneakersSpiderMiddleware': 543,
 #}
-
-DOWNLOADER_MIDDLEWARES = {
-    'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware': None,
-    'scrapy_user_agents.middlewares.RandomUserAgentMiddleware': 400,
-}
-
-# DOWNLOADER_MIDDLEWARES = {
-    # 'scrapy_proxy_pool.middlewares.ProxyPoolMiddleware': 610,
-    # 'scrapy_proxy_pool.middlewares.BanDetectionMiddleware': 620,
-# }
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'shoes.middlewares.ShoesDownloaderMiddleware': 543,
+#    'sneakers.middlewares.SneakersDownloaderMiddleware': 543,
 #}
+
+
+# DOWNLOADER_MIDDLEWARES = {
+#     # ...
+#     'scrapy_proxy_pool.middlewares.ProxyPoolMiddleware': 610,
+#     'scrapy_proxy_pool.middlewares.BanDetectionMiddleware': 620,
+#     # ...
+# }
+
+DOWNLOADER_MIDDLEWARES = {
+    'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
+    'scrapy_user_agents.middlewares.RandomUserAgentMiddleware': 400,
+}
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
@@ -78,7 +83,7 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'shoes.pipelines.ShoesPipeline': 300,
+   'sneakers.pipelines.SneakersPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
