@@ -1,0 +1,429 @@
+,sneaker,price,brand
+0,['adidas Yeezy Boost 350 V2 Cloud White (Non-Reflective)'],253,adidas
+1,['adidas Yeezy Boost 350 V2 Citrin (Non-Reflective)'],220,adidas
+2,['Jordan 1 Retro High Obsidian UNC'],249,Jordan
+3,['Jordan 1 Retro High First Class Flight'],175,Jordan
+4,['adidas Yeezy Boost 700 V2 Hospital Blue'],276,adidas
+5,['Nike Blazer Mid 77 Vintage White Black'],119,Nike
+6,['adidas Yeezy Boost 350 V2 Cream/Triple White'],279,adidas
+7,['adidas Yeezy Boost 350 V2 Lundmark (Non Reflective)'],264,adidas
+8,['adidas Yeezy Boost 350 V2 Semi Frozen Yellow'],289,adidas
+9,['adidas Yeezy Boost 700 Magnet'],327,adidas
+10,['adidas Yeezy Boost 350 V2 Clay'],319,adidas
+11,['adidas Yeezy Boost 350 V2 Sesame'],277,adidas
+12,['adidas Yeezy Boost 350 V2 Zebra'],410,adidas
+13,['Nike SB Dunk Low Supreme Jewel Swoosh Silver'],228,Nike
+14,['Jordan 1 Retro Low OG SP Travis Scott'],769,Jordan
+15,['adidas Yeezy Boost 700 V2 Geode'],269,adidas
+16,['adidas Yeezy Boost 350 V2 Static (Non-Reflective)'],350,adidas
+17,['adidas Yeezy 500 Bone White'],233,adidas
+18,['adidas Yeezy Boost 700 Utility Black'],305,adidas
+19,['Jordan 1 Retro High Rookie of the Year'],304,Jordan
+20,['Jordan 1 Retro High Black Crimson Tint'],184,Jordan
+21,['Nike SB Dunk Low Supreme Jewel Swoosh Red'],271,Nike
+22,['Jordan 1 Retro High Turbo Green'],260,Jordan
+23,['adidas Yeezy 500 Salt'],241,adidas
+24,['adidas Yeezy 500 Utility Black'],355,adidas
+25,['adidas Yeezy Boost 700 V2 Vanta'],398,adidas
+26,['adidas Yeezy Powerphase Calabasas Core White'],450,adidas
+27,['adidas Ultra Boost Mid Ronnie Fieg'],249,adidas
+28,['adidas Ultra Boost 1.0 SNS X Social Status'],227,adidas
+55,['Jordan 1 Retro High Gatorade Orange Peel'],144,Jordan
+56,['Nike Classic Cortez Stranger Things Sail Upside Down Pack'],101,Nike
+57,['Jordan 1 Retro High Track Red'],442,Jordan
+58,['Jordan 1 Retro High Gold Top 3'],589,Jordan
+59,['adidas Ultra Boost Lux Sneakersnstuff x Social Status Vintage White'],130,adidas
+60,['LeBron 15 Performance KITH Rose Gold'],550,LeBron
+61,['adidas Ultra Boost 1.0 SNS Tee Time'],888,adidas
+62,['Converse Chuck Taylor All-Star 70s Hi Off-White'],469,Converse
+63,"['Jordan 1 Retro High ""Not for Resale"" Varsity Red']",797,Jordan
+64,['adidas Yeezy Boost 700 Salt'],255,adidas
+65,['Air Fear Of God 1 Black'],850,Air
+66,['Converse Chuck Taylor All-Star 70s Hi Fear of God Black'],285,Converse
+67,['Jordan 1 Retro High Clay Green'],350,Jordan
+94,['adidas Yeezy Boost 700 Wave Runner Solid Grey'],410,adidas
+95,['Jordan 1 Retro High Neutral Grey Hyper Crimson'],190,Jordan
+96,['adidas Yeezy Boost 350 V2 Butter'],260,adidas
+97,['adidas Yeezy Boost 350 V2 Beluga 2.0'],486,adidas
+98,['adidas Yeezy Boost 350 V2 Blue Tint'],420,adidas
+99,['adidas Yeezy Boost 350 V2 Glow'],595,adidas
+100,['Jordan 1 Retro High Defiant White Black Gym Red'],150,Jordan
+101,['adidas Yeezy 700 Mauve'],300,adidas
+102,['adidas Yeezy Boost 700 Inertia'],295,adidas
+103,['Jordan 1 Retro High Shadow (2018)'],291,Jordan
+104,['adidas Yeezy Boost 350 V2 Antlia (Non-Reflective)'],274,adidas
+105,['adidas Yeezy 500 Blush'],349,adidas
+106,['Jordan 1 Retro High Game Royal'],360,Jordan
+107,['adidas Yeezy Boost 700 V2 Tephra'],280,adidas
+108,['adidas Yeezy Boost 700 V2 Inertia'],285,adidas
+109,['Jordan 1 Retro High Spider-Man Origin Story'],455,Jordan
+110,['Jordan 1 Retro High OG Defiant Couture'],130,Jordan
+169,['Jordan 1 Retro High Satin Black Toe (W)'],416,Jordan
+183,['Jordan 1 Retro High Travis Scott'],747,Jordan
+247,['Jordan 1 Retro High Shadow 2018 (GS)'],259,Jordan
+248,['adidas Ultra Boost 4.0 Breast Cancer Awareness'],159,adidas
+249,['Nike Classic Cortez Stranger Things Hawkins High School'],99,Nike
+250,['adidas Ultra Boost 4.0 Core Black (W)'],90,adidas
+251,['Jordan 11 Retro Low Golf White Metallic Gold'],206,Jordan
+252,['Converse Chuck Taylor All-Star 70s Hi Kith Coca-Cola Denim (2019)'],228,Converse
+253,['Nike ZoomX Vaporfly Next% Volt'],205,Nike
+254,['Nike Zoom Freak 1 Antetokounbros'],92,Nike
+255,['Jordan 1 Retro High Wheat'],125,Jordan
+256,['adidas Ultra Boost Nice Kicks Woodstock 50th Anniversary'],255,adidas
+257,['Nike Zoom Pegasus 35 Turbo Wolf Grey Hot Punch'],113,Nike
+258,['adidas Ultra Boost 1.0 Solar Orange (2019)'],175,adidas
+259,['Nike Zoom Freak 1 Greece'],115,Nike
+260,['Air Force 1 Low Utility Carhartt WIP Camo'],95,Air
+261,['adidas Nite Jogger Grey Two Solar Orange'],78,adidas
+262,['Converse Chuck Taylor All-Star 70s Hi Joshua Vides Black'],110,Converse
+263,['adidas Ultra Boost OG (2018)'],125,adidas
+264,['Jordan 1 Retro High Phantom Gym Red (GS)'],180,Jordan
+265,['Nike React Element 87 Volt Racer Pink'],163,Nike
+266,['Asics Gel-Lyte 3.1 Ronnie Fieg Super Blue'],245,Asics
+267,['Jordan 5 Retro JSP Laney Varsity Royal'],115,Jordan
+268,['adidas Ultra Boost 4.0 Non Dye Cloud White'],114,adidas
+269,['Jordan 1 Retro High White Snake (W)'],133,Jordan
+270,['adidas Yeezy Boost 700 Wave Runner Solid Grey (Kids)'],194,adidas
+271,['adidas Ultra Boost Clima Missoni White'],100,adidas
+272,['Air Force 1 Flyleather Steve Harrington Earth Day (2019)'],325,Air
+273,['Jordan 1 Retro High Bio Beige Anthracite Mystic Green (W)'],165,Jordan
+274,['Nike Blazer Mid 77 Habanero Red'],70,Nike
+275,['Jordan 1 Retro High Spider-Man Origin Story (TD)'],140,Jordan
+276,['Air VaporMax Plus White'],140,Air
+277,['Nike Tailwind 79 Stranger Things Hawkins High School'],110,Nike
+278,['Nike React Element 55 Black Aurora Green'],80,Nike
+279,['adidas Ultra Boost Undefeated Performance Running Black'],103,adidas
+280,['Air Foamposite One Floral (W)'],100,Air
+281,['Air Force 1 Flyknit 2 Black Pure Platinum'],80,Air
+282,['SF Air Force 1 High Dusty Peach'],70,SF
+283,['Nike React Element 55 Spruce Volt'],69,Nike
+284,['Nike Hyperdunk 2017 Low Olive Gum'],45,Nike
+285,['adidas Ultra Boost 4.0 Orchid Tint'],105,adidas
+286,['Jordan 1 Retro High City of Flight'],120,Jordan
+287,['adidas Ultra Boost 2 City White'],118,adidas
+288,['Jordan 4 Retro Flyknit Red'],145,Jordan
+289,['adidas Ultra Boost 19 Grey Two'],98,adidas
+290,['Nike React Element 87 Orange Peel'],125,Nike
+291,['Air Max 720 Saturn Black Dark Grey'],92,Air
+292,['Jordan 8 SP Retro SE White Multicolor'],150,Jordan
+293,['Nike Cortez Kenny 3 Kendrick Lamar TDE the Championship'],75,Nike
+294,['adidas Ultra Boost 2019 Panda'],109,adidas
+295,['Nike Flyknit Racer Multi-Color 2.0 (2015/2017)'],95,Nike
+296,['React Element 55 SE White'],65,React
+297,['Nike React Element 87 Undercover Light Beige Chalk'],215,Nike
+298,['Air Max 270 React Hyper Jade'],86,Air
+299,['adidas Yeezy Boost 350 V2 Cloud White (Kids)'],140,adidas
+300,['Nike Blazer Mid 77 Vintage Pink Foam'],53,Nike
+301,['adidas Ultra Boost 19 White Scarlet'],99,adidas
+302,['Air Force 1 Vandalized Sail Mystic Green (W)'],125,Air
+303,['Nike Zoom Freak 1 Black Multi Photo Blue'],85,Nike
+304,['Air Fear Of God Moccasin Particle Beige'],70,Air
+305,['adidas Alphaedge 4D Black'],190,adidas
+306,['Jordan 11 Retro Low Pink Snakeskin (W) (2019)'],124,Jordan
+307,['Air Foamposite Pro Knicks'],140,Air
+308,['adidas Yeezy Powerphase Clear Brown'],110,adidas
+309,['adidas Ultraboost 4.0 Grey Lime'],78,adidas
+310,['Air Force 1 High Riccardo Tisci All-Star 2018 (Black)'],74,Air
+311,['adidas ZX4000 4D Easy Mint'],150,adidas
+312,['adidas Ultra Boost 3 Black Multi-Color'],115,adidas
+313,['adidas Ultra Boost 4 Cloud White Non Dyed (W)'],113,adidas
+314,['Nike Zoom Vomero 5 White Racer Blue Black'],70,Nike
+315,['adidas Ultra Boost 4.0 Core Black'],119,adidas
+316,['Nike Blazer Mid 77 Vintage Sail White'],60,Nike
+317,['Jordan Legacy 312 Trainer 3 Medicine Ball'],95,Jordan
+318,['Air VaporMax 2019 Triple Black'],120,Air
+319,['adidas Yeezy Boost 350 V2 Black (Kids) (Non-Reflective)'],195,adidas
+320,['adidas Ultra Boost 1.0 Undefeated Stars and Stripes'],109,adidas
+321,"['New Balance OMN1S Clippers ""Return of the Fun Guy""']",169,New
+322,['Air Max 270 React Electro Green Yellow Ochre Obsidian'],83,Air
+323,['adidas ZX Torsion Bright Cyan'],85,adidas
+324,['Jordan 1 Retro High Bred Toe (GS)'],400,Jordan
+325,['adidas Human Race NMD Pharrell Holi Festival (Chalk Coral)'],245,adidas
+326,['Nike SB Dunk Low Black Pigeon'],274,Nike
+327,['Gucci Rubber Slides Red Green'],189,Gucci
+328,['adidas Yeezy Desert Boot Oil (Infants)'],114,adidas
+329,['Nike React Element 87 Medium Olive Bright Crimson'],110,Nike
+330,['Jordan Legacy 312 Low Tech Grey Fire Red Black (GS)'],80,Jordan
+331,['Air Force 1 Ultra Flyknit Patriots 6X Champs'],245,Air
+332,['Jordan Legacy 312 Desert Camo'],75,Jordan
+333,['adidas Yeezy Boost 350 V2 Core Black White'],740,adidas
+334,"[""Air Force 1 Low '07 White Obsidian""]",69,Air
+335,['Jordan 12 Retro Winter Black'],249,Jordan
+336,['adidas Ultra Boost 4.0 Game of Thrones House Targaryen White (W)'],100,adidas
+337,['Nike Zoom Vomero 5 A Cold Wall Black'],172,Nike
+338,['Nike Zoom Pegasus 35 Turbo Vast Gunsmoke'],80,Nike
+339,['Nike ZoomX VaporFly Next% Pink'],221,Nike
+340,['Air Force 1 Shadow Pale Ivory (W)'],135,Air
+341,['Air VaporMax Run Utility Blue Dusk'],107,Air
+342,['Nike Zoom Pegasus 35 Turbo Blackened Blue Orange Peel'],95,Nike
+343,['Balenciaga Triple S Clear Sole Black'],772,Balenciaga
+344,['Jordan 11 Retro Low Georgetown'],227,Jordan
+345,['adidas Yeezy Boost 700 Wave Runner Solid Grey (Infants)'],185,adidas
+346,['Nike Blazer Mid 77 Vintage Multi-Color'],107,Nike
+347,['Jordan 11 Retro Low Closing Ceremony'],200,Jordan
+348,['Air VaporMax Flyknit 2 Orca'],133,Air
+349,['Lunar Force 1 Low Acronym (AF100)'],220,Lunar
+350,['Air Foamposite One Habanero Red (GS)'],108,Air
+351,['Nike React Element 55 White Red'],50,Nike
+352,['Converse Chuck Taylor All-Star 70s Ox Chinatown Market UV'],80,Converse
+353,['Nike SB Dunk Low Pro Dark Russet Cedar'],84,Nike
+354,['Nike Dunk SB Low De La Soul (2015)'],199,Nike
+355,['Nike React Presto Barely Volt'],90,Nike
+356,['adidas Ultra Boost 19 Linen Green'],110,adidas
+357,['Air Max 270 React Geometric Art'],82,Air
+358,"[""Air Force 1 '07 XX White (W)""]",151,Air
+359,['Converse Chuck Taylor All-Star 70s Hi Comme des Garcons Play Multi-Heart Green'],110,Converse
+360,['Nike React Element 55 Light Orewood Brown'],70,Nike
+361,['Air Max 720 Saturn All-Star (2019)'],85,Air
+362,['Nike Zoom Vomero 5 SP Vast Grey'],97,Nike
+363,['adidas Ultra Boost Solar Yellow (2019)'],170,adidas
+364,['Air Max Tailwind 4 Supreme White'],195,Air
+365,['Nike SB Dunk Low Premium White Game Royal'],95,Nike
+366,['Nike React Element 87 Dusty Peach'],100,Nike
+367,['adidas Ultra Boost 2.0 Black Reflective'],148,adidas
+368,['Nike Zoom Pegasus 35 Turbo Red Orbit'],114,Nike
+369,['Air Force 1 Vandalized Sail Chrome Yellow (W)'],107,Air
+370,['Nike Adapt Huarache Opti Yellow'],415,Nike
+371,['Air More Uptempo Peanut Butter & Jelly (GS)'],100,Air
+372,['Nike Adapt Huarache White Black'],415,Nike
+373,['Air VaporMax 2019 Barely Grey'],137,Air
+374,['Air More Uptempo Hot Punch (W)'],95,Air
+375,['Air Foamposite Pro Sequoia'],145,Air
+376,['Nike SB Blazer Low Parra'],165,Nike
+377,['Nike React Element 55 Black White'],72,Nike
+378,['adidas ZX4000 4D Black Onix'],199,adidas
+379,['Nike Hyperdunk 2016 Orange'],75,Nike
+380,['Air More Uptempo Flax (GS)'],125,Air
+381,"['Timberland 6"" Shearling Champion Wheat']",145,Timberland
+382,['Air Foamposite One Marble (W)'],250,Air
+383,['Converse Chuck Taylor All-Star 70s Hi Comme des Garcons PLAY Black'],142,Converse
+384,['Nike React Element 55 Gym Red'],58,Nike
+385,['Nike React Element 87 Royal Tint'],139,Nike
+386,['Nike ISPA React Low Black'],115,Nike
+387,['adidas NMD Hu Trail Pharrell Now Is Her Time Solar Yellow'],209,adidas
+388,['Air Force 1 Foamposite Pro Cup Court Purple'],60,Air
+389,['Nike Cortez Basic Slip Kendrick Lamar White'],132,Nike
+390,['adidas Ultra Boost 2019 Clear Brown Chalk White'],80,adidas
+391,['Air Foamposite Pro Color Shift'],144,Air
+392,['Air Fear Of God 1 Sail Black'],465,Air
+393,['Jordan 1 Retro High Fearless UNC Chicago'],417,Jordan
+394,['Nike React Runner ISPA Ghost Aqua Total Crimson'],110,Nike
+395,['Jordan Legacy 312 Ghost Green'],108,Jordan
+396,['adidas Ultra Boost 4.0 Game of Thrones Nights Watch'],92,adidas
+397,['Jordan 11 Retro Low University Blue (2017)'],199,Jordan
+398,['Jordan 1 Retro High Paris Saint Germain'],115,Jordan
+399,['Jordan 1 Retro High Guava Ice'],80,Jordan
+400,['Air Fear Of God Moccasin Pure Platinum'],82,Air
+401,['adidas Continental 80 Vulc AriZona Iced Tea Black'],65,adidas
+402,['adidas Ultra Boost 4.0 Black White Speckle'],86,adidas
+403,['Nike Mars Yard Overshoe Tom Sachs (I)'],63,Nike
+404,['Nike Zoom Terra Kiger 5 OFF-WHITE Electric Green (W)'],180,Nike
+405,['adidas Ultra Boost 4.0 Parley Core Black Cloud White'],71,adidas
+406,['Nike React Runner Mid WR ISPA Blue Void Team Orange'],69,Nike
+407,['Converse Chuck Taylor All-Star 70s Hi Kith Classics Black'],134,Converse
+408,['adidas Ultra Boost 4.0 White Multi-Color 2'],120,adidas
+409,['Air Foamposite One Particle Beige (W)'],179,Air
+410,['adidas NMD Hu Trail Pharrell Now Is Her Time Light Pink'],200,adidas
+411,['Converse Chuck Taylor All-Star 70s Ox Comme des Garcons PLAY Black'],123,Converse
+412,['Converse Chuck Taylor All-Star 70s Hi Comme des Garcons Play Multi-Heart White'],112,Converse
+413,['Jordan Legacy 312 White Black Pink Foam (GS)'],70,Jordan
+414,['Air Foamposite One USA (W)'],190,Air
+415,['Jordan 1 Retro High Black Gym Red (GS)'],165,Jordan
+416,['Air Fear Of God Raid Black'],169,Air
+417,['Converse Chuck Taylor All-Star 70s Hi Chinatown Market UV'],104,Converse
+418,['adidas Ultra Boost 2019 Footwear White'],101,adidas
+419,['Air Force 1 Type Black'],120,Air
+420,['adidas Ultra Boost 2 City Stars and Stripes'],107,adidas
+421,['Air Jordan 1 Mid Yellow Toe Black'],105,Air
+422,['adidas Ultra Boost 4.0 Bape Camo Black'],242,adidas
+423,['adidas Solar Hu Glide Human Made White Red'],140,adidas
+424,['Jordan 11 Retro Low Snake Navy 2019 (GS)'],153,Jordan
+425,['adidas ZX 4000 4D Carbon'],195,adidas
+426,['adidas Yeezy Powerphase Quiet Grey'],95,adidas
+427,['Air Fear of God Raid Light Bone'],220,Air
+428,['adidas Yeezy Boost 350 V2 Black (Non-Reflective)'],313,adidas
+429,['Nike SB Dunk High Baroque Brown'],104,Nike
+430,['adidas Ultra Boost 4.0 Triple Black Nubuck Cage'],151,adidas
+431,['Nike SB Dunk Low Supreme Jewel Swoosh Gold'],151,Nike
+432,['adidas NMD Hu Trail Pharrell Now Is Her Time Cream White'],200,adidas
+433,['LeBron 15 Lifestyle KITH Stained Glass'],399,LeBron
+434,['Nike HyperAdapt 1.0 Black (1st Release Pair Special Box)'],500,Nike
+435,['adidas Ultra Boost 2019 Core Black Grey Five'],98,adidas
+436,['Nike React Element 55 Triple Black'],70,Nike
+437,['Jordan 1 Retro High Obsidian UNC (GS)'],179,Jordan
+438,['New Balance 997S Bodega No Bad Days'],265,New
+439,['Jordan Legacy 312 Wolf Grey'],60,Jordan
+440,['Jordan 1 Retro High OG Defiant SB LA to Chicago'],255,Jordan
+441,['adidas Ultra Boost Clima Missoni Multi-Color'],96,adidas
+442,['Air Max Lunar90 SP Moon Landing'],580,Air
+443,['adidas Y-3 Pureboost White Black'],230,adidas
+444,['Converse Chuck Taylor All-Star 70s Ox Comme des Garcons Play Multi-Heart White'],113,Converse
+445,['adidas Nemeziz Tango 17 Ultra Boost Triple Black'],159,adidas
+446,"['ASICS Gel-Lyte III Ronnie Fieg ""Flamingo""']",584,ASICS
+447,['Air VaporMax Flyknit 3.0 Triple Black'],145,Air
+448,"[""Nike Air Force 1 '07 Black/Black""]",70,Nike
+449,['Jordan 11 Retro Low Snake Light Bone (GS)'],140,Jordan
+450,['Jordan 1 Retro High First Class Flight (GS)'],134,Jordan
+451,['Jordan 1 Retro High Pine Green'],202,Jordan
+452,['Air Foamposite Pro Purple Camo'],165,Air
+453,['adidas Ultra Boost 4.0 Bape Camo'],260,adidas
+454,['Jordan 11 Retro Low Snake Light Bone'],129,Jordan
+455,"['Saucony Shadow 5000 END ""Burger""']",350,Saucony
+456,['Air VaporMax Flyknit 3 Oreo'],127,Air
+457,['adidas Ultra Boost Clima Missoni Black'],98,adidas
+458,['adidas Yeezy Boost 350 V2 Citrin (Reflective)'],298,adidas
+459,['Jordan 1 Retro High Shattered Backboard 3.0'],360,Jordan
+460,['Asics Gel-Lyte III Ronnie Fieg Super Blue'],230,Asics
+461,['Converse Chuck Taylor All-Star 70s Hi Comme des Garcons PLAY White'],129,Converse
+462,['Air VaporMax Plus Triple Black'],160,Air
+463,['Jordan 1 Retro High Black Crimson Tint (GS)'],154,Jordan
+464,['Vans Comfycush Authentic The Nightmare Before Christmas'],80,Vans
+465,['ASICS Gel-Lyte III Ronnie Fieg Super Green'],380,ASICS
+466,['ASICS Gel-Lyte III Ronnie Fieg Militia (Special Box)'],325,ASICS
+467,['New Balance 997.5 Phantaci'],375,New
+468,['Converse Chuck Taylor All-Star 70s Ox Comme des Garcons PLAY White'],134,Converse
+469,['Air Foamposite One Albino Snakeskin'],134,Air
+470,['Jordan 1 Retro High Black Gym Red'],116,Jordan
+471,['Converse Chuck Taylor All-Star 70s Hi Golf le Fleur Flames'],240,Converse
+472,['adidas Yeezy Desert Boot Salt'],199,adidas
+473,['Air Max 270 React Bauhaus'],110,Air
+474,['Air Foamposite One Navy Gum'],114,Air
+475,['Jordan 11 Retro Low IE Space Jam'],127,Jordan
+476,['adidas Ultra Boost 2019 Triple Black'],118,adidas
+477,"['ASICS Gel-Lyte III Ronnie Fieg ""Homage"" (Special Box)']",502,ASICS
+478,['ACE 16 PureControl Ultra Boost Kith Flamingos'],200,ACE
+479,['adidas Ultra Boost 1.0 Wood Wood Black'],497,adidas
+480,['adidas Futurecraft MFG Made For Germany'],350,adidas
+481,['Fear Of God Military Sneaker Canapa'],650,Fear
+482,['Air Foamposite One Iridescent (W)'],100,Air
+483,['adidas Yeezy Boost 350 V2 Cloud White (Infant)'],120,adidas
+484,['adidas NMD HU Pharrell Human Made White Red'],224,adidas
+485,['adidas Yeezy Desert Boot Oil'],204,adidas
+486,['Air Foamposite One Obsidian Glitter (W)'],121,Air
+487,"['ASICS Gel-Lyte III Woei ""Cervidae""']",780,ASICS
+488,['adidas Yeezy Boost 350 V2 Core Black Red'],800,adidas
+489,['adidas Yeezy Boost 350 V2 Citrin (Kids)'],160,adidas
+490,['Jordan Legacy 312 Desert Camo (GS)'],107,Jordan
+491,['Jordan 1 Retro High Camo 3M Bred'],335,Jordan
+492,['adidas Copa Mundial 17 Ultra Boost Kith Cobras'],200,adidas
+493,['A Bathing Ape Bapesta Ronnie Fieg Fiegsta Sand'],480,A
+494,['Jordan 1 Retro High Shattered Backboard 3.0 (GS)'],200,Jordan
+495,['Jordan 1 Retro High OG Defiant SB NYC to Paris'],145,Jordan
+496,['adidas Yeezy Boost 350 V2 Cloud White (Reflective)'],399,adidas
+497,['Reebok Instapump Fury Aape By a Bathing Ape'],449,Reebok
+500,['adidas Blackburn Spzl Collegiate Green'],140,adidas
+501,['Jordan 1 Retro High Court Purple'],260,Jordan
+502,['LeBron 8 V/2 Low Solar Red'],355,LeBron
+503,"['ASICS Gel-Lyte III Afew ""Koi""']",800,ASICS
+504,['adidas Yeezy Desert Boot Rock'],230,adidas
+505,['Nike SB Dunk Low Ben-G'],104,Nike
+506,['adidas NMD Hu Trail Pharrell Now Is Her Time Black'],221,adidas
+507,['New Balance 1500 Hanon Chosen Few'],500,New
+508,"['ASICS Gel-Lyte III Ronnie Fieg ""Mint Leaf""']",791,ASICS
+509,"['ASICS Gel-Lyte III Ronnie Fieg ""Leatherbacks""']",700,ASICS
+510,['adidas Yeezy 500 Super Moon Yellow'],214,adidas
+511,['adidas Ultra Boost 4.0 Game of Thrones House Stark'],183,adidas
+512,['Jordan 1 Retro High Nigel Sylvester'],307,Jordan
+513,['Jordan Legacy 312 Black White'],69,Jordan
+514,['Air Tech Challenge II Wimbledon (2013)'],497,Air
+515,['Reebok Instapump Fury CNCPTS Versace'],900,Reebok
+517,['adidas Yeezy Boost 750 Light Grey Glow In the Dark'],835,adidas
+518,['adidas Yeezy Powerphase Calabasas Grey'],74,adidas
+519,['Nike React Element 87 Sail Light Bone'],400,Nike
+521,"['Air More Uptempo Supreme ""Suptempo"" Black']",435,Air
+522,['Jordan 1 Retro High Gatorade Cyber'],155,Jordan
+525,['Jordan 1 Retro High Blue Moon'],230,Jordan
+526,['Diadora Intrepid Kith From Seoul To Rio'],450,Diadora
+527,['Jordan 1 Retro High Yellow Ochre'],299,Jordan
+528,['Jordan 1 Retro High Gatorade Blue Lagoon'],160,Jordan
+529,['Nike React Element 87 Anthracite Black'],209,Nike
+531,"['Air More Uptempo Supreme ""Suptempo"" Gold']",499,Air
+532,['adidas Ultra Boost Uncaged Hypebeast'],798,adidas
+533,['Nike Flyknit Lunar1+ Supreme Black'],761,Nike
+534,['Air Zoom Generation Wheat (All-Star)'],208,Air
+535,['adidas Ultra Boost Mid Kith x Nonnative'],150,adidas
+536,['Jordan 1 Retro High Homage To Home Chicago (Numbered)'],650,Jordan
+537,['Air Max 97 Ultra 17 Skepta'],260,Air
+539,['Air Force 1 High Emotionally Unavailable'],64,Air
+540,['adidas Ultra Boost 1.0 Triple Black'],270,adidas
+541,['Nike React Element 87 Dark Grey Photo Blue'],124,Nike
+543,"['Air More Uptempo Supreme ""Suptempo"" Red']",835,Air
+544,['adidas Ultra Boost 4.0 Chinese New Year (2018)'],168,adidas
+545,['Nike Tailwind 79 Stranger Things Independence Day Pack'],165,Nike
+546,['Air Fear Of God 1 Orange Pulse'],455,Air
+547,['Jordan 1 Retro Low Slip Chicago (W)'],88,Jordan
+548,['Air Fear Of God 1 Frosted Spruce'],508,Air
+550,['Jordan 1 Retro High Camo 3M Shadow'],150,Jordan
+551,['Air Zoom Generation Black White Retro'],135,Air
+552,['LeBron 15 Lifestyle KITH Concrete'],300,LeBron
+554,['Nike SB Dunk High Dog Walker'],269,Nike
+555,['adidas Tennis HU Pharrell Multi-Color'],95,adidas
+556,['adidas Ultra Boost Mid Run Thru Time'],87,adidas
+558,['Jordan 1 Retro High Satin Shattered Backboard (W)'],686,Jordan
+560,['Jordan 1 Retro High Hyper Royal'],120,Jordan
+561,['Nike Dunk SB Low Blue Lobster'],900,Nike
+562,['Air VaporMax 2019 Cactus Plant Flea Market (W)'],598,Air
+563,['adidas Ultra Boost 4.0 Triple Black'],166,adidas
+564,['Air Force 1 Low Retro Ivory Snake'],154,Air
+565,['Nike React Element 87 Desert Sand'],124,Nike
+566,['Air Fear Of God Moccasin Black'],80,Air
+568,['Nike Zoom Rookie Galaxy (2019)'],228,Nike
+569,['adidas Yeezy Boost 750 Light Brown Gum (Chocolate)'],646,adidas
+570,['adidas Yeezy 700 V2 Static'],480,adidas
+571,['adidas Yeezy Boost 350 V2 Hyperspace'],400,adidas
+572,['Nike Classic Cortez Stranger Things Independence Day Pack'],87,Nike
+573,['adidas Yeezy Boost 350 Moonrock'],800,adidas
+576,['Jordan 11 Retro Low Cool Grey'],190,Jordan
+577,['adidas Ultra Boost 4.0 Game of Thrones White Walkers'],175,adidas
+578,['Nike SB Dunk Low Concepts Purple Lobster'],520,Nike
+579,['adidas Ultra Boost 4.0 Game of Thrones Targaryen Dragons'],165,adidas
+580,['adidas Yeezy Boost 350 V2 Beluga'],600,adidas
+582,['Nike Zoom Terra Kiger 5 Off-White White (W)'],200,Nike
+583,['adidas Yeezy Boost 700 Analog'],258,adidas
+586,['Nike Zoom Terra Kiger 5 Off-White Black (W)'],190,Nike
+588,['adidas Yeezy Boost 350 V2 Synth (Non-Reflective)'],201,adidas
+591,['Jordan 1 Retro High Phantom Gym Red'],107,Jordan
+595,['adidas Ultra Boost 4.0 Running White'],133,adidas
+596,['Jordan 1 Retro High Black Mushroom (W)'],174,Jordan
+616,['Jordan 1 Retro High Turbo Green (GS)'],193,Jordan
+621,['Jordan 11 Retro Low Snake Navy (2019)'],109,Jordan
+622,['Jordan 1 Retro High Bred Toe'],284,Jordan
+626,['adidas Yeezy Boost 350 V2 Static Reflective'],394,adidas
+630,['adidas Yeezy Boost 350 V2 Trfrm'],309,adidas
+631,['Jordan 1 Retro High Twist (W)'],220,Jordan
+635,['adidas Yeezy Powerphase Calabasas Core Black'],79,adidas
+636,['adidas Yeezy Boost 350 V2 Black Red'],800,adidas
+637,['Jordan 1 Retro High UNC Patent (W)'],329,Jordan
+640,['Jordan 1 Retro High Sports Illustrated (A Star Is Born)'],117,Jordan
+643,['Jordan 1 Retro High Homage To Home (Non-numbered)'],230,Jordan
+644,['Nike SB Dunk Low Parra'],210,Nike
+645,['Jordan 1 Retro High NRG Patent Gold Toe'],290,Jordan
+677,['Nike SF Air Force 1 High Court Purple'],48,Nike
+683,['adidas Harden Vol. 3 White Black'],65,adidas
+693,['Jordan 1 Retro High Spider-Man Origin Story (PS)'],150,Jordan
+698,['Jordan 4 Retro Flyknit Royal'],137,Jordan
+700,['Nike SB Dunk Low NBA Deep Royal Blue'],64,Nike
+702,['SF Air Force 1 High Club Gold'],124,SF
+707,['adidas Superstar Cloud White Core Black'],35,adidas
+709,['Reebok Pump Omni Lite Dee Brown Black (2017)'],169,Reebok
+710,['adidas Yeezy Desert Boot Rock (Infants)'],114,adidas
+711,['Converse Chuck Taylor All-Star 70s Ox Flaming Archive Print'],65,Converse
+715,['Air Max 270 React Black White Bleached Coral (W)'],150,Air
+720,['Nike SB Dunk Low Corduroy Dusty Peach'],140,Nike
+734,['Nike ZoomX Vaporfly Next% Betrue (2019)'],435,Nike
+737,['adidas Ultra Boost 4.0 Grey Three'],102,adidas
+791,['Jordan 11 Retro Low Bred'],232,Jordan
+797,['Air More Uptempo 96 Denim'],119,Air
+799,['Air Max 270 Bowfin Triple Black'],80,Air
+801,['Air VaporMax Flyknit 3 White Pure Platinum'],135,Air
+803,['SF Air Force 1 High Camo'],91,SF
+805,['adidas Ultra Boost Manchester United'],164,adidas
+806,['Air More Uptempo Tiffany (GS)'],124,Air
+807,['Air Max 270 React Bauhaus (W)'],100,Air
+808,['adidas Continental 80 White Scarlet Navy'],50,adidas
+809,['Air Force 1 Utility Black Gum'],69,Air
+898,['Air Max Speed Turf Night Purple'],80,Air
+987,['adidas Ultra Tech Dragon Ball Z Vegeta'],133,adidas
+992,['adidas Ultra Boost 4.0 Orca'],110,adidas
+1001,['adidas NMD R1 STLT Parley Core Black'],94,adidas
+1008,['Jordan Legacy 312 Olympic'],88,Jordan

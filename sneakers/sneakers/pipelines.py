@@ -13,7 +13,7 @@ from .models import SneakerDB, db_connect, create_table
 brands = ['jordan', 'adidas', 'nike', 'vans', 'reebok', 'puma', 
             'dior', 'asics', 'balenciaga', 'chanel', 'converse',
              'gucci', 'vuitton', 'balance', 'prada', 'saucony', 
-             'armour',]
+             'armour', 'lebron', 'air', 'kobe', 'kyrie', 'kd']
 
 
 
@@ -42,7 +42,7 @@ class SneakersPipeline(object):
             current_sneaker = str(item['sneaker_name'])
             if brand in current_sneaker.lower():
                 sneakers.brand = brand
-            else:
+            elif brand not in current_sneaker.lower():
                 sneaker_brand = "other"
 
 

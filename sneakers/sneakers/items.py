@@ -28,3 +28,4 @@ class ShoesItem(scrapy.Item):
 
 
 
+
