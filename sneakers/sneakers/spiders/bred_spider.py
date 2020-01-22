@@ -7,7 +7,7 @@ class BredSpiderSpider(scrapy.Spider):
     name = 'bred_spider'
     page_number = 2
     start_urls = [
-        'https://stockx.com/sneakers/release-date?years=2012,2013&page=1',
+        'https://stockx.com/sneakers/release-date?years=2019&page=1',
         ]
 
     def parse(self, response):
@@ -28,7 +28,7 @@ class BredSpiderSpider(scrapy.Spider):
 
             yield items
 
-        next_page = 'https://stockx.com/sneakers/release-date?years=2012,2013&page='  + str(BredSpiderSpider.page_number) + ''
+        next_page = 'https://stockx.com/sneakers/release-date?years=2019&page='  + str(BredSpiderSpider.page_number) + ''
         if BredSpiderSpider.page_number <= 25:
             BredSpiderSpider.page_number += 1
             yield response.follow(next_page, callback=self.parse)
