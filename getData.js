@@ -3,7 +3,7 @@ const sneaks = new SneaksAPI();
 const fs = require("fs");
 
 let sneakers = [];
-let data = ['name,colorway,release,retail,stockx,goat,stadium,flight,silhoutte,styleid,brand,img,']
+let data = ['name,colorway,release,retail,stockx,goat,stadium,flight,silhoutte,styleid,brand']
 
 sneaks.getProducts("jordan 1 high 85", function(error, products){
   // show error if one occurs
@@ -19,7 +19,7 @@ sneaks.getProducts("jordan 1 high 85", function(error, products){
       if (!found){
         sneakers.push(product);
 
-        data.push(`${product.shoeName},${product.colorway},${product.releaseDate},${product.retailPrice},${product.lowestResellPrice.stockX},${product.lowestResellPrice.goat}, ${product.lowestResellPrice.stadiumGoods},${product.lowestResellPrice.flightClub},${product.silhoutte},${product.styleID},${product.brand},${product.thumbnail},`)
+        data.push(`${product.shoeName},${product.colorway},${product.releaseDate},${product.retailPrice},${product.lowestResellPrice.stockX},${product.lowestResellPrice.goat}, ${product.lowestResellPrice.stadiumGoods},${product.lowestResellPrice.flightClub},${product.silhoutte},${product.styleID},${product.brand}`)
 
 
         let csv = data.map() //=> {
