@@ -3,7 +3,7 @@ const sneaks = new SneaksAPI();
 const fs = require("fs");
 
 let sneakers = [];
-let data = ['name;colorway;release,retail,stockx,goat,stadium,flight,silhoutte,styleid,brand,img']
+let data = ['name;colorway;release;retail;stockx;goat;stadium;flight;silhoutte;styleid;brand;img']
 
 sneaks.getProducts("jordan 1 high 85", function(error, products){
   // show error if one occurs
