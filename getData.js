@@ -22,10 +22,11 @@ sneaks.getProducts("jordan 1 high 85", function(error, products){
         data.push(`${product.shoeName},${product.colorway},${product.releaseDate},${product.retailPrice},${product.lowestResellPrice.stockX},${product.lowestResellPrice.goat}, ${product.lowestResellPrice.stadiumGoods},${product.lowestResellPrice.flightClub},${product.silhoutte},${product.styleID},${product.brand}`)
 
 
-        let csv = data.map() //=> {
-        //     return e.replace(/;/g, ",");
-        // });
-        
+        let csv = data.map((e) => {
+            return e.replace(/;/g, ",");
+        });
+
+
         fs.writeFile("./data.csv", csv.join("\r\n"), (err) => {
             console.log(err);
         })
@@ -49,7 +50,7 @@ sneaks.getProducts("jordan 1", function(error, products){
       if (!found){
         sneakers.push(product);
 
-        data.push(`${product.shoeName},${product.colorway},${product.releaseDate},${product.retailPrice},${product.lowestResellPrice.stockX},${product.lowestResellPrice.goat}, ${product.lowestResellPrice.stadiumGoods},${product.lowestResellPrice.flightClub},${product.silhoutte},${product.styleID},${product.brand},${product.thumbnail},`)
+        data.push(`${product.shoeName},${product.colorway},${product.releaseDate},${product.retailPrice},${product.lowestResellPrice.stockX},${product.lowestResellPrice.goat}, ${product.lowestResellPrice.stadiumGoods},${product.lowestResellPrice.flightClub},${product.silhoutte},${product.styleID},${product.brand}`)
 
         let csv = data.map((e) => {
             return e.replace(/;/g, ",");
@@ -78,7 +79,7 @@ sneaks.getProducts("jordan", function(error, products){
       if (!found){
         sneakers.push(product);
 
-        data.push(`${product.shoeName},${product.colorway},${product.releaseDate},${product.retailPrice},${product.lowestResellPrice.stockX},${product.lowestResellPrice.goat}, ${product.lowestResellPrice.stadiumGoods},${product.lowestResellPrice.flightClub},${product.silhoutte},${product.styleID},${product.brand},${product.thumbnail},`)
+        data.push(`${product.shoeName},${product.colorway},${product.releaseDate},${product.retailPrice},${product.lowestResellPrice.stockX},${product.lowestResellPrice.goat}, ${product.lowestResellPrice.stadiumGoods},${product.lowestResellPrice.flightClub},${product.silhoutte},${product.styleID},${product.brand}`)
 
         let csv = data.map((e) => {
             return e.replace(/;/g, ",");
@@ -108,7 +109,7 @@ sneaks.getProducts("nike", function(error, products){
       if (!found){
         sneakers.push(product);
 
-        data.push(`${product.shoeName},${product.colorway},${product.releaseDate},${product.retailPrice},${product.lowestResellPrice.stockX},${product.lowestResellPrice.goat}, ${product.lowestResellPrice.stadiumGoods},${product.lowestResellPrice.flightClub},${product.silhoutte},${product.styleID},${product.brand},${product.thumbnail},`)
+        data.push(`${product.shoeName},${product.colorway},${product.releaseDate},${product.retailPrice},${product.lowestResellPrice.stockX},${product.lowestResellPrice.goat}, ${product.lowestResellPrice.stadiumGoods},${product.lowestResellPrice.flightClub},${product.silhoutte},${product.styleID},${product.brand}`)
 
         let csv = data.map((e) => {
             return e.replace(/;/g, ",");
@@ -138,7 +139,7 @@ sneaks.getProducts("nike dunk", function(error, products){
       if (!found){
         sneakers.push(product);
 
-        data.push(`${product.shoeName},${product.colorway},${product.releaseDate},${product.retailPrice},${product.lowestResellPrice.stockX},${product.lowestResellPrice.goat}, ${product.lowestResellPrice.stadiumGoods},${product.lowestResellPrice.flightClub},${product.silhoutte},${product.styleID},${product.brand},${product.thumbnail},`)
+        data.push(`${product.shoeName},${product.colorway},${product.releaseDate},${product.retailPrice},${product.lowestResellPrice.stockX},${product.lowestResellPrice.goat}, ${product.lowestResellPrice.stadiumGoods},${product.lowestResellPrice.flightClub},${product.silhoutte},${product.styleID},${product.brand}`)
 
 
         let csv = data.map((e) => {
@@ -170,7 +171,7 @@ sneaks.getProducts("off white", function(error, products){
       if (!found){
         sneakers.push(product);
 
-        data.push(`${product.shoeName},${product.colorway},${product.releaseDate},${product.retailPrice},${product.lowestResellPrice.stockX},${product.lowestResellPrice.goat}, ${product.lowestResellPrice.stadiumGoods},${product.lowestResellPrice.flightClub},${product.silhoutte},${product.styleID},${product.brand},${product.thumbnail},`)
+        data.push(`${product.shoeName},${product.colorway},${product.releaseDate},${product.retailPrice},${product.lowestResellPrice.stockX},${product.lowestResellPrice.goat}, ${product.lowestResellPrice.stadiumGoods},${product.lowestResellPrice.flightClub},${product.silhoutte},${product.styleID},${product.brand}`)
 
         let csv = data.map((e) => {
             return e.replace(/;/g, ",");
@@ -200,7 +201,7 @@ sneaks.getProducts("adidas", function(error, products){
       if (!found){
         sneakers.push(product);
 
-        data.push(`${product.shoeName},${product.colorway},${product.releaseDate},${product.retailPrice},${product.lowestResellPrice.stockX},${product.lowestResellPrice.goat}, ${product.lowestResellPrice.stadiumGoods},${product.lowestResellPrice.flightClub},${product.silhoutte},${product.styleID},${product.brand},${product.thumbnail},`)
+        data.push(`${product.shoeName},${product.colorway},${product.releaseDate},${product.retailPrice},${product.lowestResellPrice.stockX},${product.lowestResellPrice.goat}, ${product.lowestResellPrice.stadiumGoods},${product.lowestResellPrice.flightClub},${product.silhoutte},${product.styleID},${product.brand}`)
 
 
 
@@ -233,7 +234,7 @@ sneaks.getProducts("yeezy", function(error, products){
       if (!found){
         sneakers.push(product);
 
-        data.push(`${product.shoeName},${product.colorway},${product.releaseDate},${product.retailPrice},${product.lowestResellPrice.stockX},${product.lowestResellPrice.goat}, ${product.lowestResellPrice.stadiumGoods},${product.lowestResellPrice.flightClub},${product.silhoutte},${product.styleID},${product.brand},${product.thumbnail},`)
+        data.push(`${product.shoeName},${product.colorway},${product.releaseDate},${product.retailPrice},${product.lowestResellPrice.stockX},${product.lowestResellPrice.goat}, ${product.lowestResellPrice.stadiumGoods},${product.lowestResellPrice.flightClub},${product.silhoutte},${product.styleID},${product.brand}`)
 
         let csv = data.map((e) => {
             return e.replace(/;/g, ",");
