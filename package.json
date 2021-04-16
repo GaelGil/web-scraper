@@ -1,0 +1,30 @@
+{
+  "name": "sneaker-scraper",
+  "version": "1.0.0",
+  "description": "to get sneaker data",
+  "main": "getData.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GaelGil/Sneaker-Scraper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GaelGil/Sneaker-Scraper/issues"
+  },
+  "homepage": "https://github.com/GaelGil/Sneaker-Scraper#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.6",
+    "core-util-is": "^1.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "got": "^11.8.2",
+    "mongoose": "^5.12.4",
+    "request": "^2.88.2"
+  }
+}

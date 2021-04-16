@@ -5,8 +5,6 @@ blah blah blah what does this repo do
 
 ## run and install
 
-
-
 ## how to install
 first you shoul create a virtual enviorment by running this in the terminal <br>
 `python3 -m venv tutorial-env`
