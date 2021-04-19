@@ -26,5 +26,9 @@
     "got": "^11.8.2",
     "mongoose": "^5.12.4",
     "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.24.0",
+    "eslint-config-google": "^0.14.0"
   }
 }
