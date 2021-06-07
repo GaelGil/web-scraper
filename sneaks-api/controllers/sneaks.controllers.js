@@ -4,34 +4,6 @@ const goatScraper = require('../scrapers/goat-scraper');
 const stadiumGoodsScraper = require('../scrapers/stadiumgoods-scraper');
 
 module.exports = class Sneaks {
-  /* findOne (shoeID, callback) {
-     Sneaker.findOne({
-       styleID: shoeID
-     }, function (err, shoe) {
-       if (err) {
-         console.log(err);
-         callback(err, null);
-       }
-       callback(null, shoe)
-     });
-   };*/
-
-  /*exports.create = async function (req, res) {
-    if (!req.params) {
-      return res.status(400).send({
-        message: "Shoe parameters can not be empty"
-      });
-    }
-    getProducts(req.params.shoe, function (error, products) {
-      if (error) {
-
-        console.log(error)
-        res.send("Product Not Found");
-      } else {
-        res.json(products);
-      }
-    });
-  };*/
   async getProducts(keyword, callback) {
 
     var productCounter = 0;
@@ -123,15 +95,6 @@ module.exports = class Sneaks {
       getPrices(products[0]);
     });
   };
-
-  /*findAll(callback) {
-    Sneaker.find()
-      .then(sneaks => {
-        callback(null, sneaks);
-      }).catch(err => {
-        callback(err, null)
-      });
-  };*/
 
   getMostPopular(callback) {
     getProducts("", function (error, products) {
