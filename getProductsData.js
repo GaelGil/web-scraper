@@ -2,22 +2,38 @@ const SneaksAPI = require('./sneaks-api/controllers/sneaks.controllers.js');
 const sneaks = new SneaksAPI();
 const fs = require('fs');
 
-//Product object includes styleID where you input it in the getProductPrices function
-//getProductPrices(styleID, callback) takes in a style ID and returns sneaker info including a price map and more images of the product
+
 sneaks.getProductPrices("FY2903", function(err, product){
     if (err) {
         console.log(error);
-      } else {
-    // console.log(product); 
-    // for (let x =0; x < product.length; x++) {
-    //     console.log(product[i])
-    // }
+      } 
+    else {
+        while (product) {
+            
+            for (const [key, value] of Object.entries(product.resellPrices)) {
+                console.log(key);
+                for (const [sec_key, sec_value] of Object.entries(product.resellPrices[key])) {
+                    console.log(sec_key, sec_value);
+                }
+                console.log(' ');
+              }
 
-    fs.writeFile("test.txt", product, function(err) {
-        if (err) {
-            console.log(err);
+              product = false
+        
+            // console.log(product)
+            // console.log(product.resellPrices)
+            // console.log(product.shoeName)
+            // console.log(product.brand)
+            // console.log(product.silhoutte)
+            // console.log(product.styleID)
+            // console.log(product.make)
+            // console.log(product.colorway)
+            // console.log(product.retailPrice)
+            // console.log(product.thumbnail)
+            // console.log(product.releaseDate)
+
+
         }
-    });
     }
 
-})
+});
