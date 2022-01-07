@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/GaelGil/Sneaker-Scraper#readme",
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "cheerio": "^1.0.0-rc.6",
     "core-util-is": "^1.0.2",
     "cors": "^2.8.5",
