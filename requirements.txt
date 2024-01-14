@@ -1,0 +1,5 @@
+beautifulsoup4==4.12.2
+pip==23.3.2
+pipdeptree==2.13.2
+requests==2.31.0
+setuptools==65.5.0
