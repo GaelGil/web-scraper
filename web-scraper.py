@@ -34,6 +34,7 @@ class Scraper:
     headers = ''
     query = ''
     link_tag = ''
+    tags = ''
     
     def __init__(self):
         """
@@ -62,6 +63,9 @@ class Scraper:
     
     def set_link_tag(self, link_tag):
         self.link_tag = link_tag
+    
+    def set_tags(self, tags):
+        self.tags = tags
 
     def get_lists_of_links(self):
         try:
@@ -79,6 +83,9 @@ class Scraper:
             print(f"An unexpected error occurred: {e}")
         return
         
+    def get_data_from_link(self, data):
+        return data
+
     def print_data(self, data):
         if data:
             for idx, title in enumerate(data, start=1):
