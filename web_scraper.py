@@ -67,10 +67,9 @@ class Scraper:
     def set_tags(self, tags):
         self.tags = tags
 
-    def get_lists_of_links(self):
+    def get_links(self):
         try:
             response = requests.get(self.url+self.query, headers=self.headers)
-            # console.log(re)
             response.raise_for_status()
             if response.status_code == 200:
                 soup = BeautifulSoup(response.content, 'html.parser')
@@ -103,6 +102,6 @@ sc.set_header(header)
 sc.set_query("travel")
 sc.set_link_tag('.product-shelf-title a')
 for _ in range(3):  # Making 3 requests as an example
-    data = sc.get_lists_of_book_links()
+    data = sc.get_links()
     sc.print_data(data)
     time.sleep(2)
