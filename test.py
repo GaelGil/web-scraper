@@ -2,29 +2,85 @@ from selenium import webdriver
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
-import time
-
-options = Options()
-options.headless = True  
+import time  
 
 GECKODRIVER_PATH = "./drivers/geckodriver"
 
-service = Service(GECKODRIVER_PATH)
-driver = webdriver.Firefox(service=service, options=options)
+class Scraper:
+    """
+    A class used to manage a webscraper
 
-url = "https://www.barnesandnoble.com/b/books/_/N-1fZ29Z8q8"  
-driver.get(url)
+    Attributes
+    ----------
+    driver : 
+        The browser driver
 
-driver.get(url)
+    Methods
+    -------
+    set_url(self, query:str, limit:int)
+        Searches spotify for playlists.
 
-time.sleep(3)
+    scrape(self, playlist_ids:str, popularity:int, popular:bool):
+        Get a list of tracks for the new playlist.
+    """
+    driver = None
+    links = None
+    def __init__(self):
+        """
+        This function will call the class function `auth_spotify` and create a list for later use.
 
-try:
-    articles = driver.find_elements(By.TAG_NAME, "h2")
-    print("Found articles:")
-    for article in articles:
-        print("-", article.text)
-except Exception as e:
-    print("Error while scraping:", e)
+        Parameters
+        ----------
+        None
 
-driver.quit()
+        Returns
+        -------
+        None
+        """
+        options = Options()
+        options.headless = True 
+        service = Service(GECKODRIVER_PATH)
+        self.driver = webdriver.Firefox(service=service, options=options)
+
+    def set_url(self, url):
+        """
+        Function to set the url that we will scrape.
+
+        Parameters
+        ----------
+        url : str
+            The url we want to scrape
+        Returns
+        -------
+        None
+        """
+        self.driver.get(url)
+        time.sleep(3)
+
+    def get_links(self, xpath):
+        """
+        This function gets book titles and their link
+
+        Parameters
+        ----------
+        xpath : str
+            The xpath to the link elemnts we want to scrape
+
+        Returns
+        -------
+        None
+        """
+        try:
+            self.links = self.driver.find_elements(By.XPATH, xpath)
+            print("Found links")
+        except Exception as e:
+            print("Error while scraping:", e)
+
+        # self.driver.quit()
+
+    def scrape_item(self):
+
+
+sc = Scraper()
+sc.set_url('https://www.barnesandnoble.com/s/education')
+sc.get_links("//div[@class='product-shelf-title product-info-title pt-xs']/a")
