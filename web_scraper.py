@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 class Scraper:
     """
-    A class used to communicate with the Spotify api.
+    A class used for webscraping
 
     Attributes
     ----------
@@ -13,19 +13,25 @@ class Scraper:
 
     Methods
     -------
-    search_spotify_playlist(self, query:str, limit:int)
+    set_url(self, query:str, limit:int)
         Searches spotify for playlists.
 
-    get_tracks_for_new_playlist(self, playlist_ids:str, popularity:int, popular:bool):
+    get_query(self, playlist_ids:str, popularity:int, popular:bool):
         Get a list of tracks for the new playlist.
 
-    get_popular_tracks(self, playlist_name:str, for_user:str)
+    get_header(self, playlist_name:str, for_user:str)
         Gets popular or unpopular songs and adds them to a list
 
-    create_spotify_playlist(self, playlist_name:str)
+    set_urls(self, playlist_name:str)
         Creates a spotify playlists.
     
-    add_tracks_to_playlist(self, playlist_id:str)
+    set_link_tag(self, playlist_id:str)
+        Add songs in a list to a spotify playlists.
+
+    set_tags(self, playlist_id:str)
+        Add songs in a list to a spotify playlists.
+
+    set_links(self, playlist_id:str)
         Add songs in a list to a spotify playlists.
     """
 
