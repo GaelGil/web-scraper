@@ -78,9 +78,38 @@ class Scraper:
 
         # self.driver.quit()
 
-    def scrape_item(self):
+    def scrape_item(self, link):
+        try:
+            self.links = self.driver.find_elements(By.XPATH, xpath)
+            # title = 
+            # publish_date = 
+            # author = 
+            # tags = 
+            # pages = 
+            # publisher
+            # overview
+            print("Found links")
+        except Exception as e:
+            print("Error while scraping:", e)
 
+
+    def scrape_items(self):
+        """
+        This function passes the links to another function called scrape_item where
+        all the data proccessing will be handeld.
+
+        Parameters
+        ----------
+        None
+
+        Returns
+        -------
+        None
+        """
+        for link in self.links:
+            self.scrape_item(link)
 
 sc = Scraper()
 sc.set_url('https://www.barnesandnoble.com/s/education')
 sc.get_links("//div[@class='product-shelf-title product-info-title pt-xs']/a")
+sc.scrape_items()
