@@ -20,11 +20,19 @@ class Scraper:
     set_url(self, query:str, limit:int)
         Searches spotify for playlists.
 
-    scrape(self, playlist_ids:str, popularity:int, popular:bool):
+    scrape_links(self, playlist_ids:str, popularity:int, popular:bool):
         Get a list of tracks for the new playlist.
+
+    scrape_items(self, playlist_ids:str, popularity:int, popular:bool):
+        Get a list of tracks for the new playlist.
+
+    scrape_item(self, playlist_ids:str, popularity:int, popular:bool):
+        Get a list of tracks for the new playlist.
+    
     """
     driver = None
     links = None
+    data = []
     def __init__(self):
         """
         This function will call the class function `auth_spotify` and create a list for later use.
@@ -72,28 +80,11 @@ class Scraper:
         """
         try:
             self.links = self.driver.find_elements(By.XPATH, xpath)
-            print("Found links")
+            print('Found links')
         except Exception as e:
-            print("Error while scraping:", e)
+            print('Error while scraping:', e)
 
-        # self.driver.quit()
-
-    def scrape_item(self, link):
-        try:
-            self.links = self.driver.find_elements(By.XPATH, xpath)
-            # title = 
-            # publish_date = 
-            # author = 
-            # tags = 
-            # pages = 
-            # publisher
-            # overview
-            print("Found links")
-        except Exception as e:
-            print("Error while scraping:", e)
-
-
-    def scrape_items(self):
+    def scrape_items(self, to_scrape):
         """
         This function passes the links to another function called scrape_item where
         all the data proccessing will be handeld.
@@ -106,10 +97,39 @@ class Scraper:
         -------
         None
         """
+        if not self.links:
+            print('There are no links to scrape')
+            return
+        print(links)
         for link in self.links:
-            self.scrape_item(link)
+            self.set_url(link)
+            item = []
+            for key, value in to_scrape.items():
+                print(f'Key: {key}, Value: {value}')
+            #     try:
+            #         key = self.driver.find_elements(By.XPATH, value)
+            #         item.append(key)
+            #     except Exception as e:
+            #         print('Error while scraping:', e)
+            # self.data.append(item)
+
+    def print_data(self):
+        print(self.data)
+        return
+
 
 sc = Scraper()
 sc.set_url('https://www.barnesandnoble.com/s/education')
 sc.get_links("//div[@class='product-shelf-title product-info-title pt-xs']/a")
-sc.scrape_items()
+data_to_scrape = {
+    'title': "//h1[@class='pdp-header-title']",
+    'publish_date' : "//table[@class='plain centered']//tr[th='Publication date:']/td",
+    'author' : "//span[@id='key-contributors']/a",
+    'tags' : "//div[@class='related-sub-text pt-xxs']/a",
+    'pages' : "//table[@class='plain centered']//tr[th='Pages:']/td",
+    'publisher' : "//table[@class='plain centered']//tr[th='Publisher:']/td//span",
+    'isbn' : "//table[@class='plain centered']//tr[th='ISBN-13:']/td",
+    'overview' : "//div[contains(@class, 'overview-cntnt')]"
+    }
+sc.scrape_items(data_to_scrape)
+sc.print_data()
