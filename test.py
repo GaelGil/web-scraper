@@ -100,7 +100,7 @@ class Scraper:
         if not self.links:
             print('There are no links to scrape')
             return
-        print(links)
+        print(self.links)
         for link in self.links:
             self.set_url(link)
             item = []
