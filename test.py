@@ -80,6 +80,9 @@ class Scraper:
         """
         try:
             self.links = self.driver.find_elements(By.XPATH, xpath)
+            print(links)
+            for link in self.links:
+                print(link.get_attribute('href'))
             print('Found links')
         except Exception as e:
             print('Error while scraping:', e)
