@@ -79,10 +79,8 @@ class Scraper:
         None
         """
         try:
-            self.links = self.driver.find_elements(By.XPATH, xpath)
-            print(links)
-            for link in self.links:
-                print(link.get_attribute('href'))
+            links = self.driver.find_elements(By.XPATH, xpath)
+            self.links = [link.get_attribute('href') for link in links]
             print('Found links')
         except Exception as e:
             print('Error while scraping:', e)
@@ -109,12 +107,12 @@ class Scraper:
             item = []
             for key, value in to_scrape.items():
                 print(f'Key: {key}, Value: {value}')
-            #     try:
-            #         key = self.driver.find_elements(By.XPATH, value)
-            #         item.append(key)
-            #     except Exception as e:
-            #         print('Error while scraping:', e)
-            # self.data.append(item)
+                try:
+                    key = self.driver.find_elements(By.XPATH, value)
+                    item.append(key)
+                except Exception as e:
+                    print('Error while scraping:', e)
+            self.data.append(item)
 
     def print_data(self):
         print(self.data)
