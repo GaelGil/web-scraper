@@ -14,6 +14,10 @@ class Scraper:
     ----------
     driver : 
         The browser driver
+    links :
+        A list of links to scrape
+    data : 
+        The data we scraped
 
     Methods
     -------
