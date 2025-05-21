@@ -37,7 +37,7 @@ class Scraper:
     driver = None
     links = None
     data = []
-    def __init__(self):
+    def __init__(self) -> None:
         """
         This function will call the class function `auth_spotify` and create a list for later use.
 
@@ -54,7 +54,7 @@ class Scraper:
         service = Service(GECKODRIVER_PATH)
         self.driver = webdriver.Firefox(service=service, options=options)
 
-    def set_url(self, url):
+    def set_url(self, url)  -> None:
         """
         Function to set the url that we will scrape.
 
@@ -69,7 +69,7 @@ class Scraper:
         self.driver.get(url)
         time.sleep(3)
 
-    def get_links(self, xpath):
+    def get_links(self, xpath) -> None:
         """
         This function gets book titles and their link
 
@@ -89,7 +89,7 @@ class Scraper:
         except Exception as e:
             print('Error while scraping:', e)
 
-    def scrape_items(self, to_scrape):
+    def scrape_items(self, to_scrape) -> None:
         """
         This function passes the links to another function called scrape_item where
         all the data proccessing will be handeld.
@@ -118,7 +118,7 @@ class Scraper:
                     print('Error while scraping:', e)
             self.data.append(item)
 
-    def print_data(self):
+    def print_data(self) -> None:
         print(self.data)
         return
 
