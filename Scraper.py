@@ -105,7 +105,7 @@ class Scraper:
         except Exception as e:
             print('Error while scraping:', e)
 
-    def scrape_items(self, x_paths: dict) -> None:
+    def scrape_items(self, x_paths: dict, multiple: list) -> None:
         """Function to scrape items that we selected in get_links
         
         This functions uses the links we scraped to get individual information on 
@@ -125,12 +125,11 @@ class Scraper:
             self.set_url(link)
             item = []
             for key, xpath in x_paths.items():
-                # print(f'Key: {key}, Value: {xpath}')
                 try:
-                    if key in ['author', 'tags']:
+                    if key in multiple:
                         elements = self.driver.find_elements(By.XPATH, xpath)
                         elements = [el.text.strip() for el in elements if el.text.strip()]
-                        print(elements)
+                        print(f'tags/author {elements}')
                         item.append(elements)
                     else:
                         element = self.driver.find_element(By.XPATH, xpath)
@@ -183,5 +182,6 @@ data_to_scrape = {
     'isbn' : "//table[@class='plain centered']//tr[th='ISBN-13:']/td",
     'overview' : "//div[contains(@class, 'overview-cntnt')]"
     }
-sc.scrape_items(data_to_scrape)
+multiple = ['author', 'tags']
+sc.scrape_items(data_to_scrape, multiple)
 sc.print_data()
