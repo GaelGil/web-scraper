@@ -142,14 +142,10 @@ class Scraper:
             self.data.append(item)
 
     def print_data(self) -> None:
-        """Function to scrape items that we selected in get_links
-        
-        This functions uses the links we scraped to get individual information on 
-        each of the items
+        """print data
 
         Args:
-            x_paths: A dictionary containing the key as the item we want to scrape
-            and the value being the xpath of that item
+            None
 
         Returns:
             None
@@ -157,13 +153,14 @@ class Scraper:
         print(self.data)
         return
 
-    def to_csv(self) -> None:
+    def to_csv(self, file_name: str, x_paths: dict) -> None:
         """Function to write data to csv
         
-        This functions uses the links we scraped to get individual information on 
-        each of the items
+        This functions write the data we scraped to csv
 
         Args:
+            file_name: the name of the file we are going to create 
+
             x_paths: A dictionary containing the key as the item we want to scrape
             and the value being the xpath of that item
 
