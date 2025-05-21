@@ -1,4 +1,4 @@
-"""A one line summary of the module or program, terminated by a period.
+"""Proram to scrape a website and the items displayed in it.
 
 Leave one blank line.  The rest of this docstring should contain an
 overall description of the module or program.  Optionally, it may also
@@ -6,9 +6,13 @@ contain a brief description of exported classes and functions and/or usage
 examples.
 
   Typical usage example:
-
-  foo = ClassFoo()
-  bar = foo.FunctionBar()
+    sc = Scraper()
+    sc.set_url('example_url')
+    sc.get_links("xpath_for_links")
+    xpaths = {
+    'title': "title_xpath]",
+    }
+    sc.scrape_items(data_to_scrape)
 """
 
 
@@ -152,7 +156,6 @@ class Scraper:
         """
         print(self.data)
         return
-
 
     def to_csv(self) -> None:
         """Function to write data to csv
