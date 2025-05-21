@@ -24,36 +24,35 @@ class Scraper:
     """
     A class used to manage a webscraper
 
-    Attributes
-    ----------
-    driver : None
-        The browser driver
-    links : None
-        A list of links to scrape
-    data : list
-        The data we scraped
+    Attributes:
+        driver : The browser driver needed for webscraping
 
-    Methods
-    -------
-    set_url(self, url:str)
-        Set the url to scrape.
+        links : None
+            A list of links to scrape
+        data : list
+            The data we scraped
 
-    scrape_links(self, playlist_ids:str, popularity:int, popular:bool):
-        Get a list of tracks for the new playlist.
+    Methods:
+        set_url(self, url:str)
+            Set the url to scrape.
 
-    scrape_items(self, playlist_ids:str, popularity:int, popular:bool):
-        Get a list of tracks for the new playlist.
+        scrape_links(self, playlist_ids:str, popularity:int, popular:bool):
+            Get a list of tracks for the new playlist.
 
-    scrape_item(self, playlist_ids:str, popularity:int, popular:bool):
-        Get a list of tracks for the new playlist.
+        scrape_items(self, playlist_ids:str, popularity:int, popular:bool):
+            Get a list of tracks for the new playlist.
 
-    to_csv(self)
-        Write the data that we scraped to a csv
+        scrape_item(self, playlist_ids:str, popularity:int, popular:bool):
+            Get a list of tracks for the new playlist.
+
+        to_csv(self)
+            Write the data that we scraped to a csv
     
     """
     driver = None
     links = None
     data = []
+
     def __init__(self) -> None:
         """Initializes the instance to be ready for scraping.
 
@@ -74,10 +73,8 @@ class Scraper:
     def set_url(self, url: str)  -> None:
         """Function to set the url that we will scrape.
 
-        Parameters
-        ----------
-        url : str
-            The url we want to scrape
+        Args:
+            url: The url we want to scrape
 
         Returns:
             None
@@ -86,15 +83,15 @@ class Scraper:
         time.sleep(3)
 
     def get_links(self, xpath: str) -> None:
-        """
-        This function gets book titles and their link
+        """This function gets book titles and their link
 
-        Parameters
-        ----------
-        xpath : str
-            The xpath to the link elemnts we want to scrape
+        Using the url set previously we scrape links of items on that website
+        we then put those links into a list to be used for individual scraping.
 
-        Returns:
+        Args:
+            xpath: The xpath to the link elemnts we want to scrape
+
+        Returns: 
             None
         """
         try:
@@ -105,12 +102,14 @@ class Scraper:
             print('Error while scraping:', e)
 
     def scrape_items(self, to_scrape: dict) -> None:
-        """Function to scrape items that we selected in 
-        This function passes the links to another function called scrape_item where
-        all the data proccessing will be handeld.
+        """Function to scrape items that we selected in get_links
+        
+        This functions uses the links we scraped to get individual information on 
+        each of the items
 
         Args:
-            to_scrape: A dictionary containing the 
+            to_scrape: A dictionary containing the key as the item we want to scrape
+            and the value being the xpath of that item
 
         Returns:
             None
