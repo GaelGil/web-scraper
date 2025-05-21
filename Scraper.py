@@ -138,7 +138,35 @@ class Scraper:
             self.data.append(item)
 
     def print_data(self) -> None:
+        """Function to scrape items that we selected in get_links
+        
+        This functions uses the links we scraped to get individual information on 
+        each of the items
+
+        Args:
+            x_paths: A dictionary containing the key as the item we want to scrape
+            and the value being the xpath of that item
+
+        Returns:
+            None
+        """
         print(self.data)
+        return
+
+
+    def to_csv(self) -> None:
+        """Function to write data to csv
+        
+        This functions uses the links we scraped to get individual information on 
+        each of the items
+
+        Args:
+            x_paths: A dictionary containing the key as the item we want to scrape
+            and the value being the xpath of that item
+
+        Returns:
+            None
+        """
         return
 
 
