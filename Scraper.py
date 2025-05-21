@@ -101,14 +101,14 @@ class Scraper:
         except Exception as e:
             print('Error while scraping:', e)
 
-    def scrape_items(self, to_scrape: dict) -> None:
+    def scrape_items(self, x_paths: dict) -> None:
         """Function to scrape items that we selected in get_links
         
         This functions uses the links we scraped to get individual information on 
         each of the items
 
         Args:
-            to_scrape: A dictionary containing the key as the item we want to scrape
+            x_paths: A dictionary containing the key as the item we want to scrape
             and the value being the xpath of that item
 
         Returns:
@@ -117,15 +117,22 @@ class Scraper:
         if not self.links:
             print('There are no links to scrape')
             return
-        print(self.links)
         for link in self.links:
             self.set_url(link)
             item = []
-            for key, value in to_scrape.items():
-                print(f'Key: {key}, Value: {value}')
+            for key, xpath in x_paths.items():
+                # print(f'Key: {key}, Value: {xpath}')
                 try:
-                    key = self.driver.find_elements(By.XPATH, value)
-                    item.append(key)
+                    if key in ['author', 'tags']:
+                        elements = self.driver.find_elements(By.XPATH, xpath)
+                        elements = [el.text.strip() for el in elements if el.text.strip()]
+                        print(elements)
+                        item.append(elements)
+                    else:
+                        element = self.driver.find_element(By.XPATH, xpath)
+                        elements = element.text.strip()
+                        item.append(elements)
+
                 except Exception as e:
                     print('Error while scraping:', e)
             self.data.append(item)
