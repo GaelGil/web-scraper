@@ -1,3 +1,17 @@
+"""A one line summary of the module or program, terminated by a period.
+
+Leave one blank line.  The rest of this docstring should contain an
+overall description of the module or program.  Optionally, it may also
+contain a brief description of exported classes and functions and/or usage
+examples.
+
+  Typical usage example:
+
+  foo = ClassFoo()
+  bar = foo.FunctionBar()
+"""
+
+
 from selenium import webdriver
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.firefox.options import Options
@@ -12,17 +26,17 @@ class Scraper:
 
     Attributes
     ----------
-    driver : 
+    driver : None
         The browser driver
-    links :
+    links : None
         A list of links to scrape
-    data : 
+    data : list
         The data we scraped
 
     Methods
     -------
-    set_url(self, query:str, limit:int)
-        Searches spotify for playlists.
+    set_url(self, url:str)
+        Set the url to scrape.
 
     scrape_links(self, playlist_ids:str, popularity:int, popular:bool):
         Get a list of tracks for the new playlist.
@@ -32,44 +46,46 @@ class Scraper:
 
     scrape_item(self, playlist_ids:str, popularity:int, popular:bool):
         Get a list of tracks for the new playlist.
+
+    to_csv(self)
+        Write the data that we scraped to a csv
     
     """
     driver = None
     links = None
     data = []
     def __init__(self) -> None:
-        """
-        This function will call the class function `auth_spotify` and create a list for later use.
+        """Initializes the instance to be ready for scraping.
 
-        Parameters
-        ----------
-        None
+        Initializes the Scraper instance to set the options and driver
+        on the selenium scraper.
 
-        Returns
-        -------
-        None
+        Args: 
+            None
+
+        Returns:
+            None
         """
         options = Options()
         options.headless = True 
         service = Service(GECKODRIVER_PATH)
         self.driver = webdriver.Firefox(service=service, options=options)
 
-    def set_url(self, url)  -> None:
-        """
-        Function to set the url that we will scrape.
+    def set_url(self, url: str)  -> None:
+        """Function to set the url that we will scrape.
 
         Parameters
         ----------
         url : str
             The url we want to scrape
-        Returns
-        -------
-        None
+
+        Returns:
+            None
         """
         self.driver.get(url)
         time.sleep(3)
 
-    def get_links(self, xpath) -> None:
+    def get_links(self, xpath: str) -> None:
         """
         This function gets book titles and their link
 
@@ -78,9 +94,8 @@ class Scraper:
         xpath : str
             The xpath to the link elemnts we want to scrape
 
-        Returns
-        -------
-        None
+        Returns:
+            None
         """
         try:
             links = self.driver.find_elements(By.XPATH, xpath)
@@ -89,18 +104,16 @@ class Scraper:
         except Exception as e:
             print('Error while scraping:', e)
 
-    def scrape_items(self, to_scrape) -> None:
-        """
+    def scrape_items(self, to_scrape: dict) -> None:
+        """Function to scrape items that we selected in 
         This function passes the links to another function called scrape_item where
         all the data proccessing will be handeld.
 
-        Parameters
-        ----------
-        None
+        Args:
+            to_scrape: A dictionary containing the 
 
-        Returns
-        -------
-        None
+        Returns:
+            None
         """
         if not self.links:
             print('There are no links to scrape')
