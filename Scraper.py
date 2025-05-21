@@ -55,7 +55,7 @@ class Scraper:
     """
     driver = None
     links = None
-    data = []
+    data = {}
 
     def __init__(self) -> None:
         """Initializes the instance to be ready for scraping.
@@ -123,7 +123,7 @@ class Scraper:
             return
         for link in self.links:
             self.set_url(link)
-            item = []
+            item = x_paths.copy()
             for key, xpath in x_paths.items():
                 try:
                     if key in multiple:
