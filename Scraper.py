@@ -253,9 +253,11 @@ class Scraper:
             formated_data.append(list(value.values()))        
         return formated_data
 
+#TODO: add next page functionality
+#TODO: review set multiple funtionality and remove if not used
 
 
-# TODO: switch to scraping goodreads instead
+
 sc = Scraper()
 sc.set_url('https://www.goodreads.com/shelf/show/horror')
 sc.scrape_links("//*[@id='bodycontainer']/div[3]/div[1]/div[2]/div[3]/div[8]/div[1]/a[2]")
