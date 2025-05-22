@@ -33,32 +33,36 @@ class Scraper:
     A class used to manage a webscraper
 
     Attributes:
-        driver : The browser driver needed for webscraping
-        links : None
-            Will be used as a list of links to scrape
-        x_paths: None
-            Will be used as a dictionary where the element is a string a (key) and
+        driver: The browser driver needed for webscraping
+        links: Will be used as a list of links to scrape
+        x_paths: Will be used as a dictionary where the element is a string a (key) and
             the xpath is the value.
-        data : list
-            The data we scraped 
+        data: A list containing the data we scraped 
 
     Methods:
         set_url(self, url:str)
             Set the url to scrape.
 
-        scrape_links(self, playlist_ids:str, popularity:int, popular:bool):
-            Get a list of tracks for the new playlist.
+        scrape_links(self, xpath: str)
+            This function scrapes links from a website
 
-        set_xpaths(self, )
+        set_xpaths(self, xpaths: dict)
+            This function sets the xpaths for items we want to scrape
         
-        scrape_items(self, playlist_ids:str, popularity:int, popular:bool):
-            Get a list of tracks for the new playlist.
+        add_xpath(self, name: str, xpath: str)
+            This function adds a key and value to the xpath dictionary
 
-        scrape_item(self, playlist_ids:str, popularity:int, popular:bool):
-            Get a list of tracks for the new playlist.
+        scrape_items(self, multiple: list)
+            Function to scrape data from the links we got in scrape_links
 
-        to_csv(self)
-            Write the data that we scraped to a csv
+        print_data(self)
+            Function to print class variable `data`
+
+        to_csv(self, file_name: str, data: list)
+            Function to write data to csv
+
+        format_data(self)
+            Function to format data to be written to a csv file
     
     """
     driver = None
@@ -129,7 +133,7 @@ class Scraper:
 
         Args:
             xpath: A dictionary where the element is a string a (key) and
-            the xpath is the value.
+                the xpath is the value.
 
         Returns: 
             None
@@ -196,7 +200,7 @@ class Scraper:
                 return
 
     def print_data(self) -> None:
-        """print data
+        """Function to print class variable `data`
 
         Args:
             None
@@ -215,7 +219,6 @@ class Scraper:
 
         Args:
             file_name: The name of the csv file we are going to create 
-
             data: The formated data that we are going to write to a csv file
 
         Returns:
@@ -235,7 +238,7 @@ class Scraper:
         We then return this list to be written to csv.
 
         Args:
-            cols: A list of columns for the csv file
+            None
 
         Returns:
             list
