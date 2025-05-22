@@ -140,8 +140,8 @@ class Scraper:
                     print('Error while scraping:', e)
             self.data[i] = item
             i+=1
-            if i == 1:
-                return
+            # if i == 1:
+        return
 
     def print_data(self) -> None:
         """print data
@@ -188,9 +188,7 @@ class Scraper:
         """
         print(f'cols: {cols}')
         for value in self.data.values():
-            print(f'value: {value}')
-
-            cols.append(value.values())
+            cols.append(list(value.values()))
         return cols
 
 
