@@ -156,10 +156,13 @@ class Scraper:
         print(f'added {name}')
     
     def scrape_items(self, multiple: list) -> None:
-        """Function to scrape data from the items we got in scrape_links
+        """Function to scrape data from the links we got in scrape_links
         
         This functions uses the links we scraped to get individual information on 
-        each of the items
+        each of the items. For example if we previously scraped the products page
+        on amazon. We would now have the links to each of the individual products.
+        This function will go to each product (link) and scrape data from their page using
+        the xpaths set in the function `set_xpaths`. 
 
         Args:
             multilple: a list of elements that might have multiple items. For example
@@ -208,7 +211,7 @@ class Scraper:
         """Function to write data to csv
         
         This function writes the data we scraped to csv. Must be first
-        formated into list. Use format data first.
+        formated into list. Use the function `format_data` first.
 
         Args:
             file_name: The name of the csv file we are going to create 
@@ -228,7 +231,8 @@ class Scraper:
 
         This function formats the data we scraped into a list that will be able to
         be written to csv. 
-        Ex: [[col1, col2, col3], [1, 2, 3], [4, 5, 6]]
+        Ex: [[col1, col2, col3], [1, 2, 3], [4, 5, 6]]. 
+        We then return this list to be written to csv.
 
         Args:
             cols: A list of columns for the csv file
@@ -260,6 +264,5 @@ sc.set_xpaths(data_to_scrape)
 
 multiple = ['author']
 sc.scrape_items(multiple)
-# sc.print_data()
 formated_data = sc.format_data()
 sc.to_csv('./data.csv', formated_data)
