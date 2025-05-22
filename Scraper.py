@@ -121,6 +121,7 @@ class Scraper:
         if not self.links:
             print('There are no links to scrape')
             return
+        i = 0
         for link in self.links:
             self.set_url(link)
             item = x_paths.copy()
@@ -129,16 +130,17 @@ class Scraper:
                     if key in multiple:
                         elements = self.driver.find_elements(By.XPATH, xpath)
                         elements = [el.text.strip() for el in elements if el.text.strip()]
-                        print(f'tags/author {elements}')
-                        item.append(elements)
+                        # print(f'tags/author {elements}')
+                        item[key] = [elements]
                     else:
                         element = self.driver.find_element(By.XPATH, xpath)
                         elements = element.text.strip()
-                        item.append(elements)
+                        item[key] = [elements]
 
                 except Exception as e:
                     print('Error while scraping:', e)
-            self.data.append(item)
+            self.data[i] = [item]
+            i+=1
 
     def print_data(self) -> None:
         """print data
@@ -173,10 +175,10 @@ sc = Scraper()
 sc.set_url('https://www.barnesandnoble.com/s/education')
 sc.get_links("//div[@class='product-shelf-title product-info-title pt-xs']/a")
 data_to_scrape = {
-    'title': "//h1[@class='pdp-header-title']",
+    'title': "//h1[contains(@class, 'pdp-header-title')]",
     'publish_date' : "//table[@class='plain centered']//tr[th='Publication date:']/td",
     'author' : "//span[@id='key-contributors']/a",
-    'tags' : "//div[@class='related-sub-text pt-xxs']/a",
+    'tags' : "//div[@class='row related-subject-container focus']//a",
     'pages' : "//table[@class='plain centered']//tr[th='Pages:']/td",
     'publisher' : "//table[@class='plain centered']//tr[th='Publisher:']/td//span",
     'isbn' : "//table[@class='plain centered']//tr[th='ISBN-13:']/td",
