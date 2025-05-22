@@ -142,10 +142,12 @@ class Scraper:
     def add_xpath(self, name: str, xpath: str) -> None:
         """This function adds a key and value to the xpath dictionary
 
-        This function performs a simple
+        This function performs a simple insertion into a dictionary
 
         Args:
-            xpath: The xpath to the link elemnts we want to scrape
+            name: A string representing the name of the element we want to scrape
+            xpath: A string representing xpath to the element want want
+                to scrape
 
         Returns: 
             None
@@ -154,13 +156,14 @@ class Scraper:
         print(f'added {name}')
     
     def scrape_items(self, multiple: list) -> None:
-        """Function to scrape items that we selected in get_links
+        """Function to scrape data from the items we got in scrape_links
         
         This functions uses the links we scraped to get individual information on 
         each of the items
 
         Args:
-            multilple: a list of 
+            multilple: a list of elements that might have multiple items. For example
+            a author might have first and last name or many names.
 
         Returns:
             None
@@ -205,7 +208,7 @@ class Scraper:
         """Function to write data to csv
         
         This function writes the data we scraped to csv. Must be first
-        formated into list
+        formated into list. Use format data first.
 
         Args:
             file_name: The name of the csv file we are going to create 
@@ -231,7 +234,7 @@ class Scraper:
             cols: A list of columns for the csv file
 
         Returns:
-            None
+            list
         """
         formated_data = [list(self.xpaths.keys())]
         for value in self.data.values():
