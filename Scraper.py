@@ -139,7 +139,6 @@ class Scraper:
         self.x_paths[name] = xpath
         print(f'added {name}')
     
-
     def scrape_items(self, multiple: list) -> None:
         """Function to scrape items that we selected in get_links
         
@@ -220,10 +219,10 @@ class Scraper:
         Returns:
             None
         """
-        formated_data = self.format_data([list(self.x_paths.keys())])
+        formated_data = [list(self.x_paths.keys())]
         for value in self.data.values():
-            cols.append(list(value.values()))        
-        return cols
+            formated_data.append(list(value.values()))        
+        return formated_data
 
 
 
@@ -244,6 +243,7 @@ data_to_scrape = {
 sc.set_xpaths(data_to_scrape)
 
 multiple = ['author']
-sc.scrape_items(data_to_scrape, multiple)
+sc.scrape_items(multiple)
 # sc.print_data()
-sc.to_csv('./data.csv', data_to_scrape)
+formated_data = sc.format_data()
+sc.to_csv('./data.csv', formated_data)
