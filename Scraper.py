@@ -252,8 +252,8 @@ class Scraper:
 
 # TODO: switch to scraping goodreads instead
 sc = Scraper()
-sc.set_url('https://www.barnesandnoble.com/s/education')
-sc.scrape_links("//div[@class='product-shelf-title product-info-title pt-xs']/a")
+sc.set_url('https://www.goodreads.com/shelf/show/horror')
+sc.scrape_links("//*[@id='bodycontainer']/div[3]/div[1]/div[2]/div[3]/div[8]/div[1]/a[2]")
 data_to_scrape = {
     'title': "/html/body/main/div[3]/div[2]/section/div[2]/div/div[3]/div[1]/header/div/h1",
     'publish_date' : "//table[@class='plain centered']//tr[th='Publication date:']/td",
@@ -263,9 +263,8 @@ data_to_scrape = {
     'isbn' : "//table[@class='plain centered']//tr[th='ISBN-13:']/td",
     'overview' : "//div[contains(@class, 'overview-cntnt')]"
     }
-sc.set_xpaths(data_to_scrape)
-
-multiple = ['author']
-sc.scrape_items(multiple)
-formated_data = sc.format_data()
-sc.to_csv('./data.csv', formated_data)
+# sc.set_xpaths(data_to_scrape)
+# multiple = ['author']
+# sc.scrape_items(multiple)
+# formated_data = sc.format_data()
+# sc.to_csv('./data.csv', formated_data)
