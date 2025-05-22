@@ -155,30 +155,31 @@ class Scraper:
         print(self.data.values())
         return
 
-    def to_csv(self, file_name: str, x_paths: dict) -> None:
+    def to_csv(self, file_name: str, data: list) -> None:
         """Function to write data to csv
         
-        This functions write the data we scraped to csv
+        This function writes the data we scraped to csv. Must be first
+        formated into list
 
         Args:
-            file_name: the name of the file we are going to create 
+            file_name: The name of the csv file we are going to create 
 
-            x_paths: A dictionary containing the key as the item we want to scrape
-            and the value being the xpath of that item
+            data: The formated data that we are going to write to a csv file
 
         Returns:
             None
         """
-        # print(f'keys: {list(x_paths.keys())}')
-        formated_data = self.format_data([list(x_paths.keys())])
         with open(file_name, 'w', newline='') as file:
             writer = csv.writer(file)
-            writer.writerows(formated_data)
+            writer.writerows(data)
         print(f"Data written to {file_name}")
-        return
 
-    def format_data(self, cols: list) -> list:
+    def format_data(self, x_paths: dict) -> list:
         """Function to format data to be written to a csv file
+
+        This function formats the data we scraped into a list that will be able to
+        be written to csv. 
+        Ex: [[col1, col2, col3], [1, 2, 3], [4, 5, 6]]
 
         Args:
             cols: A list of columns for the csv file
@@ -186,6 +187,7 @@ class Scraper:
         Returns:
             None
         """
+        formated_data = self.format_data([list(x_paths.keys())])
         print(f'cols: {cols}')
         for value in self.data.values():
             cols.append(list(value.values()))
@@ -196,6 +198,7 @@ class Scraper:
 # TODO: switch to scraping goodreads instead
 sc = Scraper()
 sc.set_url('https://www.barnesandnoble.com/s/education')
+# TODO: set_x_path functions/add xpath
 sc.get_links("//div[@class='product-shelf-title product-info-title pt-xs']/a")
 data_to_scrape = {
     'title': "/html/body/main/div[3]/div[2]/section/div[2]/div/div[3]/div[1]/header/div/h1",
