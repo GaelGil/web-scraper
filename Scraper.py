@@ -20,7 +20,8 @@ from selenium import webdriver
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
-import time  
+import time
+import csv
 
 GECKODRIVER_PATH = "./drivers/geckodriver"
 
@@ -130,17 +131,17 @@ class Scraper:
                     if key in multiple:
                         elements = self.driver.find_elements(By.XPATH, xpath)
                         elements = [el.text.strip() for el in elements if el.text.strip()]
-                        # print(f'tags/author {elements}')
-                        item[key] = [elements]
+                        elements = ' '.join(elements)
                     else:
                         element = self.driver.find_element(By.XPATH, xpath)
                         elements = element.text.strip()
-                        item[key] = [elements]
-
+                    item[key] = elements
                 except Exception as e:
                     print('Error while scraping:', e)
-            self.data[i] = [item]
+            self.data[i] = item
             i+=1
+            if i == 1:
+                return
 
     def print_data(self) -> None:
         """print data
@@ -151,7 +152,7 @@ class Scraper:
         Returns:
             None
         """
-        print(self.data)
+        print(self.data.values())
         return
 
     def to_csv(self, file_name: str, x_paths: dict) -> None:
@@ -168,9 +169,33 @@ class Scraper:
         Returns:
             None
         """
+        # print(f'keys: {list(x_paths.keys())}')
+        formated_data = self.format_data([list(x_paths.keys())])
+        with open(file_name, 'w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerows(formated_data)
+        print(f"Data written to {file_name}")
         return
 
+    def format_data(self, cols: list) -> list:
+        """Function to format data to be written to a csv file
 
+        Args:
+            cols: A list of columns for the csv file
+
+        Returns:
+            None
+        """
+        print(f'cols: {cols}')
+        for value in self.data.values():
+            print(f'value: {value}')
+
+            cols.append(value.values())
+        return cols
+
+
+
+# TODO: switch to scraping goodreads instead
 sc = Scraper()
 sc.set_url('https://www.barnesandnoble.com/s/education')
 sc.get_links("//div[@class='product-shelf-title product-info-title pt-xs']/a")
@@ -185,4 +210,5 @@ data_to_scrape = {
     }
 multiple = ['author']
 sc.scrape_items(data_to_scrape, multiple)
-sc.print_data()
+# sc.print_data()
+sc.to_csv('./data.csv', data_to_scrape)
