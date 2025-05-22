@@ -56,6 +56,7 @@ class Scraper:
     """
     driver = None
     links = None
+    x_paths = None
     data = {}
 
     def __init__(self) -> None:
@@ -105,6 +106,39 @@ class Scraper:
             print('Found links')
         except Exception as e:
             print('Error while scraping:', e)
+
+    def set_xpaths(self, x_paths: dict) -> None:
+        """This function gets book titles and their link
+
+        Using the url set previously we scrape links of items on that website
+        we then put those links into a list to be used for individual scraping.
+
+        Args:
+            xpath: The xpath to the link elemnts we want to scrape
+
+        Returns: 
+            None
+        """
+        if self.x_paths:
+            print('x_paths already set, add them instead')
+            return 
+        self.x_paths = x_paths
+
+    def add_xpath(self, name: str, x_path: str) -> None:
+        """This function gets book titles and their link
+
+        Using the url set previously we scrape links of items on that website
+        we then put those links into a list to be used for individual scraping.
+
+        Args:
+            xpath: The xpath to the link elemnts we want to scrape
+
+        Returns: 
+            None
+        """
+        self.x_paths[name] = xpath
+        print(f'added {name}')
+    
 
     def scrape_items(self, x_paths: dict, multiple: list) -> None:
         """Function to scrape items that we selected in get_links
