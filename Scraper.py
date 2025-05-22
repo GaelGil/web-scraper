@@ -158,6 +158,10 @@ class Scraper:
         """
         self.xpaths[name] = xpath
         print(f'added {name}')
+
+    def handle_data(self, key, xpath) -> list:
+
+        return item[key] = elements
     
     def scrape_items(self, multiple: list) -> None:
         """Function to scrape data from the links we got in scrape_links
@@ -183,6 +187,7 @@ class Scraper:
             self.set_url(link)
             item = self.xpaths.copy()
             for key, xpath in self.xpaths.items():
+                self.handle_data(key, xpath)
                 try:
                     if key in multiple:
                         elements = self.driver.find_elements(By.XPATH, xpath)
