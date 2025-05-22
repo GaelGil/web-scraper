@@ -172,7 +172,7 @@ class Scraper:
         with open(file_name, 'w', newline='') as file:
             writer = csv.writer(file)
             writer.writerows(data)
-        print(f"Data written to {file_name}")
+        print(f'Data written to {file_name}')
 
     def format_data(self, x_paths: dict) -> list:
         """Function to format data to be written to a csv file
@@ -188,9 +188,8 @@ class Scraper:
             None
         """
         formated_data = self.format_data([list(x_paths.keys())])
-        print(f'cols: {cols}')
         for value in self.data.values():
-            cols.append(list(value.values()))
+            cols.append(list(value.values()))        
         return cols
 
 
