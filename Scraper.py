@@ -175,15 +175,14 @@ sc = Scraper()
 sc.set_url('https://www.barnesandnoble.com/s/education')
 sc.get_links("//div[@class='product-shelf-title product-info-title pt-xs']/a")
 data_to_scrape = {
-    'title': "//h1[contains(@class, 'pdp-header-title')]",
+    'title': "/html/body/main/div[3]/div[2]/section/div[2]/div/div[3]/div[1]/header/div/h1",
     'publish_date' : "//table[@class='plain centered']//tr[th='Publication date:']/td",
     'author' : "//span[@id='key-contributors']/a",
-    'tags' : "//div[@class='row related-subject-container focus']//a",
     'pages' : "//table[@class='plain centered']//tr[th='Pages:']/td",
     'publisher' : "//table[@class='plain centered']//tr[th='Publisher:']/td//span",
     'isbn' : "//table[@class='plain centered']//tr[th='ISBN-13:']/td",
     'overview' : "//div[contains(@class, 'overview-cntnt')]"
     }
-multiple = ['author', 'tags']
+multiple = ['author']
 sc.scrape_items(data_to_scrape, multiple)
 sc.print_data()
