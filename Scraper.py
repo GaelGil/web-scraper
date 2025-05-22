@@ -258,14 +258,15 @@ data_to_scrape = {
     'title': "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[1]/div[1]/h1",
     'author' : "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[1]/h3/div/span[1]/a/span[1]",
     'rating': "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[2]/a/div[1]/div",
+    'raitings' : "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[2]/a/div[2]/div/span[1]",
+    'reviews' : "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[2]/a/div[2]/div/span[2]",
     'overview' : "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[4]/div/div[1]/div/div/span",
     'genres': "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[5]/ul",
     'pages' : "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[6]/div/span[1]/span/div/p[1]",
     'publish_date' : "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[6]/div/span[1]/span/div/p[2]",
-    'setting': "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[6]/div/span[2]/span/div/div[3]/dd/div/div[1]/a"
     }
 sc.set_xpaths(data_to_scrape)
-multiple = ['author']
+multiple = ['author', 'overview', 'genres']
 sc.scrape_items(multiple)
 formated_data = sc.format_data()
 sc.to_csv('./data.csv', formated_data)
