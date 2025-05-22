@@ -231,7 +231,7 @@ class Scraper:
 # TODO: switch to scraping goodreads instead
 sc = Scraper()
 sc.set_url('https://www.barnesandnoble.com/s/education')
-# TODO: set_x_path functions/add xpath
+# TODO: add documentation for set_x_path functions/add xpath
 sc.get_links("//div[@class='product-shelf-title product-info-title pt-xs']/a")
 data_to_scrape = {
     'title': "/html/body/main/div[3]/div[2]/section/div[2]/div/div[3]/div[1]/header/div/h1",
@@ -242,6 +242,8 @@ data_to_scrape = {
     'isbn' : "//table[@class='plain centered']//tr[th='ISBN-13:']/td",
     'overview' : "//div[contains(@class, 'overview-cntnt')]"
     }
+sc.set_xpaths(data_to_scrape)
+
 multiple = ['author']
 sc.scrape_items(data_to_scrape, multiple)
 # sc.print_data()
