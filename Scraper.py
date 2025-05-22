@@ -140,15 +140,14 @@ class Scraper:
         print(f'added {name}')
     
 
-    def scrape_items(self, x_paths: dict, multiple: list) -> None:
+    def scrape_items(self, multiple: list) -> None:
         """Function to scrape items that we selected in get_links
         
         This functions uses the links we scraped to get individual information on 
         each of the items
 
         Args:
-            x_paths: A dictionary containing the key as the item we want to scrape
-            and the value being the xpath of that item
+            multilple: a list of 
 
         Returns:
             None
@@ -159,8 +158,8 @@ class Scraper:
         i = 0
         for link in self.links:
             self.set_url(link)
-            item = x_paths.copy()
-            for key, xpath in x_paths.items():
+            item = self.x_paths.copy()
+            for key, xpath in self.x_paths.items():
                 try:
                     if key in multiple:
                         elements = self.driver.find_elements(By.XPATH, xpath)
@@ -174,8 +173,8 @@ class Scraper:
                     print('Error while scraping:', e)
             self.data[i] = item
             i+=1
-            # if i == 1:
-        return
+            if i == 1:
+                return
 
     def print_data(self) -> None:
         """print data
@@ -208,7 +207,7 @@ class Scraper:
             writer.writerows(data)
         print(f'Data written to {file_name}')
 
-    def format_data(self, x_paths: dict) -> list:
+    def format_data(self) -> list:
         """Function to format data to be written to a csv file
 
         This function formats the data we scraped into a list that will be able to
@@ -221,7 +220,7 @@ class Scraper:
         Returns:
             None
         """
-        formated_data = self.format_data([list(x_paths.keys())])
+        formated_data = self.format_data([list(self.x_paths.keys())])
         for value in self.data.values():
             cols.append(list(value.values()))        
         return cols
