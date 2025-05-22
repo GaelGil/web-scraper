@@ -67,7 +67,7 @@ class Scraper:
     """
     driver = None
     links = None
-    x_paths = None
+    xpaths = None
     data = {}
 
     def __init__(self) -> None:
@@ -255,16 +255,17 @@ sc = Scraper()
 sc.set_url('https://www.goodreads.com/shelf/show/horror')
 sc.scrape_links("//*[@id='bodycontainer']/div[3]/div[1]/div[2]/div[3]/div[8]/div[1]/a[2]")
 data_to_scrape = {
-    'title': "/html/body/main/div[3]/div[2]/section/div[2]/div/div[3]/div[1]/header/div/h1",
-    'publish_date' : "//table[@class='plain centered']//tr[th='Publication date:']/td",
-    'author' : "//span[@id='key-contributors']/a",
-    'pages' : "//table[@class='plain centered']//tr[th='Pages:']/td",
-    'publisher' : "//table[@class='plain centered']//tr[th='Publisher:']/td//span",
-    'isbn' : "//table[@class='plain centered']//tr[th='ISBN-13:']/td",
-    'overview' : "//div[contains(@class, 'overview-cntnt')]"
+    'title': "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[1]/div[1]/h1",
+    'author' : "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[1]/h3/div/span[1]/a/span[1]",
+    'rating': "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[2]/a/div[1]/div",
+    'overview' : "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[4]/div/div[1]/div/div/span",
+    'genres': "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[5]/ul",
+    'pages' : "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[6]/div/span[1]/span/div/p[1]",
+    'publish_date' : "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[6]/div/span[1]/span/div/p[2]",
+    'setting': "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[6]/div/span[2]/span/div/div[3]/dd/div/div[1]/a"
     }
-# sc.set_xpaths(data_to_scrape)
-# multiple = ['author']
-# sc.scrape_items(multiple)
-# formated_data = sc.format_data()
-# sc.to_csv('./data.csv', formated_data)
+sc.set_xpaths(data_to_scrape)
+multiple = ['author']
+sc.scrape_items(multiple)
+formated_data = sc.format_data()
+sc.to_csv('./data.csv', formated_data)
