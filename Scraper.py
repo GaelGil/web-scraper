@@ -255,7 +255,6 @@ class Scraper:
 
 #TODO: add next page functionality
 #TODO: review set multiple funtionality and remove if not used
-#TODO: update README.md
 
 
 sc = Scraper()
