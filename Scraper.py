@@ -106,7 +106,7 @@ class Scraper:
         self.driver.get(url)
         time.sleep(3)
 
-    def scrape_links(self, link_xpath: str, count: int=0, stop: int = 1) -> None:
+    def scrape_links(self, link_xpath: str, count: int=0, stop: int = 2) -> None:
         """This function scrapes links from a website
 
         This function scrapes links off of items on the url we previously provided at `set_url`
@@ -125,37 +125,29 @@ class Scraper:
             return
         try:
             links = self.driver.find_elements(By.XPATH, link_xpath)
-            links_list = [link.get_attribute('href') for link in links]
-            self.links.extend(links_list)
-            print('Found links')
+            self.links.extend([link.get_attribute('href') for link in links])
+            print(f'Found links from {self.driver.current_url}')
+            self.next_page()
+            new_url = self.driver.current_url # get the url of the page we are on
+            if new_url == current_url: # if on the same page
+                print('No more pages to scrape')
+                return
+            else:
+                count += 1
+                self.set_url(new_url) 
+                self.scrape_links(link_xpath, count, stop)
         except Exception as e:
             print('Error while scraping:', e)
-        # try:
-        #     links = self.driver.find_elements(By.XPATH, link_xpath)
-        #     links = [link.get_attribute('href') for link in links]
-        #     # print(links)
-        #     self.links.append(links)
-        #     print(f'Found links from {self.driver.current_url}')
-
-        #     next_button_xpath = '//a[@class="next_page" and @rel="next"]' 
-        #     next_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, next_button_xpath))) # find next button
-
-        #     current_url = self.driver.current_url # get url of the current page
-        #     next_button.click() # click on next button
-        #     time.sleep(3) 
-
-        #     new_url = self.driver.current_url # get the url of the page we are on
-        #     if new_url == current_url: # if on the same page
-        #         print('No more pages to scrape')
-        #         return
-        #     else:
-        #         count += 1
-        #         self.set_url(new_url) 
-        #         self.scrape_links(link_xpath, count, stop)
-        # except Exception as e:
-        #     print('Error while scraping:', e)
 
     def next_page(self):
+        next_button_xpath = '//a[@class="next_page" and @rel="next"]' 
+        next_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, next_button_xpath))) # find next button
+
+        current_url = self.driver.current_url # get url of the current page
+        next_button.click() # click on next button
+        time.sleep(3) 
+
+
         return
     
     def set_xpaths(self, xpaths: dict) -> None:
@@ -226,6 +218,7 @@ class Scraper:
         Returns:
             None
         """
+        print(self.links)
         if not self.links:
             print('There are no links to scrape')
             return
@@ -238,7 +231,7 @@ class Scraper:
                 item[key] = elements # set the value of the key to the elements
             self.data[i] = item # add each dictionary to the class variable `data`
             i+=1
-            if i == 1:
+            if i == 5:
                 return
 
     def print_data(self) -> None:
@@ -319,9 +312,11 @@ class Scraper:
 # Travel
 # Young Adult
 
+# //*[@id="bodycontainer"]/div[3]/div[1]/div[2]/div[2]/table/tbody/tr[1]/td[2]/a
+
 sc = Scraper(GECKODRIVER_PATH, headless=True)
 sc.set_url('https://www.goodreads.com/search?page=1&q=horror&qid=x02cPlELXg&tab=books')
-sc.scrape_links("//*[@id='bodycontainer']/div[3]/div[1]/div[2]/div[2]/table/tbody/tr[1]/td[2]/a")
+sc.scrape_links("//*[@id='bodycontainer']/div[3]/div[1]/div[2]/div[2]/table/tbody/tr/td[2]/a")
 data_to_scrape = {
     'title': "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[1]/div[1]/h1",
     'author' : "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[1]/h3/div/span[1]/a/span[1]",
