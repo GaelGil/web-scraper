@@ -259,7 +259,35 @@ class Scraper:
 
 #TODO: add next page functionality
 #TODO: review set multiple funtionality and remove if not used
-
+# Art
+# Biography
+# Business
+# Children's
+# Classics
+# Comics
+# Cookbooks
+# Ebooks
+# Fantasy
+# Fiction
+# Graphic Novels
+# Historical Fiction
+# History
+# Horror
+# Memoir
+# Music
+# Mystery
+# Nonfiction
+# Poetry
+# Psychology
+# Romance
+# Science
+# Science Fiction
+# Self Help
+# Sports
+# Thriller
+# Travel
+# Young Adult
+# More Genres
 
 sc = Scraper()
 sc.set_url('https://www.goodreads.com/shelf/show/horror')
@@ -277,7 +305,7 @@ data_to_scrape = {
     }
 sc.set_xpaths(data_to_scrape)
 multiple = ['author', 'overview', 'genres']
-sc.set_multiple(multilple)
+sc.set_multiple(multiple)
 sc.scrape_items()
 formated_data = sc.format_data()
 sc.to_csv('./data.csv', formated_data)
