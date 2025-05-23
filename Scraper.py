@@ -72,6 +72,7 @@ class Scraper:
     xpaths = {}
     multiple = []
     data = {}
+    next_button_path = ''
 
     def __init__(self, driver_path: str, headless: bool) -> None:
         """Initializes the instance to be ready for scraping.
@@ -115,18 +116,18 @@ class Scraper:
         list `links`.
 
         Args:
-            xpath: The xpath to the link elemnts we want to scrape
+            link_xpath: The xpath to the link elements we want to scrape.
 
         Returns: 
             None
         """
         if count == stop:
-            print(f'Done getting links')
+            print(f'Done scraping links')
             return
         try:
-            links = self.driver.find_elements(By.XPATH, link_xpath)
-            self.links.extend([link.get_attribute('href') for link in links])
-            print(f'Found links from {self.driver.current_url}')
+            links = self.driver.find_elements(By.XPATH, link_xpath) # get link elements
+            self.links.extend([link.get_attribute('href') for link in links]) # for each link add get href attribute and add to list
+            print(f'Found links from {self.driver.current_url}') 
             current_url = self.driver.current_url # url before clicking next page button
             new_url = self.next_page() # url after clicking next page button
             if new_url == current_url: # if on the same page
@@ -139,11 +140,13 @@ class Scraper:
             print('Error while scraping:', e)
 
     def next_page(self) -> str:
-        next_button_xpath = '//a[@class="next_page" and @rel="next"]' # xpath for next button
-        next_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, next_button_xpath))) # find next button
+        next_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, self.next_button_xpath))) # find next button
         next_button.click() # click on next button
         time.sleep(3) 
         return self.driver.current_url 
+
+    def set_nextpage_xpath(self, xpath: str) -> None:
+        self.next_button_path = xpath
     
     def set_xpaths(self, xpaths: dict) -> None:
         """This function sets the xpaths for items we want to scrape
@@ -213,7 +216,6 @@ class Scraper:
         Returns:
             None
         """
-        print(self.links)
         if not self.links:
             print('There are no links to scrape')
             return
@@ -283,6 +285,7 @@ class Scraper:
 
 sc = Scraper(GECKODRIVER_PATH, headless=True)
 sc.set_url('https://www.goodreads.com/search?page=1&q=horror&qid=x02cPlELXg&tab=books')
+sc.set_nextpage_xpath('//a[@class="next_page" and @rel="next"]')
 sc.scrape_links("//*[@id='bodycontainer']/div[3]/div[1]/div[2]/div[2]/table/tbody/tr/td[2]/a")
 data_to_scrape = {
     'title': "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[1]/div[1]/h1",
