@@ -3,24 +3,25 @@
 ## description
 
 
-## Run and Install
-Create virtual environment
+## How to use
+###  Create virtual environment
 ~~~
 python3 -m venv env
 ~~~
 
-
-Activate virtual environment
+###  Activate virtual environment
 ~~~
 source ./env/bin/activate
 ~~~
 
-Install libraries
+### Install libraries
 ~~~
 pip install -r requirements.txt
 ~~~
 
-Run
+### Set xpaths
+
+### Run
 ~~~
-python3 web_scraper.py
+python3 Scraper.py
 ~~~
