@@ -107,7 +107,7 @@ class Scraper:
         self.driver.get(url)
         time.sleep(3)
 
-    def scrape_links(self, link_xpath: str, count: int=0, stop: int = 2) -> None:
+    def scrape_links(self, link_xpath: str, count: int=0, stop: int = 5) -> None:
         """This function scrapes links from a website
 
         This function scrapes links off of items on the url we previously provided at `set_url`
@@ -122,25 +122,35 @@ class Scraper:
             None
         """
         if count == stop:
-            print(f'Done scraping links')
+            print(f'Done getting links')
             return
         try:
-            links = self.driver.find_elements(By.XPATH, link_xpath) # get link elements
-            self.links.extend([link.get_attribute('href') for link in links]) # for each link add get href attribute and add to list
-            print(f'Found links from {self.driver.current_url}') 
-            current_url = self.driver.current_url # url before clicking next page button
-            new_url = self.next_page() # url after clicking next page button
+            links = self.driver.find_elements(By.XPATH, link_xpath)
+            self.links.extend([link.get_attribute('href') for link in links])
+            print(f'Found links from {self.driver.current_url}')
+            # self.next_page()
+            next_button_xpath = '//a[@class="next_page" and @rel="next"]' 
+            next_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, next_button_xpath))) # find next button
+
+            current_url = self.driver.current_url # get url of the current page
+            next_button.click() # click on next button
+            time.sleep(3) 
+
+            new_url = self.driver.current_url # get the url of the page we are on
             if new_url == current_url: # if on the same page
                 print('No more pages to scrape')
                 return
             else:
                 count += 1
+                self.set_url(new_url) 
                 self.scrape_links(link_xpath, count, stop)
         except Exception as e:
             print('Error while scraping:', e)
+ 
 
     def next_page(self) -> str:
-        next_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, self.next_button_xpath))) # find next button
+        next_button_xpath = self.next_button_path # xpath for next button
+        next_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, self.next_button_path))) # find next button
         next_button.click() # click on next button
         time.sleep(3) 
         return self.driver.current_url 
@@ -198,7 +208,7 @@ class Scraper:
                 element = self.driver.find_element(By.XPATH, xpath)
                 elements = element.text.strip()
         except Exception as e:
-            print('Error while scraping:', e)
+            print('Error while scraping handling data', e.Message)
         return elements
     
     def scrape_items(self) -> None:
@@ -228,8 +238,8 @@ class Scraper:
                 item[key] = elements # set the value of the key to the elements
             self.data[i] = item # add each dictionary to the class variable `data`
             i+=1
-            if i == 5:
-                return
+            # if i == 5:
+            #     return
 
     def print_data(self) -> None:
         """Function to print class variable `data`
