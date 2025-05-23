@@ -105,7 +105,7 @@ class Scraper:
         self.driver.get(url)
         time.sleep(3)
 
-    def scrape_links(self, xpath: str) -> None:
+    def scrape_links(self, link_xpath: str) -> None:
         """This function scrapes links from a website
 
         Using the url we set previously, we scrape links off of items on that website. 
@@ -121,23 +121,25 @@ class Scraper:
         """
         
         try:
-            links = self.driver.find_elements(By.XPATH, xpath)
+            links = self.driver.find_elements(By.XPATH, link_xpath)
             self.links = [link.get_attribute('href') for link in links]
             print('Found links')
-            next_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, 'rt-button.next'))).click()
-            # next_button.click()
-            # Delay for a few seconds before continuing to the next page
-            time.sleep(2)
 
-            # Check if we have reached the last page
+            next_button_xpath = '//a[@class="next_page" and @rel="next"]'
+            next_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, next_button_xpath)))
+
             current_url = self.driver.current_url
-            if current_url == url:
-                # We are back to the first page, exit the loop
-                break
-            else: 
-                self.set_url(current_url)
+            next_button.click()
+            time.sleep(3) 
 
-                self.scrape_links()
+            new_url = self.driver.current_url
+            if new_url == current_url:
+                print('No more pages to scrape')
+                return
+            else:
+                self.set_url(new_url)
+                self.scrape_links(link_xpaths)
+
         except Exception as e:
             print('Error while scraping:', e)
 
@@ -274,7 +276,6 @@ class Scraper:
             formated_data.append(list(value.values()))        
         return formated_data
 
-#TODO: add next page functionality
 #TODO: review set multiple funtionality and remove if not used
 # Art
 # Biography
@@ -307,7 +308,7 @@ class Scraper:
 # More Genres
 
 sc = Scraper()
-sc.set_url('https://www.goodreads.com/shelf/show/horror')
+sc.set_url('https://www.goodreads.com/search?page=1&q=horror&qid=x02cPlELXg&tab=books')
 sc.scrape_links("//*[@id='bodycontainer']/div[3]/div[1]/div[2]/div[3]/div[8]/div[1]/a[2]")
 data_to_scrape = {
     'title': "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[1]/div[1]/h1",
