@@ -1,5 +1,6 @@
-beautifulsoup4==4.12.2
-pip==23.3.2
-pipdeptree==2.13.2
+beautifulsoup4==4.13.4
+pipdeptree==2.26.1
+PySocks==1.7.1
 requests==2.31.0
+selenium==4.32.0
 setuptools==65.5.0
