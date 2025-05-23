@@ -68,7 +68,7 @@ class Scraper:
     
     """
     driver = None
-    links = None
+    links = []
     xpaths = {}
     multiple = []
     data = {}
@@ -81,7 +81,7 @@ class Scraper:
 
         Args: 
             driver_path: the path to the browser driver
-            headless: for headless option
+            headless: bool for headless option
 
         Returns:
             None
@@ -125,8 +125,8 @@ class Scraper:
             return
         try:
             links = self.driver.find_elements(By.XPATH, link_xpath)
-            # print(links)
-            self.links = [link.get_attribute('href') for link in links]
+            links_list = [link.get_attribute('href') for link in links]
+            self.links.extend(links_list)
             print('Found links')
         except Exception as e:
             print('Error while scraping:', e)
