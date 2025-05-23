@@ -278,36 +278,8 @@ class Scraper:
             formated_data.append(list(value.values()))        
         return formated_data
 
-#TODO: review set multiple funtionality and remove if not used
-# Art
-# Biography
-# Business
-# Children's
-# Classics
-# Comics
-# Cookbooks
-# Fantasy
-# Fiction
-# Graphic Novels
-# Historical Fiction
-# History
-# Horror
-# Memoir
-# Music
-# Mystery
-# Nonfiction
-# Poetry
-# Psychology
-# Romance
-# Science
-# Science Fiction
-# Self Help
-# Sports
-# Thriller
-# Travel
-# Young Adult
 
-# //*[@id="bodycontainer"]/div[3]/div[1]/div[2]/div[2]/table/tbody/tr[1]/td[2]/a
+
 
 sc = Scraper(GECKODRIVER_PATH, headless=True)
 sc.set_url('https://www.goodreads.com/search?page=1&q=horror&qid=x02cPlELXg&tab=books')
