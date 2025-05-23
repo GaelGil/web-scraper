@@ -28,4 +28,5 @@ GENRES = [
 'Young Adult',
 
 ]
-def return 
+def get_genres():
+    return GENRES
