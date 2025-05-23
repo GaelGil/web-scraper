@@ -20,6 +20,8 @@ examples.
 
 
 from selenium import webdriver
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
@@ -117,10 +119,25 @@ class Scraper:
         Returns: 
             None
         """
+        
         try:
             links = self.driver.find_elements(By.XPATH, xpath)
             self.links = [link.get_attribute('href') for link in links]
             print('Found links')
+            next_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, 'rt-button.next'))).click()
+            # next_button.click()
+            # Delay for a few seconds before continuing to the next page
+            time.sleep(2)
+
+            # Check if we have reached the last page
+            current_url = self.driver.current_url
+            if current_url == url:
+                # We are back to the first page, exit the loop
+                break
+            else: 
+                self.set_url(current_url)
+
+                self.scrape_links()
         except Exception as e:
             print('Error while scraping:', e)
 
