@@ -128,8 +128,9 @@ class Scraper:
             self.links.extend([link.get_attribute('href') for link in links])
             print(f'Found links from {self.driver.current_url}')
             self.next_page()
+            # current_url = self.driver.current_url # get url of the current page
             new_url = self.driver.current_url # get the url of the page we are on
-            if new_url == current_url: # if on the same page
+            if new_url == self.driver.current_url: # if on the same page
                 print('No more pages to scrape')
                 return
             else:
@@ -140,14 +141,10 @@ class Scraper:
             print('Error while scraping:', e)
 
     def next_page(self):
-        next_button_xpath = '//a[@class="next_page" and @rel="next"]' 
+        next_button_xpath = '//a[@class="next_page" and @rel="next"]' # xpath of next button
         next_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, next_button_xpath))) # find next button
-
-        current_url = self.driver.current_url # get url of the current page
         next_button.click() # click on next button
         time.sleep(3) 
-
-
         return
     
     def set_xpaths(self, xpaths: dict) -> None:
@@ -312,7 +309,6 @@ class Scraper:
 # Travel
 # Young Adult
 
-# //*[@id="bodycontainer"]/div[3]/div[1]/div[2]/div[2]/table/tbody/tr[1]/td[2]/a
 
 sc = Scraper(GECKODRIVER_PATH, headless=True)
 sc.set_url('https://www.goodreads.com/search?page=1&q=horror&qid=x02cPlELXg&tab=books')
