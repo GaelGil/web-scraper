@@ -66,8 +66,9 @@ class Scraper:
     
     """
     driver = None
-    links = None
-    xpaths = None
+    links = []
+    xpaths = {}
+    multiple = []
     data = {}
 
     def __init__(self) -> None:
@@ -159,11 +160,25 @@ class Scraper:
         self.xpaths[name] = xpath
         print(f'added {name}')
 
-    def handle_data(self, key, xpath) -> list:
+    def set_multiple(self, multilple: list) -> None:
+        self.multilple = multilple
 
-        return item[key] = elements
+
+    def handle_data(self, key, xpath) -> list:
+        elements = None
+        try:
+            if key in self.multiple:
+                elements = self.driver.find_elements(By.XPATH, xpath)
+                elements = [el.text.strip() for el in elements if el.text.strip()]
+                elements = ' '.join(elements)
+            else:
+                element = self.driver.find_element(By.XPATH, xpath)
+                elements = element.text.strip()
+        except Exception as e:
+            print('Error while scraping:', e)
+        return elements
     
-    def scrape_items(self, multiple: list) -> None:
+    def scrape_items(self) -> None:
         """Function to scrape data from the links we got in scrape_links
         
         This functions uses the links we scraped to get individual information on 
@@ -173,8 +188,7 @@ class Scraper:
         the xpaths set in the function `set_xpaths`. 
 
         Args:
-            multilple: a list of elements that might have multiple items. For example
-            a author might have first and last name or many names.
+            None
 
         Returns:
             None
@@ -183,23 +197,13 @@ class Scraper:
             print('There are no links to scrape')
             return
         i = 0
-        for link in self.links:
-            self.set_url(link)
-            item = self.xpaths.copy()
-            for key, xpath in self.xpaths.items():
-                self.handle_data(key, xpath)
-                try:
-                    if key in multiple:
-                        elements = self.driver.find_elements(By.XPATH, xpath)
-                        elements = [el.text.strip() for el in elements if el.text.strip()]
-                        elements = ' '.join(elements)
-                    else:
-                        element = self.driver.find_element(By.XPATH, xpath)
-                        elements = element.text.strip()
-                    item[key] = elements
-                except Exception as e:
-                    print('Error while scraping:', e)
-            self.data[i] = item
+        for link in self.links: # for each link
+            self.set_url(link) # set url for each link
+            item = self.xpaths.copy() # create a copy of each dictionary key (item) : value (elements)
+            for key, xpath in self.xpaths.items(): # for each item and dictionary
+                elements = self.handle_data(key, xpath) # get the elements using xpath
+                item[key] = elements # set the value of the key to the elements
+            self.data[i] = item # add each dictionary to the class variable `data`
             i+=1
             if i == 1:
                 return
@@ -273,6 +277,7 @@ data_to_scrape = {
     }
 sc.set_xpaths(data_to_scrape)
 multiple = ['author', 'overview', 'genres']
-sc.scrape_items(multiple)
+sc.set_multiple(multilple)
+sc.scrape_items()
 formated_data = sc.format_data()
 sc.to_csv('./data.csv', formated_data)
