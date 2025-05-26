@@ -305,13 +305,13 @@ data_to_scrape = {
     'rating': '//div[@class="RatingStatistics__rating"]',
     'raitings' : '//span[@data-testid="ratingsCount"]',
     'reviews' : '//span[@data-testid="reviewsCount"]',
-    'overview' : "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[4]/div/div[1]/div/div/span",
-    'genres': "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[5]/ul",
+    'overview' : '//div[@data-testid="description"]//span[@class="Formatted"]',
+    'genres': '//div[@data-testid="genresList"]//span[@class="Button__labelItem"]',
     'pages' : "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[6]/div/span[1]/span/div/p[1]",
     'publish_date' : "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[6]/div/span[1]/span/div/p[2]",
     }
 sc.set_xpaths(data_to_scrape)
-multiple = []
+multiple = ['genres']
 sc.set_multiple(multiple)
 sc.scrape_items()
 formated_data = sc.format_data()
