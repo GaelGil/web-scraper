@@ -240,8 +240,6 @@ class Scraper:
                 item[key] = elements # set the value of the key to the elements
             self.data[i] = item # add each dictionary to the class variable `data`
             i+=1
-            # if i == 5:
-            #     return
 
     def print_data(self) -> None:
         """Function to print class variable `data`
@@ -293,7 +291,8 @@ class Scraper:
         return formated_data
 
 
-
+#TODO: fix next page function
+#TODO: fix genres to get all genres
 
 sc = Scraper(GECKODRIVER_PATH, headless=True)
 sc.set_url('https://www.goodreads.com/search?page=1&q=horror&qid=x02cPlELXg&tab=books')
