@@ -149,7 +149,7 @@ class Scraper:
  
 
     def next_page(self) -> str:
-        next_button_xpath = self.next_button_path # xpath for next button
+        # next_button_xpath = self.next_button_path # xpath for next button
         next_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, self.next_button_path))) # find next button
         next_button.click() # click on next button
         time.sleep(3) 
