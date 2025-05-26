@@ -207,7 +207,10 @@ class Scraper:
                 element = self.driver.find_element(By.XPATH, xpath)
                 elements = element.text.strip()
         except Exception as e:
-            print('Error while scraping handling data', e.Message)
+            print('Error while scraping handling data', e)
+            print(f'cant locate {key}')
+            print(f'url: {self.driver.current_url}')
+            elements = ''
         return elements
     
     def scrape_items(self) -> None:
@@ -299,9 +302,9 @@ sc.scrape_links("//*[@id='bodycontainer']/div[3]/div[1]/div[2]/div[2]/table/tbod
 data_to_scrape = {
     'title': "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[1]/div[1]/h1",
     'author' : "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[1]/h3/div/span[1]/a/span[1]",
-    'rating': "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[2]/a/div[1]/div",
-    'raitings' : "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[2]/a/div[2]/div/span[1]",
-    'reviews' : "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[2]/a/div[2]/div/span[2]",
+    'rating': '//div[@class="RatingStatistics__rating"]',
+    'raitings' : '//span[@data-testid="ratingsCount"]',
+    'reviews' : '//span[@data-testid="reviewsCount"]',
     'overview' : "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[4]/div/div[1]/div/div/span",
     'genres': "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[5]/ul",
     'pages' : "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[6]/div/span[1]/span/div/p[1]",
