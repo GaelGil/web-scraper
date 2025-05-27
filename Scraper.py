@@ -24,7 +24,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
-from helper import GENRES, XPATHS, NEXT_PAGE_BUTTON_XPATH, LINKS_XPATH
+from helper import GENRES, XPATHS, NEXT_PAGE_BUTTON_XPATH, LINKS_XPATH, MULTIPLE
 import time
 import csv
 
@@ -146,8 +146,18 @@ class Scraper:
         Returns: 
             None
         """
+        if name in self.xpaths:
+            print(f'{name} already in xpaths')
+            return
         self.xpaths[name] = xpath
         print(f'added {name}')
+    
+    def add_multiple(self, key, value):
+        if key in self.multiple:
+            print(f'{key} already in multiple')
+            return 
+        self.multiple[key] = value
+        print(f'added {key}')
 
     def scrape_links(self, link_xpath: str, count: int=0, stop: int = 5) -> None:
         """This function scrapes links from a website
@@ -172,15 +182,16 @@ class Scraper:
             print(f'Found links from {self.driver.current_url}')
             current_url = self.driver.current_url # get url of the current page
             new_url = self.next_page() # go to next page
-            if new_url == current_url: # if on the same page
-                print('No more pages to scrape')
-                return
-            else:
-                count += 1
-                self.set_url(new_url) 
-                self.scrape_links(link_xpath, count, stop)
         except Exception as e:
             print('Error while scraping:', e)
+        if new_url == current_url: # if on the same page
+            print('No more pages to scrape')
+            return
+        else:
+            count += 1
+            self.set_url(new_url) 
+            self.scrape_links(link_xpath, count, stop)
+
  
     def next_page(self) -> str:
         next_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, self.next_button_path))) # find next button
@@ -284,9 +295,7 @@ sc.set_url('https://www.goodreads.com/search?page=1&q=horror&qid=x02cPlELXg&tab=
 sc.set_next_page_xpath(NEXT_PAGE_BUTTON_XPATH)
 sc.scrape_links(LINKS_XPATH)
 sc.set_xpaths(XPATHS)
-multiple = {'genres' : 0}
-sc.set_multiple(multiple)
+sc.set_multiple(MULTIPLE)
 sc.scrape_items()
-# sc.print_data()
 # formated_data = sc.format_data()
 # sc.to_csv('./data.csv', formated_data)
