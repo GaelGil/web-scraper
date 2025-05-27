@@ -229,6 +229,22 @@ class Scraper:
         self.urls = url
 
     def iterate_urls(self, link_xpath: str, count: int=0, stop: int=5):
+        """This function sets the class variable multiple.
+
+        This functions sets the class variable multiple. The point of this
+        is for when we have have elements that have multiple elements. For example
+        a book or movie can have several authors/directors. Additionally it can also 
+        have several genres. The use case for this would be if to add these to the
+        multiple dictionary. Later while scraping our scraper will look out for them
+        to scrape them correctly. We use a dictionary for faster look up.
+
+        Args:
+            multiple: A dictionary where the item is a string a (key) and
+                value can be set to anything. 
+
+        Returns: 
+            None
+        """
         for i in range(len(self.urls)): # iterate urls
             self.set_url(self.urls[i]) # set the url to scrape
             self.scrape_item_links(link_xpath) # scrape the items from the page
@@ -399,11 +415,3 @@ sc.iterate_urls(LINKS_XPATH)
 sc.iterate_items()
 formated_data = sc.format_data()
 sc.to_csv('./data.csv', formated_data)
-# sc.set_genres()
-# sc.set_next_page_xpath(NEXT_PAGE_BUTTON_XPATH)
-# sc.scrape_item_links(LINKS_XPATH)
-# sc.set_xpaths(XPATHS)
-# sc.set_multiple(MULTIPLE)
-# sc.scrape_items()
-# formated_data = sc.format_data()
-# sc.to_csv('./data.csv', formated_data)
