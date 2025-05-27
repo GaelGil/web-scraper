@@ -25,11 +25,14 @@ from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
-from helper import GENRES, XPATHS, NEXT_PAGE_BUTTON_XPATH, LINKS_XPATH, MULTIPLE, make_urls
+from helper import XPATHS, make_urls
 import time
 import csv
 
 GECKODRIVER_PATH = "./drivers/geckodriver"
+NEXT_PAGE_BUTTON_XPATH = '//a[@class="next_page" and @rel="next"]'
+LINKS_XPATH = "//*[@id='bodycontainer']/div[3]/div[1]/div[2]/div[2]/table/tbody/tr/td[2]/a"
+MULTIPLE = {'genres' : 0}
 
 class Scraper:
     """
@@ -376,6 +379,8 @@ sc = Scraper(GECKODRIVER_PATH, headless=True)
 sc.set_next_page_xpath(NEXT_PAGE_BUTTON_XPATH)
 sc.set_urls(make_urls())
 sc.iterate_urls(LINKS_XPATH)
+sc.set_xpaths(XPATHS)
+sc.set_multiple(MULTIPLE)
 # sc.set_genres()
 # sc.set_next_page_xpath(NEXT_PAGE_BUTTON_XPATH)
 # sc.scrape_item_links(LINKS_XPATH)
