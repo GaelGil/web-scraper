@@ -253,10 +253,10 @@ class Scraper:
             next_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, self.next_button_path))) # find next button
             next_button.click() # click on next button
             time.sleep(3) 
-        except NoSuchElementException:
+        except NoSuchElementException: # if we cant find the next page button throw exception
             print('Next button not found. Done finding links')
-            return True
-        return self.driver.current_url 
+            return True # return true
+        return self.driver.current_url # return url of page we are on
 
     def handle_data(self, key, xpath) -> list:
         """Function to scrape data from the links we got in scrape_links
