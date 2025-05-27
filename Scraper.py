@@ -24,6 +24,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
+from selenium.common.exceptions import NoSuchElementException
 from helper import GENRES, XPATHS, NEXT_PAGE_BUTTON_XPATH, LINKS_XPATH, MULTIPLE
 import time
 import csv
@@ -225,10 +226,8 @@ class Scraper:
             print(f'Found links from {self.driver.current_url}')
         except Exception as e:
             print('Error while scraping:', e)
-        current_url = self.driver.current_url # get url of the current page
         new_url = self.next_page() # go to next page
-        if new_url == current_url: # if on the same page
-            print('No more pages to scrape')
+        if type(new_url) is bool: # if cant find next button (we made it to end)
             return
         else:
             count += 1
@@ -237,12 +236,43 @@ class Scraper:
 
  
     def next_page(self) -> str:
-        next_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, self.next_button_path))) # find next button
-        next_button.click() # click on next button
-        time.sleep(3) 
+        """This function scrapes links from a website
+
+        This function scrapes links off of items on the url we previously provided at `set_url`
+        As an example it can be used on the products page of amazon or any website where
+        there are itmems listed. We scrape the links and then put them into the class
+        list `links`.
+
+        Args:
+            link_xpath: The xpath to the link elements we want to scrape.
+
+        Returns: 
+            None
+        """
+        try:
+            next_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, self.next_button_path))) # find next button
+            next_button.click() # click on next button
+            time.sleep(3) 
+        except NoSuchElementException:
+            print('Next button not found. Done finding links')
+            return True
         return self.driver.current_url 
 
     def handle_data(self, key, xpath) -> list:
+        """Function to scrape data from the links we got in scrape_links
+        
+        This functions uses the links we scraped to get individual information on 
+        each of the items. For example if we previously scraped the products page
+        on amazon. We would now have the links to each of the individual products.
+        This function will go to each product (link) and scrape data from their page using
+        the xpaths set in the function `set_xpaths`. 
+
+        Args:
+            None
+
+        Returns:
+            None
+        """
         elements = ''
         try:
             if key in self.multiple:
