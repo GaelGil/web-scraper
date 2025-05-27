@@ -227,12 +227,11 @@ class Scraper:
         except Exception as e:
             print('Error while scraping:', e)
         new_url = self.next_page() # go to next page
-        if type(new_url) is bool: # if cant find next button (we made it to end)
-            return
-        else:
+        if type(new_url) is not bool:
             count += 1
             self.set_url(new_url) 
             self.scrape_links(link_xpath, count, stop)
+            
 
  
     def next_page(self) -> str:
