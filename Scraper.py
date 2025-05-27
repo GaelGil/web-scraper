@@ -107,53 +107,6 @@ class Scraper:
         self.driver.get(url)
         time.sleep(3)
 
-    def scrape_links(self, link_xpath: str, count: int=0, stop: int = 5) -> None:
-        """This function scrapes links from a website
-
-        This function scrapes links off of items on the url we previously provided at `set_url`
-        As an example it can be used on the products page of amazon or any website where
-        there are itmems listed. We scrape the links and then put them into the class
-        list `links`.
-
-        Args:
-            link_xpath: The xpath to the link elements we want to scrape.
-
-        Returns: 
-            None
-        """
-        if count == stop:
-            print(f'Done getting links')
-            return
-        try:
-            links = self.driver.find_elements(By.XPATH, link_xpath)
-            self.links.extend([link.get_attribute('href') for link in links])
-            print(f'Found links from {self.driver.current_url}')
-            # self.next_page()
-            next_button_xpath = '//a[@class="next_page" and @rel="next"]' 
-            next_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, next_button_xpath))) # find next button
-
-            current_url = self.driver.current_url # get url of the current page
-            next_button.click() # click on next button
-            time.sleep(3) 
-
-            new_url = self.driver.current_url # get the url of the page we are on
-            if new_url == current_url: # if on the same page
-                print('No more pages to scrape')
-                return
-            else:
-                count += 1
-                self.set_url(new_url) 
-                self.scrape_links(link_xpath, count, stop)
-        except Exception as e:
-            print('Error while scraping:', e)
- 
-
-    def next_page(self) -> str:
-        next_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, self.next_button_path))) # find next button
-        next_button.click() # click on next button
-        time.sleep(3) 
-        return self.driver.current_url 
-
     def set_nextpage_xpath(self, xpath: str) -> None:
         self.next_button_path = xpath
     
@@ -177,6 +130,9 @@ class Scraper:
             return 
         self.xpaths = xpaths
 
+    def set_multiple(self, multilple: list) -> None:
+        self.multilple = multilple
+
     def add_xpath(self, name: str, xpath: str) -> None:
         """This function adds a key and value to the xpath dictionary
 
@@ -193,24 +149,63 @@ class Scraper:
         self.xpaths[name] = xpath
         print(f'added {name}')
 
-    def set_multiple(self, multilple: list) -> None:
-        self.multilple = multilple
+    def scrape_links(self, link_xpath: str, count: int=0, stop: int = 5) -> None:
+        """This function scrapes links from a website
+
+        This function scrapes links off of items on the url we previously provided at `set_url`
+        As an example it can be used on the products page of amazon or any website where
+        there are itmems listed. We scrape the links and then put them into the class
+        list `links`.
+
+        Args:
+            link_xpath: The xpath to the link elements we want to scrape.
+
+        Returns: 
+            None
+        """
+        if count == stop:
+            print(f'Done getting links')
+            return
+        try:
+            links = self.driver.find_elements(By.XPATH, link_xpath)
+            self.links.extend([link.get_attribute('href') for link in links])
+            print(f'Found links from {self.driver.current_url}')
+            current_url = self.driver.current_url # get url of the current page
+            new_url = self.next_page() # go to next page
+            if new_url == current_url: # if on the same page
+                print('No more pages to scrape')
+                return
+            else:
+                count += 1
+                self.set_url(new_url) 
+                self.scrape_links(link_xpath, count, stop)
+        except Exception as e:
+            print('Error while scraping:', e)
+ 
+
+    def next_page(self) -> str:
+        next_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, self.next_button_path))) # find next button
+        next_button.click() # click on next button
+        time.sleep(3) 
+        return self.driver.current_url 
 
     def handle_data(self, key, xpath) -> list:
         elements = None
         try:
+            # print(f'multiple: {self.multilple}')
+            # print(f'key: {key}')
             if key in self.multiple:
+                # print(f'key: {key}')
+                print('in multiple')
                 elements = self.driver.find_elements(By.XPATH, xpath)
                 elements = [el.text.strip() for el in elements if el.text.strip()]
                 elements = ' '.join(elements)
             else:
+                print('not in multiple')
                 element = self.driver.find_element(By.XPATH, xpath)
                 elements = element.text.strip()
         except Exception as e:
             print('Error while scraping handling data', e)
-            print(f'cant locate {key}')
-            print(f'url: {self.driver.current_url}')
-            elements = ''
         return elements
     
     def scrape_items(self) -> None:
@@ -305,13 +300,15 @@ data_to_scrape = {
     'raitings' : '//span[@data-testid="ratingsCount"]',
     'reviews' : '//span[@data-testid="reviewsCount"]',
     'overview' : '//div[@data-testid="description"]//span[@class="Formatted"]',
-    'genres': '//div[@data-testid="genresList"]//span[@class="Button__labelItem"]',
+    'genres': '//ul[@class="CollapsableList"]//span[@class="Button__labelItem"]',
     'pages' : '//p[@data-testid="pagesFormat"]',
     'publish_date' : '//p[@data-testid="publicationInfo"]',
     }
 sc.set_xpaths(data_to_scrape)
 multiple = ['genres']
 sc.set_multiple(multiple)
-sc.scrape_items()
-formated_data = sc.format_data()
-sc.to_csv('./data.csv', formated_data)
+# print(sc.multilple)
+# sc.scrape_items()
+# sc.print_data()
+# formated_data = sc.format_data()
+# sc.to_csv('./data.csv', formated_data)
