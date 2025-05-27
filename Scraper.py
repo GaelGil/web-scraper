@@ -108,6 +108,20 @@ class Scraper:
         time.sleep(3)
 
     def set_next_page_xpath(self, xpath: str) -> None:
+        """This function sets the xpaths for items we want to scrape
+
+        This functions sets the class variable xpaths. We are setting
+        a dictionary where the element is a string a (key) and the xpath 
+        is the value. This will be used to scrape each indiviual items
+        data. If we already set xpaths we return and print a message.
+
+        Args:
+            xpath: A dictionary where the element is a string a (key) and
+                the xpath is the value.
+
+        Returns: 
+            None
+        """
         self.next_button_path = xpath
     
     def set_xpaths(self, xpaths: dict) -> None:
@@ -131,6 +145,20 @@ class Scraper:
         self.xpaths = xpaths
 
     def set_multiple(self, multiple: list) -> None:
+        """This function sets the xpaths for items we want to scrape
+
+        This functions sets the class variable xpaths. We are setting
+        a dictionary where the element is a string a (key) and the xpath 
+        is the value. This will be used to scrape each indiviual items
+        data. If we already set xpaths we return and print a message.
+
+        Args:
+            xpath: A dictionary where the element is a string a (key) and
+                the xpath is the value.
+
+        Returns: 
+            None
+        """
         if self.multiple:
             print('multiple already set, add to multiple instead')
             return
@@ -156,6 +184,18 @@ class Scraper:
         print(f'added {name}')
     
     def add_multiple(self, key, value):
+        """This function adds a key and value to the xpath dictionary
+
+        This function performs a simple insertion into a dictionary
+
+        Args:
+            name: A string representing the name of the element we want to scrape
+            xpath: A string representing xpath to the element want want
+                to scrape
+
+        Returns: 
+            None
+        """
         if key in self.multiple:
             print(f'{key} already in multiple')
             return 
@@ -183,10 +223,10 @@ class Scraper:
             links = self.driver.find_elements(By.XPATH, link_xpath)
             self.links.extend([link.get_attribute('href') for link in links])
             print(f'Found links from {self.driver.current_url}')
-            current_url = self.driver.current_url # get url of the current page
-            new_url = self.next_page() # go to next page
         except Exception as e:
             print('Error while scraping:', e)
+        current_url = self.driver.current_url # get url of the current page
+        new_url = self.next_page() # go to next page
         if new_url == current_url: # if on the same page
             print('No more pages to scrape')
             return
