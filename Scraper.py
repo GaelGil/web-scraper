@@ -79,7 +79,7 @@ class Scraper:
         """Initializes the instance to be ready for scraping.
 
         Initializes the Scraper instance to set the options and driver
-        on the selenium scraper.
+        on the selenium scraper. 
 
         Args: 
             driver_path: the path to the browser driver
@@ -96,11 +96,11 @@ class Scraper:
     def set_url(self, url: str)  -> None:
         """Function to set the url that we will scrape.
 
-        Function to set the url that we want our scraper to get. After its done
+        Function to set the url that we want our scraper to visit. After its done
         we wait for 3 seconds. 
 
         Args:
-            url: The url we want to scrape
+            url: The url we want to scrape which is a string
 
         Returns:
             None
@@ -109,16 +109,15 @@ class Scraper:
         time.sleep(3)
 
     def set_next_page_xpath(self, xpath: str) -> None:
-        """This function sets the xpaths for items we want to scrape
+        """This function sets the xpath for the next page button
 
-        This functions sets the class variable xpaths. We are setting
-        a dictionary where the element is a string a (key) and the xpath 
-        is the value. This will be used to scrape each indiviual items
-        data. If we already set xpaths we return and print a message.
+        This functions sets the class variable next_button_xpath. Given a string
+        we set the xpath for the next page button. For example on pages like amazon
+        there are multiple pages of products. Often at the bottom there is a next
+        page button. That is the use case for this. 
 
         Args:
-            xpath: A dictionary where the element is a string a (key) and
-                the xpath is the value.
+            xpath: A string containing the xpath to the next page button
 
         Returns: 
             None
@@ -126,7 +125,7 @@ class Scraper:
         self.next_button_path = xpath
     
     def set_xpaths(self, xpaths: dict) -> None:
-        """This function sets the xpaths for items we want to scrape
+        """This function sets the class variable xpaths for items we want to scrape
 
         This functions sets the class variable xpaths. We are setting
         a dictionary where the element is a string a (key) and the xpath 
@@ -145,17 +144,19 @@ class Scraper:
             return 
         self.xpaths = xpaths
 
-    def set_multiple(self, multiple: list) -> None:
-        """This function sets the xpaths for items we want to scrape
+    def set_multiple(self, multiple: dict) -> None:
+        """This function sets the class variable multiple.
 
-        This functions sets the class variable xpaths. We are setting
-        a dictionary where the element is a string a (key) and the xpath 
-        is the value. This will be used to scrape each indiviual items
-        data. If we already set xpaths we return and print a message.
+        This functions sets the class variable multiple. The point of this
+        is for when we have have elements that have multiple elements. For example
+        a book or movie can have several authors/directors. Additionally it can also 
+        have several genres. The use case for this would be if to add these to the
+        multiple dictionary. Later while scraping our scraper will look out for them
+        to scrape them correctly. We use a dictionary for faster look up.
 
         Args:
-            xpath: A dictionary where the element is a string a (key) and
-                the xpath is the value.
+            multiple: A dictionary where the item is a string a (key) and
+                value can be set to anything. 
 
         Returns: 
             None
@@ -168,7 +169,8 @@ class Scraper:
     def add_xpath(self, name: str, xpath: str) -> None:
         """This function adds a key and value to the xpath dictionary
 
-        This function performs a simple insertion into a dictionary
+        This function performs a simple insertion into the class variable xpaths.
+        If it already exists we ignore it and return a message. If not we add it.
 
         Args:
             name: A string representing the name of the element we want to scrape
@@ -184,7 +186,7 @@ class Scraper:
         self.xpaths[name] = xpath
         print(f'added {name}')
     
-    def add_multiple(self, key, value):
+    def add_multiple(self, key: str, value: int=0):
         """This function adds a key and value to the xpath dictionary
 
         This function performs a simple insertion into a dictionary
@@ -232,8 +234,6 @@ class Scraper:
             self.set_url(new_url) 
             self.scrape_links(link_xpath, count, stop)
             
-
- 
     def next_page(self) -> str:
         """This function scrapes links from a website
 
