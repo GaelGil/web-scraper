@@ -41,11 +41,6 @@ XPATHS = {
     'publish_date' : '//p[@data-testid="publicationInfo"]',
     }
 
-NEXT_PAGE_BUTTON_XPATH = '//a[@class="next_page" and @rel="next"]'
-
-LINKS_XPATH = "//*[@id='bodycontainer']/div[3]/div[1]/div[2]/div[2]/table/tbody/tr/td[2]/a"
-
-MULTIPLE = {'genres' : 0}
 
 def make_urls():
     urls = []
