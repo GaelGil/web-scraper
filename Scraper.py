@@ -24,7 +24,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
-from helper import get_genres, get_xpaths
+from helper import GENRES, XPATHS, NEXT_PAGE_BUTTON_XPATH, LINKS_XPATH
 import time
 import csv
 
@@ -189,19 +189,13 @@ class Scraper:
         return self.driver.current_url 
 
     def handle_data(self, key, xpath) -> list:
-        # if key in self.multiple
         elements = None
         try:
-            # print(f'multiple: {self.multilple}')
-            # print(f'key: {key}')
             if key in self.multiple:
-                # print(f'key: {key}')
-                print('in multiple')
                 elements = self.driver.find_elements(By.XPATH, xpath)
                 elements = [el.text.strip() for el in elements if el.text.strip()]
                 elements = ' '.join(elements)
             else:
-                print('not in multiple')
                 element = self.driver.find_element(By.XPATH, xpath)
                 elements = element.text.strip()
         except Exception as e:
@@ -285,17 +279,13 @@ class Scraper:
             formated_data.append(list(value.values()))        
         return formated_data
 
-
-#TODO: fix genres to get all genres
-
 sc = Scraper(GECKODRIVER_PATH, headless=True)
 sc.set_url('https://www.goodreads.com/search?page=1&q=horror&qid=x02cPlELXg&tab=books')
-sc.set_next_page_xpath('//a[@class="next_page" and @rel="next"]')
-sc.scrape_links("//*[@id='bodycontainer']/div[3]/div[1]/div[2]/div[2]/table/tbody/tr/td[2]/a")
-sc.set_xpaths(get_xpaths())
+sc.set_next_page_xpath(NEXT_PAGE_BUTTON_XPATH)
+sc.scrape_links(LINKS_XPATH)
+sc.set_xpaths(XPATHS)
 multiple = {'genres' : 0}
 sc.set_multiple(multiple)
-# print(sc.multilple)
 sc.scrape_items()
 # sc.print_data()
 # formated_data = sc.format_data()
