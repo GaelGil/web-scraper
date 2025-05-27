@@ -69,6 +69,7 @@ class Scraper:
     
     """
     driver = None
+    urls = []
     links = []
     xpaths = {}
     multiple = {}
@@ -205,7 +206,24 @@ class Scraper:
         self.multiple[key] = value
         print(f'added {key}')
 
-    def scrape_links(self, link_xpath: str, count: int=0, stop: int = 5) -> None:
+    def set_urls(self, url: str):
+        self.urls = url
+
+
+    def iterate_urls(self, link_xpath: str, count: int=0, stop: int=5):
+        for i in range(len(self.urls)): # iterate urls
+            self.set_url(self.urls[i]) # set the url to scrape
+            self.scrape_item_links(link_xpath) # scrape the items from the page
+            new_url = self.next_page() # go to next page
+            while count != stop or type(new_url) is not bool: # while we are not done
+                count += 1
+                self.set_url(new_url)
+                self.scrape_item_links(link_xpath)
+        return
+
+
+
+    def scrape_item_links(self, link_xpath: str) -> None:
         """This function scrapes links from a website
 
         This function scrapes links off of items on the url we previously provided at `set_url`
@@ -219,20 +237,13 @@ class Scraper:
         Returns: 
             None
         """
-        if count == stop:
-            print(f'Done getting links')
-            return
         try:
             links = self.driver.find_elements(By.XPATH, link_xpath)
             self.links.extend([link.get_attribute('href') for link in links])
             print(f'Found links from {self.driver.current_url}')
         except Exception as e:
             print('Error while scraping:', e)
-        new_url = self.next_page() # go to next page
-        if type(new_url) is not bool:
-            count += 1
-            self.set_url(new_url) 
-            self.scrape_links(link_xpath, count, stop)
+
             
     def next_page(self) -> str:
         """This function scrapes links from a website
@@ -363,11 +374,14 @@ class Scraper:
         return formated_data
 
 sc = Scraper(GECKODRIVER_PATH, headless=True)
-sc.set_url('https://www.goodreads.com/search?page=1&q=horror&qid=x02cPlELXg&tab=books')
 sc.set_next_page_xpath(NEXT_PAGE_BUTTON_XPATH)
-sc.scrape_links(LINKS_XPATH)
-sc.set_xpaths(XPATHS)
-sc.set_multiple(MULTIPLE)
-sc.scrape_items()
+sc.set_urls(['https://www.goodreads.com/search?page=1&q=horror&qid=x02cPlELXg&tab=books'])
+sc.iterate_urls(LINKS_XPATH)
+# sc.set_genres()
+# sc.set_next_page_xpath(NEXT_PAGE_BUTTON_XPATH)
+# sc.scrape_item_links(LINKS_XPATH)
+# sc.set_xpaths(XPATHS)
+# sc.set_multiple(MULTIPLE)
+# sc.scrape_items()
 # formated_data = sc.format_data()
 # sc.to_csv('./data.csv', formated_data)
