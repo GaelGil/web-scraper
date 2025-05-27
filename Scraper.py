@@ -25,7 +25,7 @@ from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
-from helper import GENRES, XPATHS, NEXT_PAGE_BUTTON_XPATH, LINKS_XPATH, MULTIPLE
+from helper import GENRES, XPATHS, NEXT_PAGE_BUTTON_XPATH, LINKS_XPATH, MULTIPLE, make_urls
 import time
 import csv
 
@@ -220,6 +220,7 @@ class Scraper:
                 count += 1
                 self.set_url(new_url)
                 self.scrape_item_links(link_xpath)
+            count = 0
         return
 
     def scrape_item_links(self, link_xpath: str) -> None:
@@ -317,7 +318,7 @@ class Scraper:
             self.set_url(link) # set url for each link
             item = self.xpaths.copy() # create a copy of each dictionary key (item) : value (elements)
             for key, xpath in self.xpaths.items(): # for each item and dictionary
-                elements = self.handle_data(key, xpath) # get the elements using xpath
+                elements = self.scrape_item(key, xpath) # get the elements using xpath
                 item[key] = elements # set the value of the key to the elements
             self.data[i] = item # add each dictionary to the class variable `data`
             i+=1
@@ -373,7 +374,7 @@ class Scraper:
 
 sc = Scraper(GECKODRIVER_PATH, headless=True)
 sc.set_next_page_xpath(NEXT_PAGE_BUTTON_XPATH)
-sc.set_urls(['https://www.goodreads.com/search?page=1&q=horror&qid=x02cPlELXg&tab=books'])
+sc.set_urls(make_urls())
 sc.iterate_urls(LINKS_XPATH)
 # sc.set_genres()
 # sc.set_next_page_xpath(NEXT_PAGE_BUTTON_XPATH)

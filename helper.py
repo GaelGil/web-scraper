@@ -46,3 +46,9 @@ NEXT_PAGE_BUTTON_XPATH = '//a[@class="next_page" and @rel="next"]'
 LINKS_XPATH = "//*[@id='bodycontainer']/div[3]/div[1]/div[2]/div[2]/table/tbody/tr/td[2]/a"
 
 MULTIPLE = {'genres' : 0}
+
+def make_urls():
+    urls = []
+    for i in range(len(GENRES)//3):
+        urls.append(f'https://www.goodreads.com/search?page=1&q={GENRES[i]}&qid=x02cPlELXg&tab=books')
+    return urls
