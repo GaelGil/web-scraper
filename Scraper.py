@@ -18,13 +18,13 @@ examples.
     c.to_csv('example.csv', formated_data)
 """
 
-
 from selenium import webdriver
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
+from helper import get_genres, get_xpaths
 import time
 import csv
 
@@ -70,7 +70,7 @@ class Scraper:
     driver = None
     links = []
     xpaths = {}
-    multiple = []
+    multiple = {}
     data = {}
     next_button_path = ''
 
@@ -107,7 +107,7 @@ class Scraper:
         self.driver.get(url)
         time.sleep(3)
 
-    def set_nextpage_xpath(self, xpath: str) -> None:
+    def set_next_page_xpath(self, xpath: str) -> None:
         self.next_button_path = xpath
     
     def set_xpaths(self, xpaths: dict) -> None:
@@ -130,8 +130,8 @@ class Scraper:
             return 
         self.xpaths = xpaths
 
-    def set_multiple(self, multilple: list) -> None:
-        self.multilple = multilple
+    def set_multiple(self, multiple: list) -> None:
+        self.multiple = multiple
 
     def add_xpath(self, name: str, xpath: str) -> None:
         """This function adds a key and value to the xpath dictionary
@@ -182,7 +182,6 @@ class Scraper:
         except Exception as e:
             print('Error while scraping:', e)
  
-
     def next_page(self) -> str:
         next_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, self.next_button_path))) # find next button
         next_button.click() # click on next button
@@ -190,6 +189,7 @@ class Scraper:
         return self.driver.current_url 
 
     def handle_data(self, key, xpath) -> list:
+        # if key in self.multiple
         elements = None
         try:
             # print(f'multiple: {self.multilple}')
@@ -286,29 +286,17 @@ class Scraper:
         return formated_data
 
 
-#TODO: fix next page function
 #TODO: fix genres to get all genres
 
 sc = Scraper(GECKODRIVER_PATH, headless=True)
 sc.set_url('https://www.goodreads.com/search?page=1&q=horror&qid=x02cPlELXg&tab=books')
-sc.set_nextpage_xpath('//a[@class="next_page" and @rel="next"]')
+sc.set_next_page_xpath('//a[@class="next_page" and @rel="next"]')
 sc.scrape_links("//*[@id='bodycontainer']/div[3]/div[1]/div[2]/div[2]/table/tbody/tr/td[2]/a")
-data_to_scrape = {
-    'title': "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[1]/div[1]/h1",
-    'author' : "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[1]/h3/div/span[1]/a/span[1]",
-    'rating': '//div[@class="RatingStatistics__rating"]',
-    'raitings' : '//span[@data-testid="ratingsCount"]',
-    'reviews' : '//span[@data-testid="reviewsCount"]',
-    'overview' : '//div[@data-testid="description"]//span[@class="Formatted"]',
-    'genres': '//ul[@class="CollapsableList"]//span[@class="Button__labelItem"]',
-    'pages' : '//p[@data-testid="pagesFormat"]',
-    'publish_date' : '//p[@data-testid="publicationInfo"]',
-    }
-sc.set_xpaths(data_to_scrape)
-multiple = ['genres']
+sc.set_xpaths(get_xpaths())
+multiple = {'genres' : 0}
 sc.set_multiple(multiple)
 # print(sc.multilple)
-# sc.scrape_items()
+sc.scrape_items()
 # sc.print_data()
 # formated_data = sc.format_data()
 # sc.to_csv('./data.csv', formated_data)
