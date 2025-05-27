@@ -131,6 +131,9 @@ class Scraper:
         self.xpaths = xpaths
 
     def set_multiple(self, multiple: list) -> None:
+        if self.multiple:
+            print('multiple already set, add to multiple instead')
+            return
         self.multiple = multiple
 
     def add_xpath(self, name: str, xpath: str) -> None:
@@ -200,7 +203,7 @@ class Scraper:
         return self.driver.current_url 
 
     def handle_data(self, key, xpath) -> list:
-        elements = None
+        elements = ''
         try:
             if key in self.multiple:
                 elements = self.driver.find_elements(By.XPATH, xpath)
