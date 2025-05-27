@@ -209,19 +209,18 @@ class Scraper:
     def set_urls(self, url: str):
         self.urls = url
 
-
     def iterate_urls(self, link_xpath: str, count: int=0, stop: int=5):
         for i in range(len(self.urls)): # iterate urls
             self.set_url(self.urls[i]) # set the url to scrape
             self.scrape_item_links(link_xpath) # scrape the items from the page
-            new_url = self.next_page() # go to next page
-            while count != stop or type(new_url) is not bool: # while we are not done
+            while count != stop: # while we are not done
+                new_url = self.next_page() # go to next page
+                if type(new_url) is bool: # if we reached all pages
+                    continue
                 count += 1
                 self.set_url(new_url)
                 self.scrape_item_links(link_xpath)
         return
-
-
 
     def scrape_item_links(self, link_xpath: str) -> None:
         """This function scrapes links from a website
@@ -243,7 +242,6 @@ class Scraper:
             print(f'Found links from {self.driver.current_url}')
         except Exception as e:
             print('Error while scraping:', e)
-
             
     def next_page(self) -> str:
         """This function scrapes links from a website
@@ -268,7 +266,7 @@ class Scraper:
             return True # return true
         return self.driver.current_url # return url of page we are on
 
-    def handle_data(self, key, xpath) -> list:
+    def scrape_item(self, key, xpath) -> list:
         """Function to scrape data from the links we got in scrape_links
         
         This functions uses the links we scraped to get individual information on 
@@ -296,7 +294,7 @@ class Scraper:
             print('Error while scraping handling data', e)
         return elements
     
-    def scrape_items(self) -> None:
+    def iterate_items(self) -> None:
         """Function to scrape data from the links we got in scrape_links
         
         This functions uses the links we scraped to get individual information on 
