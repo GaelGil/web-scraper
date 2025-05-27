@@ -36,15 +36,11 @@ XPATHS = {
     'raitings' : '//span[@data-testid="ratingsCount"]',
     'reviews' : '//span[@data-testid="reviewsCount"]',
     'overview' : '//div[@data-testid="description"]//span[@class="Formatted"]',
-    'x': '//ul[@class="CollapsableList"]//span[@class="Button__labelItem"]',
+    'genres': '//ul[@class="CollapsableList"]//span[@class="Button__labelItem"]',
     'pages' : '//p[@data-testid="pagesFormat"]',
     'publish_date' : '//p[@data-testid="publicationInfo"]',
     }
 
+NEXT_PAGE_BUTTON_XPATH = '//a[@class="next_page" and @rel="next"]'
 
-def get_genres():
-    return GENRES
-
-
-def get_xpaths():
-    return XPATHS
+LINKS_XPATH = "//*[@id='bodycontainer']/div[3]/div[1]/div[2]/div[2]/table/tbody/tr/td[2]/a"
