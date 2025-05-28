@@ -294,7 +294,7 @@ class Scraper:
             self.scrape_item_links(self.link_xpath) # scrape the items from the page
             while count != stop: # while we are not done
                 new_url = self.next_page() # go to next page
-                if type(new_url) is bool: # if we reached all pages
+                if not new_url: # if we reached all pages
                     continue 
                 count += 1
                 self.set_url(new_url) # set next page url
@@ -325,16 +325,16 @@ class Scraper:
     def next_page(self) -> str:
         """This function sets the next page
 
-        This function scrapes links off of items on the url we previously provided at `set_url`
-        As an example it can be used on the products page of amazon or any website where
-        there are itmems listed. We scrape the links and then put them into the class
-        list `links`.
+        Using the xpath for the next page button we set earlier, this function tries to
+        find the button. If we find it we click it. If we can't find it we return false.
+        Otherwise we return the url of the page we are on after clicking the next page
+        button.
 
         Args:
-            link_xpath: The xpath to the link elements we want to scrape.
+            None
 
         Returns: 
-            None
+            str
         """
         try:
             next_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, self.next_button_path))) # find next button
@@ -342,7 +342,7 @@ class Scraper:
             time.sleep(3) 
         except NoSuchElementException: # if we cant find the next page button throw exception
             print('Next button not found. Done finding links')
-            return True # return True
+            return False # return True
         return self.driver.current_url # return url of page we are on
 
     def scrape_item(self, key, xpath) -> list:
