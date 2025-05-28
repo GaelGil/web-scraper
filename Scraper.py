@@ -100,8 +100,8 @@ class Scraper:
     def set_url(self, url: str)  -> None:
         """Function to set the url that we will scrape.
 
-        Function to set the url that we want our scraper to visit. After its done
-        we wait for 3 seconds. 
+        Function to set the url of the website that we want our scraper to visit.
+        After its done we wait for 3 seconds. 
 
         Args:
             url: The url we want to scrape which is a string
@@ -210,14 +210,11 @@ class Scraper:
         print(f'added {key}')
 
     def set_urls(self, urls: list) -> None:
-        """This function sets the class variable multiple.
+        """This function sets the class variable urls.
 
-        This functions sets the class variable multiple. The point of this
-        is for when we have have elements that have multiple elements. For example
-        a book or movie can have several authors/directors. Additionally it can also 
-        have several genres. The use case for this would be if to add these to the
-        multiple dictionary. Later while scraping our scraper will look out for them
-        to scrape them correctly. We use a dictionary for faster look up.
+        This function sets the urls of the pages we want to scrape items from. For example
+        if we have one page where the items 
+        
 
         Args:
             multiple: A dictionary where the item is a string a (key) and
