@@ -44,6 +44,6 @@ XPATHS = {
 
 def make_urls():
     urls = []
-    for i in range(len(GENRES)//3):
+    for i in range(len(GENRES)):
         urls.append(f'https://www.goodreads.com/search?page=1&q={GENRES[i]}&qid=x02cPlELXg&tab=books')
     return urls
