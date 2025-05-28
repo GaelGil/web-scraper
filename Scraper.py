@@ -31,7 +31,7 @@ import csv
 
 GECKODRIVER_PATH = "./drivers/geckodriver"
 NEXT_PAGE_BUTTON_XPATH = '//a[@class="next_page" and @rel="next"]'
-LINKS_XPATH = "//*[@id='bodycontainer']/div[3]/div[1]/div[2]/div[2]/table/tbody/tr/td[2]/a"
+LINK_XPATH = "//*[@id='bodycontainer']/div[3]/div[1]/div[2]/div[2]/table/tbody/tr/td[2]/a"
 MULTIPLE = {'genres' : 0}
 
 class Scraper:
@@ -129,12 +129,14 @@ class Scraper:
         self.next_button_path = xpath
     
     def set_xpaths(self, xpaths: dict) -> None:
-        """This function sets the class variable xpaths for items we want to scrape
+        """This function sets the class variable xpaths.
 
         This functions sets the class variable xpaths. We are setting
         a dictionary where the element is a string a (key) and the xpath 
         is the value. This will be used to scrape each indiviual items
-        data. If we already set xpaths we return and print a message.
+        data. For example if we want to scrape only the title then the
+        dictionary would look like {'title': 'title_xpath'}.  If we
+        already set xpaths we return and print a message.
 
         Args:
             xpath: A dictionary where the element is a string a (key) and
@@ -398,7 +400,7 @@ sc.set_next_page_xpath(NEXT_PAGE_BUTTON_XPATH)
 sc.set_xpaths(XPATHS)
 sc.set_multiple(MULTIPLE)
 sc.set_urls(make_urls())
-sc.visit_urls(LINKS_XPATH)
+sc.visit_urls(LINK_XPATH)
 sc.visit_items()
 formated_data = sc.format_data()
 sc.to_csv('./data.csv', formated_data)
