@@ -190,7 +190,7 @@ class Scraper:
         self.xpaths[name] = xpath
         print(f'added {name}')
     
-    def add_multiple(self, key: str, value: int=0):
+    def add_multiple(self, key: str, value: int=0) -> None:
         """This function adds a key and value to the xpath dictionary
 
         This function performs a simple insertion into a dictionary
@@ -209,7 +209,7 @@ class Scraper:
         self.multiple[key] = value
         print(f'added {key}')
 
-    def set_urls(self, url: str):
+    def set_urls(self, urls: list) -> None:
         """This function sets the class variable multiple.
 
         This functions sets the class variable multiple. The point of this
@@ -226,9 +226,9 @@ class Scraper:
         Returns: 
             None
         """
-        self.urls = url
+        self.urls = urls
 
-    def iterate_urls(self, link_xpath: str, count: int=0, stop: int=5):
+    def iterate_urls(self, link_xpath: str, count: int=0, stop: int=5) -> None:
         """This function sets the class variable multiple.
 
         This functions sets the class variable multiple. The point of this
