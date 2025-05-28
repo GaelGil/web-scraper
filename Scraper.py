@@ -380,8 +380,10 @@ class Scraper:
         This functions uses the links we scraped to get individual information on 
         each of the items. For example if we previously scraped the products page
         on amazon. We would now have the links to each of the individual products.
-        This function will go to each product (link) and scrape data from their page using
-        the xpaths set in the function `set_xpaths`. 
+        We set the url then using the xpaths we set earlier we will then scrape
+        that data from each individual item. For example we have
+        ['product1_link', 'product2_link', ... 'productn_link']. We will get all
+        the data we want using the function scrape_item and the xpaths we set earlier.
 
         Args:
             None
