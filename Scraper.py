@@ -25,7 +25,7 @@ from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
-from helper import XPATHS, make_urls
+import requests
 import time
 import csv
 
@@ -341,13 +341,13 @@ class Scraper:
         return self.driver.current_url # return url of page we are on
 
     def scrape_item(self, key, xpath) -> list:
-        """Function to scrape data from the links we got in scrape_links
+        """Function to scrape data from items
         
-        This functions uses the links we scraped to get individual information on 
-        each of the items. For example if we previously scraped the products page
-        on amazon. We would now have the links to each of the individual products.
-        This function will go to each product (link) and scrape data from their page using
-        the xpaths set in the function `set_xpaths`. 
+        This functions scrapes data from a page. Given a key (name
+        of the element we want to scrape) and a xpath to the element then we 
+        scrape the data. Using the previously set dictionray of multiple, we
+        check if we need to do multiple elements or just one. We also check
+        for images. We then return the element we scraped. 
 
         Args:
             key: a sring that represents the name of the element we want to scrape
@@ -362,9 +362,13 @@ class Scraper:
                 elements = self.driver.find_elements(By.XPATH, xpath)
                 elements = [el.text.strip() for el in elements if el.text.strip()]
                 elements = ' '.join(elements)
-            # elif key == 'img':
             else:
                 element = self.driver.find_element(By.XPATH, xpath)
+                if key == 'img':
+                    img = element.get_attribute('src')
+                    with open(f'{img}.png', 'wb') as f:
+                        f.write(requests.get(img).content)
+                    return img
                 elements = element.text.strip()
         except Exception as e:
             print('Error while scraping handling data', e)
