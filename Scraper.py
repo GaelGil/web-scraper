@@ -35,10 +35,15 @@ class Scraper:
 
     Attributes:
         driver: The browser driver needed for webscraping
-        links: Will be used as a list of links to scrape
-        x_paths: Will be used as a dictionary where the element is a string a (key) and
-            the xpath is the value.
-        data: A list containing the data we scraped 
+        urls: A list of urls to scrape for links
+        x_paths: Will be used as a dictionary where the element is a string
+            a (key) and the xpath is the value.
+        multiple: A dictionary containing elements that might have more than 
+            one elment to scrape
+        data: A dictionary containing the data we scraped 
+        links: A list containing links to individual items to scrape
+        next_button_path: The xpath for the next page button
+        link_xpath: the xpath for a link 
 
     Methods:
         __init__(self, driver_path: str, headless: bool)
