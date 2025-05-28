@@ -45,49 +45,49 @@ class Scraper:
             Initializes the instance to be ready for scraping
 
         set_url(self, url: str)
-            Function to set the url that we will scra
+            Function to set the url that we will scrape
 
         set_next_page_xpath(self, xpath: str)
-            This function sets the xpath for the next page but
+            This function sets the xpath for the next page button
 
         set_xpaths(self, xpaths: dict)
-            This function sets the class variable xpat
+            This function sets the class variable xpaths
 
         set_multiple(self, multiple: dict)
-            This function sets the class variable multip
+            This function sets the class variable multiple
 
         set_urls(self, urls: list)
-            This function sets the class variable ur
+            This function sets the class variable urls
 
         set_link_xpath(self, xpath: str)
-            This function adds url to our urls l
+            This sets the xpath for a link
         
         add_xpath(self, name: str, xpath: str)
-            This function adds a key and value to the xpath diction
+            This function adds a key and value to the xpath dictionary
         
         add_multiple(self, key: str, value: int=0)
-            This function adds a key and value to the xpath diction
+            This function adds a key and value to the xpath dictionary
         
         add_url(self, url: str)
-            This function adds url to our urls l
+            This function adds url to our urls list
 
         visit_urls(self, count: int=0, stop: int=5)
-            This function visits the paages of the urls we s
+            This function visits the pages of the urls we scraped
 
         scrape_item_links(self)
-            This function scrapes links from a webs
+            This function scrapes links from a website
 
         next_page(self)
-            This function sets the next p
+            This function sets the next page
 
         scrape_item(self, key, xpath)
-            Function to scrape data from it
+            Function to scrape data from a item
 
         visit_items(self)
-            Function to visit each item from the links we scra
+            Function to visit each item from the links we scraped
 
         to_csv(self, file_name: str, data: list)
-            Function to write data to 
+            Function to write data to csv file
         
         format_data(self)
             Function to format data to be written to a csv file
@@ -215,12 +215,12 @@ class Scraper:
         self.urls = urls
 
     def set_link_xpath(self, xpath: str) -> None:
-        """This function adds url to our urls list
+        """This sets the xpath for a link
 
-        This function performs a simple appending to a list.
+        This sets the xpath for the link to a item on a page of items
 
         Args:
-            url: A string representing the url we want to add
+            xpath: The xpath to a link 
 
         Returns: 
             None
@@ -288,7 +288,7 @@ class Scraper:
         print(f'added {url}')
 
     def visit_urls(self, count: int=0, stop: int=5) -> None:
-        """This function visits the paages of the urls we set.
+        """This function visits the pages of the urls we set.
 
         We have two arguments. One for counting and on for stoping.
         This function iterates our urls list. Each url will have 
