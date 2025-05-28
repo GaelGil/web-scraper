@@ -254,14 +254,14 @@ class Scraper:
                 count += 1
                 self.set_url(new_url) # set next page url
                 self.scrape_item_links(link_xpath) # scrape the links to those items on that page
-            count = 0
+            count = 0 # set back to zero for each url
 
     def scrape_item_links(self, link_xpath: str) -> None:
         """This function scrapes links from a website
 
-        This function scrapes links off of items on the url we previously provided at `set_url`
-        As an example it can be used on the products page of amazon or any website where
-        there are itmems listed. We scrape the links and then put them into the class
+        This function scrapes links off of items listed on a website. As an example
+        it can be used on the products page of amazon or any website where there
+        are itmems listed. We scrape the links and then put them into the class
         list `links`.
 
         Args:
@@ -355,18 +355,6 @@ class Scraper:
                 item[key] = elements # set the value of the key to the elements
             self.data[i] = item # add each dictionary to the class variable `data`
             i+=1
-
-    def print_data(self) -> None:
-        """Function to print class variable `data`
-
-        Args:
-            None
-
-        Returns:
-            None
-        """
-        print(self.data.values())
-        return
 
     def to_csv(self, file_name: str, data: list) -> None:
         """Function to write data to csv
