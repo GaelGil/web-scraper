@@ -119,7 +119,7 @@ class Scraper:
         This functions sets the class variable next_button_xpath. Given a string
         we set the xpath for the next page button. For example on pages like amazon
         there are multiple pages of products. Often at the bottom there is a next
-        page button. That is the use case for this. 
+        page button. We will use this to click and check other pages.
 
         Args:
             xpath: A string containing the xpath to the next page button
@@ -155,11 +155,13 @@ class Scraper:
         """This function sets the class variable multiple.
 
         This functions sets the class variable multiple. The point of this
-        is for when we have have elements that have multiple elements. For example
-        a book or movie can have several authors/directors. Additionally it can also 
-        have several genres. The use case for this would be if to add these to the
-        multiple dictionary. Later while scraping our scraper will look out for them
-        to scrape them correctly. We use a dictionary for faster look up.
+        is for when we have have elements that have multiple elements. For
+        example a book or movie can have several authors/directors.
+        Additionally it can also have several genres. During scraping our
+        scraper check the `xpaths` dictionary and see if the key matches on
+        in multiple. If we set multiple to be {'genres': 0} and our xpaths
+        is {'genres': 'genres_xpath'} then our scraper will make sure to 
+        handle that correctly.
 
         Args:
             multiple: A dictionary where the item is a string a (key) and
@@ -207,7 +209,6 @@ class Scraper:
             return
         self.link_xpath = xpath
         print(f'set {xpath}')
-
 
     def add_xpath(self, name: str, xpath: str) -> None:
         """This function adds a key and value to the xpath dictionary
