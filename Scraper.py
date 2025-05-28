@@ -166,7 +166,7 @@ class Scraper:
             None
         """
         if self.multiple:
-            print('multiple already set, add to multiple instead')
+            print('multiple already set, add to multiple instead using add_multiple')
             return
         self.multiple = multiple
 
@@ -213,16 +213,18 @@ class Scraper:
         """This function sets the class variable urls.
 
         This function sets the urls of the pages we want to scrape items from. For example
-        if we have one page where the items 
-        
+        if the page we want to scrape items has different types of items such as books and
+        kitchen utensils on different pages then you can set the urls for those pages here.
 
         Args:
-            multiple: A dictionary where the item is a string a (key) and
-                value can be set to anything. 
+            multiple: A list containg urls of the websites we want to visit.
 
         Returns: 
             None
         """
+        if self.urls:
+            print('urls already set, add them instead with add_url')
+            return
         self.urls = urls
 
     def iterate_urls(self, link_xpath: str, count: int=0, stop: int=5) -> None:
