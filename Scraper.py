@@ -41,30 +41,56 @@ class Scraper:
         data: A list containing the data we scraped 
 
     Methods:
-        set_url(self, url:str)
-            Set the url to scrape.
+        __init__(self, driver_path: str, headless: bool)
+            Initializes the instance to be ready for scraping
 
-        scrape_links(self, xpath: str)
-            This function scrapes links from a website
+        set_url(self, url: str)
+            Function to set the url that we will scra
+
+        set_next_page_xpath(self, xpath: str)
+            This function sets the xpath for the next page but
 
         set_xpaths(self, xpaths: dict)
-            This function sets the xpaths for items we want to scrape
+            This function sets the class variable xpat
+
+        set_multiple(self, multiple: dict)
+            This function sets the class variable multip
+
+        set_urls(self, urls: list)
+            This function sets the class variable ur
+
+        set_link_xpath(self, xpath: str)
+            This function adds url to our urls l
         
         add_xpath(self, name: str, xpath: str)
-            This function adds a key and value to the xpath dictionary
+            This function adds a key and value to the xpath diction
+        
+        add_multiple(self, key: str, value: int=0)
+            This function adds a key and value to the xpath diction
+        
+        add_url(self, url: str)
+            This function adds url to our urls l
 
-        scrape_items(self, multiple: list)
-            Function to scrape data from the links we got in scrape_links
+        visit_urls(self, count: int=0, stop: int=5)
+            This function visits the paages of the urls we s
 
-        print_data(self)
-            Function to print class variable `data`
+        scrape_item_links(self)
+            This function scrapes links from a webs
+
+        next_page(self)
+            This function sets the next p
+
+        scrape_item(self, key, xpath)
+            Function to scrape data from it
+
+        visit_items(self)
+            Function to visit each item from the links we scra
 
         to_csv(self, file_name: str, data: list)
-            Function to write data to csv
-
+            Function to write data to 
+        
         format_data(self)
             Function to format data to be written to a csv file
-    
     """
     driver = None
     urls = []
@@ -340,7 +366,7 @@ class Scraper:
             return False # return True
         return self.driver.current_url # return url of page we are on
 
-    def scrape_item(self, key, xpath) -> list:
+    def scrape_item(self, key: str, xpath: str) -> list:
         """Function to scrape data from items
         
         This functions scrapes data from a page. Given a key (name
