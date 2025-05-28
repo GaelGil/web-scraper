@@ -78,6 +78,7 @@ class Scraper:
     multiple = {}
     data = {}
     next_button_path = ''
+    link_xpath = ''
 
     def __init__(self, driver_path: str, headless: bool) -> None:
         """Initializes the instance to be ready for scraping.
@@ -133,9 +134,9 @@ class Scraper:
 
         This functions sets the class variable xpaths. We are setting
         a dictionary where the element is a string a (key) and the xpath 
-        is the value. This will be used to scrape each indiviual items
-        data. For example if we want to scrape only the title then the
-        dictionary would look like {'title': 'title_xpath'}.  If we
+        is the value. This will be used to scrape each indiviual item of
+        that data. For example if we want to scrape only the title then
+        the dictionary would look like {'title': 'title_xpath'}.  If we
         already set xpaths we return and print a message.
 
         Args:
@@ -171,6 +172,42 @@ class Scraper:
             print('multiple already set, add to multiple instead using add_multiple')
             return
         self.multiple = multiple
+
+    def set_urls(self, urls: list) -> None:
+        """This function sets the class variable urls.
+
+        This function sets the urls of the pages we want to scrape items from. For example
+        if the page we want to scrape items has different types of items such as books and
+        kitchen utensils on different pages then you can set the urls for those pages here.
+
+        Args:
+            multiple: A list containg urls of the websites we want to visit.
+
+        Returns: 
+            None
+        """
+        if self.urls:
+            print('urls already set, add them instead with add_url')
+            return
+        self.urls = urls
+
+    def set_link_xpath(self, xpath: str) -> None:
+        """This function adds url to our urls list
+
+        This function performs a simple appending to a list.
+
+        Args:
+            url: A string representing the url we want to add
+
+        Returns: 
+            None
+        """
+        if self.link_xpath:
+            print('link_xpath already set')
+            return
+        self.link_xpath = xpath
+        print(f'set {xpath}')
+
 
     def add_xpath(self, name: str, xpath: str) -> None:
         """This function adds a key and value to the xpath dictionary
@@ -210,26 +247,25 @@ class Scraper:
             return 
         self.multiple[key] = value
         print(f'added {key}')
+    
+    def add_url(self, url: str) -> None:
+        """This function adds url to our urls list
 
-    def set_urls(self, urls: list) -> None:
-        """This function sets the class variable urls.
-
-        This function sets the urls of the pages we want to scrape items from. For example
-        if the page we want to scrape items has different types of items such as books and
-        kitchen utensils on different pages then you can set the urls for those pages here.
+        This function performs a simple appending to a list.
 
         Args:
-            multiple: A list containg urls of the websites we want to visit.
+            url: A string representing the url we want to add
 
         Returns: 
             None
         """
-        if self.urls:
-            print('urls already set, add them instead with add_url')
+        if url in self.urls:
+            print(f'{url} is already in urls')
             return
-        self.urls = urls
+        self.urls.append(url)
+        print(f'added {url}')
 
-    def visit_urls(self, link_xpath: str, count: int=0, stop: int=5) -> None:
+    def visit_urls(self, count: int=0, stop: int=5) -> None:
         """This function sets the class variable multiple.
 
         This functions sets the class variable multiple. The point of this
@@ -248,17 +284,17 @@ class Scraper:
         """
         for i in range(len(self.urls)): # iterate urls
             self.set_url(self.urls[i]) # set the url to scrape
-            self.scrape_item_links(link_xpath) # scrape the items from the page
+            self.scrape_item_links(self.link_xpath) # scrape the items from the page
             while count != stop: # while we are not done
                 new_url = self.next_page() # go to next page
                 if type(new_url) is bool: # if we reached all pages
                     continue 
                 count += 1
                 self.set_url(new_url) # set next page url
-                self.scrape_item_links(link_xpath) # scrape the links to those items on that page
+                self.scrape_item_links(self.link_xpath) # scrape the links to those items on that page
             count = 0 # set back to zero for each url
 
-    def scrape_item_links(self, link_xpath: str) -> None:
+    def scrape_item_links(self) -> None:
         """This function scrapes links from a website
 
         This function scrapes links off of items listed on a website. As an example
@@ -273,7 +309,7 @@ class Scraper:
             None
         """
         try:
-            links = self.driver.find_elements(By.XPATH, link_xpath)
+            links = self.driver.find_elements(By.XPATH, self.link_xpath)
             self.links.extend([link.get_attribute('href') for link in links])
             print(f'Found links from {self.driver.current_url}')
         except Exception as e:
@@ -400,7 +436,8 @@ sc.set_next_page_xpath(NEXT_PAGE_BUTTON_XPATH)
 sc.set_xpaths(XPATHS)
 sc.set_multiple(MULTIPLE)
 sc.set_urls(make_urls())
-sc.visit_urls(LINK_XPATH)
+sc.set_link_xpath(LINK_XPATH)
+sc.visit_urls()
 sc.visit_items()
 formated_data = sc.format_data()
 sc.to_csv('./data.csv', formated_data)
