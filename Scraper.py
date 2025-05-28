@@ -227,7 +227,7 @@ class Scraper:
             return
         self.urls = urls
 
-    def iterate_urls(self, link_xpath: str, count: int=0, stop: int=5) -> None:
+    def visit_urls(self, link_xpath: str, count: int=0, stop: int=5) -> None:
         """This function sets the class variable multiple.
 
         This functions sets the class variable multiple. The point of this
@@ -328,7 +328,7 @@ class Scraper:
             print('Error while scraping handling data', e)
         return elements
     
-    def iterate_items(self) -> None:
+    def visit_items(self) -> None:
         """Function to scrape data from the links we got in scrape_links
         
         This functions uses the links we scraped to get individual information on 
@@ -410,7 +410,7 @@ sc.set_next_page_xpath(NEXT_PAGE_BUTTON_XPATH)
 sc.set_xpaths(XPATHS)
 sc.set_multiple(MULTIPLE)
 sc.set_urls(make_urls())
-sc.iterate_urls(LINKS_XPATH)
-sc.iterate_items()
+sc.visit_urls(LINKS_XPATH)
+sc.visit_items()
 formated_data = sc.format_data()
 sc.to_csv('./data.csv', formated_data)
