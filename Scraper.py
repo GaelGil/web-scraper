@@ -317,14 +317,14 @@ class Scraper:
         """
         for i in range(len(self.urls)): # iterate urls
             self.set_url(self.urls[i]) # set the url to scrape
-            self.scrape_item_links(self.link_xpath) # scrape the items from the page
+            self.scrape_item_links() # scrape the items from the page
             while count != stop: # while we are not done
                 new_url = self.next_page() # go to next page
                 if not new_url: # if we reached all pages
                     continue 
                 count += 1
                 self.set_url(new_url) # set next page url
-                self.scrape_item_links(self.link_xpath) # scrape the links to those items on that page
+                self.scrape_item_links() # scrape the links to those items on that page
             count = 0 # set back to zero for each url
 
     def scrape_item_links(self) -> None:
