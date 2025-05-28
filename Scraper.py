@@ -267,18 +267,24 @@ class Scraper:
         print(f'added {url}')
 
     def visit_urls(self, count: int=0, stop: int=5) -> None:
-        """This function sets the class variable multiple.
+        """This function visits the paages of the urls we set.
 
-        This functions sets the class variable multiple. The point of this
-        is for when we have have elements that have multiple elements. For example
-        a book or movie can have several authors/directors. Additionally it can also 
-        have several genres. The use case for this would be if to add these to the
-        multiple dictionary. Later while scraping our scraper will look out for them
-        to scrape them correctly. We use a dictionary for faster look up.
+        We have two arguments. One for counting and on for stoping.
+        This function iterates our urls list. Each url will have 
+        many pages since the idea is to have differnet url searches.
+        We can choose to only scrape a couple of pages from each url.
+        Thats what we use count and stop for. While we are not at
+        our limit. We will go to the next page as long as there is
+        a next page. We then get links from that page too. As an
+        example if we have
+        ['https://amazon/books', 'https://amazon/electronics'] then
+        we will got each url, scrape item links, go to the other pages 
+        of each url (ie https://amazon/books/p=2). until we are out
+        stop. Then move to the next url and to the same.
 
         Args:
-            multiple: A dictionary where the item is a string a (key) and
-                value can be set to anything. 
+            count: a interger that we use to count
+            stop: what page we stop at for each url.
 
         Returns: 
             None
@@ -304,7 +310,7 @@ class Scraper:
         list `links`.
 
         Args:
-            link_xpath: The xpath to the link elements we want to scrape.
+            None
 
         Returns: 
             None
@@ -317,7 +323,7 @@ class Scraper:
             print('Error while scraping:', e)
             
     def next_page(self) -> str:
-        """This function scrapes links from a website
+        """This function sets the next page
 
         This function scrapes links off of items on the url we previously provided at `set_url`
         As an example it can be used on the products page of amazon or any website where
@@ -360,6 +366,7 @@ class Scraper:
                 elements = self.driver.find_elements(By.XPATH, xpath)
                 elements = [el.text.strip() for el in elements if el.text.strip()]
                 elements = ' '.join(elements)
+            # elif key == 'img':
             else:
                 element = self.driver.find_element(By.XPATH, xpath)
                 elements = element.text.strip()
