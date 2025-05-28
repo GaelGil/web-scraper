@@ -29,11 +29,6 @@ from helper import XPATHS, make_urls
 import time
 import csv
 
-GECKODRIVER_PATH = "./drivers/geckodriver"
-NEXT_PAGE_BUTTON_XPATH = '//a[@class="next_page" and @rel="next"]'
-LINK_XPATH = "//*[@id='bodycontainer']/div[3]/div[1]/div[2]/div[2]/table/tbody/tr/td[2]/a"
-MULTIPLE = {'genres' : 0}
-
 class Scraper:
     """
     A class used to manage a webscraper
@@ -355,7 +350,8 @@ class Scraper:
         the xpaths set in the function `set_xpaths`. 
 
         Args:
-            None
+            key: a sring that represents the name of the element we want to scrape
+            xpath: a sring that represents the xpath of the element we want to 
 
         Returns:
             None
@@ -375,7 +371,7 @@ class Scraper:
         return elements
     
     def visit_items(self) -> None:
-        """Function to scrape data from the links we got in scrape_links
+        """Function to visit each item from the links we scraped
         
         This functions uses the links we scraped to get individual information on 
         each of the items. For example if we previously scraped the products page
@@ -439,13 +435,3 @@ class Scraper:
             formated_data.append(list(value.values()))        
         return formated_data
 
-sc = Scraper(GECKODRIVER_PATH, headless=True)
-sc.set_next_page_xpath(NEXT_PAGE_BUTTON_XPATH)
-sc.set_xpaths(XPATHS)
-sc.set_multiple(MULTIPLE)
-sc.set_urls(make_urls())
-sc.set_link_xpath(LINK_XPATH)
-sc.visit_urls()
-sc.visit_items()
-formated_data = sc.format_data()
-sc.to_csv('./data.csv', formated_data)
