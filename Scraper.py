@@ -30,6 +30,12 @@ import logging
 import time
 import csv
 
+logging.basicConfig(
+    level=logging.INFO,  
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
 class Scraper:
     """
     A class used to manage a webscraper
@@ -125,6 +131,7 @@ class Scraper:
         self._next_button_path = ''
         self._link_xpath = ''
         self._categories = []
+        logger.info("WebDriver initialized successfully")
 
     def set_url(self, url: str)  -> None:
         """Function to set the url that we will scrape.
@@ -175,7 +182,7 @@ class Scraper:
             None
         """
         if self._xpaths:
-            print('x_paths already set, add them instead')
+            logger.info('x_paths already set, add them instead')
             return 
         self._xpaths = xpaths
 
@@ -199,7 +206,7 @@ class Scraper:
             None
         """
         if self._multiple:
-            print('multiple already set, add to multiple instead using add_multiple')
+            logger.info('multiple already set, add to multiple instead using add_multiple')
             return
         self._multiple = multiple
 
@@ -217,7 +224,7 @@ class Scraper:
             None
         """
         if self._urls:
-            print('urls already set, add them instead with add_url')
+            logger.info('urls already set, add them instead with add_url')
             return
         self._urls = urls
 
@@ -233,10 +240,10 @@ class Scraper:
             None
         """
         if self._link_xpath:
-            print('link_xpath already set')
+            logger.info('link_xpath already set')
             return
         self._link_xpath = xpath
-        print(f'set {xpath}')
+        logger.info(f'set {xpath}')
 
     def add_xpath(self, name: str, xpath: str) -> None:
         """This function adds a key and value to the xpath dictionary
@@ -253,10 +260,10 @@ class Scraper:
             None
         """
         if name in self._xpaths:
-            print(f'{name} already in xpaths')
+            logger.info(f'{name} already in xpaths')
             return
         self._xpaths[name] = xpath
-        print(f'added {name}')
+        logger.info(f'added {name}')
     
     def add_multiple(self, key: str, value: int=0) -> None:
         """This function adds a key and value to the xpath dictionary
@@ -272,10 +279,10 @@ class Scraper:
             None
         """
         if key in self._multiple:
-            print(f'{key} already in multiple')
+            logger.info(f'{key} already in multiple')
             return 
         self._multiple[key] = value
-        print(f'added {key}')
+        logger.info(f'added {key}')
     
     def add_url(self, url: str) -> None:
         """This function adds url to our urls list
@@ -289,10 +296,10 @@ class Scraper:
             None
         """
         if url in self._urls:
-            print(f'{url} is already in urls')
+            logger.info(f'{url} is already in urls')
             return
         self._urls.append(url)
-        print(f'added {url}')
+        logger.info(f'added {url}')
 
     def get_categories(self, url, categories_button, categories):
         """This function gets categories from a website
@@ -316,7 +323,7 @@ class Scraper:
             browse_button.click()
             categories_links = WebDriverWait(self.driver, 10).until(EC.presence_of_all_elements_located((By.XPATH, "//ul[contains(@class, 'genreList')]//li/a")))
         except NoSuchElementException: 
-            print('Next button not found. Done finding links')
+            logger.info('Next button not found. Done finding links')
             return
         self._categories = [link.text for link in categories_links]
 
@@ -383,9 +390,9 @@ class Scraper:
         try:
             links = self._driver.find_elements(By.XPATH, self.link_xpath)
             self._links.extend([link.get_attribute('href') for link in links])
-            print(f'Found links from {self._driver.current_url}')
+            logger.info(f'Found links from {self._driver.current_url}')
         except Exception as e:
-            print('Error while scraping:', e)
+            logger.info('Error while scraping:', e)
             
     def next_page(self) -> str:
         """This function sets the next page
@@ -406,7 +413,7 @@ class Scraper:
             next_button.click() # click on next button
             time.sleep(3) 
         except NoSuchElementException: # if we cant find the next page button throw exception
-            print('Next button not found. Done finding links')
+            logger.info('Next button not found. Done finding links')
             return False # return True
         return self._driver.current_url # return url of page we are on
 
@@ -441,7 +448,7 @@ class Scraper:
                     return img
                 elements = element.text.strip()
         except Exception as e:
-            print('Error while scraping handling data', e)
+            logger.info('Error while scraping handling data', e)
         return elements
     
     def visit_items(self) -> None:
@@ -462,7 +469,7 @@ class Scraper:
             None
         """
         if not self._links:
-            print('There are no links to scrape')
+            logger.info('There are no links to scrape')
             return
         i = 0
         for link in self._links: # for each link
@@ -490,7 +497,7 @@ class Scraper:
         with open(file_name, 'w', newline='') as file:
             writer = csv.writer(file)
             writer.writerows(data)
-        print(f'Data written to {file_name}')
+        logger.info(f'Data written to {file_name}')
 
     def format_data(self) -> list:
         """Function to format data to be written to a csv file
