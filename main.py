@@ -8,10 +8,12 @@ MULTIPLE = {'genres' : 0}
 
 
 sc = Scraper(GECKODRIVER_PATH, headless=True)
+# sc.get_categories()
+# sc.generate_urls()
 sc.set_next_page_xpath(NEXT_PAGE_BUTTON_XPATH)
 sc.set_xpaths(XPATHS)
 sc.set_multiple(MULTIPLE)
-sc.set_urls(make_urls())
+# sc.set_urls(make_urls())
 sc.set_link_xpath(LINK_XPATH)
 sc.visit_urls(stop=5)
 sc.visit_items()
