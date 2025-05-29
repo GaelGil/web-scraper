@@ -24,7 +24,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
-from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import NoSuchElementException, TimeoutException
 import requests
 import logging
 import time
@@ -391,8 +391,10 @@ class Scraper:
             links = self._driver.find_elements(By.XPATH, self.link_xpath)
             self._links.extend([link.get_attribute('href') for link in links])
             logger.info(f'Found links from {self._driver.current_url}')
+        except NoSuchElementException:
+            logger.warning('No item links found on the page')
         except Exception as e:
-            logger.info('Error while scraping:', e)
+            logger.exception('Failed to scrape item links', e)
             
     def next_page(self) -> str:
         """This function sets the next page
@@ -412,9 +414,12 @@ class Scraper:
             next_button = WebDriverWait(self._driver, 10).until(EC.element_to_be_clickable((By.XPATH, self._next_button_path))) # find next button
             next_button.click() # click on next button
             time.sleep(3) 
-        except NoSuchElementException: # if we cant find the next page button throw exception
-            logger.info('Next button not found. Done finding links')
-            return False # return True
+        except (NoSuchElementException, TimeoutException):
+            logger.warning("Next button not found or not clickable")
+            return False
+        except Exception as e:
+            logger.exception("Unexpected error while navigating to next page")
+            return False
         return self._driver.current_url # return url of page we are on
 
     def scrape_item(self, key: str, xpath: str) -> list:
