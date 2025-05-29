@@ -25,6 +25,7 @@ from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
+from ScrapedItem import ScrapedItem
 import requests
 import logging
 import time
@@ -480,9 +481,11 @@ class Scraper:
         for link in self._links: # for each link
             self.set_url(link) # set url for each link
             item = self._xpaths.copy() # create a copy of each dictionary key (item) : value (elements)
+            item = ScrapedItem()
             for key, xpath in self._xpaths.items(): # for each item and dictionary
                 elements = self.scrape_item(key, xpath) # get the elements using xpath
-                item[key] = elements # set the value of the key to the elements
+                # item[key] = elements # set the value of the key to the elements
+                item.add_field(key, elements)
             self._data[i] = item # add each dictionary to the class variable `data`
             i+=1
 
