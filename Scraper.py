@@ -6,16 +6,16 @@ contain a brief description of exported classes and functions and/or usage
 examples.
 
   Typical usage example:
-    sc = Scraper()
-    sc.set_url('example_url')
-    sc.get_links("xpath_for_links")
-    xpaths = {
-    'title': "title_xpath]",
-    }
+    sc = Scraper(driver=driver_path, headless=True)
+    sc.set_next_page_xpath(xpath=next_button_xpath)
     sc.set_xpaths(xpaths)
-    sc.scrape_items(data_to_scrape)
-    formated_data = sc.format_data()
-    c.to_csv('example.csv', formated_data)
+    sc.set_multiple(multiple)
+    sc.set_urls(urls)
+    sc.set_link_xpath(link_xpath)
+    sc.visit_urls(stop=5) # only go to 5 pages per each url
+    sc.visit_items() # visit items scraped
+    formated_data = sc.format_data() # format the data
+    sc.to_csv('./data.csv', formated_data) # write data to csv
 """
 
 from selenium import webdriver
