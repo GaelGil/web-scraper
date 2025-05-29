@@ -103,12 +103,12 @@ class Scraper:
     def __init__(self, driver_path: str, headless: bool) -> None:
         """Initializes the instance to be ready for scraping.
 
-        Initializes the Scraper instance to set the options and driver
-        on the selenium scraper. 
+        Initializes the Scraper instance with broswer driver and
+        headless mode (optional)
 
         Args: 
             driver_path: the path to the browser driver
-            headless: bool for headless option
+            headless: bool to run browser in headless mode or not
 
         Returns:
             None
@@ -116,15 +116,15 @@ class Scraper:
         options = Options()
         options.headless = headless
         service = Service(driver_path)
-        self.driver = webdriver.Firefox(service=service, options=options)
-        self.urls = []
-        self.links = []
-        self.xpaths = {}
-        self.multiple = {}
-        self.data = {}
-        self.next_button_path = ''
-        self.link_xpath = ''
-        self.categories = []
+        self._driver = webdriver.Firefox(service=service, options=options)
+        self._urls = []
+        self._links = []
+        self._xpaths = {}
+        self._multiple = {}
+        self._data = {}
+        self._next_button_path = ''
+        self._link_xpath = ''
+        self._categories = []
 
     def set_url(self, url: str)  -> None:
         """Function to set the url that we will scrape.
@@ -138,7 +138,7 @@ class Scraper:
         Returns:
             None
         """
-        self.driver.get(url)
+        self._driver.get(url)
         time.sleep(3)
 
     def set_next_page_xpath(self, xpath: str) -> None:
@@ -155,7 +155,7 @@ class Scraper:
         Returns: 
             None
         """
-        self.next_button_path = xpath
+        self._next_button_path = xpath
     
     def set_xpaths(self, xpaths: dict) -> None:
         """This function sets the class variable xpaths.
@@ -174,10 +174,10 @@ class Scraper:
         Returns: 
             None
         """
-        if self.xpaths:
+        if self._xpaths:
             print('x_paths already set, add them instead')
             return 
-        self.xpaths = xpaths
+        self._xpaths = xpaths
 
     def set_multiple(self, multiple: dict) -> None:
         """This function sets the class variable multiple.
@@ -198,10 +198,10 @@ class Scraper:
         Returns: 
             None
         """
-        if self.multiple:
+        if self._multiple:
             print('multiple already set, add to multiple instead using add_multiple')
             return
-        self.multiple = multiple
+        self._multiple = multiple
 
     def set_urls(self, urls: list) -> None:
         """This function sets the class variable urls.
@@ -216,10 +216,10 @@ class Scraper:
         Returns: 
             None
         """
-        if self.urls:
+        if self._urls:
             print('urls already set, add them instead with add_url')
             return
-        self.urls = urls
+        self._urls = urls
 
     def set_link_xpath(self, xpath: str) -> None:
         """This sets the xpath for a link
@@ -232,10 +232,10 @@ class Scraper:
         Returns: 
             None
         """
-        if self.link_xpath:
+        if self._link_xpath:
             print('link_xpath already set')
             return
-        self.link_xpath = xpath
+        self._link_xpath = xpath
         print(f'set {xpath}')
 
     def add_xpath(self, name: str, xpath: str) -> None:
@@ -252,10 +252,10 @@ class Scraper:
         Returns: 
             None
         """
-        if name in self.xpaths:
+        if name in self._xpaths:
             print(f'{name} already in xpaths')
             return
-        self.xpaths[name] = xpath
+        self._xpaths[name] = xpath
         print(f'added {name}')
     
     def add_multiple(self, key: str, value: int=0) -> None:
@@ -271,10 +271,10 @@ class Scraper:
         Returns: 
             None
         """
-        if key in self.multiple:
+        if key in self._multiple:
             print(f'{key} already in multiple')
             return 
-        self.multiple[key] = value
+        self._multiple[key] = value
         print(f'added {key}')
     
     def add_url(self, url: str) -> None:
@@ -288,10 +288,10 @@ class Scraper:
         Returns: 
             None
         """
-        if url in self.urls:
+        if url in self._urls:
             print(f'{url} is already in urls')
             return
-        self.urls.append(url)
+        self._urls.append(url)
         print(f'added {url}')
 
     def get_categories(self, url, categories_button, categories):
@@ -318,7 +318,7 @@ class Scraper:
         except NoSuchElementException: 
             print('Next button not found. Done finding links')
             return
-        self.categories = [link.text for link in categories_links]
+        self._categories = [link.text for link in categories_links]
 
     def generate_urls(self, base_url):
         """Function to generate search urls
@@ -329,7 +329,7 @@ class Scraper:
         Returns: 
             None
         """
-
+        pass
 
     def visit_urls(self, count: int=0, stop: int=5) -> None:
         """This function visits the pages of the urls we set.
@@ -354,8 +354,8 @@ class Scraper:
         Returns: 
             None
         """
-        for i in range(len(self.urls)): # iterate urls
-            self.set_url(self.urls[i]) # set the url to scrape
+        for i in range(len(self._urls)): # iterate urls
+            self.set_url(self._urls[i]) # set the url to scrape
             self.scrape_item_links() # scrape the items from the page
             while count != stop: # while we are not done
                 new_url = self.next_page() # go to next page
@@ -381,9 +381,9 @@ class Scraper:
             None
         """
         try:
-            links = self.driver.find_elements(By.XPATH, self.link_xpath)
-            self.links.extend([link.get_attribute('href') for link in links])
-            print(f'Found links from {self.driver.current_url}')
+            links = self._driver.find_elements(By.XPATH, self.link_xpath)
+            self._links.extend([link.get_attribute('href') for link in links])
+            print(f'Found links from {self._driver.current_url}')
         except Exception as e:
             print('Error while scraping:', e)
             
@@ -402,13 +402,13 @@ class Scraper:
             str
         """
         try:
-            next_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, self.next_button_path))) # find next button
+            next_button = WebDriverWait(self._driver, 10).until(EC.element_to_be_clickable((By.XPATH, self._next_button_path))) # find next button
             next_button.click() # click on next button
             time.sleep(3) 
         except NoSuchElementException: # if we cant find the next page button throw exception
             print('Next button not found. Done finding links')
             return False # return True
-        return self.driver.current_url # return url of page we are on
+        return self._driver.current_url # return url of page we are on
 
     def scrape_item(self, key: str, xpath: str) -> list:
         """Function to scrape data from items
@@ -429,11 +429,11 @@ class Scraper:
         elements = ''
         try:
             if key in self.multiple:
-                elements = self.driver.find_elements(By.XPATH, xpath)
+                elements = self._driver.find_elements(By.XPATH, xpath)
                 elements = [el.text.strip() for el in elements if el.text.strip()]
                 elements = ' '.join(elements)
             else:
-                element = self.driver.find_element(By.XPATH, xpath)
+                element = self._driver.find_element(By.XPATH, xpath)
                 if key == 'img':
                     img = element.get_attribute('src')
                     with open(f'{img}.png', 'wb') as f:
@@ -461,17 +461,17 @@ class Scraper:
         Returns:
             None
         """
-        if not self.links:
+        if not self._links:
             print('There are no links to scrape')
             return
         i = 0
-        for link in self.links: # for each link
+        for link in self._links: # for each link
             self.set_url(link) # set url for each link
-            item = self.xpaths.copy() # create a copy of each dictionary key (item) : value (elements)
-            for key, xpath in self.xpaths.items(): # for each item and dictionary
+            item = self._xpaths.copy() # create a copy of each dictionary key (item) : value (elements)
+            for key, xpath in self._xpaths.items(): # for each item and dictionary
                 elements = self.scrape_item(key, xpath) # get the elements using xpath
                 item[key] = elements # set the value of the key to the elements
-            self.data[i] = item # add each dictionary to the class variable `data`
+            self._data[i] = item # add each dictionary to the class variable `data`
             i+=1
 
     def to_csv(self, file_name: str, data: list) -> None:
@@ -506,8 +506,8 @@ class Scraper:
         Returns:
             list
         """
-        formated_data = [list(self.xpaths.keys())]
-        for value in self.data.values():
+        formated_data = [list(self._xpaths.keys())]
+        for value in self._data.values():
             formated_data.append(list(value.values()))        
         return formated_data
 
