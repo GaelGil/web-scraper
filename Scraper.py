@@ -182,7 +182,7 @@ class Scraper:
             None
         """
         if self._xpaths:
-            logger.info('x_paths already set, add them instead')
+            logger.warning('x_paths already set, add them instead')
             return 
         self._xpaths = xpaths
 
@@ -206,7 +206,7 @@ class Scraper:
             None
         """
         if self._multiple:
-            logger.info('multiple already set, add to multiple instead using add_multiple')
+            logger.warning('multiple already set, add to multiple instead using add_multiple')
             return
         self._multiple = multiple
 
@@ -224,7 +224,7 @@ class Scraper:
             None
         """
         if self._urls:
-            logger.info('urls already set, add them instead with add_url')
+            logger.warning('urls already set, add them instead with add_url')
             return
         self._urls = urls
 
@@ -240,7 +240,7 @@ class Scraper:
             None
         """
         if self._link_xpath:
-            logger.info('link_xpath already set')
+            logger.warning('link_xpath already set')
             return
         self._link_xpath = xpath
         logger.info(f'set {xpath}')
@@ -260,7 +260,7 @@ class Scraper:
             None
         """
         if name in self._xpaths:
-            logger.info(f'{name} already in xpaths')
+            logger.warning(f'{name} already in xpaths')
             return
         self._xpaths[name] = xpath
         logger.info(f'added {name}')
@@ -279,7 +279,7 @@ class Scraper:
             None
         """
         if key in self._multiple:
-            logger.info(f'{key} already in multiple')
+            logger.warning(f'{key} already in multiple')
             return 
         self._multiple[key] = value
         logger.info(f'added {key}')
@@ -296,7 +296,7 @@ class Scraper:
             None
         """
         if url in self._urls:
-            logger.info(f'{url} is already in urls')
+            logger.warning(f'{url} is already in urls')
             return
         self._urls.append(url)
         logger.info(f'added {url}')
