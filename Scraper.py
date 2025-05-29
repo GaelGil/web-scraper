@@ -105,6 +105,7 @@ class Scraper:
     data = {}
     next_button_path = ''
     link_xpath = ''
+    categories = []
 
     def __init__(self, driver_path: str, headless: bool) -> None:
         """Initializes the instance to be ready for scraping.
@@ -291,6 +292,43 @@ class Scraper:
             return
         self.urls.append(url)
         print(f'added {url}')
+
+    def get_categories(self, url, categories_button, categories):
+        """This function gets categories from a website
+
+        Given a url and a xpath to categories on a website. This function
+        goes to that page and gets categories to use to generate search 
+        queries/urls. For example ebay has categories such as kitchen, clothes
+        collectibles, electronics etc. We scrape that text from the webstite
+        to use to generate search urls later.
+    
+        Args:
+            url: The url of the page we want to visit
+            xpath:  The xpath of the categories. 
+
+        Returns: 
+            None
+        """
+        self.set_url(url=url)
+        try:
+            browse_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, categories_button)))
+            browse_button.click()
+            categories_links = WebDriverWait(self.driver, 10).until(EC.presence_of_all_elements_located((By.XPATH, "//ul[contains(@class, 'genreList')]//li/a")))
+        except NoSuchElementException: 
+            print('Next button not found. Done finding links')
+            return
+        self.categories = [link.text for link in categories_links]
+
+    def generate_urls(self, base_url):
+        """Function to generate search urls
+        
+        Args:
+            base_url: the base url we want generate more urls of
+
+        Returns: 
+            None
+        """
+
 
     def visit_urls(self, count: int=0, stop: int=5) -> None:
         """This function visits the pages of the urls we set.
