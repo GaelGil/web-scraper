@@ -26,6 +26,7 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 import requests
+import logging
 import time
 import csv
 
@@ -97,15 +98,7 @@ class Scraper:
         format_data(self)
             Function to format data to be written to a csv file
     """
-    driver = None
-    urls = []
-    links = []
-    xpaths = {}
-    multiple = {}
-    data = {}
-    next_button_path = ''
-    link_xpath = ''
-    categories = []
+
 
     def __init__(self, driver_path: str, headless: bool) -> None:
         """Initializes the instance to be ready for scraping.
@@ -124,6 +117,14 @@ class Scraper:
         options.headless = headless
         service = Service(driver_path)
         self.driver = webdriver.Firefox(service=service, options=options)
+        self.urls = []
+        self.links = []
+        self.xpaths = {}
+        self.multiple = {}
+        self.data = {}
+        self.next_button_path = ''
+        self.link_xpath = ''
+        self.categories = []
 
     def set_url(self, url: str)  -> None:
         """Function to set the url that we will scrape.
