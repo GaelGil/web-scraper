@@ -147,7 +147,23 @@ class Scraper:
             None
         """
         self._driver.get(url)
+
         time.sleep(3)
+
+    def check_popup(self):
+        time.sleep(5)  
+        self._driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
+        try:
+            popup = WebDriverWait(self._driver, 10).until(EC.visibility_of_element_located((By.XPATH, "//div[contains(@class, 'modal__content')]")))
+            logger.info("Popup detected!")
+
+            close_button = WebDriverWait(self._driver, 5).until(EC.element_to_be_clickable((By.XPATH, "//div[contains(@class, 'modal__close')]//button")))
+            close_button.click()
+            logger.info("Popup closed.")
+
+        except TimeoutException:
+            logger.info("Popup not detected or not visible, continuing...")
 
     def set_next_page_xpath(self, xpath: str) -> None:
         """This function sets the xpath for the next page button
@@ -339,7 +355,7 @@ class Scraper:
         """
         pass
 
-    def visit_urls(self, count: int=0, stop: int=5) -> None:
+    def visit_urls(self, count: int=1, stop: int=5) -> None:
         """This function visits the pages of the urls we set.
 
         We have two arguments. One for counting and on for stoping.
@@ -366,7 +382,9 @@ class Scraper:
             self.set_url(self._urls[i]) # set the url to scrape
             self.scrape_item_links() # scrape the items from the page
             while count != stop: # while we are not done
+                self.check_popup()
                 new_url = self.next_page() # go to next page
+                self.check_popup()
                 if not new_url: # if we reached all pages
                     continue 
                 count += 1
@@ -389,7 +407,8 @@ class Scraper:
             None
         """
         try:
-            links = self._driver.find_elements(By.XPATH, self.link_xpath)
+            # Wait for the popup to appear (adjust timeout as needed)
+            links = self._driver.find_elements(By.XPATH, self._link_xpath)
             self._links.extend([link.get_attribute('href') for link in links])
             logger.info(f'Found links from {self._driver.current_url}')
         except NoSuchElementException:
@@ -441,7 +460,7 @@ class Scraper:
         """
         elements = ''
         try:
-            if key in self.multiple:
+            if key in self._multiple:
                 elements = self._driver.find_elements(By.XPATH, xpath)
                 elements = [el.text.strip() for el in elements if el.text.strip()]
                 elements = ' '.join(elements)
