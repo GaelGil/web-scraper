@@ -1,18 +1,23 @@
 CONFIG = {
-    'product': {
-        'url': 'https://example.com/products',
+    'PRODUCT': {
         'xpaths': {
-            'item': '//div[@class="product"]',
-            'title': './/h2/text()',
-            'link': './/a/@href',
+            'title': "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[1]/div[1]/h1",
+            'author' : "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[1]/h3/div/span[1]/a/span[1]",
+            'rating': '//div[@class="RatingStatistics__rating"]',
+            'raitings' : '//span[@data-testid="ratingsCount"]',
+            'reviews' : '//span[@data-testid="reviewsCount"]',
+            'overview' : '//div[@data-testid="description"]//span[@class="Formatted"]',
+            'genres': '//ul[@class="CollapsableList"]//span[@class="Button__labelItem"]',
+            'pages' : '//p[@data-testid="pagesFormat"]',
+            'publish_date' : '//p[@data-testid="publicationInfo"]',
         }
     },
-    'news': {
-        'url': 'https://example.com/news',
-        'xpaths': {
-            'item': '//div[@class="news-item"]',
-            'title': './/h3/text()',
-            'link': './/a/@href',
-        }
-    }
+    'NEXT_PAGE_BUTTON_XPATH': {
+        'xpath' : '//a[@class="next_page" and @rel="next"]'
+    },
+    'PRODUCTS': {
+        'xpath': '//*[@id="bodycontainer"]/div[3]/div[1]/div[2]/div[2]/table/tbody/tr/td[2]/a'
+    },
+    'MULTIPLE': {'genres' : 0},
+    'URLS' : []
 }
