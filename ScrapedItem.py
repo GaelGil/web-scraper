@@ -52,5 +52,6 @@ class ScrapedItem:
         return self._data[key]
     
 
-    def to_list(self) -> None:
-        pass
+    def get_item_values(self) -> None:
+        return self._data.values()
+        # pass
