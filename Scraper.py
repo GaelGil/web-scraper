@@ -542,6 +542,7 @@ class Scraper:
         """
         formated_data = [list(self._xpaths.keys())]
         for value in self._data.values():
-            formated_data.append(list(value.values()))        
+            # print(value._data)
+            formated_data.append(list(value.get_item_values()))        
         return formated_data
 
