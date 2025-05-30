@@ -26,7 +26,6 @@ GENRES = [
 'Thriller',
 'Travel',
 'Young Adult',
-
 ]
 
 # XPATHS = {
