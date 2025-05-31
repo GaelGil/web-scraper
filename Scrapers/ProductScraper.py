@@ -1,3 +1,24 @@
+"""Program to scrape a website and the items displayed in it.
+
+Leave one blank line.  The rest of this docstring should contain an
+overall description of the module or program.  Optionally, it may also
+contain a brief description of exported classes and functions and/or usage
+examples.
+
+  Typical usage example:
+    sc = Scraper(driver=driver_path, headless=True)
+    sc.set_next_page_xpath(xpath=next_button_xpath)
+    sc.set_xpaths(xpaths)
+    sc.set_multiple(multiple)
+    sc.set_urls(urls)
+    sc.set_link_xpath(link_xpath)
+    sc.visit_urls(stop=5) # only go to 5 pages per each url
+    sc.visit_items() # visit items scraped
+    formated_data = sc.format_data() # format the data
+    sc.to_csv('./data.csv', formated_data) # write data to csv
+
+"""
+
 from .BaseScraper import BaseScraper
 from ScrapedItem import ScrapedItem
 from selenium.webdriver.common.by import By
@@ -17,6 +38,22 @@ logger = logging.getLogger(__name__)
 
 class ProductScraper(BaseScraper):
     def iterate_urls(self, products) -> dict:
+        """Function to visit each item from the links we scraped
+        
+        This functions uses the links we scraped to get individual information on 
+        each of the items. For example if we previously scraped the products page
+        on amazon. We would now have the links to each of the individual products.
+        We set the url then using the xpaths we set earlier we will then scrape
+        that data from each individual item. For example we have
+        ['product1_link', 'product2_link', ... 'productn_link']. We will get all
+        the data we want using the function scrape_item and the xpaths we set earlier.
+
+        Args:
+            None
+
+        Returns:
+            None
+        """
         data = {}
         i = 0
         for product in products: # for each link
@@ -92,6 +129,19 @@ class ProductScraper(BaseScraper):
         return self.driver.current_url # return url of page we are on
     
     def handle_popup(self):
+        """This function sets the next page
+
+        Using the xpath for the next page button we set earlier, this function tries to
+        find the button. If we find it we click it. If we can't find it we return false.
+        Otherwise we return the url of the page we are on after clicking the next page
+        button.
+
+        Args:
+            None
+
+        Returns: 
+            str
+        """
         time.sleep(5)  
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         try:
