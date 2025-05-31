@@ -95,7 +95,7 @@ class ProductsScraper(BaseScraper):
             None
         """
         products = []
-        print(self.config['URLS'])
+        # print(self.config['URLS'])
         for i in range(len(self.config['URLS'])):
             self.get_url(self.config['URLS'][i])
             products.extend(self.scrape())
@@ -106,7 +106,7 @@ class ProductsScraper(BaseScraper):
                 if not new_url: # if we reached all pages
                     continue 
                 count += 1
-                self.set_url(new_url) # set next page url
+                self.get_url(new_url) # set next page url
                 self.scrape() # scrape the links to those items on that page
             count = 0 # set back to zero for each url
         return products
@@ -152,7 +152,8 @@ class ProductsScraper(BaseScraper):
             str
         """
         try:
-            next_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, self.config['NEXT_PAGE_BUTTON_XPATH']))) # find next button
+            print(self.config['NEXT_PAGE_BUTTON_XPATH'])
+            next_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, self.config['NEXT_PAGE_BUTTON_XPATH']['xpath']))) # find next button
             next_button.click() # click on next button
             time.sleep(3) 
         except (NoSuchElementException, TimeoutException):
@@ -179,10 +180,10 @@ class ProductsScraper(BaseScraper):
         time.sleep(5)  
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         try:
-            popup = WebDriverWait(self._driver, 10).until(EC.visibility_of_element_located((By.XPATH, "//div[contains(@class, 'modal__content')]")))
+            popup = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.XPATH, "//div[contains(@class, 'modal__content')]")))
             logger.info("Popup detected!")
 
-            close_button = WebDriverWait(self._driver, 5).until(EC.element_to_be_clickable((By.XPATH, "//div[contains(@class, 'modal__close')]//button")))
+            close_button = WebDriverWait(self.driver, 5).until(EC.element_to_be_clickable((By.XPATH, "//div[contains(@class, 'modal__close')]//button")))
             close_button.click()
             logger.info("Popup closed.")
         except TimeoutException:

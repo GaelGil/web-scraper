@@ -91,13 +91,13 @@ class BaseScraper(ABC):
     def __init__(self, driver, config):
         """
         """
-        self.driver = driver
+        self.driver = driver.get_driver()
         self.config = config
 
     def get_url(self, url: str) -> None:
         """
         """
-        self.driver._driver.get(url)
+        self.driver.get(url)
 
     @abstractmethod
     def scrape(self):
