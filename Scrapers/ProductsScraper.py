@@ -1,4 +1,4 @@
-from BaseScraper import BaseScraper
+from .BaseScraper import BaseScraper
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
@@ -16,7 +16,8 @@ logger = logging.getLogger(__name__)
 class ProductsScraper(BaseScraper):
     def iterate_urls(self, count: int=0, stop: int=5) -> list:
         products = []
-        for i in range(len(self.config)['URLS']):
+        # print(self.config['URLS'])
+        for i in range(len(self.config['URLS'])):
             self.set_url(self.config['URLS'][i])
             products.extend(self.scrape())
             while count != stop: # while we are not done

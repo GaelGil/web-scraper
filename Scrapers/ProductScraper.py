@@ -1,5 +1,5 @@
-from BaseScraper import BaseScraper
-from ..ScrapedItem import ScrapedItem
+from .BaseScraper import BaseScraper
+from ScrapedItem import ScrapedItem
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
