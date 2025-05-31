@@ -86,7 +86,7 @@ XPATHS = {
 
 def make_urls():
     urls = []
-    for i in range(len(GENRES)):
-        # urls.append(f'https://www.goodreads.com/search?page=1&q={GENRES[i]}&qid=x02cPlELXg&tab=books')
-        urls.append(f'https://www.goodreads.com/search?page=2&q={GENRES[i]}&qid=jyOk4gd2oJ&search_type=books&tab=books&utf8=%E2%9C%93')
+    for i in range(len(GENRES)//1):
+        urls.append(f'https://www.goodreads.com/search?page=1&q={GENRES[i]}&qid=x02cPlELXg&tab=books')
+        # urls.append(f'https://www.goodreads.com/search?page=2&q={GENRES[i]}&qid=jyOk4gd2oJ&search_type=books&tab=books&utf8=%E2%9C%93')
     return urls
