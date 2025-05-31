@@ -65,8 +65,6 @@ class DriverManager:
         """
         return self._driver
     
-    # def get(self, url: str) -> None:
-    #     self._driver.get(url)
 
     def quit_driver(self):
         """Initializes the instance to be ready for scraping.
