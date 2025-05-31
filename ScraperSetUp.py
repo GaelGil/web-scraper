@@ -19,5 +19,7 @@ CONFIG = {
         'xpath': '//*[@id="bodycontainer"]/div[3]/div[1]/div[2]/div[2]/table/tbody/tr/td[2]/a'
     },
     'MULTIPLE': {'genres' : 0},
-    'URLS' : []
+    'URLS' : [],
+    'DRIVER_PATH': './drivers/geckodriver',
+    'HEADLESS': True
 }
