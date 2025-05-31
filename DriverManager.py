@@ -51,12 +51,34 @@ class DriverManager:
         self._driver = webdriver.Firefox(service=service, options=options)
 
     def get_driver(self):
-        """Function to get the driver
-        
+        """Initializes the instance to be ready for scraping.
+
+        Initializes the Scraper instance with broswer driver and
+        headless mode (optional)
+
+        Args: 
+            driver_path: the path to the browser driver
+            headless: bool to run browser in headless mode or not
+
+        Returns:
+            None
         """
         return self._driver
+    
+    # def get(self, url: str) -> None:
+    #     self._driver.get(url)
 
     def quit_driver(self):
-        """Function to quit the driver
+        """Initializes the instance to be ready for scraping.
+
+        Initializes the Scraper instance with broswer driver and
+        headless mode (optional)
+
+        Args: 
+            driver_path: the path to the browser driver
+            headless: bool to run browser in headless mode or not
+
+        Returns:
+            None
         """
         self._driver.quit()
