@@ -47,11 +47,31 @@ class ScrapedItem:
         """
         self._data[key] = value
 
-
     def get_field(self, key: str) -> None:
+        """Function to set the url that we will scrape.
+
+        Function to set the url of the website that we want our scraper to visit.
+        After its done we wait for 3 seconds. 
+
+        Args:
+            url: The url we want to scrape which is a string
+
+        Returns:
+            None
+        """
         return self._data[key]
     
 
     def get_item_values(self) -> None:
+        """Function to set the url that we will scrape.
+
+        Function to set the url of the website that we want our scraper to visit.
+        After its done we wait for 3 seconds. 
+
+        Args:
+            url: The url we want to scrape which is a string
+
+        Returns:
+            None
+        """
         return self._data.values()
-        # pass
