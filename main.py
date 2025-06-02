@@ -5,8 +5,8 @@ from Scrapers.ProductsScraper import ProductsScraper
 from helper import make_urls
 
 #TODO: add good comments to all classes
-#TODO: add start stop system
 #TODO: updated readme again
+#TODO: add logger to only be used by base scrapper class
 
 if __name__ == "__main__":
     CONFIG_GOODREADS['URLS'] = make_urls()
@@ -16,5 +16,7 @@ if __name__ == "__main__":
     products = products_scraper.iterate_urls(stop=2, next_page=True, popup=True)
     data = product_scraper.iterate_urls(products)
 
-    print("Products:", products)
-    print("data", )
+    print(f'Products: {products}')
+    print(f'Data: {data}')
+
+

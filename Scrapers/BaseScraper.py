@@ -22,7 +22,15 @@ from abc import ABC, abstractmethod
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import NoSuchElementException
+import logging
 
+
+logging.basicConfig(
+    level=logging.INFO,  
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
 class BaseScraper(ABC):
     """
@@ -58,13 +66,23 @@ class BaseScraper(ABC):
         """
         self.driver.get(url)
 
-
-    def wait(self, xpath: str, time: int=15) -> None:
+    def wait_click(self, xpath: str, time: int=15) -> None:
         """
         """
-        wait = WebDriverWait(self.driver, time)
-        wait.until(EC.presence_of_element_located((By.XPATH, xpath)))
+        try:
+            button = WebDriverWait(self.driver, time).until(EC.element_to_be_clickable((By.XPATH, xpath))) 
+            button.click()
+        except NoSuchElementException:
+            logger.warning('No item links found on the page')
 
+    def wait_found(self, xpath: str, time: int=15) -> None:
+        """
+        """
+        try:
+            wait = WebDriverWait(self.driver, time)
+            wait.until(EC.presence_of_element_located((By.XPATH, xpath)))
+        except NoSuchElementException:
+            logger.warning('No item links found on the page')
 
     @abstractmethod
     def scrape(self):

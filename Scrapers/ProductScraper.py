@@ -75,17 +75,15 @@ class ProductScraper(BaseScraper):
         Returns:
             None
         """
-        data = {}
-        i = 0
+        data = []
+        # i = 0
         for product in products: # for each link
-            self.driver.get_url(product) # set url for each link
-            item = self._xpaths.copy() # create a copy of each dictionary key (item) : value (elements)
+            self.get_url(product) # set url for each link
             item = ScrapedItem()
-            for key, xpath in self.config['product']['xpaths']: # for each item and dictionary
+            for key, xpath in self.config['PRODUCT']['xpaths'].items(): # for each item and dictionary
                 elements = self.scrape(key, xpath) # get the elements using xpath
                 item.add_field(key, elements)
-            data[i] = item # add each dictionary to the class variable `data`
-            i+=1
+            data.append(item)
         return data
 
     def scrape(self, key: str, xpath: str) -> list:
@@ -106,12 +104,12 @@ class ProductScraper(BaseScraper):
         """
         elements = ''
         try:
-            if key in self._multiple:
-                elements = self._driver.find_elements(By.XPATH, xpath)
+            if key in self.config['MULTIPLE']:
+                elements = self.driver.find_elements(By.XPATH, xpath)
                 elements = [el.text.strip() for el in elements if el.text.strip()]
                 elements = ' '.join(elements)
             else:
-                element = self._driver.find_element(By.XPATH, xpath)
+                element = self.driver.find_element(By.XPATH, xpath)
                 if key == 'img':
                     img = element.get_attribute('src')
                     with open(f'{img}.png', 'wb') as f:
@@ -122,8 +120,7 @@ class ProductScraper(BaseScraper):
             logger.info('Error while scraping handling data', e)
         return elements
     
-
-    def next_page(self) -> str:
+    def next_page(self, next_page: bool) -> str:
         """This function sets the next page
 
         Using the xpath for the next page button we set earlier, this function tries to
@@ -137,9 +134,10 @@ class ProductScraper(BaseScraper):
         Returns: 
             str
         """
+        if not next_page:
+            return False
         try:
-            next_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, self.config['next_button_xpath']))) # find next button
-            next_button.click() # click on next button
+            self.wait_click(self.config['NEXT_PAGE_BUTTON_XPATH']['xpath'])
             time.sleep(3) 
         except (NoSuchElementException, TimeoutException):
             logger.warning("Next button not found or not clickable")
@@ -148,7 +146,7 @@ class ProductScraper(BaseScraper):
             logger.exception("Unexpected error while navigating to next page")
             return False
         return self.driver.current_url # return url of page we are on
-    
+        
     def handle_popup(self):
         """This function sets the next page
 
@@ -174,3 +172,6 @@ class ProductScraper(BaseScraper):
             logger.info("Popup closed.")
         except TimeoutException:
             logger.info("Popup not detected or not visible, continuing...")
+
+        def next_page(self):
+            pass

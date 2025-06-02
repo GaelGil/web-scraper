@@ -1,3 +1,23 @@
+"""Program to scrape a website and the items displayed in it.
+
+Leave one blank line.  The rest of this docstring should contain an
+overall description of the module or program.  Optionally, it may also
+contain a brief description of exported classes and functions and/or usage
+examples.
+
+  Typical usage example:
+    sc = Scraper(driver=driver_path, headless=True)
+    sc.set_next_page_xpath(xpath=next_button_xpath)
+    sc.set_xpaths(xpaths)
+    sc.set_multiple(multiple)
+    sc.set_urls(urls)
+    sc.set_link_xpath(link_xpath)
+    sc.visit_urls(stop=5) # only go to 5 pages per each url
+    sc.visit_items() # visit items scraped
+    formated_data = sc.format_data() # format the data
+    sc.to_csv('./data.csv', formated_data) # write data to csv
+"""
+
 from .BaseScraper import BaseScraper
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
@@ -47,7 +67,7 @@ class ProductsScraper(BaseScraper):
         set_urls(self, urls: list)
             This function sets the class variable urls
     """
-    def iterate_urls(self, next_page, popup, count: int=0, stop: int=5) -> list:
+    def iterate_urls(self, next_page, popup, count: int=1, stop: int=5) -> list:
         """Initializes the instance to be ready for scraping.
 
         Initializes the Scraper instance with broswer driver and
@@ -92,9 +112,7 @@ class ProductsScraper(BaseScraper):
         """
         products = []
         try:
-            wait = WebDriverWait(self.driver, 15)
-            wait.until(EC.presence_of_element_located((By.XPATH, self.config['PRODUCTS']['xpath'])))
-            self.wait(self.config['PRODUCTS']['xpath'])
+            self.wait_found(self.config['PRODUCTS']['xpath'])
             links = self.driver.find_elements(By.XPATH, self.config['PRODUCTS']['xpath'])
             products.extend([link.get_attribute('href') for link in links])
             logger.info(f'Found links from {self.driver.current_url}')
@@ -122,9 +140,7 @@ class ProductsScraper(BaseScraper):
         if not next_page:
             return False
         try:
-            print(self.config['NEXT_PAGE_BUTTON_XPATH'])
-            next_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, self.config['NEXT_PAGE_BUTTON_XPATH']['xpath']))) # find next button
-            next_button.click() # click on next button
+            self.wait_click(self.config['NEXT_PAGE_BUTTON_XPATH']['xpath'])
             time.sleep(3) 
         except (NoSuchElementException, TimeoutException):
             logger.warning("Next button not found or not clickable")
