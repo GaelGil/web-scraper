@@ -3,7 +3,6 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.by import By
 import logging
 import time
 
@@ -62,7 +61,6 @@ class ProductsScraper(BaseScraper):
             None
         """
         products = []
-        # print(self.config['URLS'])
         for i in range(len(self.config['URLS'])):
             self.get_url(self.config['URLS'][i])
             products.extend(self.scrape())
@@ -96,6 +94,7 @@ class ProductsScraper(BaseScraper):
         try:
             wait = WebDriverWait(self.driver, 15)
             wait.until(EC.presence_of_element_located((By.XPATH, self.config['PRODUCTS']['xpath'])))
+            self.wait(self.config['PRODUCTS']['xpath'])
             links = self.driver.find_elements(By.XPATH, self.config['PRODUCTS']['xpath'])
             products.extend([link.get_attribute('href') for link in links])
             logger.info(f'Found links from {self.driver.current_url}')
@@ -155,7 +154,6 @@ class ProductsScraper(BaseScraper):
         try:
             popup = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.XPATH, "//div[contains(@class, 'modal__content')]")))
             logger.info("Popup detected!")
-
             close_button = WebDriverWait(self.driver, 5).until(EC.element_to_be_clickable((By.XPATH, "//div[contains(@class, 'modal__close')]//button")))
             close_button.click()
             logger.info("Popup closed.")
