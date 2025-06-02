@@ -1,5 +1,5 @@
 from DriverManager import DriverManager
-from ScraperSetUp import CONFIG
+from ScraperSetUp import CONFIG_GOODREADS
 from Scrapers.ProductScraper import ProductScraper
 from Scrapers.ProductsScraper import ProductsScraper
 from helper import make_urls
@@ -9,11 +9,11 @@ from helper import make_urls
 #TODO: updated readme again
 
 if __name__ == "__main__":
-    CONFIG['URLS'] = make_urls()
-    driver_manager = DriverManager(CONFIG['DRIVER_PATH'], CONFIG['HEADLESS'])
-    products_scraper = ProductsScraper(driver=driver_manager, config=CONFIG)
-    product_scraper = ProductScraper(driver=driver_manager, config=CONFIG)
-    products = products_scraper.iterate_urls()
+    CONFIG_GOODREADS['URLS'] = make_urls()
+    driver_manager = DriverManager(CONFIG_GOODREADS['DRIVER_PATH'], CONFIG_GOODREADS['HEADLESS'])
+    products_scraper = ProductsScraper(driver=driver_manager, config=CONFIG_GOODREADS)
+    product_scraper = ProductScraper(driver=driver_manager, config=CONFIG_GOODREADS)
+    products = products_scraper.iterate_urls(stop=2, next_page=True, popup=True)
     data = product_scraper.iterate_urls(products)
 
     print("Products:", products)
