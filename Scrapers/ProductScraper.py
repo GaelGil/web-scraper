@@ -37,19 +37,10 @@ logger = logging.getLogger(__name__)
 
 class ProductScraper(BaseScraper):
     """
-    A class used to manage a webscraper
+    A class used to scrape products from a web page
 
     Attributes:
-        driver: The browser driver needed for webscraping
-        urls: A list of urls to scrape for links
-        x_paths: Will be used as a dictionary where the element is a string
-            a (key) and the xpath is the value.
-        multiple: A dictionary containing elements that might have more than 
-            one elment to scrape
-        data: A dictionary containing the data we scraped 
-        links: A list containing links to individual items to scrape
-        next_button_path: The xpath for the next page button
-        link_xpath: the xpath for a link 
+        None
 
     Methods:
         __init__(self, driver_path: str, headless: bool)
@@ -66,42 +57,6 @@ class ProductScraper(BaseScraper):
 
         set_multiple(self, multiple: dict)
             This function sets the class variable multiple
-
-        set_urls(self, urls: list)
-            This function sets the class variable urls
-
-        set_link_xpath(self, xpath: str)
-            This sets the xpath for a link
-        
-        add_xpath(self, name: str, xpath: str)
-            This function adds a key and value to the xpath dictionary
-        
-        add_multiple(self, key: str, value: int=0)
-            This function adds a key and value to the xpath dictionary
-        
-        add_url(self, url: str)
-            This function adds url to our urls list
-
-        visit_urls(self, count: int=0, stop: int=5)
-            This function visits the pages of the urls we scraped
-
-        scrape_item_links(self)
-            This function scrapes links from a website
-
-        next_page(self)
-            This function sets the next page
-
-        scrape_item(self, key, xpath)
-            Function to scrape data from a item
-
-        visit_items(self)
-            Function to visit each item from the links we scraped
-
-        to_csv(self, file_name: str, data: list)
-            Function to write data to csv file
-        
-        format_data(self)
-            Function to format data to be written to a csv file
     """
     def iterate_urls(self, products: list) -> dict:
         """Function to visit each item from the links we scraped
@@ -123,11 +78,11 @@ class ProductScraper(BaseScraper):
         data = {}
         i = 0
         for product in products: # for each link
-            self.driver.set_url(product) # set url for each link
+            self.driver.get_url(product) # set url for each link
             item = self._xpaths.copy() # create a copy of each dictionary key (item) : value (elements)
             item = ScrapedItem()
             for key, xpath in self.config['product']['xpaths']: # for each item and dictionary
-                elements = self.scrape_(key, xpath) # get the elements using xpath
+                elements = self.scrape(key, xpath) # get the elements using xpath
                 item.add_field(key, elements)
             data[i] = item # add each dictionary to the class variable `data`
             i+=1

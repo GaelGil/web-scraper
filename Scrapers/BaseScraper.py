@@ -19,22 +19,20 @@ examples.
 """
 
 from abc import ABC, abstractmethod
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+
 
 class BaseScraper(ABC):
     """
-    A class used to manage a webscraper
+    A class that will be inherrited by other webscraper
+    classes
 
     Attributes:
         driver: The browser driver needed for webscraping
-        urls: A list of urls to scrape for links
-        x_paths: Will be used as a dictionary where the element is a string
-            a (key) and the xpath is the value.
-        multiple: A dictionary containing elements that might have more than 
-            one elment to scrape
-        data: A dictionary containing the data we scraped 
-        links: A list containing links to individual items to scrape
-        next_button_path: The xpath for the next page button
-        link_xpath: the xpath for a link 
+        config: a dictionary representing with important info
+            for the scraper 
 
     Methods:
         __init__(self, driver_path: str, headless: bool)
@@ -48,45 +46,6 @@ class BaseScraper(ABC):
 
         set_xpaths(self, xpaths: dict)
             This function sets the class variable xpaths
-
-        set_multiple(self, multiple: dict)
-            This function sets the class variable multiple
-
-        set_urls(self, urls: list)
-            This function sets the class variable urls
-
-        set_link_xpath(self, xpath: str)
-            This sets the xpath for a link
-        
-        add_xpath(self, name: str, xpath: str)
-            This function adds a key and value to the xpath dictionary
-        
-        add_multiple(self, key: str, value: int=0)
-            This function adds a key and value to the xpath dictionary
-        
-        add_url(self, url: str)
-            This function adds url to our urls list
-
-        visit_urls(self, count: int=0, stop: int=5)
-            This function visits the pages of the urls we scraped
-
-        scrape_item_links(self)
-            This function scrapes links from a website
-
-        next_page(self)
-            This function sets the next page
-
-        scrape_item(self, key, xpath)
-            Function to scrape data from a item
-
-        visit_items(self)
-            Function to visit each item from the links we scraped
-
-        to_csv(self, file_name: str, data: list)
-            Function to write data to csv file
-        
-        format_data(self)
-            Function to format data to be written to a csv file
     """
     def __init__(self, driver, config):
         """
@@ -98,6 +57,14 @@ class BaseScraper(ABC):
         """
         """
         self.driver.get(url)
+
+
+    def wait(self, xpath: str, time: int=15) -> None:
+        """
+        """
+        wait = WebDriverWait(self.driver, time)
+        wait.until(EC.presence_of_element_located((By.XPATH, xpath)))
+
 
     @abstractmethod
     def scrape(self):
@@ -116,6 +83,3 @@ class BaseScraper(ABC):
         """
         """
         pass
-
-
-        #TODO: add wait function that all subclasses can inherit from
