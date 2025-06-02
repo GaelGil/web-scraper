@@ -47,41 +47,8 @@ class ProductsScraper(BaseScraper):
 
         set_urls(self, urls: list)
             This function sets the class variable urls
-
-        set_link_xpath(self, xpath: str)
-            This sets the xpath for a link
-        
-        add_xpath(self, name: str, xpath: str)
-            This function adds a key and value to the xpath dictionary
-        
-        add_multiple(self, key: str, value: int=0)
-            This function adds a key and value to the xpath dictionary
-        
-        add_url(self, url: str)
-            This function adds url to our urls list
-
-        visit_urls(self, count: int=0, stop: int=5)
-            This function visits the pages of the urls we scraped
-
-        scrape_item_links(self)
-            This function scrapes links from a website
-
-        next_page(self)
-            This function sets the next page
-
-        scrape_item(self, key, xpath)
-            Function to scrape data from a item
-
-        visit_items(self)
-            Function to visit each item from the links we scraped
-
-        to_csv(self, file_name: str, data: list)
-            Function to write data to csv file
-        
-        format_data(self)
-            Function to format data to be written to a csv file
     """
-    def iterate_urls(self, count: int=0, stop: int=5) -> list:
+    def iterate_urls(self, next_page, popup, count: int=0, stop: int=5) -> list:
         """Initializes the instance to be ready for scraping.
 
         Initializes the Scraper instance with broswer driver and
@@ -100,12 +67,12 @@ class ProductsScraper(BaseScraper):
             self.get_url(self.config['URLS'][i])
             products.extend(self.scrape())
             while count != stop: # while we are not done
-                self.handle_popup()
-                new_url = self.next_page() # go to next page
-                self.handle_popup()
+                self.handle_popup(popup)
+                new_url = self.next_page(next_page) # go to next page
+                self.handle_popup(popup)
+                count += 1
                 if not new_url: # if we reached all pages
                     continue 
-                count += 1
                 self.get_url(new_url) # set next page url
                 self.scrape() # scrape the links to those items on that page
             count = 0 # set back to zero for each url
@@ -127,6 +94,8 @@ class ProductsScraper(BaseScraper):
         """
         products = []
         try:
+            wait = WebDriverWait(self.driver, 15)
+            wait.until(EC.presence_of_element_located((By.XPATH, self.config['PRODUCTS']['xpath'])))
             links = self.driver.find_elements(By.XPATH, self.config['PRODUCTS']['xpath'])
             products.extend([link.get_attribute('href') for link in links])
             logger.info(f'Found links from {self.driver.current_url}')
@@ -137,7 +106,7 @@ class ProductsScraper(BaseScraper):
         return products
     
 
-    def next_page(self) -> str:
+    def next_page(self, next_page: bool) -> str:
         """This function sets the next page
 
         Using the xpath for the next page button we set earlier, this function tries to
@@ -151,6 +120,8 @@ class ProductsScraper(BaseScraper):
         Returns: 
             str
         """
+        if not next_page:
+            return False
         try:
             print(self.config['NEXT_PAGE_BUTTON_XPATH'])
             next_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, self.config['NEXT_PAGE_BUTTON_XPATH']['xpath']))) # find next button
@@ -164,7 +135,7 @@ class ProductsScraper(BaseScraper):
             return False
         return self.driver.current_url # return url of page we are on
     
-    def handle_popup(self) -> None:
+    def handle_popup(self, popup: bool) -> None:
         """Initializes the instance to be ready for scraping.
 
         Initializes the Scraper instance with broswer driver and
@@ -177,6 +148,8 @@ class ProductsScraper(BaseScraper):
         Returns:
             None
         """
+        if not popup:
+            return 
         time.sleep(5)  
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         try:

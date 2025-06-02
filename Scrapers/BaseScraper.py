@@ -116,3 +116,6 @@ class BaseScraper(ABC):
         """
         """
         pass
+
+
+        #TODO: add wait function that all subclasses can inherit from

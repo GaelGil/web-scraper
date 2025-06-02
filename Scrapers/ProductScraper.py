@@ -103,7 +103,7 @@ class ProductScraper(BaseScraper):
         format_data(self)
             Function to format data to be written to a csv file
     """
-    def iterate_urls(self, products) -> dict:
+    def iterate_urls(self, products: list) -> dict:
         """Function to visit each item from the links we scraped
         
         This functions uses the links we scraped to get individual information on 
