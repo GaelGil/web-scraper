@@ -21,7 +21,9 @@ CONFIG_GOODREADS = {
     'MULTIPLE': {'genres' : 0},
     'URLS' : [],
     'DRIVER_PATH': './drivers/geckodriver',
-    'HEADLESS': True
+    'HEADLESS': True,
+    'CATEGORIES_BUTTON' : '//span[text()="Browse ▾"]',
+    'CATEGORIES' : '//ul[contains(@class, "genreList")]//li/a'
 }
 
 
