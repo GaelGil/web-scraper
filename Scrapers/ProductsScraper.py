@@ -23,14 +23,7 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-import logging
 import time
-
-logging.basicConfig(
-    level=logging.INFO,  
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
-logger = logging.getLogger(__name__)
 
 class ProductsScraper(BaseScraper):
     """
@@ -115,11 +108,11 @@ class ProductsScraper(BaseScraper):
             self.wait_found(self.config['PRODUCTS']['xpath'])
             links = self.driver.find_elements(By.XPATH, self.config['PRODUCTS']['xpath'])
             products.extend([link.get_attribute('href') for link in links])
-            logger.info(f'Found links from {self.driver.current_url}')
+            self.log_message('i', f'Found links from {self.driver.current_url}')
         except NoSuchElementException:
-            logger.warning('No item links found on the page')
+            self.log_message('w', 'No item links found on the page')
         except Exception as e:
-            logger.exception('Failed to scrape item links', e)
+            self.log_message('e', 'Failed to scrape item links')
         return products
     
 
@@ -143,10 +136,10 @@ class ProductsScraper(BaseScraper):
             self.wait_click(self.config['NEXT_PAGE_BUTTON_XPATH']['xpath'])
             time.sleep(3) 
         except (NoSuchElementException, TimeoutException):
-            logger.warning("Next button not found or not clickable")
+            self.log_message('w', 'Next button not found or not clickable')
             return False
         except Exception as e:
-            logger.exception("Unexpected error while navigating to next page")
+            self.log_message('w', 'Unexpected error while navigating to next page"')
             return False
         return self.driver.current_url # return url of page we are on
     
@@ -169,9 +162,9 @@ class ProductsScraper(BaseScraper):
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         try:
             popup = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.XPATH, "//div[contains(@class, 'modal__content')]")))
-            logger.info("Popup detected!")
+            self.log_message('i', 'popup detected')
             close_button = WebDriverWait(self.driver, 5).until(EC.element_to_be_clickable((By.XPATH, "//div[contains(@class, 'modal__close')]//button")))
             close_button.click()
-            logger.info("Popup closed.")
+            self.log_message('i', 'popup closed')
         except TimeoutException:
-            logger.info("Popup not detected or not visible, continuing...")
+            self.log_message('i', 'opup not detected or not visible, continuing...')
