@@ -26,14 +26,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 import requests
-import logging
 import time
-
-logging.basicConfig(
-    level=logging.INFO,  
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
-logger = logging.getLogger(__name__)
 
 class ProductScraper(BaseScraper):
     """
@@ -117,7 +110,7 @@ class ProductScraper(BaseScraper):
                     return img
                 elements = element.text.strip()
         except Exception as e:
-            logger.info('Error while scraping handling data', e)
+            self.log_message('e', 'Error while scraping handling data')
         return elements
     
     def next_page(self, next_page: bool) -> str:
@@ -140,10 +133,10 @@ class ProductScraper(BaseScraper):
             self.wait_click(self.config['NEXT_PAGE_BUTTON_XPATH']['xpath'])
             time.sleep(3) 
         except (NoSuchElementException, TimeoutException):
-            logger.warning("Next button not found or not clickable")
+            self.log_message('w', 'Next button not found or not clickable')
             return False
         except Exception as e:
-            logger.exception("Unexpected error while navigating to next page")
+            self.log_message('e', 'Unexpected error while navigating to next page')
             return False
         return self.driver.current_url # return url of page we are on
         
@@ -165,13 +158,9 @@ class ProductScraper(BaseScraper):
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         try:
             popup = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.XPATH, "//div[contains(@class, 'modal__content')]")))
-            logger.info("Popup detected!")
-
+            self.log_message('i', 'Popup detected!')
             close_button = WebDriverWait(self.driver, 5).until(EC.element_to_be_clickable((By.XPATH, "//div[contains(@class, 'modal__close')]//button")))
             close_button.click()
-            logger.info("Popup closed.")
+            self.log_message('i', 'Popup closed.')
         except TimeoutException:
-            logger.info("Popup not detected or not visible, continuing...")
-
-        def next_page(self):
-            pass
+            self.log_message('i', 'Popup not detected or not visible, continuing...')
