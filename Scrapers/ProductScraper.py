@@ -6,16 +6,7 @@ contain a brief description of exported classes and functions and/or usage
 examples.
 
   Typical usage example:
-    sc = Scraper(driver=driver_path, headless=True)
-    sc.set_next_page_xpath(xpath=next_button_xpath)
-    sc.set_xpaths(xpaths)
-    sc.set_multiple(multiple)
-    sc.set_urls(urls)
-    sc.set_link_xpath(link_xpath)
-    sc.visit_urls(stop=5) # only go to 5 pages per each url
-    sc.visit_items() # visit items scraped
-    formated_data = sc.format_data() # format the data
-    sc.to_csv('./data.csv', formated_data) # write data to csv
+
 """
 
 from .BaseScraper import BaseScraper
@@ -33,54 +24,41 @@ class ProductScraper(BaseScraper):
     A class used to scrape products from a web page
 
     Attributes:
-        None
+        Inherited from BaseScraper
 
     Methods:
-        __init__(self, driver_path: str, headless: bool)
-            Initializes the instance to be ready for scraping
 
-        set_url(self, url: str)
-            Function to set the url that we will scrape
 
-        set_next_page_xpath(self, xpath: str)
-            This function sets the xpath for the next page button
-
-        set_xpaths(self, xpaths: dict)
-            This function sets the class variable xpaths
-
-        set_multiple(self, multiple: dict)
-            This function sets the class variable multiple
     """
-    def iterate_urls(self, products: list) -> dict:
-        """Function to visit each item from the links we scraped
-        
-        This functions uses the links we scraped to get individual information on 
-        each of the items. For example if we previously scraped the products page
-        on amazon. We would now have the links to each of the individual products.
-        We set the url then using the xpaths we set earlier we will then scrape
-        that data from each individual item. For example we have
-        ['product1_link', 'product2_link', ... 'productn_link']. We will get all
-        the data we want using the function scrape_item and the xpaths we set earlier.
 
+    def iterate_urls(self, products: list) -> dict:
+        """Function to visit each item given a list of items
+        
+        This functions takes in a list of products as its argument. We itterate
+        through the products and set the url of each. Then using the config
+        we set earlier we will then scrape that data from each individual item.
+        For example we have  ['product1_link', 'product2_link', ... 'productn_link'].
+        We will iterate the list and get data for each prodcut using the function
+        `scrape`. We then return the data we got from each prodcut.
         Args:
-            None
+            products: A list of products we want to scrape
 
         Returns:
-            None
+            list
         """
         data = []
         # i = 0
         for product in products: # for each link
             self.get_url(product) # set url for each link
-            item = ScrapedItem()
+            item = ScrapedItem() # create a scraped item instance
             for key, xpath in self.config['PRODUCT']['xpaths'].items(): # for each item and dictionary
                 elements = self.scrape(key, xpath) # get the elements using xpath
-                item.add_field(key, elements)
-            data.append(item)
+                item.add_field(key, elements) # insert the data collceted to scrapeditem
+            data.append(item) # add item to list
         return data
 
     def scrape(self, key: str, xpath: str) -> list:
-        """Function to scrape data from products
+        """Function to scrape data from a product
         
         This functions scrapes data from a page. Given a key (name
         of the element we want to scrape) and a xpath to the element then we 
@@ -93,7 +71,7 @@ class ProductScraper(BaseScraper):
             xpath: a sring that represents the xpath of the element we want to 
 
         Returns:
-            None
+            list
         """
         elements = ''
         try:
