@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'Crimson Text';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/crimsontext/v19/wlprgwHKFkZgtmSR3NB0oRJfajCOD9NV.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Eczar';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/eczar/v26/BXR2vF3Pi-DLmxcpJB-qbNTyTMDXHd6WqQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Eczar';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/eczar/v26/BXR2vF3Pi-DLmxcpJB-qbNTyTMDXw9mWqQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Sail';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sail/v16/DPEjYwiBxwYJFBQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Sofia';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sofia/v14/8QIHdirahM3j_vu-.ttf) format('truetype');
+}

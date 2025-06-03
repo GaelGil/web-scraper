@@ -1,0 +1,60 @@
+#headshot {
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+#introduction {
+  margin-top: 150px;
+  
+}
+#intro-paragraph {
+  font-size: 1.5em;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+#home {
+  background-image: url(https://cdn.glitch.global/68e59abc-736d-4b9e-bfd4-c6b06a984643/christine-mendoza-9gOV9Jz6Gho-unsplash.jpg?v=1709774590089);
+  background-color: #1B1A55;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  scroll-behavior: smooth;
+  display: flex;
+  padding-bottom: 20%;
+  
+}
+#about {
+  scroll-behavior: smooth;
+  background-color: #1B1A55;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+#about-paragraph {
+  display: flex;
+  font-size: 1.5rem;
+  font-family: "Truculenta", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  margin-left: 75px;
+  margin-right: 75px;
+}
+#projects {
+  scroll-behavior: smooth;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #9290C3;
+}
+#project-carousel {
+  padding-left: 55px;
+  padding-right: 55px;
+}
+#contact {
+  scroll-behavior: smooth;
+  background-color: #f9f9f9;
+  padding: 50px 0;
+  text-align: center;
+  margin-bottom: 20px;
+}

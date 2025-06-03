@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Agbalumo';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/agbalumo/v5/55xvey5uMdT2N37KZfMCgL0.ttf) format('truetype');
+}

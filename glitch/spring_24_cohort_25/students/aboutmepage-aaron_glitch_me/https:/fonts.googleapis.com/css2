@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'Madimi One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/madimione/v1/2V0YKIEADpA8U6RygDnZZFQ.ttf) format('truetype');
+}

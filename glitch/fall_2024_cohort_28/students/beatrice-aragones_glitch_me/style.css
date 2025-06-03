@@ -1,0 +1,338 @@
+/* Default light mode body */
+body,
+html {
+    font-family: 'Raleway', sans-serif !important;
+    font-size: 1.25rem;
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth !important;
+    height: 100%;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #F5F9F2 !important;
+    color: #1E3715 !important;
+}
+
+p {
+    margin-bottom: 0px !important;
+}
+
+/* Adjust icon size */
+.toggle-icon {
+    font-size: 1.5rem;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Dark mode body */
+.dark-mode {
+    background-color: #122B3F !important;
+    color: #E4E5E7 !important;
+}
+
+/* Default light mode navbar */
+.navbar {
+    background-color: #D1EAC8;
+    color: #1C252E;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    height: 89px;
+}
+
+/* Dark mode navbar */
+.dark-mode .navbar {
+    background-color: #5C7196;
+    color: #E4E5E7;
+}
+
+/* Default nav link color */
+.nav-link {
+    color: #719484 !important;
+    transition: all .25s ease-in-out !important;
+}
+
+/* Dark mode nav link */
+.dark-mode .nav-link {
+    color: #1C252E !important;
+}
+
+/* Default nav link on hover */
+.nav-link:hover {
+    color: #1E3715 !important;
+    text-shadow: #d2dae3 !important;
+    font-size: 115%;
+    font-weight: bolder;
+}
+
+/* Dark mode nav link on hover */
+.dark-mode .nav-link:hover {
+    color: #DDDDDD !important;
+}
+
+/* Dark mode toggle icon color */
+.dark-mode .toggle-icon i {
+    color: #FFFFFF;
+}
+
+/* Row styling */
+.row {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+.about-container,
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    max-height: none;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+/* Light mode headshot */
+#beatrice-headshot {
+    height: 30vw !important;
+    border: 10px solid #719484;
+    border-radius: 1000px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Dark mode headshot */
+.dark-mode #beatrice-headshot {
+    border: 10px solid #81AFD9;
+}
+
+/* Light mode about page images */
+#beatrice-graduation,
+#beatrice-logo,
+#beatrice-pc {
+    height: 15vw;
+    border: 5px solid #719484;
+    border-radius: 500px;
+}
+
+/* Dark mode about page images */
+.dark-mode #beatrice-graduation,
+.dark-mode #beatrice-logo,
+.dark-mode #beatrice-pc {
+    border: 5px solid #81AFD9;
+}
+
+#home-screen,
+#about-screen,
+#experience-screen,
+#projects-screen,
+#contact-screen {
+    min-height: calc(100vh - 89px);
+    min-width: 100vw;
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+    scroll-margin-top: 89px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#about-screen,
+#projects-screen {
+    background-color: #D8E0D0;
+}
+
+.dark-mode #about-screen,
+.dark-mode #projects-screen {
+    background-color: #09151F;
+}
+
+#introduction,
+#academics,
+#etsy,
+#hobbies {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#headshot,
+#grad-pic,
+#etsy-logo,
+#hobby-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#introduction-text,
+#academics-text,
+#etsy-text,
+#hobbies-text,
+#about-dev-mission-cta,
+#about-dev-mission,
+#about-lfi,
+#about-lbnl,
+.contact-text {
+    background-color: #FDFCFC;
+    padding: 1vw;
+    border: 10px solid #719484;
+    border-radius: 50px;
+    box-sizing: border-box;
+    transition: transform .3s ease-in-out;
+}
+
+#academics-text,
+#etsy-text,
+#hobbies-text {
+  border: 5px solid #719484 !important;
+}
+
+#about-dev-mission-cta,
+#about-dev-mission,
+#about-lfi,
+#about-lbnl {
+    width: 65vw;
+}
+
+img {
+    transition: all .3s ease-in-out !important;
+}
+
+img:hover,
+#introduction-text:hover,
+#academics-text:hover,
+#etsy-text:hover,
+#hobbies-text:hover,
+#about-dev-mission-cta:hover, 
+#about-dev-mission:hover,
+#about-lfi:hover,
+#about-lbnl:hover,
+.contact-text:hover {
+    transform: scale(1.10);
+}
+
+.contact-container {
+    width: 60vw !important;
+}
+
+.dark-mode #introduction-text,
+.dark-mode #academics-text,
+.dark-mode #etsy-text,
+.dark-mode #hobbies-text,
+.dark-mode #about-dev-mission-cta,
+.dark-mode #about-dev-mission,
+.dark-mode #about-lfi,
+.dark-mode #about-lbnl,
+.dark-mode .contact-text {
+    background-color: #1C252E;
+    border: 10px solid #81AFD9;
+}
+
+.dark-mode #academics-text,
+.dark-mode #etsy-text,
+.dark-mode #hobbies-text {
+  border: 5px solid #81AFD9 !important;
+}
+
+.btn {
+    margin: 0;
+    background-color: #1E3715 !important;
+    color: #FDFCFC !important;
+    border-radius: 50px !important;
+    transition: color 0.3s;
+}
+
+.dark-mode .btn {
+    background-color: #81AFD9 !important;
+}
+
+.btn:hover {
+    background-color: #719484 !important;
+}
+
+.dark-mode .btn:hover {
+    background-color: #26537E !important;
+}
+
+.skill-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.25rem 0.5rem !important;
+    font-size: 0.75vw !important;
+    line-height: normal;
+}
+
+#accordionExample {
+    max-width: 80%;
+    min-width: 80vw;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.dark-mode .accordion-body {
+    background-color: #1C252E;
+}
+
+.accordion-button {
+    background-color: #1E3715 !important;
+    color: #FDFCFC !important;
+}
+
+.dark-mode .accordion-button {
+    background-color: #81AFD9 !important;
+    color: #FDFCFC !important;
+}
+
+.accordion-button::after {
+    background-color: #FDFCFC !important;
+}
+
+.card {
+    height: auto;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    overflow: hidden;
+    white-space: normal;
+    width: 100%;
+    display: block;
+}
+
+.card-img-top {
+    max-height: 300px;
+    object-fit: contain;
+    width: 100%;
+}
+
+.social-icon {
+    color: #1E3715;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.dark-mode .social-icon {
+    color: #81AFD9;
+}
+
+.social-icon:hover {
+    color: #719484;
+}
+
+.dark-mode .social-icon:hover {
+    color: #26537E;
+}

@@ -1,0 +1,102 @@
+
+
+img.pfp {
+  width: 70%;
+  padding: 1em;
+  height: 100%;
+  border-radius: 50%;
+}
+
+div {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  padding: 1em;
+  font-family: Ysabeau, sans-serif;
+  font-size: 2.3em;
+}
+
+h5 {
+  font-family: Ysabeau, sans-serif;
+  font-size: 2em;
+}
+
+li {
+  text-align: left;
+}
+
+ul {
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+button {
+  padding: .5em;
+  margin: .5em;
+  font-family: "Ysabeau SC", sans-serif;
+  font-size: 1.5em;
+}
+
+
+
+#name {
+  font-family: Ysabeau, sans-serif;
+}
+
+
+.card {
+  text-align: center;
+  margin: 1em;
+}
+
+.name-header {
+  font-size: 3em;
+  color: #AA336A;
+}
+
+.bio {
+  padding-left: 3em;
+  padding-right: 3em;
+  font-size: 1.2em;
+}
+
+.artpage {
+  width: 90%;
+  margin:0.5em;
+  margin-bottom: 1.6em;
+}
+
+.gifs {
+  width:90%;
+  margin:1em;
+  margin-top:3em;
+  margin-bottom:3em;
+}
+
+.others {
+  background:pink; 
+}
+
+.navbar {
+  background-color: pink; 
+}
+
+a:link.dev {
+      text-decoration: none;
+  color: #ca4e87;
+}
+
+a:visited.dev {
+      text-decoration: none;
+  color: #ca4e87;
+}
+
+a:hover.dev {
+      color:#ecbfd3;
+  
+}
+
+a:active {
+  text-decoration: none;}

@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("https://cdn.pixabay.com/photo/2016/03/31/22/21/asia-1296989_1280.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: middle-center;
+  background-color: #94D1BE;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: transparent;
+  color: #550C18;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #A41623;
+  font-size: 18px;
+}
+
+main {
+  padding: 20px;
+  position:relative;
+  right:350px;
+  top:50px;
+}
+
+p {
+  max-width: 45ch;
+}
+
+a:hover{
+  color:white; 
+}
+
+p:hover{
+  color:#E26D5C; 
+}
+/* Rest of your styles here */

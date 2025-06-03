@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'Abril Fatface';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/abrilfatface/v24/zOL64pLDlL1D99S8g8PtiKchm-A.ttf) format('truetype');
+}

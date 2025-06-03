@@ -1,0 +1,75 @@
+body {
+  background-color: #faebd7;
+}
+
+nav {
+  background-color: black;
+}
+
+section {
+  margin-top: 20px;
+  border-style: solid;
+  border-radius: 1em;
+}
+
+h1,
+.navbar-brand {
+  font-family: "Bebas Neue", sans-serif;
+  background-color: black;
+  color: #06d6a0;
+}
+
+h2 {
+  text-decoration: underline;
+  text-decoration-color: #06d6a0;
+  font-family: "Roboto", sans-serif;
+}
+
+h5 {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.navbar-toggler {
+  background-color: #06d6a0;
+}
+
+.nav-link {
+  color: #faebd7;
+}
+
+.accordion-item,
+.card-body {
+  color: #faebd7;
+  background-color: black;
+}
+
+.accordion-body h5 {
+  text-decoration: underline;
+  text-decoration-color: #faebd7;
+}
+
+.accordion-button {
+  color: #06d6a0;
+  background-color: black;
+}
+.accordion-button:not(.collapsed),
+.card-body .btn {
+  color: black;
+  background-color: #06d6a0;
+}
+
+.navbar-brand,
+.card-body h5 {
+  color: #06d6a0;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.card-img-top {
+  height: 50%;
+  object-fit: cover;
+}
+s

@@ -1,0 +1,1244 @@
+
+/************************************************************BODY***********************************************************************/
+
+
+
+
+body {
+  background-color: #2D2B55; /* BACKGROUND FOR BODY*/
+  
+}
+
+
+
+
+/************************************************************CONTENT********************************************************************/
+
+
+
+
+
+.main {                  /*SETTING "main" SCREENSIZE*/
+  height: 100vh;
+}
+
+
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+nav ul li {
+  display: inline-block;
+  float: left;
+  padding: 0;
+  margin-top: 130px;
+  
+
+}
+
+
+.navbar {
+  color: blue;
+  padding: 0;
+  min-height: 9vh;
+
+
+}
+
+
+a.buttontab {
+  background-color: #515151;
+  padding: 4px 40px;
+  text-decoration: none;
+  color: white;
+  font-size: 10px;
+  border: 1px solid black; 
+  margin-bottom: 20px;
+}
+
+
+  
+
+
+
+.content {                 
+  margin-left: 160px;
+  padding: 20px;
+  color: #612d92 ;
+}
+
+/* .adaedae {
+  margin-left: 10vh;
+  margin-top: -100vh
+} */
+
+.numerthree {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#nicoheader {
+  color: #612d92;
+  margin-left: 14vh;
+  
+
+} 
+
+#secondpart {
+  color:white;
+
+}
+
+#secondpart, #nicoheader{
+  display: inline-block;
+  opacity: 0;
+}
+
+
+.lop1 {
+   margin-left: 13vh; 
+}
+
+.seconddiv {
+     margin-left: 15vh; 
+
+}
+
+.contenttext {
+   margin-left: 18vh; 
+}
+
+.about {
+    margin-left: 22vh;
+  }
+
+
+ 
+
+
+
+#lop2, #l2p2,#l6p1,#l17p1 {
+  color: #617AFF;  /********************COLOR: DARK BLUE***********************/ 
+  
+}
+
+#lop4, #l2p4, #l2p7{
+  color: #AACCFF;  /********************COLOR: CYAN ***************************/
+}
+
+#l3p2, #l5p1, #l7p1, #l11p1, #l12p1, #l16p1, #l19p1, #l20p1,#l24p1,#l525p1,#l26p1,#l27p1,#l28p1,#l29p1,#l30p1,#l31p1 {
+  color: white;   /************************COLOR: WHITE************************/
+}
+
+#l9p1, #l14p1, #l22p1 {
+  color: #2F9866;
+  margin-left: 29vh;
+}
+
+
+
+/************************************************************* END OF CONTENT ***********************************************************/
+
+
+
+
+/************************************************************** LOADING PAGE CONTENT ****************************************************************/
+
+.loading  {
+  min-height:100vh;       /* "HELLO" LOADING SCREEN*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+h2 {
+  color: white; 
+  font-family: 'Space Mono', monospace;
+}
+
+
+
+
+/************************************************************* END OFLOADING PAGE CONTENT ***********************************************************/
+
+
+
+
+
+
+/************************************************************** MAIN PAGE CONTENT ******************************************************************/
+
+
+
+/************************************************************** END OF MAIN PAGE CONTENT ******************************************************************/
+
+/****************************************************************************************************************************************/
+
+
+
+
+
+ /* .sticky-sidebar {
+  width: 12vh;
+  height: 290%;
+  position: absolute; 
+  background-color: #333333;
+}
+ */
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************************************************************************************************************/
+/************************************************************** MEDIA MIN FOR 1228 ******************************************************************/
+/****************************************************************************************************************************************************/
+
+
+@media (max-width: 1280px ) {
+
+/************************************************************CONTENT********************************************************************/
+
+
+  .content {                 
+    margin-left: 110px;
+    padding: 20px;
+    color: #612d92 ;
+  }
+  
+  .numerthree {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 9vh; 
+  }
+
+
+  #nicoheader {
+    color: #612d92;
+    margin-left: 12vh;
+  }
+  
+  
+  .numerfour {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-weight: bold;
+  
+  }
+  
+  .lop1 {
+     margin-left: 9vh; 
+  }
+  
+  .seconddiv {
+       margin-left: 11vh; 
+  
+  }
+  
+  .contenttext {
+     margin-left: 13vh; 
+  }
+  
+  .about {
+      margin-left: 16vh;
+    }
+
+    #l9p1, #l14p1, #l22p1 {
+      color: #2F9866;
+      margin-left: 23vh;
+    }
+    
+  
+  
+  
+  
+  /************************************************************* END OF CONTENT ***********************************************************/
+  
+  
+  
+  
+  /************************************************************** LOADING PAGE CONTENT ****************************************************************/
+  
+  .loading  {
+    min-height:100vh;       /* "HELLO" LOADING SCREEN*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  /************************************************************* END OFLOADING PAGE CONTENT ***********************************************************/
+  
+  
+  
+  /************************************************************** MAIN PAGE CONTENT ******************************************************************/
+  
+  .main {                  /*SETTING "main" SCREENSIZE*/
+    height: 200vh;
+  }
+  
+  
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  
+  nav ul li {
+    display: inline-block;
+    float: left;
+    padding: 0;
+  }
+  
+  
+  .navbar {
+    color: blue;
+    padding: 0;
+    min-height: 10vh;
+  }
+  
+  
+  a.buttontab {
+    background-color: #515151;
+    padding: 4px 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 10px;
+    border: 1px solid black; 
+    margin-bottom: 20px;
+  }
+  
+  /************************************************************** END OF MAIN PAGE CONTENT ******************************************************************/
+  
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************************************************************************************************************/
+/************************************************************** MEDIA MIN FOR 1228 ******************************************************************/
+/****************************************************************************************************************************************************/
+
+
+@media (max-width: 1150px ) {
+
+  /************************************************************CONTENT********************************************************************/
+  
+  
+    .content {                 
+      margin-left: 90px;
+      padding: 20px;
+      color: #612d92 ;
+      font-size: 12px;
+    }
+    
+    .numerthree {
+      font-size: 30px;
+      font-weight: bold;
+      
+    }s
+
+
+    #nicoheader {
+      color: #612d92;
+      margin-left: 11vh;
+    }
+    
+    
+    .numerfour {
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      font-weight: bold;
+    
+    }
+    
+    .lop1 {
+       margin-left: 9vh; 
+    }
+    
+    .seconddiv {
+         margin-left: 11vh; 
+    
+    }
+    
+    .contenttext {
+       margin-left: 13vh; 
+    }
+    
+    .about {
+        margin-left: 16vh;
+      }
+    
+      #l9p1, #l14p1, #l22p1 {
+        color: #2F9866;
+        margin-left: 21vh;
+      }
+    
+    
+    
+    /************************************************************* END OF CONTENT ***********************************************************/
+    
+    
+    
+    
+    /************************************************************** LOADING PAGE CONTENT ****************************************************************/
+    
+    .loading  {
+      min-height:100vh;       /* "HELLO" LOADING SCREEN*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    
+    /************************************************************* END OFLOADING PAGE CONTENT ***********************************************************/
+    
+    
+    
+    /************************************************************** MAIN PAGE CONTENT ******************************************************************/
+    
+    .main {                  /*SETTING "main" SCREENSIZE*/
+      height: 200vh;
+    }
+    
+    
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    
+    
+    nav ul li {
+      display: inline-block;
+      float: left;
+      padding: 0;
+    }
+    
+    
+    .navbar {
+      color: blue;
+      padding: 0;
+      min-height: 10vh;
+    }
+    
+    
+    a.buttontab {
+      background-color: #515151;
+      padding: 4px 17px;
+      text-decoration: none;
+      color: white;
+      font-size: 10px;
+      border: 1px solid black; 
+      margin-bottom: 10px;
+    }
+    
+    /************************************************************** END OF MAIN PAGE CONTENT ******************************************************************/
+    
+  
+  
+  
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************************************************************************************************************/
+/************************************************************** MEDIA MIN FOR 1228 ******************************************************************/
+/****************************************************************************************************************************************************/
+
+
+@media (max-width: 975px ) {
+
+  /************************************************************CONTENT********************************************************************/
+  
+  
+    .content {                 
+      margin-left: 70px;
+      padding: 20px;
+      color: #612d92 ;
+      font-size: 9px;
+    }
+    
+    .numerthree {
+      font-size: 20px;
+      font-weight: bold;
+      margin-left: 9vh; 
+    }
+
+    #nicoheader {
+      color: #612d92;
+      margin-left: 6vh;
+      font-size: 20px;
+    }
+    
+    #secondpart {
+      font-size: 20px;
+    }
+    
+    
+    
+    .lop1 {
+       margin-left: 4vh; 
+    }
+    
+    .seconddiv {
+         margin-left: 7vh; 
+    
+    }
+    
+    .contenttext {
+       margin-left: 9vh; 
+    }
+    
+    .about {
+        margin-left: 12vh;
+      }
+    
+      #l9p1, #l14p1, #l22p1 {
+        color: #2F9866;
+        margin-left: 16vh;
+      }
+    
+    
+    /************************************************************* END OF CONTENT ***********************************************************/
+    
+    
+    
+    
+    /************************************************************** LOADING PAGE CONTENT ****************************************************************/
+    
+    .loading  {
+      min-height:100vh;       /* "HELLO" LOADING SCREEN*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    
+    /************************************************************* END OFLOADING PAGE CONTENT ***********************************************************/
+    
+    
+    
+    /************************************************************** MAIN PAGE CONTENT ******************************************************************/
+    
+    .main {                  /*SETTING "main" SCREENSIZE*/
+      height: 200vh;
+    }
+    
+    
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    
+    
+    nav ul li {
+      display: inline-block;
+      float: left;
+      padding: 0;
+    }
+    
+    
+    .navbar {
+      color: blue;
+      padding: 0;
+      min-height: 8vh;
+    }
+    
+    
+    a.buttontab {
+      background-color: #515151;
+      padding: 4px 17px;
+      text-decoration: none;
+      color: white;
+      font-size: 10px;
+      border: 1px solid black; 
+      margin-bottom: 10px;
+    }
+    
+    /************************************************************** END OF MAIN PAGE CONTENT ******************************************************************/
+    
+  
+  
+  
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************************************************************************************************************/
+/************************************************************** MEDIA MIN FOR 1228 ******************************************************************/
+/****************************************************************************************************************************************************/
+
+
+@media (max-width: 780px ) {
+
+  /************************************************************CONTENT********************************************************************/
+  
+  
+    .content {                 
+      margin-left: 50px;
+      padding: 10px;
+      color: #612d92 ;
+      font-size: 9px;
+    }
+    
+    .numerthree {
+      font-size: 20px;
+      font-weight: bold;
+      margin-left: 3vh; 
+    }
+    
+    .numerfour {
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      font-weight: bold;
+    
+    }
+    
+    .lop1 {
+       margin-left: 3vh; 
+    }
+    
+    .seconddiv {
+         margin-left: 3.5vh; 
+    
+    }
+    
+    .contenttext {
+       margin-left: 4vh; 
+    }
+    
+    .about {
+        margin-left: 6vh;
+      }
+    
+      #l9p1, #l14p1, #l22p1 {
+        color: #2F9866;
+        margin-left: 10vh;
+      }
+    
+    
+    /************************************************************* END OF CONTENT ***********************************************************/
+    
+    
+    
+    
+    /************************************************************** LOADING PAGE CONTENT ****************************************************************/
+    
+    .loading  {
+      min-height:100vh;       /* "HELLO" LOADING SCREEN*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    
+    /************************************************************* END OFLOADING PAGE CONTENT ***********************************************************/
+    
+    
+    
+    /************************************************************** MAIN PAGE CONTENT ******************************************************************/
+    
+    .main {                  /*SETTING "main" SCREENSIZE*/
+      height: 200vh;
+    }
+    
+    
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    
+    
+    nav ul li {
+      display: inline-block;
+      float: left;
+      padding: 0;
+    }
+    
+    
+    .navbar {
+      color: blue;
+      padding: 0;
+      min-height: 9vh;
+    }
+    
+    
+    a.buttontab {
+      background-color: #515151;
+      padding: 4px 17px;
+      text-decoration: none;
+      color: white;
+      font-size: 7px;
+      border: 1px solid black; 
+      margin-bottom: 7px;
+    }
+      
+  }
+
+  /******************************************************************* END **************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media (max-width: 630px ) {
+
+    /************************************************************CONTENT********************************************************************/
+    
+    
+      .content {                 
+        margin-left: 5vh;
+        padding: 20px;
+        color: #612d92 ;
+        font-size: 7px;
+        margin-top: 2vh;
+      }
+      
+      .numerthree {
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 3vh; 
+      }
+      
+      .numerfour {
+        color: white;
+        font-size: 17px;
+        font-weight: bold;
+        font-weight: bold;
+      
+      }
+
+      
+      
+      .lop1 {
+        margin-left: 1vh; 
+     }
+     
+     .seconddiv {
+          margin-left: 1.5vh; 
+     
+     }
+     
+     .contenttext {
+        margin-left: 2vh; 
+     }
+     
+     .about {
+         margin-left: 2vh;
+       }
+     
+       #l9p1, #l14p1, #l22p1 {
+         color: #2F9866;
+         margin-left: 4vh;
+       }
+      
+      /************************************************************* END OF CONTENT ***********************************************************/
+      
+      
+      
+      
+      /************************************************************** LOADING PAGE CONTENT ****************************************************************/
+      
+      .loading  {
+        min-height:100vh;       /* "HELLO" LOADING SCREEN*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      
+      /************************************************************* END OFLOADING PAGE CONTENT ***********************************************************/
+      
+      
+      
+      /************************************************************** MAIN PAGE CONTENT ******************************************************************/
+      
+      .main {                  /*SETTING "main" SCREENSIZE*/
+        height: 200vh;
+      }
+      
+      
+      
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      
+      
+      nav ul li {
+        display: inline-block;
+        float: left;
+        padding: 0;
+      }
+      
+      
+      .navbar {
+        color: blue;
+        padding: 0;
+        min-height: 5vh;
+        
+
+      }
+      
+      
+      a.buttontab {
+        background-color: #515151;
+        padding: 4px 10px;
+        text-decoration: none;
+        color: white;
+        font-size: 5px;
+        border: 1px solid black; 
+        margin-bottom: 10px;
+      }      
+      }
+      /********************************************************************* END **************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      @media (max-width: 495px ) {
+
+        /************************************************************CONTENT********************************************************************/
+        
+        
+          .content {                 
+            margin-left: 2vh;
+            padding: 2vh;
+            color: #612d92 ;
+            font-size: 6px;
+          }
+          
+          .numerthree {
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 3vh; 
+          }
+          
+          .numerfour {
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            font-weight: bold;
+          
+          }
+          
+          .lop1 {
+             margin-left: 1vh; 
+          }
+          
+          .seconddiv {
+               margin-left: 1.5vh; 
+          
+          }
+          
+          .contenttext {
+             margin-left: 2vh; 
+          }
+          
+          .about {
+              margin-left: 2vh;
+            }
+          
+            #l9p1, #l14p1, #l22p1 {
+              color: #2F9866;
+              margin-left: 4vh;
+            }
+          
+          
+          /************************************************************* END OF CONTENT ***********************************************************/
+          
+          
+          
+          
+          /************************************************************** LOADING PAGE CONTENT ****************************************************************/
+          
+          .loading  {
+            min-height:100vh;       /* "HELLO" LOADING SCREEN*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          
+          
+          /************************************************************* END OFLOADING PAGE CONTENT ***********************************************************/
+          
+          
+          
+          /************************************************************** MAIN PAGE CONTENT ******************************************************************/
+          
+          .main {                  /*SETTING "main" SCREENSIZE*/
+            height: 200vh;
+          }
+          
+          
+          
+          nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+          }
+          
+          
+          
+          nav ul li {
+            display: inline-block;
+            float: left;
+            padding: 0;
+          }
+          
+          
+          .navbar {
+            color: blue;
+            padding: 0;
+            min-height: 5vh;
+          }
+          
+          
+          .buttontab {
+            background-color: #515151;
+            border-color: black;
+            padding: 2px 5px;
+            margin-top: 100px;
+            color: white;
+            font-size: 5px;
+            }
+          
+          /************************************************************** END OF MAIN PAGE CONTENT ******************************************************************/
+          
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      @media (max-width: 480px ) {
+
+        /************************************************************CONTENT********************************************************************/
+        
+        
+          .content {                 
+            margin-left: 3px;
+            padding: 0;
+            color: #612d92 ;
+            font-size: 4.5px;
+          }
+          
+          .numerthree {
+            font-size: 13px;
+            font-weight: bold;
+            margin-left: 3vh; 
+          }
+          
+          .numerfour {
+            color: white;
+            font-size: 11px;
+            font-weight: bold;
+            font-weight: bold;
+          
+          }
+          
+          .lop1 {
+             margin-left: 1vh; 
+          }
+          
+          .seconddiv {
+               margin-left: 1.5vh; 
+          
+          }
+          
+          .contenttext {
+             margin-left: 2vh; 
+          }
+          
+          .about {
+              margin-left: 2vh;
+            }
+          
+            #l9p1, #l14p1, #l22p1 {
+              color: #2F9866;
+              margin-left: 4vh;
+            }
+          
+          
+          /************************************************************* END OF CONTENT ***********************************************************/
+          
+          
+          
+          
+          /************************************************************** LOADING PAGE CONTENT ****************************************************************/
+          
+          .loading  {
+            min-height:100vh;       /* "HELLO" LOADING SCREEN*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          
+          
+          /************************************************************* END OFLOADING PAGE CONTENT ***********************************************************/
+          
+          
+          
+          /************************************************************** MAIN PAGE CONTENT ******************************************************************/
+          
+          .main {                  /*SETTING "main" SCREENSIZE*/
+            height: 200vh;
+          }
+          
+          
+          
+          nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+          }
+          
+          
+          
+          nav ul li {
+            display: inline-block;
+            padding: 0;
+          }
+          
+          
+          .navbar {
+            color: blue;
+            padding: 0;
+            min-height: 1vh;
+          }
+          
+          
+          .buttontab {
+            background-color: #515151;
+            border-color: black;
+            padding: 3px 5px;
+            margin-top: 100px;
+            color: white;
+            font-size: 5px;
+            }
+          
+          /************************************************************** END OF MAIN PAGE CONTENT ******************************************************************/
+          
+          }

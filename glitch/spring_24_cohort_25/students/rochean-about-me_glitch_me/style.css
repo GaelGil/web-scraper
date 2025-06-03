@@ -1,0 +1,31 @@
+
+body{background-color:#975ca3;}
+
+
+.header {
+  background-color: #311145;
+  color: white;
+  padding: 15px;
+  font-family:"Pacifico",sans-serif;
+}
+.pic{
+  width:100%;
+    height:100%;
+  text-align:center;
+  
+}
+p{color:black;}
+
+.carousel-item{
+  width:50%;
+    height:50%;
+}
+.footer{
+  background-color: #311145;
+  color: white;
+  padding: 15px;
+  font-family:"Pacifico",sans-serif;
+}
+.wi{
+  font-size:10%
+}

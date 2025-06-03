@@ -1,0 +1,91 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* adjust typography defaults */
+body {
+  margin: 1rem;
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: #e7ebef;
+  
+
+}
+
+
+/* images and videos max out at full width */
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+/* Fixed navbar */
+.fixed_part {
+    background-color: #dde3e7;
+
+  z-index: 1030 ; /* Ensure navbar stays on top */
+}
+
+/* Container1 */
+.container1 {
+  height: 50vh;   
+  position: fixed; /* Sticks until container2 pushes it out */
+  top: 56px; /* Sticks just below the navbar */
+  z-index: 1; /* Stays behind container2 */
+  display: flex;
+/*   align-items: center;
+  justify-content: center; */
+  padding-top: 20px; /* Adjust to avoid overlapping with navbar */
+  background-image: url(https://cdn.glitch.global/a018e94f-d9b1-4b6c-b221-a17de8a8774c/bg_img.png?v=1728890267559),
+    url(https://cdn.glitch.global/a018e94f-d9b1-4b6c-b221-a17de8a8774c/background_img_lg.png?v=1728890271063);
+  background-repeat: repeat, no-repeat;
+  background-size:10px 10px, 80% 80%;
+  background-position: left top , right bottom;
+  background-color: #dee4e8;
+}
+
+/* Container2 will scroll and cover container1 */
+.container2 {
+  background-color: #e7ebef;
+  position: relative ;
+  z-index: 2 ; /* Ensure it's above container1 */
+  margin-top: 50vh ; /* Adjust as needed to control overlap timing */
+}
+
+.logo{
+  width: 20vh;
+}
+
+.tech_tag {
+    background-color: #283593;
+    color: #ffffff;
+    padding: 4px 6px;
+    border-radius: 4px;
+    margin-right: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .5px;
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 11px;
+}
+
+.card_img{
+  height:15rem;
+}
+
+.card_p{
+/*   height:12rem; */
+}
+
+.tech_div{
+  height:4rem;
+}

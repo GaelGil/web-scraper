@@ -1,0 +1,55 @@
+#Summary {
+  margin-top: 3rem;
+}
+#Summary .card {
+  background-color: #e0f1e9;
+}
+
+#Summary .card-body {
+  padding-left: 2rem;
+}
+
+#Summary img {
+  max-width: 30em;
+}
+
+#Summary .card-title {
+  font-family: "Noto Serif", serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #475b5a;
+}
+#Summary .card-text,
+p,
+li,
+#Contact, #Contact  {
+  font-family: "Noto Serif", serif;
+}
+
+#Projects {
+  background-color: #e0f1e9;
+  padding-bottom: 5rem;
+}
+#Skills {
+  padding-top: 5rem;
+}
+#Skills .card {
+  border-style: solid;
+  border-width: medium;
+  border-color: gray;
+  width: 20rem;
+}
+
+#Resume iframe {
+  width: 50rem;
+  height: 50rem;
+  padding-bottom: 5rem;
+}
+
+#Contact {
+  background-color: #e0f1e9;
+}
+
+#Contact form{
+  padding: 2rem;
+}

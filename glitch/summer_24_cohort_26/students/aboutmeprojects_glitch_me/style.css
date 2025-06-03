@@ -1,0 +1,28 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 24px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* adjust typography defaults */
+body {
+  background-image: url("https://cdn.glitch.global/8a1233ca-dea6-4807-984d-38df0f1c1b8d/8A55F863-824B-46B3-84A1-0D1202124999_1_105_c.jpeg?v=1721252162070");
+  color:white 
+}
+
+/* images and videos max out at full width */
+img,
+video {
+  height: auto;
+  max-width: 60%;
+  
+}
+

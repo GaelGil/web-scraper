@@ -1,0 +1,130 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* adjust typography defaults */
+body {
+  margin: 1rem;
+  font-family: sans-serif;
+  line-height: 1.5;
+   background-image: url('https://cdn.glitch.global/235ab3c1-7563-4560-aea3-8a01b896903c/photo-1501594907352-04cda38ebc29.avif?v=1691358392592');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+   background-size: 100% 100%;
+}
+
+
+/* images and videos max out at full width */
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+.card {
+    width: 90%;
+    height: 5vw;
+    object-fit: cover;
+    margin-top: 3vw;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7);
+}
+
+.title, .subTitle{
+  text-align: center;
+}
+
+.title{
+  margin-top: 5vw;
+  font-family: 'Bungee Spice', cursive;
+  text-shadow: 4px 4px 3px black;
+  font-size: 4.69vw;
+}
+.aboutPageTitle{
+   margin-top: 5vw;
+  font-family: 'Bungee Spice', cursive;
+  text-shadow: 4px 4px 3px black;
+  font-size: 3vw;
+  text-align: center;
+}
+
+.generalText{
+   font-family: 'Comfortaa', cursive;
+}
+
+.subTitle{
+  font-family: 'Comfortaa', cursive;
+  color: white;
+  text-shadow: 2px 1px 2px black;
+  font-size: 1.8vw;
+}
+
+.formatDescrip{
+   font-family: 'Comfortaa', cursive;
+  color: white;
+  text-shadow: 2px 1px 2px black;
+  font-size: 1.8vw;
+  text-align:center;
+}
+.formatDescrip2{
+   font-family: 'Comfortaa', cursive;
+  color: white;
+  text-shadow: 2px 1px 2px black;
+  font-size: 1.8vw;
+  text-align:center;
+  margin-top: 1vw;
+}
+
+.btn-block{
+  align-items: center;
+}
+
+.navbar-custom{
+  background-color: orange;
+}
+
+.homeButton{
+  margin-left: 1vw;
+}
+
+.abtPageDiv1{
+  background-color: white;
+  margin-top: 6vw;
+}
+
+.formatTitle{
+  margin-top: 5vw;
+  font-family: 'Bungee Spice', cursive;
+  text-shadow: 4px 4px 3px black;
+  font-size: 3vw;
+  text-align: center;
+}
+
+.allFormatCards{
+  align-items: center;
+  
+}
+
+.filterdiv{
+  margin-top: 4vw;
+}
+
+
+.detailView{
+  align-items: center;
+}
+
+.searchBar{
+  margin-left: auto;
+  margin-right: auto;
+}

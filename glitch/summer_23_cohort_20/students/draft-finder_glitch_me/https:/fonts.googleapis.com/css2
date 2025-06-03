@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Bungee Spice';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bungeespice/v15/nwpTtK2nIhxE0q-IwgSpZBqCzw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/comfortaa/v46/1Pt_g8LJRfWJmhDAuUsSQamb1W0lwk4S4VrMPrQ.ttf) format('truetype');
+}
+body {
+  --google-font-color-bungeespice:none;
+}

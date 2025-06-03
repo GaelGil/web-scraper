@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Chakra Petch';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/chakrapetch/v12/cIf6MapbsEk7TDLdtEz1BwkmmA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Tilt Neon';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/tiltneon/v11/E21L_d7gguXdwD9LEFY2WCeElCNtd-eBqpHp1TzrkJSmwpj5ndxquXK9.ttf) format('truetype');
+}

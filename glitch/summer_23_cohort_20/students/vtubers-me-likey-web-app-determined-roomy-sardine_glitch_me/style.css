@@ -1,0 +1,134 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* adjust typography defaults */
+body {
+  margin: 1rem;
+  font-family: sans-serif;
+  line-height: 1.5;
+   background-image:url("https://cdn.glitch.global/63e2191f-f189-4444-862f-c1ae2157cee8/pink%20plaid%20bg.png?v=1691785043678");
+}
+
+/* images and videos max out at full width */
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+.carddetailedview {
+ margin-top: 3rem;
+ margin-left: 3rem;
+ margin-right: 3rem;
+ margin-bottom: 3rem;
+ height: auto;
+ border-radius: 20px;
+}  
+.cardlistview{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin-bottom: 30px;  
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+
+
+.list img {
+  max-width: 100%;
+  width: 265px;
+  height: 265px;}
+
+
+.cardlistimage{
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+.cardlisttitlenormalcolor{
+  color:black;
+}
+
+.cardlisttitle{
+  text-align:center;
+}
+
+a:visited {
+      text-decoration: none;
+}
+
+a:hover {
+      text-decoration: none;
+      color:#e6198b;
+}
+
+a:active {
+      text-decoration: none;
+}
+
+
+
+.headingforinfo{
+ margin-top: 1rem;
+}
+
+.middletext{
+  text-align: center;
+}
+
+.carddetailedviewname{
+  margin-top:1rem;
+ 
+}
+
+.carddetailedviewpicture{
+  margin-top:1rem;
+}
+
+.mascotpicturesmall{
+  width: 150px;
+  height: auto;
+  
+}
+
+.vtuberfullbodybigger{
+  width: 50rem;
+  height: auto;
+
+}
+
+.topparagraph{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  text-align: center;
+}
+
+.overflowscroll{
+   overflow-y: scroll;
+   height: 650px;
+  
+}
+
+
+
+.infodetailedcardbgcolor{
+  background-color: lightpink;
+}
+
+.topofscrollbarpicdetailed{
+  margin-top: 3rem;
+}
+
+.test  {
+  margin-bottom: 2rem;
+}

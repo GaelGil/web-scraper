@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'Ysabeau Infant';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ysabeauinfant/v3/hv-ClzpqOkkV94kBTQVdX1EWI9B0V-HEmd9JmTQYSI8HKw.ttf) format('truetype');
+}

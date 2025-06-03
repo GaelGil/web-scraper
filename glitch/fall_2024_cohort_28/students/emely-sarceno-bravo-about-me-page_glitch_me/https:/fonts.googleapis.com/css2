@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'Baloo Paaji 2';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/baloopaaji2/v28/i7dfIFFzbz-QHZUdV9_UGWZuelmy79QJ1HOSY9AX74fy.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Baloo Paaji 2';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/baloopaaji2/v28/i7dfIFFzbz-QHZUdV9_UGWZuelmy79QJ1HOSY9Al74fy.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Baloo Paaji 2';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/baloopaaji2/v28/i7dfIFFzbz-QHZUdV9_UGWZuelmy79QJ1HOSY9DJ6Ify.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Baloo Paaji 2';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/baloopaaji2/v28/i7dfIFFzbz-QHZUdV9_UGWZuelmy79QJ1HOSY9Dw6Ify.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Baloo Paaji 2';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/baloopaaji2/v28/i7dfIFFzbz-QHZUdV9_UGWZuelmy79QJ1HOSY9CX6Ify.ttf) format('truetype');
+}

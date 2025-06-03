@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/titilliumweb/v18/NaPFcZTIAOhVxoMyOr9n_E7fdMbewI1zZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/titilliumweb/v18/NaPFcZTIAOhVxoMyOr9n_E7fdMbepI5zZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/titilliumweb/v18/NaPAcZTIAOhVxoMyOr9n_E7fdMbmCA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/titilliumweb/v18/NaPFcZTIAOhVxoMyOr9n_E7fdMbe0IhzZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/titilliumweb/v18/NaPFcZTIAOhVxoMyOr9n_E7fdMbetIlzZg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/titilliumweb/v18/NaPDcZTIAOhVxoMyOr9n_E7ffAzHKIw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/titilliumweb/v18/NaPDcZTIAOhVxoMyOr9n_E7ffGjEKIw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/titilliumweb/v18/NaPecZTIAOhVxoMyOr9n_E7fRMQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/titilliumweb/v18/NaPDcZTIAOhVxoMyOr9n_E7ffBzCKIw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/titilliumweb/v18/NaPDcZTIAOhVxoMyOr9n_E7ffHjDKIw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/titilliumweb/v18/NaPDcZTIAOhVxoMyOr9n_E7ffEDBKIw.ttf) format('truetype');
+}

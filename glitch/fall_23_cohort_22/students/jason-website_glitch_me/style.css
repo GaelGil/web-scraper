@@ -1,0 +1,223 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* adjust typography defaults */
+body {
+  margin: 1rem;
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1));
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+hr {
+  height: 1px;
+  background-color: #BA0000;
+  width: 50%;
+}
+
+h1 {
+  background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
+/*   border-color: rgba(150,0,0);
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 25px; */
+  opacity: 100%;
+  margin: 10px;
+}
+
+.link { 
+  color: #FFFFFF; 
+}
+
+.link:hover {
+  color: #515151; 
+}
+
+.link:visited { 
+  color: #BA0000; 
+}
+
+.link:active { 
+  color: #FF0000; 
+}
+
+/* ------------------------------------------------------------------------------------------------------------ */
+/* Fonts */
+
+
+.general-text {
+  font-size: 32px;
+}
+
+.title {
+  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 78px;
+  width: 25%;
+}
+
+.main-font {
+  font-family: 'Sofia Sans Condensed', sans-serif;
+}
+
+.white-text {
+  color: #FFFFFF;
+}
+
+.grey-text {
+  color: #515151;
+}
+
+.red-text {
+  color: #BA0000;
+}
+
+.introduction-text {
+  margin-top: 80px;
+  font-size: 78px;
+  
+}
+
+p.skills {
+  background-color: #515151;
+  width: 300px;
+  margin: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: 'Sofia Sans Condensed', sans-serif;
+  font-size: 20px;
+  border-radius: 15px;
+}
+
+#my-webscraper {
+  font-family: 'Sofia Sans Condensed', sans-serif;
+  color: white;
+  border-radius: 15px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #1e1f22;
+}
+
+#my-casino {
+  font-family: 'Sofia Sans Condensed', sans-serif;
+  color: white;
+  border-radius: 15px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: rgba(28,35,51);
+}
+
+#my-lyrics {
+  font-family: 'Sofia Sans Condensed', sans-serif;
+  color: black;
+  border-radius: 15px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: lightgrey;
+}
+
+#Webscraper {
+  border-color: #1e1f22;
+  border-style: solid;
+}
+
+#Casino {
+  border-color: rgba(28,35,51);
+  border-style: solid;
+  background-color: rgba(28,35,51);
+}
+
+#Lyrics {
+  border-color: lightgrey;
+  border-style: solid;
+  background-color: lightgrey;
+  border-radius: 20px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------ */
+/* Formatting */
+
+
+.introduce-section {
+  margin-top: 150px;
+}
+
+.end-section {
+  margin-bottom: 200px;
+  margin-top: 200px;
+}
+
+.end-website {
+  margin-bottom: 200px;
+}
+
+.small-gap {
+  margin-bottom: 30px;
+}
+
+.large-gap {
+  margin-top: 200px;
+}
+
+.center {
+  margin-top: 50px;
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+}
+
+.four-three-aspect {
+  height: 400px;
+  width: 300px;
+}
+
+.sixteen-nine-aspect {
+  height: 800px;
+  width: 450px;
+}
+
+.margin-left {
+  margin-left: 50%;
+}
+
+.image {
+  border-color: rgba(0,0,0);
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 20px;
+}
+
+.carousel img {
+  margin: auto;
+}
+
+.carousel-inner {
+  margin: auto;
+}
+

@@ -1,0 +1,817 @@
+ /* Minimalist CSS Resets */
+
+/* Default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Adjust typography defaults */
+body {
+  margin: 1rem;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+/* Images and videos max out at full width */
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Custom Styles */
+
+body {
+  font-family: "bilo";
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #1C2C59;
+  background-color: #F5F3EC;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%; /* Change to full width */
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  width: 100%; /* Change to full width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Set a fixed height and use object-fit to maintain aspect ratio */
+.mySlides img {
+  width: 100%;
+  height: 600px; /* Set the desired height */
+  object-fit: cover; /* Cover the area while maintaining aspect ratio */
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Flip card styles */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.9s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #f7b1a6;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* Font styles for specific sections */
+.hours {
+  font-family: "Platypi", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  text-align: center;
+  margin: 20px;
+}
+
+.w3-content w3-section {
+  position: relative;
+  width="500";
+  height="600";
+}
+
+.time {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-size: 30px;
+  text-align: center;
+}
+
+.google-map {
+  padding-bottom: 30%;
+  position: relative;
+}
+
+.google-map iframe {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+/* Navbar styles */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+nav {
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background:black;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+  /*position: fixed;
+  top: 0;*/
+  
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
+  
+
+}
+
+/*.slideshow-container{
+  margin-top:35px;
+}*/
+
+nav .logo {
+  color: #f7b1a6;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+nav .brand {
+  width: 150px;
+  height: 80px; /* Adjust height to match the navbar */
+  display: flex;
+  align-items: center; /* Center vertically */
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color:White;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  color:black;
+  background: #fff;
+}
+
+nav .menu-btn i {
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  nav {
+    padding: 0 40px 0 50px;
+  }
+}
+
+@media (max-width: 920px) {
+  nav .menu-btn i {
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+  nav ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+    
+
+  }
+  #click:checked ~ ul {
+    left: 0;
+  }
+  nav ul li {
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a {
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover {
+    background: none;
+    color: cyan;
+  }
+}
+
+/* Content positioning */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  color: #1b1b1b;
+}
+
+.content div {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+/* card */
+flip-card{
+  width:100px; 
+  height:100px;
+  
+}
+
+/* chatGPT*/
+/* Minimalist CSS Resets */
+
+/* Default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Adjust typography defaults */
+body {
+  margin: 1rem;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+/* Images and videos max out at full width */
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+@media and (min-height: 900px) {
+  img {
+    height: 100px;
+  }
+}
+
+/* Custom Styles */
+
+body {
+  font-family: "bilo";
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #1C2C59;
+  background-color: #F5F3EC;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%; /* Change to full width */
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  width: 100%; /* Change to full width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Set a fixed height and use object-fit to maintain aspect ratio */
+.mySlides img {
+  width: 100%;
+  height: 600px; /* Set the desired height */
+  object-fit: cover; /* Cover the area while maintaining aspect ratio */
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Text overlay */
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3rem; /* Adjust the size as needed */
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  
+
+
+}
+
+/* Buttons inside text overlay */
+.text-overlay .buttons {
+  margin-top: 20px;
+
+  
+
+}
+
+.text-overlay .btn {
+  background-color:#d6443a;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  text-decoration: none
+    
+  
+}
+
+
+.title{  
+
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size:150px;
+
+}
+
+
+.outside{
+  width:100px;
+  height:100px;
+}
+
+/* the test page*/
+.outsidepic {
+  float: right;
+  width: 45%;
+  padding-left: 50px;
+  padding-right:10px;
+  margin-top:60px;
+  margin-left:10px;
+}
+
+.pos {
+  position: relative;
+  margin: 0 10%; /* Center the content within the background */
+  padding: 10px;
+  overflow: auto; /* Ensures content is properly contained */
+}
+
+.background {
+  background-color: #cc281d;
+  color: white; /* Ensures text is readable against the black background */
+  padding: 20px 0; /* Adds some padding at the top and bottom */
+  width: 100%; /* Makes the background span the full width */
+  box-sizing: border-box; /* Ensures padding doesn't affect the width */
+  border-radius:35px;
+}
+
+.background2{
+   background-color: #fce9e6;
+  color: white; /* Ensures text is readable against the black background */
+  padding: 50px; /* Adds some padding at the top and bottom */
+  width: 100%; /* Makes the background span the full width */
+  box-sizing: border-box; /* Ensures padding doesn't affect the width */
+  border-radius:35px;
+  margin-top:50px;
+  
+}
+.about {
+  margin-top: 40px; /* Adds some space between the image and the text */
+}
+
+.textabout {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  text-align: center;
+  margin-top:50px;
+  font-size: 20px;
+  /*color:black;*/ 
+}
+
+/*test page pt2*/
+.noodle{
+  float:left;
+  width:35%;
+  padding-top:20px;
+  padding-left:100px;
+  
+
+}
+
+.order{
+  text-align:center;
+  margin-top:100px;
+}
+
+.cut{
+  font-size: 100px; /* Adjust the font size as needed */
+  background-color:#e86a61;
+  color:white;
+  border-radius:35px;
+  padding:20px;
+  
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cut:hover{
+  background-color:#ed1202;
+}
+
+.pt2{
+  font-size:35px;
+  color:black;
+  
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+
+/* online order nav bar*/
+.on{
+  background-color:#f7b1a6;
+  border-radius:35px;
+  padding:5px;
+}
+
+/* image for hour*/
+.h {
+  
+   max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  
+}
+
+/* button for hour*/
+.round{
+  font-size:30px;
+   margin:20px;
+  padding:15px;
+  margin-left:180px;
+  border-radius:35px;
+  background-color:white;
+  
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  
+}
+
+.round:hover{
+  background-color:#f7b1a6;
+}
+
+.hi{
+  font-size:10px;
+  padding:20px;
+  
+}
+
+
+/* flip card */
+.f{
+color:black;
+  font-size:30px;
+  
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top:30px;
+}
+
+.i{
+  font-size:20px;
+  
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+  
+.hint{
+    font-size:50px;
+    text-align:center;
+  
+    font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top:30px;
+  }
+
+/*menu pic */
+.menu1{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 50%;
+  height:auto;
+  width:auto;
+  border: 5px solid black;
+}
+
+.menu2{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height:auto;
+  width:auto;
+
+  border: 5px solid black;
+}
+
+.popup-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  max-width: 400px;
+  width: 90%;
+}
+
+.close-btn {
+  position: absolute;
+  top: 340px;
+  right: 540px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  color: black; /* Make the "X" visible */
+}
+
+#popup-btn{
+  font-size:30px;
+  margin-top:20px;
+  padding:5px;
+  background-color:#f7b1a6;
+  border-radius:35px;
+  
+  
+}
+
+#popup-btn:hover{
+  background-color:#cc281d;
+  
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top:30px;
+  
+}
+
+.popup-content{
+  
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top:30px;
+  font-size:20px;
+  
+}
+
+

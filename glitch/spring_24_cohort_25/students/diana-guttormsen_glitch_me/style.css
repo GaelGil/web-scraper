@@ -1,0 +1,125 @@
+/* body{
+  background-image: url(https://cdn.glitch.global/6a512068-595f-429f-bf6c-4d3d774147e6/milky-way-2695569_1280.jpg?v=1709772909056);
+    width: 400px; 
+  height: 100px; 
+} */
+em {
+  color: #e6e6ff;
+}
+h1 {
+  color: #e6e6ff;
+}
+
+@property --a {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+html,
+body {
+  display: grid;
+}
+
+html {
+  height: 100%;
+} /* full viewport height */
+
+.spinner {
+  box-sizing: border-box; /* ensures padding is subtracted out of width */
+  place-self: center; /* put in the middle of grid cell along both axes */
+  width: min(100%, 18em); /* give it a width, but ensure no overflow */
+  aspect-ratio: 1; /* make it a square box, 1/ 1 aspect ratio */
+  padding: 1.25em;
+  border-radius: 50%; /* turn square into disc */
+  box-shadow: 2px 2px 17px #000000;
+  background: 
+		/* top layer, restricted to the content-box */ url(https://cdn.glitch.global/6a512068-595f-429f-bf6c-4d3d774147e6/IMG_20231031_200636.jpg?v=1709770241628)
+      50% / cover content-box,
+    /* bottom layer, a conic-gradient() covering the entire padding-box. 
+		 * using longer hue interpolation method to generate 🌈 out of 1 hsl() value,
+		 * making the start angle a custom property we can then animate */
+      conic-gradient(in hsl longer hue from var(--a), hsl(0, 100%, 80%) 0 0);
+  animation: a 2s linear infinite;
+}
+
+@keyframes a {
+  to {
+    --a: 1turn;
+  }
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: black;
+  overflow: hidden;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+ {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ html{
+  background: #ffffff;
+}
+
+.acc-container {
+  width: 90%;
+  margin: 30px auto 0 auto;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.acc-btn {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 25px;
+  cursor: pointer;
+  background: #34495e;
+  border-bottom: 1px solid #2c3e50;
+}
+
+.acc-content {
+  height: 0px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #2c3e50;
+}
+
+.acc-content-inner {
+  padding: 30px;
+}
+
+.open {
+  height: auto;
+}
+
+h1 {
+  font: 700 20px/26px "Lato", sans-serif;
+  color: #ffffff;
+}
+
+p {
+  font: 400 16px/24px "Lato", sans-serif;
+  color: #798795;
+}
+
+.selected {
+  color: #1abc9c;
+}

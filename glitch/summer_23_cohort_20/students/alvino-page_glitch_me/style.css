@@ -1,0 +1,85 @@
+h1 {
+  text-align:center;
+  font-family: 'Passion One',sans-serif;
+  font-size: 60px;
+  color:#000000;
+}
+
+.myself {
+  height:20rem;
+  width:15rem;
+  border: 3px solid black;
+}
+
+.card{
+ text-align:center;
+ margin-left:20%;
+ margin-right:20%;
+}
+
+.about-me {
+  margin-left:5%;
+  font-size: 1.3rem;
+}
+
+.background {
+  background-color:#769FCD;
+}
+
+.bio {
+  background-color:#D6E6F2;
+   
+}
+.container-fluid {
+  background-color:#000000;
+  height: 3.5rem;
+}
+
+.navbar-brand {
+  font-family: 'Chela One', sans-serif;
+  color: #ffffff; 
+}
+
+.navbar-brand:hover {
+  color:#D6E6F2;
+}
+  
+.nav-link {
+  color:#769FCD;
+}
+
+.nav-link:hover {
+  color:#ffffff;
+}
+ 
+.fa-linkedin-square {
+  color:#000000;
+}
+
+.fa-envelope {
+  padding-left:3rem;
+  padding-bottom:1rem;
+  color:#000000;
+}
+
+.fa-linkedin-square:hover, .fa-envelope:hover {
+  color:#769FCD;
+}
+
+.accordion {
+  width:80rem;
+  margin-left:5rem;
+  margin-right: 3rem;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color:#ffffff;
+}
+
+.navbar-collapse {
+  background-color:#000000;
+}
+.navbar-toggler {
+  background-color:#ffffff;
+}
+

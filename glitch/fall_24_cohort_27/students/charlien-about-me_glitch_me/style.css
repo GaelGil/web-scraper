@@ -1,0 +1,101 @@
+body {
+  font-family: "Titillium Web", sans-serif;
+}
+#charlie-about-me,
+#charlie-work-experience,
+#charlie-education,
+#charlie-projects {
+    scroll-margin-top: 120px; /* Adjust this if your navbar height changes */
+}
+
+.charlie-about-me-row {
+  background-color: #cbf5dd;
+}
+
+
+.timeline {
+  width: 100%;
+}
+.timeline.timeline-one .timeline-item {
+  position: relative;
+  width: 50%;
+  margin-left: 50%;
+  padding-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  text-align: left;
+}
+@media (max-width: 575.98px) {
+  .timeline.timeline-one .timeline-item {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.timeline.timeline-one .timeline-item img {
+  margin-bottom: 1.25rem;
+}
+.timeline.timeline-one .timeline-item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 0.425rem;
+  margin-left: -0.5rem;
+  border: 0.0625rem solid #dce6f3;
+  border-radius: 50%;
+}
+.timeline.timeline-one .timeline-item:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: -0.1875rem;
+  width: 0.0625rem;
+  margin-top: 1.875rem;
+  margin-left: -0.0625rem;
+  background-color: #dce6f3;
+}
+.timeline.timeline-one .timeline-item:nth-child(2n + 1) {
+  margin-left: 0;
+  padding-right: 1.5rem;
+  padding-left: 0;
+  text-align: right;
+}
+@media (max-width: 575.98px) {
+  .timeline.timeline-one .timeline-item:nth-child(2n + 1) {
+    padding-right: 0;
+    padding-left: 1.5rem;
+    text-align: left;
+  }
+}
+.timeline.timeline-one .timeline-item:nth-child(2n + 1):after,
+.timeline.timeline-one .timeline-item:nth-child(2n + 1):before {
+  right: 0;
+  left: auto;
+}
+@media (max-width: 575.98px) {
+  .timeline.timeline-one .timeline-item:nth-child(2n + 1):after,
+  .timeline.timeline-one .timeline-item:nth-child(2n + 1):before {
+    right: auto;
+    left: 0;
+  }
+}
+.timeline.timeline-one .timeline-item:nth-child(2n + 1):before {
+  margin-right: -0.5rem;
+}
+.timeline.timeline-one .timeline-item:nth-child(2n + 1):after {
+  margin-right: -0.0625rem;
+}
+.timeline.timeline-one.dark .timeline-item:before {
+  border: 0.0625rem solid #b7c3d2;
+}
+.timeline.timeline-one.dark .timeline-item:after {
+  background-color: #b7c3d2;
+}
+
+.my-3 {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+

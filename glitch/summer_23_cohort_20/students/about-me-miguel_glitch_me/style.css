@@ -1,0 +1,185 @@
+body {
+      background-color: rgb(255, 92, 51); /* Replace with your desired background color */
+    }
+
+nav {
+  background-color: rgb(230, 115, 0); 
+  display: flex;
+  padding: 20px;
+  color: black;
+  margin-right: 20px; /* Adjust the spacing between navigation items */
+  color: white;
+  text-decoration: none;
+   width: 20%; 
+  margin: 40;
+  
+ 
+  
+}
+
+h1 {
+  background-color: rgb(230, 115, 0);
+  display: inline-block;
+  font-family: "Rubik Burned", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 35%; 
+  margin: 0 auto;
+    
+}
+
+h2 {
+  text-align: center;
+  background-color: rgb(230, 115, 0);
+  display: inline-block;
+  font-family: "Rubik Burned", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 25%;
+  margin: 0 auto;
+    
+}
+
+h3 {
+  background-color: rgb(230, 115, 0);
+  display: inline-block;
+  font-family: "Rubik Burned", cursive;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 15%; /* Adjust the width as needed */
+  margin: 0 auto;
+    
+}
+h4 {
+  background-color: rgb(230, 115, 0);
+  display: inline-block;
+  font-family: "Rubik Burned", cursive;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 15%; 
+  margin: 0 auto;
+    
+}
+
+p {
+  padding: 10px;
+   
+  
+}
+.margin {
+  width: 30%;
+  
+  
+}
+
+img {
+  padding: 5px;
+}
+
+.card {
+  position: relative;
+  width: 320px;
+  height: 420px;
+  background: mediumturquoise;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.card::before,
+.card::after {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: rgb(230, 115, 0);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.card::before {
+  top: 0;
+  right: 0;
+  border-radius: 0 15px 0 100%;
+}
+
+.card::after {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 100% 0 15px;
+}
+
+.card:hover::before,
+.card:hover:after {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.card:hover:after {
+  content: "HELLO, I am Miguel. Welcome to my about me page";
+}
+
+a {
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.container {
+  position: absolute;
+  top: 20%;
+  left: 80%;
+  transform: translateX(-50%);
+  padding: 200px;
+}
+.highlight {
+  background-color: rgb(230, 115, 0);
+  display: inline-block;
+}
+
+.white-margin {
+  padding: 10px;
+  background-color: rgb(255, 140, 26);
+}
+
+.highlight2 {
+  background-color: rgb(230, 115, 9);
+  padding: 10px;
+  display: down;
+}
+
+.container2 {
+    margin-right: 10px;
+  display: flex;
+  
+}

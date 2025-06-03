@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'Sofia Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/sofiasanscondensed/v5/r05xGKVS5aVKd567NYXawnFKJaTtoAuLnK0EjiAN5s9CZwUq2eGslw.ttf) format('truetype');
+}

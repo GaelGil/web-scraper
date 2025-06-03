@@ -1,0 +1,209 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+    <!-- Top Border with Name   -->
+    <nav class="navbar-custom navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#picture">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact Me</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <h1 class="text-center">Winnie Li</h1>
+
+    <br>
+
+    <div class="container">
+      <!-- Picture and Discription -->
+      <div class="section" id="picture">
+        <div class="row">
+          <h2>About Me</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <img src="https://cdn.glitch.global/98308922-f70d-4468-ad8e-5189f02f2247/Winnie%20Li%20Professional%20Headshot.jpg?v=1691010252429" alt="Picture of Me" id="headshot">
+          </div>
+          <div class="col-md-6 description">
+            Hello! My name is Winnie Li and I recently graduated from UC Davis
+            with a B.S. in Managerial Economics. I am currently a Human Resource
+            Analyst at It's Personnel, working in recruitment, payroll,
+            benefits, workers compensation, and more. I am passionate about
+            innovation and technology and hope to make a career switch to tech.
+            I have previous experience in Product/Project management, Business
+            Development, and Marketing in technology, specifically with building
+            apps and working with API integrations, CI/CD tools, Figma
+            wireframing and prototyping. My goal is to become a Product Manager
+            one day to build products that creates innovation.
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Skills -->
+      <div class="section" id="skills">
+        <div class="row">
+          <h2>Skills</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-3">
+            <div class="card" style="width: 18rem">
+              <div class="card-header">Technical</div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">HTML/CSS</li>
+                <li class="list-group-item">Javascript</li>
+                <li class="list-group-item">Python</li>
+                <li class="list-group-item">R</li>
+                <li class="list-group-item">SQL</li>
+                <li class="list-group-item">Tableau</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem">
+              <div class="card-header">Organizational Management</div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Microsoft Office</li>
+                <li class="list-group-item">Google Workspace</li>
+                <li class="list-group-item">Asana</li>
+                <li class="list-group-item">Jira</li>
+                <li class="list-group-item">Notion</li>
+                <li class="list-group-item">Slack</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem">
+              <div class="card-header">Social Media</div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">LinkedIn</li>
+                <li class="list-group-item">Facebook</li>
+                <li class="list-group-item">Instagram</li>
+                <li class="list-group-item">Twitter</li>
+                <li class="list-group-item">TikTok</li>
+                <li class="list-group-item">Pinterest</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" style="width: 18rem">
+              <div class="card-header">Design</div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Adobe Suite</li>
+                <li class="list-group-item">Canva</li>
+                <li class="list-group-item">Figma</li>
+                <li class="list-group-item">iMovie</li>
+                <li class="list-group-item">Bootstrap</li>
+                <li class="list-group-item">Photoshop</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Projects -->
+      <div class="section" id="projects">
+        <div class="row">
+          <h2>Projects</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-4">
+            <div class="card h-100" style="width: 18rem">
+              <img src="https://cdn.glitch.global/98308922-f70d-4468-ad8e-5189f02f2247/iot%20picture.jpeg?v=1691014387997" class="card-img-top" alt="IoT picture">
+              <div class="card-body">
+                <h5 class="card-title">IoT Project</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card h-100" style="width: 18rem">
+              <img src="https://cdn.glitch.global/98308922-f70d-4468-ad8e-5189f02f2247/web%20app%20picture.jpeg?v=1691014460013" class="card-img-top" alt="web app picture">
+              <div class="card-body">
+                <h5 class="card-title">Web App</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="https://winnieli-starbucks-secret-sauce.glitch.me/" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card h-100" style="width: 18rem">
+              <img src="https://cdn.glitch.global/98308922-f70d-4468-ad8e-5189f02f2247/lyric%20page%20pic.jpeg?v=1691014645447" class="card-img-top" alt="lyric page picture">
+              <div class="card-body">
+                <h5 class="card-title">Lyric Page</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Contact Me -->
+      <div class="section" id="contact">
+        <div class="row">
+          <h2>Contact Me</h2>
+        </div>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-6">
+              <p class="contactinfo">
+                <a href="mailto:winnieli0601@gmail.com">winnieli0601@gmail.com</a>
+              </p>
+            </div>
+            <div class="col-6">
+              <p class="contactinfo">
+                <a href="https://www.linkedin.com/in/winnieli0601/">Linkedin</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  
+
+</body></html>

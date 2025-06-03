@@ -1,0 +1,135 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+.navbar{
+  font-family: "Madimi One", sans-serif;
+}
+.navbar-nav[
+  background color: hsl(39, 100%, 50%);
+]
+.navbar-nav a {
+  color: black;
+  text-align: center;
+  font-size: 17px;
+  font-family: "Madimi One", sans-serif;
+}
+
+.navbar-nav a:hover {
+  background-color: hsl(39, 100%, 45%); 
+}
+.topsection{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.row>* {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+img{
+   width: 50%; /* Adjust the size as needed */
+    height: 50%; /* Adjust the size as needed */
+    border-radius: 30%; /* Make the border radius 50% to create a circle */
+    overflow: hidden; /* Hide any content that exceeds the circular shape */
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-bottom: 10%;
+}
+
+
+.About {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  font-family: "Madimi One", sans-serif;
+}
+
+.Skills{
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  font-family: "Madimi One", sans-serif;
+}
+
+.Projects{
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  font-family: "Madimi One", sans-serif;
+}
+
+.skills-section{
+  list-style-type: none;
+  padding: 40px;
+  color: yellow;
+  font-family: "Madimi One", sans-serif;
+}
+.skills-item{
+  padding: 20px;
+}
+.project-section{
+  padding: 40px;
+  margin-bottom: 0px;
+  list-style-type: none;
+  font-family: "Madimi One", sans-serif;
+  background-color: violet;
+  
+}
+.section4{
+  background-color: hsl(248, 25%, 58%);
+}
+.Music{
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  font-family: "Madimi One", sans-serif;
+}
+
+.music-item{
+  font-family: "Madimi One", sans-serif;
+  color: black;
+  text-decoration: none;
+}
+.music-item a:hover{
+  color: gold;
+  text-decoration: none;
+}
+.music-list{
+  list-style-type: none;
+}
+.author{
+  color: black;
+  font-family: "Madimi One", sans-serif;
+}
+.project-section a{
+  text-decoration: none;
+}
+
+.project-section a:hover{
+  color: gold;
+}
+.project-item{
+  padding:20px;
+}
+.LinkedIn {
+  color: blue;
+}
+.LinkedIn a:hover{
+  color: blue;
+}
+
+.paragraph{
+  text-indent: 25px;
+  font-family: "Madimi One", sans-serif;
+}
+
+.paragraph1{
+  text-indent: 25px;
+  font-family: "Madimi One", sans-serif;
+}

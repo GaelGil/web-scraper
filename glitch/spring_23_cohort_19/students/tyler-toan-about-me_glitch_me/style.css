@@ -1,0 +1,162 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* adjust typography defaults */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+/* images and videos max out at full width */
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+.container1{
+  display: flex;
+  background-color: #9BBEC7;
+}
+.navbar{
+  background-color: #02182B;
+  position: fixed;
+  width: 100%;
+  z-index : 10;
+}
+ul .nav-item{
+  color:white;
+}
+.navbar-nav{
+  --bs-nav-link-color: white;
+}
+.navbar-brand{
+  color: white;
+}
+
+.image img{
+  margin: 1em;
+  margin-left: 35%;
+  padding: 2em;
+  width: 30em;
+  height: 25em;
+  border-radius: 50%;
+}
+.me{
+  margin: 10%;
+  margin-left: 15%;
+}
+
+h2{
+  color: #8c8fa3;
+}
+
+.container1, .container2, .container3, .container4, .container5{
+  padding-top: 2em;
+}
+.container2 p{
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.container3{
+  padding: 1em;
+  background-color: #9BBEC7;
+}
+
+
+#about, #skills, #projects, #contact{
+  text-align: center;
+}
+
+.both-skills{
+  display: flex;
+}
+
+.technical, .soft{
+  margin: auto;
+}
+
+.soft{
+  padding-top: 0;
+}
+.projects ul{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15em 0 15em;
+}
+.projects li{
+  list-style-type: none;
+}
+#projects{
+  padding-bottom: 1em;
+}
+.container5{
+  background-color: #9BBEC7;
+}
+
+.contact{
+  display: flex;
+}
+
+.mb-3 button{
+  margin-top: .5em;
+}
+
+.form{
+  width: 50%;
+  padding-left: 3em;
+  padding-bottom: 3em;
+}
+.contact ul li{
+  list-style: none;
+}
+
+.contact-me{
+  margin-top: 1em
+}
+
+.row{
+  justify-content: center;
+}
+.card{
+  padding: 0;
+  margin: 1em;
+  width: 20em;
+}
+
+.project-links{
+  text-decoration: none;
+  color: black;
+}
+
+.card-img-top{
+  height: 15em;
+}
+
+h3{
+  font-size: 1em;
+}
+
+@media screen and (max-width: 1600px){
+  .projects ul{
+    display: block;
+  }
+}
+
+.linkedin{
+  text-decoration: none;
+  color: black;
+}

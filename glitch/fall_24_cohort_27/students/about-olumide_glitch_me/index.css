@@ -1,0 +1,74 @@
+/* Global Styles */
+html {
+  background-color: #004d40; /* Deep Green */
+  background: url('https://cdn.glitch.global/6284e277-f47f-470f-adba-31fe0ae431e4/pexels-bardalacray-3172830.jpg?v=1734111825905') no-repeat center center fixed;
+  background-size: cover;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #f5f5f5; /* Light Gray */
+}
+
+/* Centered Container */
+.center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffc107; /* Gold */
+}
+
+/* Heading Styles */
+h1 {
+  font-size: 80px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #ffc107; /* Gold */
+}
+
+/* Paragraph Styles */
+p {
+  font-size: 30px;
+  font-style: italic;
+  color: #f5f5f5; /* Light Gray */
+}
+
+.tab {
+  color: #ffc107; /* Gold */
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* Button Styles */
+.btn {
+  margin-top: 30px;
+  width: 150px;
+  height: 50px;
+  border: 2px solid #ffc107; /* Gold */
+  background: none;
+  color: #f5f5f5; /* Light Gray */
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background: #ffc107; /* Gold */
+  color: #004d40; /* Deep Green */
+}

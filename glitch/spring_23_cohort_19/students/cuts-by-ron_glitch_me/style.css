@@ -1,0 +1,243 @@
+body,
+html {
+  height: 100%;
+}
+.name-addy {
+  margin-right: 40em;
+  margin-bottom: 2em;
+  position: absolute;
+  color: #ffe4c4;
+
+}
+.table0 {
+  color: #ffe4c4;
+  margin-right: 2em;
+}
+.table1 {
+  color: #ffe4c4;
+}
+.scissor {
+  font-size: 30px;
+}
+.ig {
+  margin: 0.5em;
+  font-size: 30px;
+}
+.port {
+  font-size: 35px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #f4d580;
+  font-family: "Rye", cursive;
+}
+
+.two {
+  background-color: #2c2b2b;
+  background-size: 100% 100%;
+  color: #f4d580;
+  font-family: "Rye", cursive;
+   margin-top: 5em;
+  text-align:center;
+  margin-bottom:4em;
+}
+.abt{
+  font-size: 35px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #f4d580;
+  font-family: "Rye", cursive;
+}
+.bio {
+  background-color: #2c2b2b;
+  background-size: 100% 100%;
+  color: #f4d580;
+  font-family: "Rye", cursive;
+   margin-top: 5em;
+  text-align:center;
+  margin-bottom:4em;
+  margin-top:5em;
+}
+.appointment {
+  margin: 0.5em;
+  font-size: 30px;
+}
+.page {
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+/*   background-size: 60%; */
+  font-family: "Rye", cursive;
+}
+
+.page::before {
+  content: "";
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url("https://cdn.glitch.global/f695b8d7-4ea8-4a49-872d-ba3659caa70f/rons-face?v=1680140384009");
+  position: absolute;
+  background-size: cover;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.25);
+  opacity: 0.5;
+}
+.page2 {
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Rye", cursive;
+}
+
+.page2::before {
+  content: "";
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url("https://cdn.glitch.global/f695b8d7-4ea8-4a49-872d-ba3659caa70f/ron-face?v=1680966693923");
+  position: absolute;
+  background-size: cover;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.25);
+  opacity: 0.4;
+}
+.name-addy2 {
+  margin-top: 5em;
+  margin-left: 45em;
+  margin-bottom: 5em;
+  position: relative;
+  color: #ffe4c4;
+}
+.cut-cards {
+  background-size: 100% 100%;
+  color: #f4d580;
+  font-family: "Rye", cursive;
+}
+.common2 {
+  font-size: 35px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.cutshtml {
+  background-color: #2c2b2b;
+  background-size: 100% 100%;
+}
+.indexhtml {
+  background-color: #2c2b2b;
+  background-size: 100% 100%;
+}
+.fadez {
+  margin-top: 5em;
+}
+
+.platforms {
+  font-size: 35px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.socials {
+ margin-top:2em;
+}
+.book {
+ margin-top:1em;
+}
+.common {
+ margin-top:1em;
+}
+.cardz {
+  height: 800px;
+  margin-bottom: 200px;
+}
+
+/* this is the code for my nav bar */
+.nav {
+  position:absolute;
+  top:8%;
+  left:33%;
+  transform:translate(-50%,-50%);
+  background:linear-gradient(45deg,#ffffff,#D2B48C);
+  border-radius:3px;
+  padding:4px;
+  box-shadow:0px 10px 40px rgba(255,192,203 ,1 );
+  color: #f4d580;
+  font-family: "Rye", cursive;
+}
+
+li{
+  list-style-type:none;
+  display:inline-block;
+  padding:15px 20px;
+  letter-spacing:3px;
+  color:#222222;
+  background:linear-gradient(45deg,,);
+  transition:500ms;
+  text-transform:uppercase;
+  position:relative;
+  z-index:3;
+  cursor:pointer;
+}
+
+.item:before{
+  content:'';
+  width:0%;
+  height:100%;
+  position:absolute;
+  top:0%;
+  left:50%;
+  opacity:1;
+  transform:translateX(-50%);
+ background-color: #2c2b2b;
+  transition:300ms;
+  z-index:-1;
+}
+
+.item:hover{
+  color:#2c2b2b;
+  font-weight:700;
+}
+
+.item:hover:before{
+ background-color: #2c2b2b;
+  width:100%;
+  opacity:0;
+  
+}
+.list-group-item.active {
+  margin-bottom:1em;
+  background-color: #2c2b2b;
+  font-size: 20px;
+}
+.item a {
+  color:#2c2b2b;
+  font-weight:bold;
+  text-decoration:none;
+}
+

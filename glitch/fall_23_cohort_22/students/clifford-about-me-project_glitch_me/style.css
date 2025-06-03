@@ -1,0 +1,107 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.selfie {
+   border-style: solid;
+  border-radius: 5rem;
+  height: 30%;
+  width: 30%;
+  margin-bottom: 4rem;
+}
+
+.navbar navbar-expand-lg bg-body-tertiary {
+  border-style: solid;
+}
+
+body {
+  margin: 1rem;
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-image: linear-gradient(#73cdfa, #634b30);
+}
+.paper{
+  margin: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+   border-style: solid;
+  border-radius: 5rem;
+  background-image: linear-gradient(white, #54a85f);
+}
+.clifford {
+  display: inline-block;
+  font-size: 4em;
+  color: #010380;
+  border-style: solid;
+  border-color: black;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 0.4rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-family: 'Chakra Petch', sans-serif;
+  
+}
+.aboutme{
+  border-style: solid;
+  border-radius: 3rem;
+  padding: 1rem;
+  background-color: white;
+  margin-top: 2rem;
+  margin-right: 15rem;
+  margin-bottom: 4rem;
+  margin-left: 15rem;
+}
+.projeck {
+  border-style: solid;
+  border-radius: 5rem;
+  background-color: white;
+  margin-top: 2rem;
+  margin-right: 15rem;
+  margin-bottom: 4rem;
+  margin-left: 15rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.card{
+  display: inline-block;
+  margin: 1rem;
+}
+#socials{
+  border-style: solid;
+  background-position: center;
+  background-color: white;
+  border-radius: 5rem;
+  padding: 2rem;
+  margin-top: 2rem;
+  margin-right: 30rem;
+  margin-bottom: 4rem;
+  margin-left: 30rem;
+}
+
+h2 {
+  font-size: 3rem;
+  font-family: 'Chakra Petch', sans-serif;
+  color: #010380;
+}
+p {
+  font-family: 'Tilt Neon', sans-serif;
+}
+/* images and videos max out at full width */
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}

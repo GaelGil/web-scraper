@@ -1,0 +1,93 @@
+/* navbar */
+nav {
+  background-color: black;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  z-index: 1000;
+}
+
+#navTitle {
+  color: #ffd700;
+  padding-left: 10px;
+}
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Images */
+
+img {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: end;
+  border: 3px solid #ffd700;
+  border-radius: 50%;
+}
+
+/* Accordion */
+
+.accordion {
+  background-color: #f1f1f1;
+  color: #212121;
+  padding: 10px;
+}
+
+.accordion-title {
+  color: #4d4d4d;
+  font-size: 16px;
+  height: 5px;
+  line-height: 20px;
+  display: flex;
+  flex: 0 1 auto;
+  justify-content: start;
+}
+
+.accordion-title span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.accordion-content {
+  color: #4d4d4d;
+  overflow: hidden;
+  padding: 5px;
+  padding-top: 10px;
+  transition: height 0.3s ease-in-out;
+  border-bottom: 1px solid darkgray;
+}
+
+.accordion-title:hover {
+  background-color: #f4f4f4;
+}
+
+/* adjust typography defaults */
+body {
+  margin: 0;
+  padding: 20px;
+  padding-top: 100px;
+  font-family: Montserrat, Arial, sans-serif;
+  background-color: white;
+}
+
+/* General Text */
+
+nav,h1,h2,h3,h4,p,a {
+  font-family: Montserrat, Arial, sans-serif;
+  color: black;
+}
+
+a:hover {
+  color: #ffd700;
+}

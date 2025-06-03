@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Gabarito';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/gabarito/v8/QGYwz_0dZAGKJJ4t3FFkc3Q8AkNP9Pj248KEEQgp.ttf) format('truetype');
+}

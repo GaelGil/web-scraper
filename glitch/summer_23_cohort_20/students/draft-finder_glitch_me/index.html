@@ -1,0 +1,175 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://glitch.com/favicon.ico">
+<!-- Font start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&amp;family=Comfortaa:wght@500&amp;display=swap" rel="stylesheet">
+    <!--font end-->
+    <title>Bay Area LGS Finder</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    
+    
+  </head>
+  <body class="topOfPage">
+    <!-- NAVBAR START -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-custom bg-light">
+      <a class="navbar-brand homeButton generalText" href="index.html">Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="formatInfo.html"><span class="sr-only generalText">Event Types</span></a>
+          </li>
+<!--           <li class="nav-item active">
+            <a class="nav-link" href="aboutPage.html"
+              ><span class="sr-only generalText">About(wip)</span></a
+            >
+          </li> -->
+          
+        </ul>
+      </div>
+    </nav>
+    <!--NAVBAR END -->
+    
+    
+  
+    <!-- Open area with search bar before cards -->
+    <div class="container-fluid filterDiv">
+      <h1 class="title">Bay Area Game Stores!</h1>
+      <h5 class="subTitle">Find your LGS in the Bay Area!</h5>
+    </div>
+    
+    <!-- Search bar    WORK IN PROGRES------------------------------------------------->
+<!--     <div class="input-group w-50 mb-3 searchBar">
+  <input type="text" class="form-control" placeholder="Search Stores" aria-label="Store Name" aria-describedby="basic-addon2">
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button">Search</button>
+  </div>
+</div>
+ -->
+    <!-- Target for card making forloop-->
+    <div class="container-sm">
+      <div class="row" id="card-container">
+          <div class="col-xl-4 storeCards d-flex justify-content-center">
+            <div class="card">
+              <img class="cardImage" src="https://v5.airtableusercontent.com/v3/u/41/41/1748988000000/ibZR6N2uxLGRd15oY9E1cw/s0vVkE5s8hFhD35UizjB0O5Xl7MOD2T8qhziy1sQz2N4nBUJLng4NoYq-EilEgLGpUABI4IWA7AAMhiYxtQ8jyIkl2yL3gkeTNwahK3ZCSd_4NaX_JUOWnP1PTviKZ4E2mszfzVKAEffVGYj4HGYtw/afarx6iLdFhakOuSWIej8CEA3dV5ASgZxflTE579go8">
+              <div class="card-body">
+              <h4 class="card-title generalText">D20 Games</h4>
+               <h5 class="generalText">Alameda</h5> 
+              <a class="btn btn-primary generalText" href="index.html?id=rec23FmByf9X55fVx">View More</a>
+            </div>
+            </div>
+          </div>
+        
+          <div class="col-xl-4 storeCards d-flex justify-content-center">
+            <div class="card">
+              <img class="cardImage" src="https://v5.airtableusercontent.com/v3/u/41/41/1748988000000/N20RVk0kw7FqrTx0bPY6pw/hdyoGiwgHr7lWirkc62RwZeIpFoOjvncf3HA7iaOQ98hJiWftcykAIECvbOQRD-sCCJrdd6uDRQ_oGjLoE0Nz5x9MqhS5TOUtbZvQRup7hUZQ-ovetIzfYvureJRkWhAIW14wXKlkGezVBJtA-p8AQ/wFiwHkPRGZDhCD9I_mLSPWJ48TKAU8J5DlmH7afJTWc">
+              <div class="card-body">
+              <h4 class="card-title generalText">Game Parlour SF</h4>
+               <h5 class="generalText">SanFrancisco</h5> 
+              <a class="btn btn-primary generalText" href="index.html?id=recBA7XbC4k0ceMOQ">View More</a>
+            </div>
+            </div>
+          </div>
+        
+          <div class="col-xl-4 storeCards d-flex justify-content-center">
+            <div class="card">
+              <img class="cardImage" src="https://v5.airtableusercontent.com/v3/u/41/41/1748988000000/qF4KR9NiFs3i0Jd6PuGouQ/n6PL0o_SNqecjebsudOcWw55Y3KO5Ni2t7qYnpQ6t6V-GKIXHq18wSnfdWXLP5WQCrEcOEIW4VUruSOkCMkmEKH5IKnqpI4gzTNlqMOTdnY6yIVLb3bnGZFilmgFAGegehbpSPKIa6Mn22JuxSFO5A/7S1d3EezzpctuOPrIpaTQlh_ZCcB6nstaS6q4kPYakI">
+              <div class="card-body">
+              <h4 class="card-title generalText">Versus Games</h4>
+               <h5 class="generalText">SanFrancisco</h5> 
+              <a class="btn btn-primary generalText" href="index.html?id=recJb65kU2YVSkc3K">View More</a>
+            </div>
+            </div>
+          </div>
+        
+          <div class="col-xl-4 storeCards d-flex justify-content-center">
+            <div class="card">
+              <img class="cardImage" src="https://v5.airtableusercontent.com/v3/u/41/41/1748988000000/aEctW8wXNl6D1cDNmE4HUQ/LZ6V-tSh3xfRkb67KXIo1JdmV0H52JeSR1r51w4YqI0zgv6T408RBEfpnlbyUiEna11qEI5_hU2BRZydAz9pPVoFNJYwmV4pK-MLYWqNjYv7vouQhJnAq40HRysuuDRoBkzHeo6PPujlpsVFNWOgOAwG-BqVXZINtcFBWQfABxA/QkVyjXEzrlOd9ZhUY15Z5LnzE0MieVCIsRzxZGcRlb0">
+              <div class="card-body">
+              <h4 class="card-title generalText">Gamescape</h4>
+               <h5 class="generalText">SanFrancisco</h5> 
+              <a class="btn btn-primary generalText" href="index.html?id=recOJHd8yssBcom7B">View More</a>
+            </div>
+            </div>
+          </div>
+        
+          <div class="col-xl-4 storeCards d-flex justify-content-center">
+            <div class="card">
+              <img class="cardImage" src="https://v5.airtableusercontent.com/v3/u/41/41/1748988000000/MhEjWt-SKe8xuCjZXfHOtw/F6lvR1APdj3i7_YsKbh-XvF-yPrJRTFb21n0KM3jSG-km41BdCAB9G2k9BQOEeA190wsi8QtgSBY-2G_y4CfznC0EfY08B-T7wrXN_mvZstAN7JVGBSJnmvxQa3dWzE5RUDxUExIqreIbTawWMW2KQ/vbz4zLmOFuIPJLthfyFb-l8ha2AFI_cvFdfeOr9LppQ">
+              <div class="card-body">
+              <h4 class="card-title generalText">Anime Imports
+
+</h4>
+               <h5 class="generalText">Pacifica</h5> 
+              <a class="btn btn-primary generalText" href="index.html?id=recSJzD7Ol0I2IQHx">View More</a>
+            </div>
+            </div>
+          </div>
+        
+          <div class="col-xl-4 storeCards d-flex justify-content-center">
+            <div class="card">
+              <img class="cardImage" src="https://v5.airtableusercontent.com/v3/u/41/41/1748988000000/BYIWu2FW86l4LtNUB0322w/Dk0rc9KdoFEG8CjJ1Mpz7-dQWcp54QcVwBN33TWWs5Odsju-ZHw9GfmKDf_kc9Tlvq6JkjqBh2trENUzEe3catrqvAqVFgaGy5RUt_UcBgo1OGeYh4yOAK-kA3PcxyPXzT9ZBXlwy_QSjZrJn3oRqw/xD_47_doT6Wahi9AUE6xO3075_Qbxw_XB7FKsivgLew">
+              <div class="card-body">
+              <h4 class="card-title generalText">Game Post sf</h4>
+               <h5 class="generalText">SanFrancisco</h5> 
+              <a class="btn btn-primary generalText" href="index.html?id=receYVnBa60EIpSM9">View More</a>
+            </div>
+            </div>
+          </div>
+        
+          <div class="col-xl-4 storeCards d-flex justify-content-center">
+            <div class="card">
+              <img class="cardImage" src="https://v5.airtableusercontent.com/v3/u/41/41/1748988000000/8oEvJd9cDRiav8ipSEE3wQ/TxlXD241lvEtWnqdP2foTSfwZ7T7jYCQtT0Z044N1QWBfTxvKhyGO6qVwDczBFyKK2yh0MuW09rjK5dQNFhaXrxLRBGdY1Xw3kZ8DcS6o2zKlQtR8LVlmUoVr7ywHzx3UCt0Uon7v3zqSaYFmHy5YQ/c43WtgPtc88r0v0_KMwF4aOmDjz_oJIJBdLKqaekL-g">
+              <div class="card-body">
+              <h4 class="card-title generalText">Its Your Move Games</h4>
+               <h5 class="generalText">Oakland</h5> 
+              <a class="btn btn-primary generalText" href="index.html?id=recjfjfQUwxUEi2Jx">View More</a>
+            </div>
+            </div>
+          </div>
+        
+          <div class="col-xl-4 storeCards d-flex justify-content-center">
+            <div class="card">
+              <img class="cardImage" src="https://v5.airtableusercontent.com/v3/u/41/41/1748988000000/3tdP9opJwCg5h8fGVlIROw/9JfPyZL9OpS_yErA-7pUhpGZXjSoZWUclqeqN3N8e8RBUZlqi7cWWzydqSEWvNuD87ylm20906GW5wo91TMI8rt_XKSpJ4OSDryDQnreQL_OYcOYdAp7taHX7vQTLl0HTIjWDX284ScvVBFGYyUETQ/38qA-ycg9vKUVobAdCxwdXXW1vPqcNTMMgZH8yxe8bQ">
+              <div class="card-body">
+              <h4 class="card-title generalText">Cards and Comics Central</h4>
+               <h5 class="generalText">SanFrancisco</h5> 
+              <a class="btn btn-primary generalText" href="index.html?id=recp0R8bZDrESkFM5">View More</a>
+            </div>
+            </div>
+          </div>
+        
+          <div class="col-xl-4 storeCards d-flex justify-content-center">
+            <div class="card">
+              <img class="cardImage" src="https://v5.airtableusercontent.com/v3/u/41/41/1748988000000/weCb5zcfC3fIiDM5afSj5A/IFIEwTzxXYo4MoZxoRe5-1Bgajx1EgwK1kPubsqe_5tvnCQs58dxkvVo-9Jq8uoMXHiMKxnWF9XFYakFdTdPxwDLTBJMHutzl5i2BAZQZtQ_6G_zHlGjxO33mIHWhm9JTsT0AjjTvkXWojrqVqVq_g/xlUAEw2z6KyG4mHX36ZLR_RQoeaLJBFN3YwYY6HYPIs">
+              <div class="card-body">
+              <h4 class="card-title generalText">Games of Berkley</h4>
+               <h5 class="generalText">Berkeley</h5> 
+              <a class="btn btn-primary generalText" href="index.html?id=recxNMXjpxKLm3mkG">View More</a>
+            </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- store cards end-->
+    
+    
+    <!-- BACK TO TOP BUTTON-->
+     <button onclick="topFunction()" id="myBtn" title="Go to top">Back To Top</button> 
+    
+    
+  
+
+</body></html>

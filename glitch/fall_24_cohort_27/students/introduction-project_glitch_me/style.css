@@ -1,0 +1,114 @@
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    background-color: #f8f9fa;
+    color: #2c3e50; /* Different font color */
+    font-family: 'Roboto', sans-serif; /* Different font family (imported from Google Fonts) */
+    font-size: 16px; /* Base font size */
+}
+
+h1, h2, h3 {
+    color: #34495e; /* Different color for headings */
+}
+
+.navbar {
+    background-color: #3498db !important; /* Background color on navbar */
+}
+
+.navbar-brand, .nav-link {
+    color: black !important; /* Light color for navbar text */
+}
+
+.profile-img {
+    width: 200px; /* Adjusted size of image */
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid #3498db; 
+}
+
+.card {
+    margin-bottom: 20px;
+    border-radius: 15px; /* Rounded corners for cards */
+    overflow: hidden; /* Ensures content doesn't overflow rounded corners */
+}
+
+.card-title {
+    color: #2980b9; /* Different color for card titles */
+    font-weight: 700; /* Bold font weight for titles */
+}
+
+.card-text {
+    font-size: 1.1em; /* Slightly larger font size for card text */
+}
+
+.bg-light {
+    background-color: #ecf0f1 !important; /* Light background for certain elements */
+}
+
+.btn-primary {
+    background-color: #3498db;
+    border-color: #3498db;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.contact-icons a {
+    color: #34495e;
+    transition: color 0.3s ease;
+}
+
+.contact-icons a:hover {
+    color: #3498db;
+}
+
+/* Bootstrap utility classes */
+.text-primary {
+    color: #3498db !important;
+}
+
+.border-primary {
+    border-color: #3498db !important;
+}
+
+/* Additional custom styles */
+.list-group-item {
+    background-color: #f8f9fa; /* Light background for list items */
+    border-color: #e9ecef;
+}
+
+#about .card {
+    border-left: 5px solid #3498db; /* Accent border on about section */
+}
+
+#skills .card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for skills cards */
+}
+
+#projects .card {
+    background-color: #e8f4f8; /* Light blue background for projects card */
+}
+
+footer {
+    background-color: lightblue; 
+    color: #ecf0f1;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+
+
+
+
+
+
+
+

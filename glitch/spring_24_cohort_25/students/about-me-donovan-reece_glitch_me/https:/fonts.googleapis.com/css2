@@ -1,0 +1,948 @@
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v39/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTbtY.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v39/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_pqTbtY.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v39/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_naUbtY.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v39/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_k-UbtY.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v39/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_iiUbtY.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v39/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_gGUbtY.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v39/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvUDQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v39/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKd3vUDQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v39/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKebukDQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v39/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiukDQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v39/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKfFukDQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v39/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKfsukDQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 100;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNpJcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMlAjswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 100;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNppcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMlAjswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 100;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqJcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMlAjswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 100;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqBcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMlAjswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 100;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqZcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMlAjswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 100;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqpcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMlAjswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 100;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNrJcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMlAjswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 100;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNrpcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMlAjswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 100;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNoZce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMlAjswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 100;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNpJce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMlAjswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 100;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNp5ce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMlAjswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 100;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqZce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMlAjswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 200;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNpJcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMtAiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 200;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNppcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMtAiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 200;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqJcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMtAiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 200;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqBcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMtAiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 200;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqZcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMtAiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 200;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqpcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMtAiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 200;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNrJcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMtAiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 200;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNrpcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMtAiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 200;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNoZce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMtAiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 200;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNpJce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMtAiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 200;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNp5ce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMtAiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 200;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqZce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMtAiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNpJcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMg4iswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNppcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMg4iswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqJcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMg4iswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqBcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMg4iswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqZcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMg4iswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqpcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMg4iswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNrJcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMg4iswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNrpcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMg4iswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNoZce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMg4iswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNpJce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMg4iswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNp5ce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMg4iswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqZce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMg4iswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNpJcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMlAiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNppcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMlAiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqJcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMlAiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqBcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMlAiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqZcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMlAiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqpcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMlAiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNrJcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMlAiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNrpcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMlAiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNoZce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMlAiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNpJce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMlAiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNp5ce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMlAiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqZce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMlAiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNpJcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMmIiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNppcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMmIiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqJcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMmIiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqBcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMmIiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqZcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMmIiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqpcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMmIiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNrJcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMmIiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNrpcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMmIiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNoZce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMmIiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNpJce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMmIiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNp5ce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMmIiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqZce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMmIiswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNpJcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMo4lswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNppcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMo4lswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqJcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMo4lswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqBcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMo4lswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqZcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMo4lswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqpcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMo4lswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNrJcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMo4lswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNrpcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMo4lswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNoZce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMo4lswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNpJce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMo4lswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNp5ce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMo4lswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqZce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMo4lswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNpJcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMrclswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNppcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMrclswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqJcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMrclswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqBcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMrclswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqZcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMrclswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqpcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMrclswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNrJcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMrclswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNrpcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMrclswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNoZce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMrclswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNpJce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMrclswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNp5ce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMrclswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqZce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMrclswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNpJcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMtAlswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNppcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMtAlswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqJcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMtAlswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqBcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMtAlswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqZcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMtAlswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqpcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMtAlswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNrJcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMtAlswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNrpcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMtAlswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNoZce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMtAlswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNpJce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMtAlswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNp5ce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMtAlswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqZce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMtAlswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNpJcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMvklswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNppcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMvklswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqJcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMvklswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqBcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMvklswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqZcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMvklswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqpcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMvklswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNrJcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMvklswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNrpcu32Mb2f06y6Oa21F6XHi0VYDX_PzOupMvklswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNoZce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMvklswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNpJce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMvklswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNp5ce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMvklswc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Truculenta';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/truculenta/v26/LhWfMVvBKusVIfNYGi1-WvRVyDdZeeiySNqZce32Mb2f06y6Oa21F6XHi0VYDX_PzOupMvklswc.ttf) format('truetype');
+}

@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Amatic SC';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/amaticsc/v27/TUZyzwprpvBS1izr_vO0DQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/caveat/v22/WnznHAc5bAfYB2QRah7pcpNvOx-pjfJ9SII.ttf) format('truetype');
+}

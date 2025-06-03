@@ -1,0 +1,77 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+
+h3{
+  font-size: 20px;
+  font-variant: small-caps;
+  color: darkred;
+  font-weight: bold;
+}
+
+/* adjust typography defaults */
+body {
+ /* margin: 1rem;
+  font-family: sans-serif;
+  line-height: 1.5; */
+  background-image: url(https://www.halfalive.co/dist/img/cover-fingerprints.png);
+  padding: 10px;
+  background-size: auto 100%;
+  
+  .catamaran-<uniquifer> {
+    font-family: "Catamaran", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
+}
+
+/* images and videos max out at full width */
+img {
+  height: 10;
+  max-width: 50%;
+  border:solid;
+  
+}
+h1,h3,p{
+  text-align: center;
+}
+.lyric{
+ /* width: 80%;*/
+  background-color: chocolate;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px;
+  max-width: 600px;
+  
+    
+  
+}
+
+a {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: darkred;
+}
+
+a:active {
+  color: darkred;
+}

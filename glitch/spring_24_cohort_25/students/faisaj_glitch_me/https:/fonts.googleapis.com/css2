@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'Antic Didone';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/anticdidone/v16/RWmPoKKX6u8sp8fIWdnDKqDiqQ.ttf) format('truetype');
+}
