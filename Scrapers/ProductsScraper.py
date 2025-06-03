@@ -6,16 +6,7 @@ contain a brief description of exported classes and functions and/or usage
 examples.
 
   Typical usage example:
-    sc = Scraper(driver=driver_path, headless=True)
-    sc.set_next_page_xpath(xpath=next_button_xpath)
-    sc.set_xpaths(xpaths)
-    sc.set_multiple(multiple)
-    sc.set_urls(urls)
-    sc.set_link_xpath(link_xpath)
-    sc.visit_urls(stop=5) # only go to 5 pages per each url
-    sc.visit_items() # visit items scraped
-    formated_data = sc.format_data() # format the data
-    sc.to_csv('./data.csv', formated_data) # write data to csv
+    
 """
 
 from .BaseScraper import BaseScraper
@@ -30,16 +21,7 @@ class ProductsScraper(BaseScraper):
     A class used to manage a webscraper
 
     Attributes:
-        driver: The browser driver needed for webscraping
-        urls: A list of urls to scrape for links
-        x_paths: Will be used as a dictionary where the element is a string
-            a (key) and the xpath is the value.
-        multiple: A dictionary containing elements that might have more than 
-            one elment to scrape
-        data: A dictionary containing the data we scraped 
-        links: A list containing links to individual items to scrape
-        next_button_path: The xpath for the next page button
-        link_xpath: the xpath for a link 
+        BaseScraper Attributes: ProductsScraper inherits from BaseScraper
 
     Methods:
         __init__(self, driver_path: str, headless: bool)

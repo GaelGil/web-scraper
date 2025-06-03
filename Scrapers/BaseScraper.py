@@ -1,11 +1,15 @@
 """This is an abstract class that represents a base web scraper
 
-Leave one blank line.  The rest of this docstring should contain an
-overall description of the module or program.  Optionally, it may also
-contain a brief description of exported classes and functions and/or usage
-examples.
+This abstract class is the base web scraper. Other site specific class
+scrapers should inherit from this class. This class handles all the logging.
+The webdriver and the config
 
   Typical usage example:
+  from .BaseScraper import BaseScraper
+
+  class SiteSpecificScraper(BaseScraper)
+
+  scraper = SiteSpecificScraper(config, driver)
     
 """
 
@@ -24,19 +28,25 @@ logger = logging.getLogger(__name__)
 
 class BaseScraper(ABC):
     """
-    A class that will be inherrited by other webscraper
-    classes
+    A abstract class that will be inherrited by other webscraper
+    classes.
 
     Attributes:
         driver: the browser driver needed for webscraping
         config: a dictionary that holds info for our webscraper
 
     Methods:
-        __init__(self, driver_path: str, headless: bool)
+        __init__(self, driver, config)
             Initializes the instance to be ready for scraping
 
         get_url(self, url: str)
             Function to set the url that we will scrape
+
+        wait_click(xpath: str, time: int=15)
+
+        wait_found(xpath: str, time: int=15)
+
+        log_message(log_type: str, message: str)
     """
     def __init__(self, driver, config):
         """
