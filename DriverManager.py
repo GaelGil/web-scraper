@@ -1,8 +1,13 @@
 """Module to manage the web driver for a selenium web scraper
 
 This python module is used to manage the web driver of a selenium web scraper.
+It has a class variable _driver that is initlaized once the class instance is
+created. To initialize we give the path to the firefox geckodriver and bool
+to set the option to run the browser in headless mode or not.
 
-
+  Typical usage example:
+    driver_manager = DriverManager('path_to_driver', True)
+    driver_manager.get_driver()
 """
 
 from selenium import webdriver
@@ -28,7 +33,7 @@ class DriverManager:
     """
 
 
-    def __init__(self, driver_path: str, headless: bool) -> None:
+    def __init__(self, driver_path: str, headless: bool=True) -> None:
         """Initializes the instance to be ready for scraping.
 
         Initializes the web driver witht eh firefox driver. Sets
@@ -37,6 +42,7 @@ class DriverManager:
         Args: 
             driver_path: the path to the browser driver
             headless: bool to run browser in headless mode or not
+                Set to true by default.
 
         Returns:
             None
