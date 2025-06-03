@@ -1,4 +1,4 @@
-"""Program to scrape a website and the items displayed in it.
+"""Class to scrape data from individual products
 
 Leave one blank line.  The rest of this docstring should contain an
 overall description of the module or program.  Optionally, it may also

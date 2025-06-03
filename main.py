@@ -4,7 +4,6 @@ from Scrapers.ProductScraper import ProductScraper
 from Scrapers.ProductsScraper import ProductsScraper
 from helper import make_urls
 
-#TODO: add good comments to all classes
 #TODO: updated readme again
 
 if __name__ == "__main__":

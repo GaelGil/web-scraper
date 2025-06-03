@@ -1,4 +1,4 @@
-"""Program to scrape a website and the items displayed in it.
+"""Class to scrape a website for the items displayed in it.
 
 Leave one blank line.  The rest of this docstring should contain an
 overall description of the module or program.  Optionally, it may also
@@ -6,6 +6,14 @@ contain a brief description of exported classes and functions and/or usage
 examples.
 
   Typical usage example:
+    from DriverManager import DriverManager
+    from ScraperSetUp import CONFIG
+    from Scrapers.ProductsScraper import ProductsScraper
+
+    driver_manager = DriverManager(CONFIG['DRIVER_PATH'], CONFIG['HEADLESS'])
+    products_scraper = ProductsScraper(driver=driver_manager, config=CONFIG)
+    products = products_scraper.iterate_urls(stop=2, next_page=True, popup=True)
+    print(f'Products: {products}')
     
 """
 
