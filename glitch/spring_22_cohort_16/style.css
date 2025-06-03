@@ -1,0 +1,106 @@
+body,
+html {
+  height: 100%;
+  background-color: #134e6f;
+}
+h1 {
+  font-family: "Russo One", sans-serif;
+  color: white;
+  font-size: 5rem;
+  margin-top: -5rem;
+}
+.description {
+  font-size: 2rem;
+}
+
+/* The hero image */
+.hero-image {
+  /* darken background effect to the image*/
+  background-image: linear-gradient(
+      rgba(25, 25, 25, 0.9),
+      rgba(25, 25, 25, 0.27)
+    ),
+    url("https://cdn.glitch.global/0b7bef3c-d5b8-4aab-8131-66f40b9c896b/SpringCohort22?v=1651100819885");
+
+  /* Set a specific height */
+  width: 100%;
+  height: 93vh;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {position: relative;
+  text-align: center;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+
+}
+
+.middlecontainer {
+  text-align: center;
+  padding: 60px;
+}
+.middletext {
+  font-family: "Russo One", sans-serif;
+  color: #c84b31;
+  font-size:5vw;
+}
+/* Image Overlay fade #ff6352 */
+
+.image {
+  display: block;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #c84b31;
+}
+
+.card:hover .overlay {
+  opacity: 0.9;
+}
+
+.text {
+  color: white;
+  font-size:1.5vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.card {
+  margin-bottom: 5rem;
+  margin-right: 1rem;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  width: 80vw;
+}
+
+.container {
+  margin-left: 10vw;
+}

@@ -1,0 +1,341 @@
+ /* Fonts for the Dev/Mission Logo*/
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=DotGothic16&display=swap');
+@import url('https://cdn.glitch.global/412fb940-7a8b-43e6-a945-d9c2b2e96f12/superglue.zip?v=1721802032361');
+@import url('https://cdn.glitch.global/412fb940-7a8b-43e6-a945-d9c2b2e96f12/fake%20receipt.ttf?v=1721802374568');
+
+ /* Moving Text for the Dev/Mission Logo*/
+marquee{
+  font-size: 170px;
+  color: #1377FF;
+}
+
+header{
+  font-family: "Domine", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin-bottom: 4rem;
+}
+
+.header {
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+
+a{
+  font-family: "DotGothic16", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #375E99;
+}
+
+.AboutUs{
+  margin-top: 13em;
+  margin-left: 13em;
+}
+
+ /* Position Copyright Logo */
+#copyright img{
+  position: absolute;
+  top: 850px;
+  left: 250px;
+}
+
+.photoCard{
+    border: 16px solid #396097;
+  width: 395px; 
+  height: 350px; 
+  background-color: white;
+  top: -225px; left: 200px;
+  border-radius: 25px;
+ 
+}
+.photo{
+  width: 250px; 
+  height: 300px; 
+  background-color: White;
+  top: -225px; left: 200px;
+  border-radius: 25px;
+}
+
+.aboutUs{
+  width: 50px;
+  height: 60px;
+}
+
+.search-container{
+  margin-bottom:20px;
+}
+
+#searchBar{
+  padding:5px;
+  width:100%;
+  font-size:15px;
+}
+
+.frame {
+  border: solid 10px #003483;
+  border-radius: 10px;
+}
+
+/* about us page section */
+
+#aboutustx{
+  font-family: "DotGothic16", sans-serif;
+  font-size: 90px;
+  font-weight: 600;
+  position: relative;
+  left: 850px;
+  top: -20px;
+}
+
+/* border with text inside */
+
+#bordertext{
+  border-style: outset;
+  border-color: #def9ff;
+  border-width: 15px;
+  height: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  border-radius: 30px;
+  z-index: 10px;
+  background-color: white;
+}
+
+#aboutusnote{
+  font-family: "DotGothic16", sans-serif;
+  font-size: 20px;
+  font-weight: 0px;
+  line-height: 33px;
+  z-index: 10px;
+}
+  
+/* colored boxes surround border */
+
+#tropicalbox{
+  width: 450px;
+  height: 250px;
+  background-color: #16d4ff;
+  position: relative;
+  top: -600px;
+  left: 350px;
+  z-index: -10;
+}
+
+#navybox{
+  width: 450px;
+  height: 250px;
+  background-color: #003483;
+  position: relative;
+  top: -350px;
+  left: 1050px;
+  z-index: -10;
+}
+
+#lightblubox{
+  width: 450px;
+  height: 250px;
+  background-color: #1377ff;
+  position: relative;
+  top: -1020px;
+  left: 1150px;
+  z-index: -10;
+}
+
+#bluebox{
+  width: 450px;
+  height: 250px;
+  background-color: #0026ff;
+  position: relative;
+  top: -900px;
+  left: 400px;
+  z-index: -10;
+}
+
+/* code for smaller screens */
+
+@media only screen and (max-width: 1440px){
+  
+  /* about us page section */
+
+#aboutustx{
+  font-family: "DotGothic16", sans-serif;
+  font-size: 70px;
+  font-weight: 600;
+  position: relative;
+  left: 530px;
+  top: -20px;
+}
+
+/* border with text inside */
+
+#bordertext{
+  border-style: outset;
+  border-color: #def9ff;
+  border-width: 15px;
+  height: 350px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 30px;
+  z-index: 10px;
+  background-color: white;
+}
+
+#aboutusnote{
+  font-family: "DotGothic16", sans-serif;
+  font-size: 15px;
+  font-weight: 0px;
+  line-height: 25px;
+  z-index: 10px;
+}
+  
+/* colored boxes surround border */
+
+#tropicalbox{
+  width: 300px;
+  height: 170px;
+  background-color: #16d4ff;
+  position: relative;
+  top: -420px;
+  left: 190px;
+  z-index: -10;
+}
+
+#navybox{
+  width: 300px;
+  height: 170px;
+  background-color: #003483;
+  position: relative;
+  top: -250px;
+  left: 750px;
+  z-index: -10;
+}
+
+#lightblubox{
+  width: 300px;
+  height: 170px;
+  background-color: #1377ff;
+  position: relative;
+  top: -710px;
+  left: 800px;
+  z-index: -10;
+}
+
+#bluebox{
+  width: 300px;
+  height: 170px;
+  background-color: #0026ff;
+  position: relative;
+  top: -620px;
+  left: 230px;
+  z-index: -10;
+}
+} 
+  
+  
+ /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbbbbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+} 
+
+/* sets left margin and container size for all fetched data*/
+.tables {
+  
+  width: 70vw;
+}
+
+.card {
+  margin-bottom: 2rem;
+  width: 20rem;
+  height: 24rem;
+  border: 16px solid #375E99;
+  
+}
+
+.hshot {
+  width: 20rem;
+  height: 24rem;
+  object-fit: cover;
+}
+
+.desc {
+  overflow: auto;
+  width: 18rem;
+  text-align: center;
+}
+
+.bio {
+  width: 17rem;
+  text-align: center;
+}
+
+.btn {
+  margin-bottom: 1rem;
+}
+
+footer {
+  height: 4rem;
+}
+
+.banner {
+  margin-left: 4rem;
+  height:auto;
+  width: 50%;
+}
+
+.main {
+  margin-bottom: 10rem;
+  margin-top: 4rem;
+}
+
+.text-center, .copy {
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+}
+

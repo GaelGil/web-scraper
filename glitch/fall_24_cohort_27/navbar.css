@@ -1,0 +1,29 @@
+.toppage {
+  height: 10vh;
+  width: 100vw;
+  font-weight: bolder;
+  font-size: 25px;
+  padding-right: 20px;
+  z-index: 5;
+}
+.devlogo {
+  width: 30%;
+  height: 40%;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navbar-nav {
+  width: 20rem;
+}
+
+@media screen and (max-width: 500px) {
+  .devlogo {
+    width: 50%;
+    height: 100%;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}

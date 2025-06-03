@@ -1,0 +1,149 @@
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* adjust typography defaults */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: #f1d6ab;
+}
+/*CSS Styling for Banner*/
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #38470b;
+  color: #f1d6ab;
+  font-size: 30px;
+  font-family: Sora, sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 63px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+/*CSS Styling for Portfolio Cards*/
+.card {
+  margin: 2%;
+  border: none;
+  background: #ffffff;
+  box-shadow: 0px 15px 80px rgb(29 74 133 / 10%);
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  cursor: pointer;
+  height: auto;
+  position: relative;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.member-image {
+  /*   border-radius: 55%; */
+  border-top-right-radius: 50px;
+  padding: 5%;
+  width: 20rem;
+  height: 300px;
+  display: block;
+  object-fit: cover;
+}
+
+.card-design {
+  width: 8rem;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.quote {
+  background-color: #4e6c50;
+  border-bottom-left-radius: 50px;
+  width: 100%;
+  height: 400px;
+  padding: 1%;
+  color: #f0ebce;
+  font-family: Sora;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 5%;
+}
+
+.memberName {
+  color: #aa8b56;
+  font-family: Sora;
+  font-size: 1.5rem;
+}
+
+.portfolio {
+  color: #6b5117;
+  font-family: Sora;
+  font-size: 1.5rem;
+}
+
+.linkedin-logo {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.project-title {
+  color: #ffa500;
+  font-weight: bold;
+  font-family: Sora;
+  font-size: 1.2rem;
+}
+
+.project-title:hover {
+  color: #ffa500;
+}
+
+.view-project {
+  color: #ff5f1f;
+  font-size: 1.2rem;
+  border-bottom: 4px solid #e74c3c;
+}
+
+.view-project:hover {
+  color: inherit;
+  font-size: 1.2rem;
+  border-bottom: 4px solid #e74c3c;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.container {
+  height: 100%;
+  display: flex;
+}

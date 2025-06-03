@@ -1,0 +1,604 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+  margin: 0rem;
+  line-height: 1.5;
+  background-image: linear-gradient(
+    to bottom,
+    #ffffff,
+    #69a297,
+    #914cd2,
+    #01529c
+  );
+  background-attachment: fixed;
+  font-family: "Platypi", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.hometitle {
+  margin-bottom: -80px;
+}
+/* <uniquifier>: Use a unique and descriptive class name
+ <weight>: Use a value from 100 to 900 */
+
+.noto-sans-<uniquifier > {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+/*navbar and slider*/
+.nav {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  display: block;
+  width: 100%;
+  height: 50px;
+  background-color: black;
+}
+
+.navListItem {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  margin-right: 5%;
+  cursor: pointer;
+  color: black;
+}
+
+.padding-none {
+  padding: 0;
+}
+
+.logo {
+  position: absolute;
+  top: 5px;
+  left: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+.logo a {
+  margin-left: 20px;
+  color: white;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.logo-img {
+  height: 40px;
+}
+
+#modalBtn {
+  position: absolute;
+  top: 10px;
+  left: 35%;
+  border: 1px white solid;
+  border-radius: 10px;
+  padding: 0.5vw;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#modalBtn:focus {
+  background-color: white;
+  color: black;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.navListItems {
+  display: flex;
+  justify-content: end;
+}
+
+.slider {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: 100% 500px;
+}
+
+.slider-img {
+  width: 100%;
+  height: 500px;
+}
+
+.prev,
+.next {
+  background-color: rgb(3, 3, 3);
+  color: red;
+  font-size: large;
+  height: 100px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+
+.quote {
+  color: white;
+  font-family: "Farsan", cursive;
+  font-weight: 400;
+  font-style: normal;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-size: 60px;
+}
+.abtustitle {
+  font-size: 48px;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+.aboutusparagraph {
+  text-align: Center;
+  margin-left: 40px;
+  margin-right: 40px;
+  font-size: 20px;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  padding-bottom: 50px;
+}
+.sponsor {
+  font-size: 40px;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  padding-bottom: 60px;
+}
+/* adjust typography defaults */
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  padding: 0.625rem;
+}
+
+.white-text {
+  color: #ffffff;
+}
+
+.gradient-text {
+  background-image: linear-gradient(to bottom, #000000 50%, #ffffff 50%);
+  background-clip: text;
+  color: transparent;
+}
+
+.page-center {
+  text-align: center;
+}
+
+.purple-text {
+  color: purple;
+}
+
+/* <uniquifier>: Use a unique and descriptive class name
+ <weight>: Use a value from 100 to 900 */
+
+.noto-sans-<uniquifier > {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+footer {
+  background-color: white;
+  padding: 20px;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* GoodWill image max out at full width */
+.goodwill {
+  height: auto;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+/* Adjusts sponsor images to fit footer */
+.logo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: auto;
+  max-height: 50px;
+  margin: 0 10px;
+}
+
+/*Slider*/
+.carousel {
+  margin-left: 15%;
+  margin-right: 15%;
+  padding-top: 100px;
+}
+
+ul.slides {
+  display: block;
+  position: relative;
+  height: 600px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
+}
+
+.slides * {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+ul.slides input {
+  display: none;
+}
+
+.slide-container {
+  display: block;
+}
+
+.slide-image {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+}
+
+.slide-image img {
+  width: auto;
+  min-width: 100%;
+  height: 100%;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  font-size: 100px;
+  line-height: 600px;
+  color: #ffffff;
+}
+
+.carousel-controls label {
+  display: none;
+  position: absolute;
+  padding: 0 20px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.slide-image:hover + .carousel-controls label {
+  opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+  opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+  width: 49%;
+  text-align: left;
+  left: 0;
+}
+
+.carousel-controls .next-slide {
+  width: 49%;
+  text-align: right;
+  right: 0;
+}
+
+.carousel-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  z-index: 999;
+  text-align: center;
+}
+
+.carousel-dots .carousel-dot {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  opacity: 0.5;
+  margin: 10px;
+}
+
+input:checked + .slide-container .slide-image {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .carousel-controls label {
+  display: block;
+}
+
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+  opacity: 1;
+}
+
+input:checked + .slide-container .nav label {
+  display: block;
+}
+
+.slider {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+/*students*/
+.stu {
+  padding-top: 50px;
+}
+.frame {
+  text-align: center;
+}
+/*infinet*/
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+.slider {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  max-height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.slider::before,
+.slider::after {
+  content: "";
+  max-height: 100px;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+.slider .slide {
+  height: 100px;
+  width: 250px;
+}
+
+.kanji {
+  padding-top: 30px;
+}
+.wf {
+  padding-bottom: 100px;
+}
+
+/* Site Visit CSS starts here */
+.sitevisittitle {
+  color: white;
+  font-size: 48px;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  padding-top: 80px;
+  padding-bottom: 25px;
+  text-shadow: 1px 1px 2px gray;
+}
+.sitevisitp {
+  color: white;
+  text-align: left;
+  font-size: 18px;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  padding-bottom: 50px;
+}
+.sitepage {
+  display: block;
+  max-width: 1000px;
+  margin: auto;
+  color: white;
+  height: 10px;
+  border: 10;
+  border-top: 10px solid #ffffff;
+  border-radius: 20px;
+}
+.sitetitle {
+  color: white;
+  font-size: 28px;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  padding-top: 10px;
+}
+.sitep {
+  color: white;
+  text-align: left;
+  font-size: 18px;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <300>;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+.kandjiphoto {
+  width: 600px;
+  height: 350px;
+  padding-left: 20px;
+}
+.sitecontainer {
+  padding-bottom: 50px;
+}
+.linkedinphoto {
+  width: 550px;
+  height: 350px;
+  padding-right: 20px;
+}
+.verizonphoto {
+  width: 600px;
+  height: 350px;
+  padding-left: 20px;
+}
+.wellsfargophoto {
+  width: 550px;
+  height: 350px;
+  padding-right: 20px;
+}
+.sitevisitending {
+  color: white;
+  font-size: 48px;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  padding-bottom: 110px;
+}
+/* Students Page starts here */
+.ourcohort {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  padding-top: 80px;
+  padding-bottom: 25px;
+  font-size: 48px;
+  text-shadow: 1px 1px 2px gray;
+}
+.ourcohortp {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth", 100;
+  font-size: 18px;
+  padding-bottom: 75px;
+}
+.cohortline {
+  display: block;
+  max-width: 1000px;
+  margin: auto;
+  color: white;
+  border-top: 10px solid #ffffff;
+  border-radius: 20px;
+  margin-bottom: 100px;
+}
+
+.front {
+  width: 150px;
+}
+.front1 {
+  padding-right: 50px;
+}
+
+
+.DevMissionGoodwill {
+  display:flex; 
+  position:relative;
+  top:5rem;
+  justify-content:center;
+}
+
+/* student project photos CSS */
+.thaisphoto {
+  width: 600px;
+  height: 350px;
+  padding-left: 20px;
+}
+.humerasphoto {
+  width: 600px;
+  height: 350px;
+  padding-right: 20px;
+}
+.traevonsphoto {
+  width: 600px;
+  height: 350px;
+  padding-left: 20px;
+}
+.kendricksphoto {
+  width: 600px;
+  height: 350px;
+  padding-right: 20px;
+}
+.arnelsphoto {
+  width: 600px;
+  height: 350px;
+  padding-left: 20px;
+}

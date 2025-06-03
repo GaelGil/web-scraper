@@ -1,0 +1,69 @@
+
+
+
+
+.title{
+  text-align:center; 
+  background-color:#00296b;
+  color:#edf2f4;
+  padding-top:2vw;
+  padding-bottom:2vw;
+  
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+  font-size:5vw;
+}
+
+#description{
+  font-size:2.5vw;
+}
+
+
+#student{
+  text-align:center;
+  
+  display:flex;
+  justify-content:space-around;
+  flex-flow: row wrap;
+  margin-left:5%;
+  margin-right:5%;
+  background-color:#C0D6DF;
+}
+
+.headshot{
+  margin:2%;
+  margin-top:7%;
+  margin-bottom:0px;
+  background-color: orange;
+  border-right:6px solid orange;
+  border-top:4px solid orange;
+  
+  width:250px;
+  transition: transform 300ms;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.headshot:hover{
+  transform: translateY(-2px);
+}
+
+.cropped{
+  width:250px;
+  height:250px;
+  overflow:hidden;
+}
+
+
+.cropped img {
+    margin: -10px 5px 0px 3px;
+}
+
+.footer{
+  display:flex;
+  justify-content:space-between;
+  padding:50px;
+  padding-top:30px;
+  
+}

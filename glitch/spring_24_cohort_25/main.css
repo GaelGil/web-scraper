@@ -1,0 +1,166 @@
+.banner{
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 50px;
+  font-weight: 900;
+}
+strong{
+    color: #400084;
+    font-weight: 900;
+}
+h1{
+  color: #ffffff;
+}
+.navbar {
+  background: transparent;
+  border: none;
+}
+
+.navbar-brand{
+  margin-top: 1vw;
+  font-family: "Oswald", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+}
+.carousel-inner {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-item {
+  text-align: center;
+  width: auto; /* Ensure each item occupies the full width of the carousel */
+}
+
+.carousel-image {
+  height: 500px !important; /* Adjust as needed */ 
+}
+
+.carousel-control.left, .carousel-control.right {
+  background-image: none; /* Remove the default background image */
+  box-shadow: none; /* Remove the shadow */
+}
+
+/* Left control */
+.carousel-control.left {
+  left: 0; /* Adjust the position if needed */
+}
+
+/* Right control */
+.carousel-control.right {
+  right: 0; /* Adjust the position if needed */
+}
+
+.container-fluid.slideshow {
+  background: url(https://cdn.glitch.global/e7482db6-32a1-485d-a2b6-c4d73215be78/Student-Testimonials-Quote-New-Background.jpeg?v=1713489674597);
+  background-size: cover; /* Cover the entire container */
+}
+
+.bottomhalf {
+  background-image: linear-gradient(#1377FF, #191919);
+}
+
+.participants-title {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.participants-title span {
+  color: #400084; /* Set color of "<" and ">" to #400084 */
+  font-size: 60px;
+  
+}
+
+.card {
+  height: 400px;
+  background-color: white; /* Set background color to white */
+  border: 1px solid #cccccc;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  perspective: 1000px;
+  position: relative; /* Add position relative to allow absolute positioning of children */
+  width: calc(25% - 40px); /* Adjust as needed to accommodate margin */
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: calc(50% - 40px); /* Adjust as needed to accommodate margin */
+  }
+}
+
+#cards-container {
+  display: inline-block; /* Make it behave like a block element */
+  margin: 0 auto; /* Auto margin for horizontal centering */
+}
+
+.front,
+.back {
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.front {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.back {
+  transform: rotateY(180deg);
+  display: flex;
+  font-size: 20px; /* Set font size to 20px */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+}
+
+.back p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 50px; /* Adjust as needed */
+  margin: 7px;
+}
+
+.back p.description {
+    margin-bottom: 10px; /* Add margin to the bottom of the description */
+}
+
+.back .btn {
+  margin-top: 10px; /* Adjust as needed */
+  border: 1px solid #337ab7; /* Add a black border */
+}
+
+.card:hover .front {
+  transform: rotateY(-90deg);
+}
+
+.card:hover .back {
+  transform: rotateY(0deg);
+}
+
+.front img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+
+.front h2 {
+  height: 20%;
+  margin: 0;
+  padding-top: 10px; /* Adjust as needed */
+}
+

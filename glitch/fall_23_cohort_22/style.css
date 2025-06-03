@@ -1,0 +1,82 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-size: 1em;
+  line-height: 1.5;
+  color: white;
+  font-family: 'League Spartan', sans-serif;
+  background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+}
+
+.navbar-custom {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+h1#class-directory { 
+  
+  font-size: 5em; 
+  padding-bottom: 50px;
+  padding-top: 50px;
+
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: nowrap;
+  height: auto;
+}
+
+.nav-item {
+  color: white;
+  font-size: 30px;
+}
+
+#nav-header {
+  font-size: 38px;
+  color: white;
+}
+
+.link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #000000;
+}
+.link:visited {
+  color: #000000;
+}
+.link:active {
+  color: #ff0000;
+}
+.myDivider { 
+  padding-bottom: 50px;
+}
+
+hr {
+  display: flex;
+  height: 3px;
+  color: #000000;
+}
+
+.end-website {
+  background-color: #3a47d5;
+  padding-bottom: 200px;
+  margin-top: 100px;
+}
+
+.card-text { font-size: 1.5em; }
+
+.careerText { color: red; }
+
+.background-img {
+  background: url("https://cdn.glitch.global/31c97da5-8904-4918-a97e-f0ac0cd3f28d/C22%20Banner.png?v=1700190359336")
+    center/cover no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100vh; /* Adjust the height as needed */
+}

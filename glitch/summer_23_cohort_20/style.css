@@ -1,0 +1,101 @@
+#home-page {
+  background-image: url("https://cdn.glitch.global/3ad06cb4-4225-4d9a-9a22-c909a51024f8/Untitled212_20230729221545%20(1).png?v=1690694302214");
+  background-size: contain;
+}
+.logo {
+  width: 100%;
+  align-items: center;
+}
+
+.titlepadding {
+  margin: 0.5em;
+  margin-top: -0.5em;
+  text-align: center;
+  color: #213a62;
+}
+
+/* .center {
+  width: 80%;
+  margin: auto;
+} */
+
+p {
+  text-align: center;
+  font-size: 20px;
+}
+
+#card1 {
+  width: 90%;
+  border-radius: 10%;
+  justify-content: center;
+}
+
+h5 {
+  font-size: 30px;
+}
+
+/* Everything Below is for Cards */
+.meetTheStudents {
+  text-align: center;
+  font-size: 35px;
+  padding: 2em;
+  padding-top: 3em;
+  padding-bottom: 2.5em;
+  color: #213a62;
+  margin: 0;
+}
+
+#students {
+  background-color: #31bccc;
+  padding: 1em;
+}
+
+.cardpadding {
+  padding: 0rem;
+  box-shadow: 0.313rem 0.313rem 1.25rem black;
+}
+
+.col:hover, .card-padding {
+  transform: translate(-10px, -10px);
+}
+
+.jobTitle {
+  font-family: "Philosopher", sans-serif;
+}
+
+.card-title {
+  font-family: "Passion One", sans-serif;
+}
+
+.card-title,
+.card-text {
+  text-align: center;
+}
+
+#images {
+  width: auto;
+  height: 30rem;
+  object-fit: cover;
+  border-radius: 15%;
+}
+
+#description {
+  height: 25rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.description {
+  margin: 1em;
+  margin-right: 3em;
+  margin-left: 3em;
+  font-family: "Montserrat", sans-serif;
+}
+
+.button-center {
+ text-align: center;
+}
+
+.btn {
+  background-color: #31bccc;
+}
+
