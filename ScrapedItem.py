@@ -31,7 +31,13 @@ class ScrapedItem:
             Initializes the instance
 
         add_field(key: str, value: str)
+            Function to add a field to our scraped item.
 
+        get_field(self, key: str)
+            Function to retrive the value of a feature in the scraped item
+
+        get_item_values(self)
+            Function to get the values of the scraped item
     """
 
     def __init__(self) -> None:
@@ -52,41 +58,43 @@ class ScrapedItem:
     def add_field(self, key: str, value: str)  -> None:
         """Function to add a field to our scraped item.
 
-        This 
+        This functions perfomes a simple insertion into the _data
+        dictionary using a given key and value.
 
         Args:
-            url: The url we want to scrape which is a string
+            key: The feature/field of the item. Example 'price'
+            value: The value of the feature/field of the item
+                Example 20.
 
         Returns:
             None
         """
         self._data[key] = value
 
-    def get_field(self, key: str) -> None:
-        """Function to set the url that we will scrape.
+    def get_field(self, key: str) -> str:
+        """Function to retrive the value of a feature in the scraped item
 
-        Function to set the url of the website that we want our scraper to visit.
-        After its done we wait for 3 seconds. 
+        Function that retrives a feature/field from the scraped item dictionary
+        given a key. 
 
         Args:
-            url: The url we want to scrape which is a string
+            key: the feature we want to retrive from the scraped item dictionary
 
         Returns:
-            None
+            str
         """
         return self._data[key]
-    
 
-    def get_item_values(self) -> None:
-        """Function to set the url that we will scrape.
+    def get_item_values(self) -> list:
+        """Function to get the values of the scraped item
 
-        Function to set the url of the website that we want our scraper to visit.
-        After its done we wait for 3 seconds. 
+        This functions returns only the values of the scraped item in the 
+        dictionary
 
         Args:
-            url: The url we want to scrape which is a string
+            None
 
         Returns:
-            None
+            list
         """
         return self._data.values()
