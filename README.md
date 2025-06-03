@@ -21,19 +21,44 @@ source ./env/bin/activate
 pip install -r requirements.txt
 ~~~
 
-### Set xpaths
-Typical usage example:
+### Set config
+`ScraperSetUp.py`
 ~~~python
- sc = Scraper()
- sc.set_url('example_url')
- sc.get_links("xpath_for_links")
- xpaths = {
- 'title': "title_xpath]"
- }
- sc.set_xpaths(xpaths)
- sc.scrape_items(data_to_scrape)
- formated_data = sc.format_data()
- sc.to_csv('example.csv', formated_data)
+CONFIG_GOODREADS = {
+    'PRODUCT': {
+        'xpaths': {
+            'title': "title_xpath",
+            'description': 'description_xpath',
+            'raitings' : 'raitings_xpath',
+            'reviews' : 'reviews_xpath',
+        }
+    },
+    'NEXT_PAGE_BUTTON_XPATH': {
+        'xpath' : 'next_button_xpath'
+    },
+    'PRODUCTS': {
+        'xpath': 'xpath_to_product_links'
+    },
+    'MULTIPLE': None,
+    'URLS' : ['example.com'],
+    'DRIVER_PATH': './drivers/geckodriver',
+    'HEADLESS': True
+}
+ ~~~
+
+ `main.py`
+
+ ~~~python
+from DriverManager import DriverManager
+from ScraperSetUp import CONFIG_GOODREADS
+from Scrapers.ProductScraper import ProductScraper
+from Scrapers.ProductsScraper import ProductsScraper
+
+driver_manager = DriverManager(CONFIG_GOODREADS['DRIVER_PATH'], CONFIG_GOODREADS['HEADLESS'])
+products_scraper = ProductsScraper(driver=driver_manager, config=CONFIG_GOODREADS)
+product_scraper = ProductScraper(driver=driver_manager, config=CONFIG_GOODREADS)
+products = products_scraper.iterate_urls(stop=2, next_page=True, popup=True)
+data = product_scraper.iterate_urls(products)
  ~~~
 
 
