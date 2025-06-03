@@ -1,9 +1,8 @@
 """Class to scrape data from individual products
 
-Leave one blank line.  The rest of this docstring should contain an
-overall description of the module or program.  Optionally, it may also
-contain a brief description of exported classes and functions and/or usage
-examples.
+This class inherits from the BaseScraper class. This class is used to
+scrape data from individual prodcuts. Below is a short example of how
+it is used.
 
   Typical usage example:
     from DriverManager import DriverManager
@@ -15,7 +14,6 @@ examples.
     product_scraper = ProductScraper(driver=driver_manager, config=CONFIG_GOODREADS)
     data = product_scraper.iterate_urls(products)
     print(f'Data: {data}')
-
 
 """
 
