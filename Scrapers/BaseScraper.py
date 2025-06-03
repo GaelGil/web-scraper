@@ -12,6 +12,9 @@ The webdriver and the config
   scraper = SiteSpecificScraper(config, driver)
     
 """
+#TODO: update the base scraper to only interect with driver
+#TDOO: update base scraper to have next_page 
+#TODO: update base scraper to have popup page
 
 from abc import ABC, abstractmethod
 from selenium.webdriver.support.ui import WebDriverWait
