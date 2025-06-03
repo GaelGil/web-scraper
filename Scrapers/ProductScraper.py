@@ -61,10 +61,10 @@ class ProductScraper(BaseScraper):
         """Function to scrape data from a product
         
         This functions scrapes data from a page. Given a key (name
-        of the element we want to scrape) and a xpath to the element then we 
-        scrape the data. Using the previously set dictionray of multiple, we
-        check if we need to do multiple elements or just one. We also check
-        for images. We then return the element we scraped. 
+        of the element we want to scrape) and a xpath to the element we
+        scrape the data. Using the config, we check if we need to do
+        multiple elements or just one. We also check for images.
+        We then return the element we scraped. 
 
         Args:
             key: a sring that represents the name of the element we want to scrape
@@ -94,13 +94,12 @@ class ProductScraper(BaseScraper):
     def next_page(self, next_page: bool) -> str:
         """This function sets the next page
 
-        Using the xpath for the next page button we set earlier, this function tries to
-        find the button. If we find it we click it. If we can't find it we return false.
-        Otherwise we return the url of the page we are on after clicking the next page
-        button.
+        Using the config, this function tries to find the next page button. If we
+        find it we click it. If we can't find it we return false. If we do find it
+        we return the url of the page we are on after clicking the next page button.
 
         Args:
-            None
+            next_page: A boolean to see if we need to check for next page
 
         Returns: 
             str
@@ -118,20 +117,19 @@ class ProductScraper(BaseScraper):
             return False
         return self.driver.current_url # return url of page we are on
         
-    def handle_popup(self):
-        """This function sets the next page
+    def handle_popup(self, popup: bool):
+        """This function handles a popup if it is detected
 
-        Using the xpath for the next page button we set earlier, this function tries to
-        find the button. If we find it we click it. If we can't find it we return false.
-        Otherwise we return the url of the page we are on after clicking the next page
-        button.
+        Using the config, this function closes a popup if it appears on the page. 
 
         Args:
-            None
+            popup: A boolean to see if we need to check for a popup
 
         Returns: 
-            str
+            None
         """
+        if not popup:
+            return 
         time.sleep(5)  
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         try:
