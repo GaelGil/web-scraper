@@ -21,14 +21,23 @@ import time
 
 class ProductScraper(BaseScraper):
     """
-    A class used to scrape products from a web page
+    A class used to scrape products of a page
 
     Attributes:
-        Inherited from BaseScraper
+        BaseScraper Attributes: ProductsScraper inherits from BaseScraper
 
     Methods:
+        iterate_urls(self, products: list)
+            Function to visit each item given a list of items
 
+        scrape(self, key: str, xpath: str)
+            Function to scrape data from a product
 
+        next_page(self, next_page: bool)
+            This function sets the next page
+
+        handle_popup(self, popup: bool)
+            This function handles a popup if it is detected
     """
 
     def iterate_urls(self, products: list) -> dict:

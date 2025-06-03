@@ -18,32 +18,26 @@ import time
 
 class ProductsScraper(BaseScraper):
     """
-    A class used to manage a webscraper
+    A class used to scrape products of a page
 
     Attributes:
         BaseScraper Attributes: ProductsScraper inherits from BaseScraper
 
     Methods:
-        __init__(self, driver_path: str, headless: bool)
-            Initializes the instance to be ready for scraping
+        iterate_urls(self, next_page: bool, popup: bool, count: int, stop: int):
+            Function to visit websites and scrape links to products
 
-        set_url(self, url: str)
-            Function to set the url that we will scrape
+        scrape(self)
+            Function to scrape data links from a page
 
-        set_next_page_xpath(self, xpath: str)
-            This function sets the xpath for the next page button
+        next_page(self, next_page: bool)
+            This function sets the next page
 
-        set_xpaths(self, xpaths: dict)
-            This function sets the class variable xpaths
-
-        set_multiple(self, multiple: dict)
-            This function sets the class variable multiple
-
-        set_urls(self, urls: list)
-            This function sets the class variable urls
+        handle_popup(self, popup: bool)
+            This function handles a popup if it is detected
     """
 
-    def iterate_urls(self, next_page, popup, count: int=1, stop: int=5) -> list:
+    def iterate_urls(self, next_page: bool, popup: bool, count: int=1, stop: int=5) -> list:
         """Function to visit websites and scrape links to products
         
         Using the config set in the scraper. We itterate urls of pages
