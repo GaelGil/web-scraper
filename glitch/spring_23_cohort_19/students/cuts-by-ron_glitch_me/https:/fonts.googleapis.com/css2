@@ -1,7 +1,0 @@
-@font-face {
-  font-family: 'Rye';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/rye/v16/r05XGLJT86YDFg.ttf) format('truetype');
-}

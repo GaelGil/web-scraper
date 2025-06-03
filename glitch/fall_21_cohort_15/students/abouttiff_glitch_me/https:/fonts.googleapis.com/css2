@@ -1,7 +1,0 @@
-@font-face {
-  font-family: 'Yuji Syuku';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/yujisyuku/v7/BngNUXdTV3vO6Lw5ApOPqPc.ttf) format('truetype');
-}

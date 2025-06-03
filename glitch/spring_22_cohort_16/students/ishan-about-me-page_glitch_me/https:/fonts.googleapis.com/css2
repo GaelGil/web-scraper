@@ -1,7 +1,0 @@
-@font-face {
-  font-family: 'Sansita Swashed';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/sansitaswashed/v22/BXR8vFfZifTZgFlDDLgNkBydPKTt3pVCeYWqJnZSW-ppbTo.ttf) format('truetype');
-}

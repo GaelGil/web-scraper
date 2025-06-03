@@ -1,7 +1,0 @@
-@font-face {
-  font-family: 'Monoton';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/monoton/v21/5h1aiZUrOngCibe4fkY.ttf) format('truetype');
-}

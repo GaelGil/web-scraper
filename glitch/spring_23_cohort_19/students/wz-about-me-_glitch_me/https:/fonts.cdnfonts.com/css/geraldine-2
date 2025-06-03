@@ -1,8 +1,0 @@
-@font-face {
-    font-family: 'Geraldine';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Geraldine'), url('https://fonts.cdnfonts.com/s/80482/Geraldinedafont.woff') format('woff');
-}
-
-

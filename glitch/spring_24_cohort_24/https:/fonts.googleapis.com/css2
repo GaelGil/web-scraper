@@ -1,7 +1,0 @@
-@font-face {
-  font-family: 'Farsan';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/farsan/v23/VEMwRoJ0vY_zsyz62g.ttf) format('truetype');
-}

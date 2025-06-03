@@ -1,8 +1,0 @@
-@font-face {
-    font-family: 'Agustina';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Agustina'), url('https://fonts.cdnfonts.com/s/29981/Agustina.woff') format('woff');
-}
-
-

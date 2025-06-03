@@ -1,7 +1,0 @@
-@font-face {
-  font-family: 'Sora';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/sora/v16/xMQOuFFYT72X5wkB_18qmnndmSdgnn-K.ttf) format('truetype');
-}

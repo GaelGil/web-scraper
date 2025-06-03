@@ -1,7 +1,0 @@
-@font-face {
-  font-family: 'Roboto Condensed';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/robotocondensed/v30/ieVo2ZhZI2eCN5jzbjEETS9weq8-_d6T_POl0fRJeyXsovBJ.ttf) format('truetype');
-}

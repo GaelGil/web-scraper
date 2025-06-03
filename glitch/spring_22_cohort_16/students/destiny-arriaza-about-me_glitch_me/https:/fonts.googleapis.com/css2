@@ -1,7 +1,0 @@
-@font-face {
-  font-family: 'Hubballi';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/hubballi/v9/o-0JIpUj3WIZ1RFN56B7.ttf) format('truetype');
-}

@@ -1,7 +1,0 @@
-@font-face {
-  font-family: 'Fjalla One';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/fjallaone/v15/Yq6R-LCAWCX3-6Ky7FAFnOY.ttf) format('truetype');
-}
