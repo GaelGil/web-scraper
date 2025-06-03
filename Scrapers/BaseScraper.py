@@ -42,11 +42,20 @@ class BaseScraper(ABC):
         get_url(self, url: str)
             Function to set the url that we will scrape
 
-        wait_click(xpath: str, time: int=15)
+        wait_click(self, xpath: str, time: int=15)
 
-        wait_found(xpath: str, time: int=15)
+        wait_found(self, xpath: str, time: int=15)
 
-        log_message(log_type: str, message: str)
+        log_message(self,log_type: str, message: str)
+
+        scrape(self)
+            Abstract method to be implemented by other scraper classes
+
+        next_page(self)
+            Abstract method to be implemented by other scraper classes
+
+        handle_popup(self)
+            Abstract method to be implemented by other scraper classes
     """
     def __init__(self, driver, config):
         """
@@ -89,18 +98,18 @@ class BaseScraper(ABC):
 
     @abstractmethod
     def scrape(self):
-        """
+        """Abstract method to be implemented by other scraper classes
         """
         pass
 
     @abstractmethod
     def next_page(self):
-        """
+        """Abstract method to be implemented by other scraper classes
         """
         pass
 
     @abstractmethod
     def handle_popup(self):
-        """
+        """Abstract method to be implemented by other scraper classes
         """
         pass
