@@ -42,6 +42,7 @@ class ProductsScraper(BaseScraper):
         set_urls(self, urls: list)
             This function sets the class variable urls
     """
+    
     def iterate_urls(self, next_page, popup, count: int=1, stop: int=5) -> list:
         """Initializes the instance to be ready for scraping.
 
@@ -71,7 +72,6 @@ class ProductsScraper(BaseScraper):
             count = 0 # set back to zero for each url
         return products
 
-
     def scrape(self):
         """Initializes the instance to be ready for scraping.
 
@@ -96,18 +96,16 @@ class ProductsScraper(BaseScraper):
         except Exception as e:
             self.log_message('e', 'Failed to scrape item links')
         return products
-    
 
     def next_page(self, next_page: bool) -> str:
         """This function sets the next page
 
-        Using the xpath for the next page button we set earlier, this function tries to
-        find the button. If we find it we click it. If we can't find it we return false.
-        Otherwise we return the url of the page we are on after clicking the next page
-        button.
+        Using the config, this function tries to find the next page button. If we
+        find it we click it. If we can't find it we return false. If we do find it
+        we return the url of the page we are on after clicking the next page button.
 
         Args:
-            None
+            next_page: A boolean to see if we need to check for next page
 
         Returns: 
             str
@@ -121,21 +119,19 @@ class ProductsScraper(BaseScraper):
             self.log_message('w', 'Next button not found or not clickable')
             return False
         except Exception as e:
-            self.log_message('w', 'Unexpected error while navigating to next page"')
+            self.log_message('e', 'Unexpected error while navigating to next page')
             return False
         return self.driver.current_url # return url of page we are on
-    
-    def handle_popup(self, popup: bool) -> None:
-        """Initializes the instance to be ready for scraping.
+        
+    def handle_popup(self, popup: bool):
+        """This function handles a popup if it is detected
 
-        Initializes the Scraper instance with broswer driver and
-        headless mode (optional)
+        Using the config, this function closes a popup if it appears on the page. 
 
-        Args: 
-            driver_path: the path to the browser driver
-            headless: bool to run browser in headless mode or not
+        Args:
+            popup: A boolean to see if we need to check for a popup
 
-        Returns:
+        Returns: 
             None
         """
         if not popup:
@@ -144,9 +140,9 @@ class ProductsScraper(BaseScraper):
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         try:
             popup = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.XPATH, "//div[contains(@class, 'modal__content')]")))
-            self.log_message('i', 'popup detected')
+            self.log_message('i', 'Popup detected!')
             close_button = WebDriverWait(self.driver, 5).until(EC.element_to_be_clickable((By.XPATH, "//div[contains(@class, 'modal__close')]//button")))
             close_button.click()
-            self.log_message('i', 'popup closed')
+            self.log_message('i', 'Popup closed.')
         except TimeoutException:
-            self.log_message('i', 'opup not detected or not visible, continuing...')
+            self.log_message('i', 'Popup not detected or not visible, continuing...')
