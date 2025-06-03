@@ -6,7 +6,6 @@ from helper import make_urls
 
 #TODO: add good comments to all classes
 #TODO: updated readme again
-#TODO: add logger to only be used by base scrapper class
 
 if __name__ == "__main__":
     CONFIG_GOODREADS['URLS'] = make_urls()
