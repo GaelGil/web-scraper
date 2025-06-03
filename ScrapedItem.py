@@ -1,21 +1,38 @@
-"""class the represents a scraped item
+"""Class that represents a scraped item
 
+This python module is used to represent a item that we scrape and its data.
+It has a class variable _data that is a dictionary. We can add to it, 
+retrive a field and return the dictionaries values. This is used when scraping
+a item such as a product on amazons page. We can store the name, price,
+description etc. 
+
+  Typical usage example:
+    item1 = ScrapedItem()
+    item1['title'] = 'A title'
+    item1['price'] = 10
+
+    item2 = ScrapedItem()
+    item1['title'] = 'The title'
+    item1['price'] = 20
 
 """
 
 class ScrapedItem:
     """
-    A class used to manage a webscraper
+    A class used to represent a item and its features.
 
     Attributes:
-        _data: 
+        _data: A dictionary to hold the items features. Each key is
+            a feature and the value being the items actual feature. 
+            Example {'product_name': 'name'}
 
     Methods:
-        __init__(self, driver_path: str, headless: bool)
-            Initializes the instance to be ready for scraping
+        __init__(self)
+            Initializes the instance
+
+        add_field(key: str, value: str)
 
     """
-
 
     def __init__(self) -> None:
         """Initializes the instance to be ready for scraping.
@@ -24,8 +41,7 @@ class ScrapedItem:
         on the selenium scraper. 
 
         Args: 
-            driver_path: the path to the browser driver
-            headless: bool for headless option
+            None
 
         Returns:
             None
@@ -34,10 +50,9 @@ class ScrapedItem:
 
 
     def add_field(self, key: str, value: str)  -> None:
-        """Function to set the url that we will scrape.
+        """Function to add a field to our scraped item.
 
-        Function to set the url of the website that we want our scraper to visit.
-        After its done we wait for 3 seconds. 
+        This 
 
         Args:
             url: The url we want to scrape which is a string
