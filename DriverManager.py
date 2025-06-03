@@ -1,11 +1,7 @@
-"""Program to scrape a website and the items displayed in it.
+"""Module to manage the web driver for a selenium web scraper
 
-Leave one blank line.  The rest of this docstring should contain an
-overall description of the module or program.  Optionally, it may also
-contain a brief description of exported classes and functions and/or usage
-examples.
+This python module is used to manage the web driver of a selenium web scraper.
 
-  Typical usage example:
 
 """
 
@@ -24,7 +20,7 @@ class DriverManager:
         __init__(self, driver_path: str, headless: bool)
             Initializes the instance to be ready for scraping
 
-        set_driver(self)
+        get_driver(self)
             Function to get the driver
 
         quit_driver(self)
@@ -35,8 +31,8 @@ class DriverManager:
     def __init__(self, driver_path: str, headless: bool) -> None:
         """Initializes the instance to be ready for scraping.
 
-        Initializes the Scraper instance with broswer driver and
-        headless mode (optional)
+        Initializes the web driver witht eh firefox driver. Sets
+        the headless option. Sets the pirvate variable _driver.
 
         Args: 
             driver_path: the path to the browser driver
@@ -51,14 +47,10 @@ class DriverManager:
         self._driver = webdriver.Firefox(service=service, options=options)
 
     def get_driver(self):
-        """Initializes the instance to be ready for scraping.
-
-        Initializes the Scraper instance with broswer driver and
-        headless mode (optional)
+        """Function to get the web driver
 
         Args: 
-            driver_path: the path to the browser driver
-            headless: bool to run browser in headless mode or not
+            None
 
         Returns:
             None
@@ -67,14 +59,10 @@ class DriverManager:
     
 
     def quit_driver(self):
-        """Initializes the instance to be ready for scraping.
-
-        Initializes the Scraper instance with broswer driver and
-        headless mode (optional)
+        """Function to quit the webd river
 
         Args: 
-            driver_path: the path to the browser driver
-            headless: bool to run browser in headless mode or not
+            None
 
         Returns:
             None
