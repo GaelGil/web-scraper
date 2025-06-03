@@ -42,19 +42,26 @@ class ProductsScraper(BaseScraper):
         set_urls(self, urls: list)
             This function sets the class variable urls
     """
-    
+
     def iterate_urls(self, next_page, popup, count: int=1, stop: int=5) -> list:
-        """Initializes the instance to be ready for scraping.
+        """Function to visit websites and scrape links to products
+        
+        Using the config set in the scraper. We itterate urls of pages
+        that have products on their page. We handle popups if they appear.
+        For each url we visit the next pages if there are any. In the end
+        we retrun a list that looks like
+        ['product1_link', 'product2_link', ... 'productn_link'].
 
-        Initializes the Scraper instance with broswer driver and
-        headless mode (optional)
-
-        Args: 
-            driver_path: the path to the browser driver
-            headless: bool to run browser in headless mode or not
+        Args:
+            next_page: A boolean to see if we need to check for next page
+            popup: A boolean to see if we need to check for a popup
+            count: A integer to keep track of how many pages we have
+                visited per url (default=1)
+            stop: A integer to let us know when to stop visitting pages for
+                each url (default=5)
 
         Returns:
-            None
+            list
         """
         products = []
         for i in range(len(self.config['URLS'])):
@@ -72,18 +79,17 @@ class ProductsScraper(BaseScraper):
             count = 0 # set back to zero for each url
         return products
 
-    def scrape(self):
-        """Initializes the instance to be ready for scraping.
+    def scrape(self) -> list:
+        """Function to scrape data links from a page
+        
+        This functions scrapes the links/urls for all the products that appear in
+        the page. 
 
-        Initializes the Scraper instance with broswer driver and
-        headless mode (optional)
-
-        Args: 
-            driver_path: the path to the browser driver
-            headless: bool to run browser in headless mode or not
+        Args:
+            None
 
         Returns:
-            None
+            list
         """
         products = []
         try:
