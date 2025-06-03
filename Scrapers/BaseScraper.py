@@ -57,7 +57,7 @@ class BaseScraper(ABC):
             button = WebDriverWait(self.driver, time).until(EC.element_to_be_clickable((By.XPATH, xpath))) 
             button.click()
         except NoSuchElementException:
-            logger.warning('No item links found on the page')
+            self.log_message('w', 'NoSuchElementException element not found')
 
     def wait_found(self, xpath: str, time: int=15) -> None:
         """
@@ -66,7 +66,17 @@ class BaseScraper(ABC):
             wait = WebDriverWait(self.driver, time)
             wait.until(EC.presence_of_element_located((By.XPATH, xpath)))
         except NoSuchElementException:
-            logger.warning('No item links found on the page')
+            self.log_message('w', 'NoSuchElementException element not found')
+
+    def log_message(self, log_type: str, message: str='') -> None:
+        """
+        """
+        if log_type == 'e':
+            logger.exception(message)
+        elif log_type == 'w':
+            logger.warning(message)
+        else:
+            logger.info(message)
 
     @abstractmethod
     def scrape(self):
