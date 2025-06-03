@@ -1,0 +1,163 @@
+body {
+  -webkit-animation: fadein 4s;
+  scroll-behavior: smooth;
+}
+
+/* Used for fade in */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#part-index-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1500px;
+}
+#index-nav {
+  background-color: #e9eaec;
+  border-radius: 5%;
+}
+#index-coloration {
+  background-color: grey;
+}
+#main-img {
+  width: 100%;
+  height: 94%;
+  padding: 30px;
+  object-fit: contain;
+  border-radius: 50%;
+  -webkit-animation: fadein 6s;
+}
+#main-index-content {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  background-color: #e9eaec;
+  border-radius: 2%;
+  -webkit-animation: fadein 4s;
+}
+#index-left-content {
+  text-align: center;
+  font-family: "Source Code Pro", monospace;
+  border-radius: 10%;
+}
+#index-text {
+  font-size: 70px;
+}
+.index-margin-text {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+#index-desc {
+  font-size: 150%;
+}
+#home-button {
+  padding: 3%;
+  margin-bottom: 3%;
+}
+#part-exp-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1500px;
+}
+#res-body-layout {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  background-color: #e9eaec;
+  border-radius: 2%;
+  -webkit-animation: fadein 4s;
+}
+.about-body-layout {
+  border-radius: 2%;
+  -webkit-animation: fadein 4s;
+}
+.about-head {
+  font-size: 50%;
+}
+.about-layout-margin {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+.contact-layout-margin {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.resume-content {
+  font-family: "Source Code Pro", monospace;
+  border-radius: 5%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.about-content {
+  font-family: "Source Code Pro", monospace;
+  border-radius: 10%;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: #e9eaec;
+}
+.resume-header {
+  margin-top: 20px;
+  font-size: 130%;
+}
+.resume-sub-header {
+  font-size: 110%;
+}
+.resume-sm-desc {
+  font-size: 80%;
+}
+.list-body {
+  margin-right: 10%;
+}
+#title-resume-head {
+  font-family: "Source Code Pro", monospace;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 40px;
+}
+.insider-padding {
+  padding: 30px 10px 10px 10px;
+  margin: 20px;
+}
+#part-contact-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1500px;
+}
+.contactIMG {
+  width: 200px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+#part-about-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1500px;
+}
+#part-contact-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1500px;
+}
+#part-projects-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1500px;
+}
+.contact-mid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

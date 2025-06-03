@@ -1,0 +1,180 @@
+
+body {
+  font-family: "Mulish", sans-serif;
+  font-size: 17px;
+}
+
+h3 {
+  font-size: 1.953 em;
+  font-weight: normal;
+  font-size: 32px;
+}
+
+h5 {
+  font-weight:normal;
+  font-size: 25px;
+}
+
+
+h6 {
+  color: black;
+  font-size: 19px;
+  font-family: "Mulish", sans-serif;
+ 
+}
+h7 {
+  color: white;
+  font-size: 32px;
+  font-family: "Mulish",sans-serif;
+}
+
+h8 {
+  color: white;
+  font-size: 25px;
+  font-family: "Mulish",sans-serif;
+}
+
+img  {
+  
+  width: 160px;
+  height: 250px;
+}
+
+#logo {
+  width: 75%;
+}
+
+#linkedin {
+  width: 48px;
+  height: 46px;
+  padding-left: 10px;
+}
+
+#email {
+  width: 56px;
+  height: 43px;
+  padding-left: 10px;
+}
+
+/* font styling */
+.highlight{
+  font-weight: bold;
+  color: #679B9B;
+}
+
+a {
+  color: black;
+  font-family: "Avenir";
+   font-size: 18px;
+  
+}
+
+a:hover {
+  color: white;
+  text-decoration: solid;
+   
+}
+
+
+
+
+.hero {
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-bottom: 10%;
+/*  background-image: url(https://cdn.glitch.com/1b61f20f-90a0-45cf-a631-4b74eb613280%2FHero%20Background.svg?v=1602653959344);
+*/
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.profpic {
+  position: absolute;
+  width: 250px;
+  height: 300px;
+  border-radius: 10px;
+  left: 50px;
+  top: 86px;
+  z-index: 2;
+}
+
+/*.square {
+  position: absolute;
+  width: 310px;
+  height: 350px;
+  left: 20px;
+  top: 60px;
+
+  background: #F5EEDC;
+  border-radius: 15px;
+  z-index: 0;
+} */
+
+
+.iconbuttons {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+}
+
+.introtext{
+  padding-top: 90px;
+}
+
+.subtext{
+  padding-top: 15px;
+}
+
+.projects { 
+  padding-top: 60px;
+  padding-bottom: 55px;
+/*  box-shadow: inset 0 0 10px #DCA531; */
+}
+
+.projectcard {
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 15px;
+  margin-top: 25px;
+}
+
+.card-img-top{
+  width:92%;
+}
+
+.skills { 
+  padding-top: 60px;
+  padding-bottom: 60px;
+ /* background-image: url(https://cdn.glitch.com/1b61f20f-90a0-45cf-a631-4b74eb613280%2FSkills%20Background.svg?v=1602654329911);
+ */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.skillcard {
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.skill-text{
+  text-align: center;
+}
+
+.footer { 
+  padding-top: 60px;
+  padding-bottom: 55px;
+ /* box-shadow: inset 0 0 10px #DCA531; */
+}
+
+.sociallinks{
+  padding-top: 20px;
+}
+
+.card-title{
+  font-weight: bold;
+}

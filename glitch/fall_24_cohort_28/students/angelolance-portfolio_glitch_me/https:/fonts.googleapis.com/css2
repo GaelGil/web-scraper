@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'Afacad Flux';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/afacadflux/v3/9oRgNYYQryMlneUPykRmTuH4ET0fri4I5rJVT_CWHKDZnskVK5edsUwWZaQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Afacad Flux';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/afacadflux/v3/9oRgNYYQryMlneUPykRmTuH4ET0fri4I5rJVT_CWHKDZnskVK5edscwXZaQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Afacad Flux';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/afacadflux/v3/9oRgNYYQryMlneUPykRmTuH4ET0fri4I5rJVT_CWHKDZnskVK5edsRIXZaQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Afacad Flux';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/afacadflux/v3/9oRgNYYQryMlneUPykRmTuH4ET0fri4I5rJVT_CWHKDZnskVK5edsUwXZaQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Afacad Flux';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/afacadflux/v3/9oRgNYYQryMlneUPykRmTuH4ET0fri4I5rJVT_CWHKDZnskVK5edsX4XZaQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Afacad Flux';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/afacadflux/v3/9oRgNYYQryMlneUPykRmTuH4ET0fri4I5rJVT_CWHKDZnskVK5edsZIQZaQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Afacad Flux';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/afacadflux/v3/9oRgNYYQryMlneUPykRmTuH4ET0fri4I5rJVT_CWHKDZnskVK5edsasQZaQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Afacad Flux';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/afacadflux/v3/9oRgNYYQryMlneUPykRmTuH4ET0fri4I5rJVT_CWHKDZnskVK5edscwQZaQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Afacad Flux';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/afacadflux/v3/9oRgNYYQryMlneUPykRmTuH4ET0fri4I5rJVT_CWHKDZnskVK5edseUQZaQ.ttf) format('truetype');
+}

@@ -1,0 +1,147 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* adjust typography defaults */
+body {
+  margin: 1rem;
+  font-family: 'Architects Daughter', sans-serif;
+  line-height: 1.5;
+}
+
+/* images and videos max out at full width */
+img,
+video {
+  height: 15em;
+  max-width: 100%;
+}
+
+
+
+.navbar-brand {
+  color: black;
+  font-family: 'Rock Salt', sans-serif;
+  font-size: 2em;
+}
+
+.nav-item {
+  padding-right: 0.8em;
+}
+
+.nav-link {
+  color: black;
+  font-size: 1.2em;
+  font-family: 'Sedgwick Ave', sans-serif;
+}
+
+.linkedin {
+  width: 2.5em;
+  height: 2.5em;
+  padding: none;
+}
+
+.email {
+  width: 2.5em;
+  height: 2.5em;
+  padding: none;
+}
+
+hr.solid {
+  border-top: 0.2em solid #815ba0;
+}
+
+.intro-pic {
+  width: 18em;
+  height: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-radius: 20%;
+}
+
+.intro-text {
+  text-align: center;
+  margin-bottom: 1.5em;
+  margin-left: 8em;
+  margin-right: 8em;
+}
+.intro-name {
+  font-size: 2.2em;
+  padding: 0.3em;
+}
+.intro-p {
+  font-size: 1.7em;
+}
+h5.intro-p {
+  padding: 0.3em;
+}
+h5.hobbies {
+  padding: 0.3em;
+}
+highlight {
+  color: #ad94c0;
+}
+
+.title {
+  font-size: 2em;
+  padding: 0.5em;
+  font-family: 'Sedgwick Ave', sans-serif;
+}
+
+.card {
+  text-align: center;
+  background-color: #d4e8f6;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 10%
+}
+.card-img-top {
+  width: 20em;
+  height: 12em;
+  border-radius: 10%;
+}
+.card-title {
+  font-size: 1.7em;
+}
+.card-text {
+  font-size: 1.3em;
+}
+p.coming-soon {
+  font-size: 1.5em;
+  font-family: 'Rock Salt', sans-serif;
+}
+
+p.skills {
+  font-size: 1.3em;
+  text-align: center;
+}
+
+
+
+
+
+
+
+a:link {
+  color: black;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color: black;
+  text-decoration: underline;
+}
+a:active {
+  color: black;
+  text-decoration: underline;
+}

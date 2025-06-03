@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Kalam&display=swap");
+
+html {
+  box-sizing: border-box;
+  font-size: 13px;
+}
+.second_h1 {
+  padding-left: 0px;
+  font-family: "Kalam", cursive;
+}
+
+body {
+  background-color: powderblue;
+  margin: 0;
+}
+.logo {
+  margin-left: 380px;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+.linkedin {
+  font-family: "Kalam", cursive;
+  font-size: 25px;
+  margin-left: 1050px;
+}
+.col {
+  margin-top:50px;
+  margin-left:100px;
+  font-family: "Kalam", cursive;
+  font-size:20px;
+}
+
+.first {
+  background-color: mintcream;
+  display: flex;
+}
+
+.face_pic {
+  height: 300px;
+  width: 450px;
+}
+.third {
+  margin-top: 100px;
+  
+}
+.web_app_pic {
+  margin-left: 70px;
+  height: 400px;
+  width: 700px;
+}
+.make_pic {
+  margin-left: 60px;
+  height: 400px;
+  width: 700px;
+}
+.web_app_link {
+  font-family: "Kalam", cursive;
+  font-size: 25px;
+  margin-left: 660px;
+}
+.make_link {
+  font-family: "Kalam", cursive;
+  font-size: 25px;
+  margin-left: 325px;
+}
+.list-group {
+  margin-right: 300px;
+}
+p {
+  margin-left: 200px;
+}
+.fifth {
+  font-family: "Kalam", cursive;
+  font-size: 25px;
+}
+.fifth_list {
+  margin-left: 300px;
+}
+.sixth {
+  font-family: "Kalam", cursive;
+  font-size: 25px;
+}
+.email {
+  margin-top: 50px;
+  margin-left: 200px;
+}
+.sixth_h2 {
+  font-family: "Kalam", cursive;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+.sixth_list {
+  margin-left: 300px;
+}

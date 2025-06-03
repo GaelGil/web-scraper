@@ -1,0 +1,79 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* adjust typography defaults */
+body {
+  margin: 1rem;
+  font-family: Urbanist, sans-serif;
+  line-height: 1.5;
+  background-color: #98D5FF;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+
+.navbar-collapse {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar {
+  background-color:#98D5FF;
+}
+
+.container {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.img-fluid {
+  height: 75%;
+}
+
+.iconsize {
+ height: 60%; 
+} 
+
+.about {
+  padding-top: 16px;
+  padding-right: 48px;
+}
+
+.about-buttons {
+  padding-top: 32px;   color: #000000; }
+
+.img-thumbnail {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+footer {
+  background-color: #d6d5d2;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+}
+
+/* images and videos max out at full width */
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+
+

@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'Castoro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/castoro/v19/1q2GY5yMCld3-O4cHYg.ttf) format('truetype');
+}

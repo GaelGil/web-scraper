@@ -1,0 +1,140 @@
+
+.img-responsive{
+  position: absolute;
+  z-index: 999999;
+
+  height: 60%;
+  text-align: left;
+  
+}
+.containertwo{
+ width:25%;
+    float: left;
+  margin:0;}
+  
+
+
+.container{
+   width:70%;
+    margin-right:2%;
+    float: left;
+  
+  
+  margin:0;
+}
+
+footer{
+  background-color:#052337;
+  
+}
+.timeline-content h2{
+  font-size:20px;
+  color:dark gray;
+ 
+ 
+}
+
+.timeline-content p{
+  font-size:10px;
+  color:dark gray;
+
+ 
+  
+}
+body {
+ background-color:#052337;
+  color:white;
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+
+}
+
+
+ .parallax-container {
+      height: 100vh
+    
+    }
+
+
+
+
+ul{
+    
+  margin-left: auto;
+    margin-right: auto;
+    width: 9em
+  }
+.skill{
+  
+  font-size:50px;
+  padding-right: 300px;
+}
+.title{
+ text-align: center;
+margin:200px;
+ grid-template-columns: 40px 50px auto 50px 40px;
+  grid-template-rows: 25% 100px auto;
+  
+
+
+}
+#about{
+  padding-top: 55px;
+  padding-bottom: 250px;
+  width: 900px;
+  margin-left:auto;
+  margin-right:auto;
+    
+  
+}
+#about #picofme{
+  width:500px;
+  float:left;
+  margin-botton:300px;
+  padding-bottom: 250px;
+}
+
+#about #aboutme{
+  width:350px;
+  float:right;
+  padding-bottom: 250px;}
+  
+#img{
+  width: 4px;
+  padding-left: 300px;
+  }
+  
+ 
+.socialmedia {
+    display: flex;
+    align-items: center;
+  justify-content: center;
+  }
+
+  #linked {
+    margin-right:40px;
+    margin
+    
+    
+  }
+
+
+
+.timeline-content h1{
+  font-size:20px;
+  color:white;
+ 
+ 
+}
+
+.timeline-content p{
+  font-size:10px;
+  color:white;
+  width:70%;
+ 
+  
+}
+table{
+  padding-bottom:40px;
+}

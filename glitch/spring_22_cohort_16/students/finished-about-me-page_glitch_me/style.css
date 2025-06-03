@@ -1,0 +1,76 @@
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 0em;
+  color: white;
+  background-color: #E4F0D0;
+}
+
+h1 {
+  font-style: bold;
+  
+}
+//.imgHeader{
+//  opacity= 0.05;
+//}
+.Header {
+  color: #FFFFFF;
+  //background-color: #E4F0D0;
+  font-family: helvetica, arial, sans-serif;
+  
+}
+
+.Header2 {
+  color: #FFFFFF;
+  //background-color: #E4F0D0;
+  font-family: helvetica, arial, sans-serif;
+  align-content: ;
+}
+.rounded{
+  width: 350px;
+  Height: 400px;
+  border: solid #FDE2FF 5px;
+  
+}
+.subTitles{
+  color: #FFFCF9; 
+  font-family: helvetica, arial, sans-serif;
+  //Background: #F4E9CD;
+  
+}
+.linkedIn{
+  width: 400px;
+  Height: 300px;
+
+}
+.spotify{
+  width: 400px;
+}
+
+.card-title{
+  font-family: helvetica, arial, sans-serif;
+  
+}
+
+.card{
+  background-color: #2B2B2B;
+
+
+}
+
+.frontcard{
+  background-color: #2B2B2B;
+
+}
+.card-img-top{
+  height: 550px;
+  width: 200;
+}
+
+
+.Name2{
+  color:#FFFFF;
+}
+
+.btn{
+  align-contetn: center;
+}

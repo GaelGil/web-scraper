@@ -1,0 +1,79 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+  color: black;
+  background-color: #D3FAC7;
+}
+
+h1 {
+  font-style: bold;
+  
+}
+//.imgHeader{
+//  opacity= 0.05;
+//}
+.Header {
+  color: #FFB7C3;
+  //background-color: #CFF2DD;
+  font-family: "Bungee Shade", cursive;
+  
+}
+
+.Header2 {
+  color: #1B2021;
+  //background-color: #CFF2DD;
+  font-family: "Bungee Shade", cursive;
+  align-content: ;
+}
+.rounded{
+  width: 350px;
+  Height: 400px;
+  border: solid #FDE2FF 5px;
+  
+}
+.subTitles{
+  color: #FFFCF9; 
+  font-family: "Bungee Shade";
+  //Background: #F4E9CD;
+  
+}
+.linkedIn{
+  width: 400px;
+  Height: 300px;
+
+}
+.spotify{
+  width: 400px;
+}
+
+.card-title{
+  font-family: "Bungee Shade";
+  
+}
+
+.card{
+  background-color: #E4F0D0;
+
+
+}
+
+.frontcard{
+  background-color: #9BA2FF;
+
+}
+.card-img-top{
+   height: 550px;
+  width: 200;
+}
+
+
+.Name2{
+  color:#1B2021;
+}
+
+.btn{
+  align-contetn: center;
+}
+

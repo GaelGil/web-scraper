@@ -1,0 +1,47 @@
+/* a minimalist set of CSS resets */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* adjust typography defaults */
+body {
+  margin:2rem;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 2.5;
+background-color: black;
+font-size: 35px;
+}
+.pictures{
+  width: 100px;  
+height: auto;  
+text-align: center;  
+padding: 15px;  
+ 
+}
+/* images and videos max out at full width */
+img,
+video {
+  height: 300px;
+ width: 414px;
+}
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 70px;
+  color: orange;
+ font-family:"Rubik Dirt", sans-serif;
+}
+.car_name{
+  font-size:38px;
+
+}

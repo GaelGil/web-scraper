@@ -1,0 +1,336 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://glitch.com/favicon.ico">
+
+    <title>Hello world!</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer=""></script>
+  </head>
+  
+  
+  <body>
+    <!-- this is the start of content -->
+<h1>
+  Cameron Wong's Webpage
+</h1>  
+    <!-- Tabs Set up-->
+<div>
+    
+<ul class="nav nav-tabs center">
+  <li class="nav-item">
+    <a href="#education" class="nav-link active" role="tab" data-toggle="tab">Home</a>
+  </li>
+  <li class="nav-item">
+    <a href="#experience" class="nav-link" role="tab" data-toggle="tab">Experience</a>
+  </li>
+
+</ul>
+    
+   <!-- Tab Content-->
+<div class="tab-content">
+  <!-- First Tab-->
+<div role="tabpanel" class="tab-pane active" id="education">
+    
+<div class="right">
+  
+  <div class="card aboutme">
+    <img src="https://cdn.glitch.com/186c0b84-71a3-4289-b62c-7619b0ff7d46%2FHeadshot.jpg?v=1625593338743" class="card-img-top" alt="Cam">
+      <div class="card-body">
+        <h5>About Me</h5>
+        <p class="card-text">I'm a 4th year Business Major concentrating in Financial Management.
+ I am currently learning the fundamentals of finance and have developed insight on how companies and individuals can make day to day financial decisions. 
+          I would be highly interesting in working on material related to financial management and to get more real world experience on the subject.</p>
+      </div>
+  </div>
+    
+      <!-- Accordian-->
+<div class="accordion acc-style" id="accordionExample">
+    <!-- Education Section-->
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Education
+        </button>
+      </h2>
+    </div>
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        <ul>
+          <li>
+            <h5 class="card-title">Cal Poly San Luis Obispo</h5>
+        <p class="card-text">
+          Major: Business Administration, Financial Management
+          <br>
+          Minor: Statistics
+          <br>
+          <small class="text-muted">Expected Graduation: June 2022</small>
+            </p>
+          </li>
+          <br>
+          <li>
+            <h5 class="card-title">Galileo High School</h5>
+        <p class="card-text"><small class="text-muted">2014 - 2018</small></p>
+          </li>
+          <br>
+          <li>
+            <h5 class="card-title">Central Chinese High School in America</h5>
+        <p class="card-text"><small class="text-muted">2005 - 2014</small></p>
+          </li>
+        </ul>  
+      </div>
+    </div>
+  </div>
+    
+    <!-- Clubs Section-->
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Clubs
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        <ul>
+          <li>Cal Poly Fintech
+            <br>
+            <a href="https://www.calpolyfintech.com/">CPF website</a>
+          </li>
+        </ul>
+        <ul>
+          <li>Financial Management Association (FMA)
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+     <!-- Skills Section--> 
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Skills
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        <h4>Languages</h4>
+        <ul>
+          <li>Cantonese</li>
+          <li>Mandarin</li>
+          <li>Spanish</li>
+        </ul>
+        <h4>Technical</h4>
+        <ul>
+          <li>Microsoft Office</li>
+          <li>R</li>
+          <li>SAS</li>
+          <li>HMTL</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+    <!-- Projects Section-->
+<div class="card">
+    <div class="card-header" id="headingFour">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Projects
+        </button>
+      </h2>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+      <div class="card-body">
+        <ul>
+          <li>Web apps
+            <br>
+            <a href="https://finance-returns.glitch.me">Glitch.me web app</a>
+            <br>
+            <a href="https://camwong.shinyapps.io/App-1/">R Shiny app</a>
+          </li>
+        </ul>
+        <ul>
+          <li>Tinkercad
+            <br>
+            <a href="https://www.tinkercad.com/things/5w84QTiKS3i-pitch-velocity-monitor/editel?sharecode=5gxQqvAXwTP3u7Jc9www86tPoZFNiJpSgPIoul0tPbo">Pitch velocity machine</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+       <!-- Contact Section--> 
+  <div class="card">
+    <div class="card-header" id="headingFive">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          Contact Info.
+        </button>
+      </h2>
+    </div>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+      <div class="card-body">
+        <p>
+          <h7>Email: camwong16@gmail.com</h7>
+          <br>
+          <h7>Phone: (415)-471-5218</h7>
+          <br>
+          <h7>LinkedIn: <a href="https://www.linkedin.com/in/cameron-wong-922163180">Profile</a></h7>
+        </p>
+      </div>
+    </div>
+  </div> 
+</div>
+  
+</div>
+  
+</div>
+  <!-- First Tab END-->
+  
+  <!-- Second Tab-->
+<div role="tabpanel" class="tab-pane" id="experience">
+    <div class="work-type">
+      <h3>Volunteer</h3>
+      <h3>Work</h3>
+    </div>
+  
+  <div class="work">
+  <!-- Volunteer Experince #1-->
+  <div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+      <div class="col-md-4">
+      <img src="https://cdn.glitch.com/186c0b84-71a3-4289-b62c-7619b0ff7d46%2FUSF.png?v=1625612269697" class="card-img" alt="USF">
+      </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">USF - Coach</h5>
+        <p class="card-text"><small class="text-muted">June 2016 - August 2016</small></p>
+        <p class="card-text">
+          </p><ul>
+            <li>Learned and applied leadership skills through coaching players from ages 6-13</li>
+            <li>Refined specific skills and mechanics of baseball fundamentals (Mon.- Thurs.)</li>
+            <li>Emphasized teamwork, positive mindsets, and sportsmanship through mini-games (Fri.)</li>
+          </ul>
+        <p></p>
+      </div>
+    </div>
+</div>
+</div>
+  
+  <!-- Work Experince #1--> 
+  <div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+      <div class="col-md-4">
+      <img src="https://cdn.glitch.com/186c0b84-71a3-4289-b62c-7619b0ff7d46%2Fdevmission.png?v=1625611162533" class="card-img" alt="dev/mission">
+      </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Dev/Mission - Intern</h5>
+        <p class="card-text"><small class="text-muted">June 2021 - August 2021</small></p>
+        <p class="card-text">
+          </p><ul>
+            <li>Learned programming languages, basic circuits, and career biulding skills </li>
+            <li>Applied skills in projects like designing websites, programming working circuits, and mock interviews.</li>
+            <li>Built connections through a fun and ineractive online environment</li>
+          </ul>
+        <p></p>
+    </div>
+    </div>
+</div>
+</div>
+
+<!-- Volunteer Experince #2-->
+  
+  <div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+      <div class="col-md-4">
+      <img src="https://cdn.glitch.com/186c0b84-71a3-4289-b62c-7619b0ff7d46%2FYMojo.jpg?v=1625612262754" class="card-img" alt="Youth Mojo">
+      </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Youth Mojo - Volunteer</h5>
+        <p class="card-text"><small class="text-muted">June 2015 - August 2015</small></p>
+        <p class="card-text">
+          </p><ul>
+            <li>Educated neighborhoods within S.F about social issues like wage theft</li>
+            <li>Petitioned for wrongly detained immigrant</li>
+            <li>Outreached to organizations to join our “Day of Action”</li>
+          </ul>
+        <p></p>
+      </div>
+    </div>
+</div>
+</div>
+  
+  <!-- Work Experince #2-->
+  
+  <div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+      <div class="col-md-4">
+      <img src="https://cdn.glitch.com/186c0b84-71a3-4289-b62c-7619b0ff7d46%2FHM.png?v=1625611165454" class="card-img" alt="H&amp;M">
+      </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">H&amp;M - Sales Associate</h5>
+        <p class="card-text"><small class="text-muted">June 2020 - November 2020</small></p>
+        <p class="card-text">
+          </p><ul>
+            <li>Assisted customers with department locations, changing rooms, and garment preferences</li>
+            <li>Processed new inventory and tracked current inventory via RFID</li>
+            <li>Developed communication skills with peers and customers via phone and radio</li>
+          </ul>
+        <p></p>
+      </div>
+    </div>
+</div>
+</div>
+  
+
+  
+    <!-- Volunteer Experince #3-->
+  <div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+      <div class="col-md-4">
+      <img src="https://cdn.glitch.com/186c0b84-71a3-4289-b62c-7619b0ff7d46%2FChouse.png?v=1625612265960" class="card-img" alt="Cameron House">
+      </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Cameron House - Leader</h5>
+        <p class="card-text"><small class="text-muted">June 2014 - August 2014</small></p>
+        <p class="card-text">
+          </p><ul>
+            <li>Planned and executed day to day activities for 30 incoming 7th graders</li>
+            <li>Maintained safety of campers in public areas including public transportation</li>
+            <li>Addressed parents questions and concerns in a professional and reassuring manner</li>
+          </ul>
+        <p></p>
+      </div>
+    </div>
+</div>
+</div>
+  </div>
+  
+</div>
+  <!-- Second Tab END-->
+  
+</div>
+  
+</div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  
+
+
+
+</body></html>

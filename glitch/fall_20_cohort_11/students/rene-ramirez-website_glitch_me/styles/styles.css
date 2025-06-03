@@ -1,0 +1,58 @@
+/* CSS files add styling rules to your content */
+#hoverIMG{
+    display:none;
+}
+#reneIMG:hover #hoverIMG{
+    display: block;
+}
+#reneIMG:hover #reneIMG{
+    display:none;
+}
+.navbar .navbar-nav{
+    margin-top: 2.5em;
+    font-size: 1.4em;
+    position: fixed;
+    left: 50%;
+    transform: translatex(-50%);
+    text-transform:uppercase;
+}
+
+.btn{
+    margin-bottom: 0.5em;
+}
+body {
+    font-family: helvetica, arial, sans-serif;
+    margin: 2em;
+  }
+  
+  h1 {
+    font-style: italic;
+    color: #373fff;
+}
+.main{
+    display: flex;
+    justify-content: space-around;
+}
+.display-4 {
+    text-align: center;
+}
+.desJumbo{
+    text-align: center;
+}
+.btnDiv{
+  margin-top:50px;
+}
+.aboutMeBtn{
+  text-decoration: none !important;
+  color: black;
+  background-color: white;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.aboutMeBtn:hover{
+  background-image: linear-gradient(to bottom right, #42588B, #A1AECB);
+  color:white;
+  border-width: 0.1px;
+}

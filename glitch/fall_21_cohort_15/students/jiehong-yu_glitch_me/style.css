@@ -1,0 +1,16 @@
+:root {
+  
+}
+
+p {
+  font: monospace;
+}
+
+.btn-group {
+  padding-top: 10px;
+  width: 100%;
+}
+
+.card-group {
+  padding: 50px;
+}

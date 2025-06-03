@@ -1,0 +1,334 @@
+body{
+  background-color:#343a40;
+}
+.carousel-inner img {
+  width: 100%; /* Ensures the image takes the full width */
+  height: 500px; /* Set a fixed height */
+  object-fit:cover; /* Ensures the image covers the area without distortion */
+}
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%; /* Adjust the width as needed */
+}
+
+.carousel-control-prev {
+  left: 10px; /* Adjust the left position */
+}
+
+.carousel-control-next {
+  right: 10px; /* Adjust the right position */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: add a background color */
+  border-radius: 50%; /* Optional: make it circular */
+  width: 30px; /* Set a specific width */
+  height: 30px; /* Set a specific height */
+}
+
+/* Darken the background on hover */
+.carousel-item {
+  
+  position: relative;
+}
+
+.carousel-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0); /* Start with transparent background */
+  transition: background 0.5s ease; /* Transition effect */
+  z-index: 1;
+}
+
+.carousel-item:hover::before {
+  background: rgba(0, 0, 0, 0.5); /* Darken background on hover */
+}
+
+/* Carousel text animation and hover display */
+.carousel-caption {
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.carousel-item:hover .carousel-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.carousel-caption h3 {
+  font-size: 2rem;
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+.carousel-caption p {
+  font-size: 1.25rem;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+.navbar {
+  background-color: #343a40 !important; /* Dark background with !important */
+  padding: 10px 20px;
+  border-bottom: 2px solid #555; /* Subtle bottom border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+.navbar-brand {
+  color: #ffffff !important;
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #00b4d8 !important; /* Hover color change with !important */
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="%23ffffff" viewBox="0 0 16 16"%3E%3Cpath fill-rule="evenodd" d="M1.5 12.5a.5.5 0 010-1h13a.5.5 0 010 1h-13zm0-5a.5.5 0 010-1h13a.5.5 0 010 1h-13zm0-5a.5.5 0 010-1h13a.5.5 0 010 1h-13z"%3E%3C/path%3E%3C/svg%3E');
+  /* White toggle icon for better contrast */
+}
+
+/* Ensure the navbar links are styled consistently */
+.navbar-nav .nav-item {
+  position: relative; /* Required to position the dropdown menu */
+}
+
+.navbar-nav .nav-item .dropdown-menu {
+  display: none; /* Hide the dropdown menu initially */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333; /* Dropdown background to match your color scheme */
+  border: 2px solid #00b4d8; /* Add a green border to the dropdown */
+  border-radius: 5px;
+  padding: 10px;
+  min-width: 200px;
+  z-index: 1000;
+}
+
+.navbar-nav .nav-item .dropdown-menu a {
+  color: white; /* White text inside the dropdown */
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-nav .nav-item .dropdown-menu a:hover {
+  background-color: #00b4d8; /* Green hover effect */
+  color: white;
+}
+
+/* Show dropdown on hover */
+.navbar-nav .nav-item:hover .dropdown-menu {
+  display: block; /* Show the dropdown on hover */
+}
+
+/* Adjust spacing and hover effects */
+.navbar-nav .nav-item:hover > .nav-link {
+  background-color: #00b4d8; /* Green background for active link */
+  color: white; /* White text for active link */
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #00b4d8; /* Hover effect for regular links */
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-nav .nav-item .dropdown-menu {
+    position: static; /* Make dropdown menus inline for mobile */
+  }
+}
+
+.linkedinlogo{
+  height:25px;
+  padding-bottom:2px;
+  margin-bottom:2px;
+  
+}
+
+
+
+/* Container for the image and text */
+.image-text-container {
+  
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: space-between;
+   display: flex;
+  align-items: center;
+  padding-right: 50px;
+  padding-left:50px;
+  padding-top:55px;
+  background-color: #343a40; /* Dark background for the container */
+  gap: 200px;
+}
+
+/* Image placeholder styling */
+.image-placeholder {
+  display: flex;
+  padding:0 100px;
+ 
+  justify-content: center; /* Centers the image horizontally */
+  margin-bottom: 20px; /* Adds some space below the image */
+}
+
+.image-placeholder img {
+  width: 250px; /* Set the desired image width */
+  height: 250px; /* Set the desired image height */
+  border-radius: 50%; /* Makes the image circular */
+  border: 3px solid #00b4d8; /* Green border around the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  object-fit: cover; /* Ensures the image is properly cropped inside the circle */
+  
+}
+
+
+
+
+
+
+
+
+/* Text box styling */
+.text-box {
+
+  color: white;
+  
+  max-width: 25%; /* Set a max width to reduce the size of the text box */
+  border: 2px solid #00b4d8; /* Add a green border around the text box */
+  padding: 10px 100px; /* Add padding inside the text box */
+  border-radius: 5px; /* Round the corners of the border */
+  
+  align-items: center; /* Center text within the box vertically */
+  background-color: #333333; /* Darker background inside the text box */
+}
+
+.text-box p {
+  color: white; /* Keep the text inside the box white for contrast */
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0; /* Remove margin to align text properly */
+  text-align: center; /* Center text horizontally */
+}
+
+
+
+
+
+/* Skills List Styling */
+.skills-list {
+  flex: 2;
+  border: 2px double #00b4d8; /* Green double border */
+  max-width: 400px; /* Set a maximum width to keep it compact */
+  margin: 0 auto; /* Center the list inside its container */
+  padding: 15px;
+  background-color: #333333; /* Dark background for skills list */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.skills-title {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.5em;
+  color: #00b4d8; /* Green color for title */
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #00b4d8; /* Green underline */
+  padding-bottom: 5px;
+}
+
+.skills-list ul {
+  list-style-type: none;
+  padding-left: 0; /* Remove extra padding on the left */
+  font-family: Arial, sans-serif;
+}
+
+.skills-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Reduced space between items */
+  padding: 8px; /* Reduced padding to make the list more compact */
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.skills-list li:hover {
+  background-color: #00b4d8; /* Green background on hover */
+  color: white; /* White text on hover */
+}
+
+.skills-list .icon {
+  color: #00b4d8; /* Green color for the icon */
+  margin-right: 10px; /* Reduced margin for more compact layout */
+  font-size: 1.2em;
+}
+
+.skills-list li span {
+  font-size: 1.1em;
+  color: #ffffff; /* White text for the list items */
+  font-weight: 500;
+}
+
+.skills-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .image-text-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-placeholder img {
+    width: 100%;
+    height: auto;
+  }
+
+  .text-box {
+    max-width: 100%; /* Allow the text box to take full width on small screens */
+    text-align: center;
+  }
+}

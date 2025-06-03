@@ -38,32 +38,40 @@ def download_resource(resource_url, folder, base_url):
 
 
 
-for key in directories.keys():
+for key, value in directories.items():
     # folder_name = f'./{key}' 
     parent_folder = f'./{key}'
+    # print(key)
+    # print(value)
+    # print()
+    for i in range(len(value)):
+        # print(value[i])
+        url = value[i]
+    # for:
+    #     print(value)
     # print(folder_name)
     # for url in urls:
-    #     print(f"📥 Downloading: {url}")
-    #     driver.get(url)
-    #     time.sleep(3)  # Allow time for dynamic content to load
+        print(f"📥 Downloading: {url}")
+        driver.get(url)
+        time.sleep(3)  # Allow time for dynamic content to load
 
-    #     folder_name = sanitize_folder_name(url)
-    #     folder_name = f'{parent_folder}/students/{folder_name}'
-    #     os.makedirs(folder_name, exist_ok=True)
+        folder_name = sanitize_folder_name(url)
+        folder_name = f'{parent_folder}/students/{folder_name}'
+        os.makedirs(folder_name, exist_ok=True)
 
-    #     # Save page HTML
-    #     html = driver.page_source
-    #     with open(os.path.join(folder_name, "index.html"), "w", encoding="utf-8") as f:
-    #         f.write(html)
+        # Save page HTML
+        html = driver.page_source
+        with open(os.path.join(folder_name, "index.html"), "w", encoding="utf-8") as f:
+            f.write(html)
 
-    #     # Parse HTML to find static assets
-    #     soup = BeautifulSoup(html, "html.parser")
-    #     tags = soup.find_all(["img", "link", "script"])
+        # Parse HTML to find static assets
+        soup = BeautifulSoup(html, "html.parser")
+        tags = soup.find_all(["img", "link", "script"])
 
-    #     for tag in tags:
-    #         src = tag.get("src") or tag.get("href")
-    #         if src and not src.startswith("data:"):
-    #             download_resource(src, folder_name, url)
+        for tag in tags:
+            src = tag.get("src") or tag.get("href")
+            if src and not src.startswith("data:"):
+                download_resource(src, folder_name, url)
 
 driver.quit()
 print("✅ All downloads complete.")

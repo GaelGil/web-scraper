@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Fugaz One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/fugazone/v20/rax_HiWKp9EAITukFslMBA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Paytone One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/paytoneone/v24/0nksC9P7MfYHj2oFtYm2CiTq.ttf) format('truetype');
+}

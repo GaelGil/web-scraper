@@ -1,0 +1,25 @@
+.row {
+  background-color: lightblue;
+}
+
+.photo {
+  border: 5px solid white;
+}
+
+.exp {
+  border-radius: 50%;
+  border: 3px solid black;
+}
+
+.edu {
+  border-radius: 10%;
+  border: 3px solid black;
+}
+
+.place {
+  font-size: 30px;
+}
+
+.date {
+  font-size: 20px;
+}

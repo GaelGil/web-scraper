@@ -1,0 +1,16 @@
+h1{
+  font-family: Benne;
+  padding-top:100px;
+  font-size: 40px;
+  
+}
+.nav-item {
+  color: #EBDEF0;
+}
+
+
+.me {
+  border-radius: 50%
+}
+body { background-color: #b79184 !important;
+}

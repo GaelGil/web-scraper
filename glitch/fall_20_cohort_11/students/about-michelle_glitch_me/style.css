@@ -1,0 +1,130 @@
+/* CSS files add styling rules to your content */
+body {
+  background-color: #f7e6ff;
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+a{
+  color: purple;
+}
+
+
+.email {
+  font-family: 'Quicksand', sans-serif;
+  color: #4d0066;
+  justify-content: flex-end;
+}
+
+.phone {
+  font-family: 'Quicksand', sans-serif;
+  color: #4d0066;
+  text-align: right;
+  padding-right:11.8em;
+}
+
+.logo{
+  display: block;
+  margin-left: 37em;
+  margin-right: auto;
+}
+
+.col-md{
+  text-align: center;
+  margin-left: 20em;
+}
+
+.col-sm{
+  border: solid white;
+  text-align: center;
+  margin-right: 24em;
+  color: #4d0066;
+}
+
+.aboutme {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+  border: solid;
+}
+
+.resume{
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 1.2em;
+  padding-left: 4em;
+}
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: purple;
+  border: 1px solid purple;
+  border-radius: 5px/10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: purple;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 0.5s;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 2px;
+  width: 30%;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+
+.popup h2 {
+  margin: 10px;
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 16px;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 400ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: purple;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}

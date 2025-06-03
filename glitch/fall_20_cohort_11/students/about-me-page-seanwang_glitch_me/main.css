@@ -1,0 +1,46 @@
+main {
+  height: 900px;
+}
+
+#Intro {
+  display: flex;
+  border-right: #C0C0C0 1px solid;
+}
+
+#Projects {
+  display: flex;
+  border-right: #C0C0C0 1px solid;
+}
+
+#Skills {
+  display: flex;
+  border-right: #C0C0C0 1px solid;
+}
+
+.container-right {
+  height: 300px;
+  width: 168px;
+}
+
+#Intro-left {
+  background: #C0C0C0;
+  height: 400px;
+}
+
+#Projects-left {
+  height: 400px;
+}
+
+#Skills-left {
+  background: #C0C0C0;
+  height: 400px;
+}
+
+.skill-set {
+  position: relative;
+  top: 120px;
+}
+
+.project-container {
+  padding-top: 36px;
+}
