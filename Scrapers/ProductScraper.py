@@ -6,6 +6,16 @@ contain a brief description of exported classes and functions and/or usage
 examples.
 
   Typical usage example:
+    from DriverManager import DriverManager
+    from ScraperSetUp import CONFIG
+    from Scrapers.ProductsScraper import ProductsScraper
+
+    products = ['product_link1', 'product_link2']
+    driver_manager = DriverManager(CONFIG['DRIVER_PATH'], CONFIG['HEADLESS'])
+    product_scraper = ProductScraper(driver=driver_manager, config=CONFIG_GOODREADS)
+    data = product_scraper.iterate_urls(products)
+    print(f'Data: {data}')
+
 
 """
 
