@@ -1,6 +1,6 @@
 CONFIG_GOODREADS = {
     'PRODUCT': {
-        'xpaths': {
+
             'title': "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[1]/div[1]/h1",
             'author' : "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[1]/h3/div/span[1]/a/span[1]",
             'rating': '//div[@class="RatingStatistics__rating"]',
@@ -10,14 +10,9 @@ CONFIG_GOODREADS = {
             'genres': '//ul[@class="CollapsableList"]//span[@class="Button__labelItem"]',
             'pages' : '//p[@data-testid="pagesFormat"]',
             'publish_date' : '//p[@data-testid="publicationInfo"]',
-        }
     },
-    'NEXT_PAGE_BUTTON_XPATH': {
-        'xpath' : '//a[@class="next_page" and @rel="next"]'
-    },
-    'PRODUCTS': {
-        'xpath': '//*[@id="bodycontainer"]/div[3]/div[1]/div[2]/div[2]/table/tbody/tr/td[2]/a'
-    },
+    'NEXT_PAGE_BUTTON_XPATH': '//a[@class="next_page" and @rel="next"]',
+    'PRODUCTS':  '//*[@id="bodycontainer"]/div[3]/div[1]/div[2]/div[2]/table/tbody/tr/td[2]/a',
     'MULTIPLE': {'genres' : 0},
     'URLS' : [],
     'DRIVER_PATH': './drivers/geckodriver',

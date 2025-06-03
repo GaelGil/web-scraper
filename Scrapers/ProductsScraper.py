@@ -94,8 +94,8 @@ class ProductsScraper(BaseScraper):
         """
         products = []
         try:
-            self.wait_found(self.config['PRODUCTS']['xpath'])
-            links = self.driver.find_elements(By.XPATH, self.config['PRODUCTS']['xpath'])
+            self.wait_found(self.config['PRODUCTS'])
+            links = self.driver.find_elements(By.XPATH, self.config['PRODUCTS'])
             products.extend([link.get_attribute('href') for link in links])
             self.log_message('i', f'Found links from {self.driver.current_url}')
         except NoSuchElementException:
@@ -120,7 +120,7 @@ class ProductsScraper(BaseScraper):
         if not next_page:
             return False
         try:
-            self.wait_click(self.config['NEXT_PAGE_BUTTON_XPATH']['xpath'])
+            self.wait_click(self.config['NEXT_PAGE_BUTTON_XPATH'])
             time.sleep(3) 
         except (NoSuchElementException, TimeoutException):
             self.log_message('w', 'Next button not found or not clickable')

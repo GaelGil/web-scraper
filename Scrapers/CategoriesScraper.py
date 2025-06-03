@@ -18,13 +18,11 @@ it is used.
 """
 
 from .BaseScraper import BaseScraper
-from ScrapedItem import ScrapedItem
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
-import requests
 import time
 
 class CategoriesScraper(BaseScraper):
@@ -64,7 +62,6 @@ class CategoriesScraper(BaseScraper):
         Returns: 
             None
         """
-        # categories = []
         self.get_url(url=url)
         try:
             self.wait_click(self.config['CATEGORIES_BUTTON'])
@@ -74,6 +71,17 @@ class CategoriesScraper(BaseScraper):
             return
         return [link.text for link in categories_links]
     
+    def generate_urls(self, url: str, categories: list) -> list:
+        """
+        """
+        urls = []
+        for category in categories:
+            if not category:
+                continue
+            urls.append(url % category)
+        return urls
+
+
     def next_page(self, next_page: bool) -> str:
         """This function sets the next page
 

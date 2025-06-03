@@ -68,7 +68,7 @@ class ProductScraper(BaseScraper):
         for product in products: # for each link
             self.get_url(product) # set url for each link
             item = ScrapedItem() # create a scraped item instance
-            for key, xpath in self.config['PRODUCT']['xpaths'].items(): # for each item and dictionary
+            for key, xpath in self.config['PRODUCT'].items(): # for each item and dictionary
                 elements = self.scrape(key, xpath) # get the elements using xpath
                 item.add_field(key, elements) # insert the data collceted to scrapeditem
             data.append(item) # add item to list
@@ -124,7 +124,7 @@ class ProductScraper(BaseScraper):
         if not next_page:
             return False
         try:
-            self.wait_click(self.config['NEXT_PAGE_BUTTON_XPATH']['xpath'])
+            self.wait_click(self.config['NEXT_PAGE_BUTTON_XPATH'])
             time.sleep(3) 
         except (NoSuchElementException, TimeoutException):
             self.log_message('w', 'Next button not found or not clickable')
