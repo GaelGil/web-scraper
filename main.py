@@ -3,7 +3,6 @@ from ScraperSetUp import CONFIG_GOODREADS
 from Scrapers.ProductScraper import ProductScraper
 from Scrapers.ProductsScraper import ProductsScraper
 from Scrapers.CategoriesScraper import CategoriesScraper
-from helper import make_urls
 
 #TODO: updated readme again
 
