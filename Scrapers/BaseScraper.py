@@ -43,10 +43,13 @@ class BaseScraper(ABC):
             Function to set the url that we will scrape
 
         wait_click(self, xpath: str, time: int=15)
+            This function waits for a element to be clickable then clicks it
 
         wait_found(self, xpath: str, time: int=15)
+            This function waits for a element to be located
 
         log_message(self,log_type: str, message: str)
+            Function to log a message
 
         scrape(self)
             Abstract method to be implemented by other scraper classes
@@ -58,18 +61,38 @@ class BaseScraper(ABC):
             Abstract method to be implemented by other scraper classes
     """
     def __init__(self, driver, config):
-        """
+        """This function initaliazes the class
+
+        Args:
+            driver: The web driver used for scraping
+            config: important information for the webscraper
+
+        Returns:
+            None
         """
         self.driver = driver.get_driver()
         self.config = config
 
     def get_url(self, url: str) -> None:
-        """
+        """This function sets the url we are going to scrape
+
+        Args:
+            url: The url that we want to scrape from
+
+        Returns:
+            None
         """
         self.driver.get(url)
 
     def wait_click(self, xpath: str, time: int=15) -> None:
-        """
+        """This function waits for a element to be clickable then clicks it
+
+        Args:
+            xpath: The xpath to the element we want to click
+            time: The time we wait until we look for it
+            
+        Returns:
+            None
         """
         try:
             button = WebDriverWait(self.driver, time).until(EC.element_to_be_clickable((By.XPATH, xpath))) 
@@ -78,7 +101,14 @@ class BaseScraper(ABC):
             self.log_message('w', 'NoSuchElementException element not found')
 
     def wait_found(self, xpath: str, time: int=15) -> None:
-        """
+        """This function waits for a element to be located
+
+        Args:
+            xpath: The xpath to the element we want to locate
+            time: The time we wait until we look for it
+            
+        Returns:
+            None
         """
         try:
             wait = WebDriverWait(self.driver, time)
@@ -87,7 +117,15 @@ class BaseScraper(ABC):
             self.log_message('w', 'NoSuchElementException element not found')
 
     def log_message(self, log_type: str, message: str='') -> None:
-        """
+        """Function to log a message
+        Args:
+            log_type: A string to represent the type of message we
+                want to log
+            message: The message we want to log. Set to an empty string 
+                by default
+            
+        Returns:
+            None
         """
         if log_type == 'e':
             logger.exception(message)
