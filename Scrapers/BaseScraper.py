@@ -154,7 +154,7 @@ class BaseScraper(ABC):
         """
         element = ''
         try:
-            element = self.driver.find_elements(By.XPATH, xpath)
+            element = self.driver.find_element(By.XPATH, xpath)
         except TimeoutException:
             self.log_message('e', f'Timeout Exception {e}')
         except NoSuchElementException:

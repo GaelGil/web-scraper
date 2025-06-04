@@ -81,11 +81,11 @@ class ProductScraper(BaseScraper):
         """
         elements = ''
         if key in self.config['MULTIPLE']:
-            elements = self.get_elements(By.XPATH, xpath)
+            elements = self.get_elements(xpath)
             elements = [el.text.strip() for el in elements if el.text.strip()]
             elements = ' '.join(elements)
         else:
-            element = self.get_element(By.XPATH, xpath)
+            element = self.get_element(xpath)
             if key == 'img':
                 img = element.get_attribute('src')
                 with open(f'{img}.png', 'wb') as f:
