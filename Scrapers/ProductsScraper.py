@@ -97,59 +97,9 @@ class ProductsScraper(BaseScraper):
             self.wait_found(self.config['PRODUCTS'])
             links = self.driver.find_elements(By.XPATH, self.config['PRODUCTS'])
             products.extend([link.get_attribute('href') for link in links])
-            self.log_message('i', f'Found links from {self.driver.current_url}')
+            self.log_message('i', f'Found links from {self.current_url()}')
         except NoSuchElementException:
             self.log_message('w', 'No item links found on the page')
         except Exception as e:
             self.log_message('e', 'Failed to scrape item links')
         return products
-
-    def next_page(self, next_page: bool) -> str:
-        """This function sets the next page
-
-        Using the config, this function tries to find the next page button. If we
-        find it we click it. If we can't find it we return false. If we do find it
-        we return the url of the page we are on after clicking the next page button.
-
-        Args:
-            next_page: A boolean to see if we need to check for next page
-
-        Returns: 
-            str
-        """
-        if not next_page:
-            return False
-        try:
-            self.wait_click(self.config['NEXT_PAGE_BUTTON_XPATH'])
-            time.sleep(3) 
-        except (NoSuchElementException, TimeoutException):
-            self.log_message('w', 'Next button not found or not clickable')
-            return False
-        except Exception as e:
-            self.log_message('e', 'Unexpected error while navigating to next page')
-            return False
-        return self.driver.current_url # return url of page we are on
-        
-    def handle_popup(self, popup: bool):
-        """This function handles a popup if it is detected
-
-        Using the config, this function closes a popup if it appears on the page. 
-
-        Args:
-            popup: A boolean to see if we need to check for a popup
-
-        Returns: 
-            None
-        """
-        if not popup:
-            return 
-        time.sleep(5)  
-        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        try:
-            popup = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.XPATH, "//div[contains(@class, 'modal__content')]")))
-            self.log_message('i', 'Popup detected!')
-            close_button = WebDriverWait(self.driver, 5).until(EC.element_to_be_clickable((By.XPATH, "//div[contains(@class, 'modal__close')]//button")))
-            close_button.click()
-            self.log_message('i', 'Popup closed.')
-        except TimeoutException:
-            self.log_message('i', 'Popup not detected or not visible, continuing...')
