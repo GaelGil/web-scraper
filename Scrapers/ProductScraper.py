@@ -20,8 +20,6 @@ it is used.
 from .BaseScraper import BaseScraper
 from ScrapedItem import ScrapedItem
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
 import requests
 
 class ProductScraper(BaseScraper):
@@ -88,20 +86,18 @@ class ProductScraper(BaseScraper):
             list
         """
         elements = ''
-        try:
-            if key in self.config['MULTIPLE']:
-                elements = self.driver.find_elements(By.XPATH, xpath)
-                elements = [el.text.strip() for el in elements if el.text.strip()]
-                elements = ' '.join(elements)
-            else:
-                element = self.driver.find_element(By.XPATH, xpath)
-                if key == 'img':
-                    img = element.get_attribute('src')
-                    with open(f'{img}.png', 'wb') as f:
-                        f.write(requests.get(img).content)
-                    return img
-                elements = element.text.strip()
-        except Exception as e:
-            self.log_message('e', 'Error while scraping handling data')
+        if key in self.config['MULTIPLE']:
+            elements = self.get_elements(By.XPATH, xpath)
+            elements = [el.text.strip() for el in elements if el.text.strip()]
+            elements = ' '.join(elements)
+        else:
+            element = self.get_element(By.XPATH, xpath)
+            if key == 'img':
+                img = element.get_attribute('src')
+                with open(f'{img}.png', 'wb') as f:
+                    f.write(requests.get(img).content)    
+                return img
+            elements = element.text.strip()
         return elements
+
     

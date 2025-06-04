@@ -18,10 +18,6 @@ it is used.
 
 from .BaseScraper import BaseScraper
 from selenium.webdriver.common.by import By
-from selenium.common.exceptions import NoSuchElementException, TimeoutException
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
-import time
 
 class ProductsScraper(BaseScraper):
     """
@@ -93,13 +89,8 @@ class ProductsScraper(BaseScraper):
             list
         """
         products = []
-        try:
-            self.wait_found(self.config['PRODUCTS'])
-            links = self.driver.find_elements(By.XPATH, self.config['PRODUCTS'])
-            products.extend([link.get_attribute('href') for link in links])
-            self.log_message('i', f'Found links from {self.current_url()}')
-        except NoSuchElementException:
-            self.log_message('w', 'No item links found on the page')
-        except Exception as e:
-            self.log_message('e', 'Failed to scrape item links')
+        self.wait_found(self.config['PRODUCTS'])
+        links = self.get_elements(By.XPATH, self.config['PRODUCTS'])
+        products.extend([link.get_attribute('href') for link in links])
+        self.log_message('i', f'Found links from {self.current_url()}')
         return products
