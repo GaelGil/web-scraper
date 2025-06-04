@@ -20,8 +20,9 @@ from abc import ABC, abstractmethod
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import NoSuchElementException, TimeoutException
 import logging
+import time
 
 logging.basicConfig(
     level=logging.INFO,  
@@ -136,21 +137,68 @@ class BaseScraper(ABC):
             logger.warning(message)
         else:
             logger.info(message)
+    
+    def get_element(self):
+        pass
+
+    def get_elements(self):
+        pass
+
+    def current_url(self) -> str:
+        return self.driver.current_url
+    
+    def next_page(self, next_page: bool) -> str:
+        """This function sets the next page
+
+        Using the config, this function tries to find the next page button. If we
+        find it we click it. If we can't find it we return false. If we do find it
+        we return the url of the page we are on after clicking the next page button.
+
+        Args:
+            next_page: A boolean to see if we need to check for next page
+
+        Returns: 
+            str
+        """
+        if not next_page:
+            return False
+        try:
+            self.wait_click(self.config['NEXT_PAGE_BUTTON_XPATH'])
+            time.sleep(3) 
+        except (NoSuchElementException, TimeoutException):
+            self.log_message('w', 'Next button not found or not clickable')
+            return False
+        except Exception as e:
+            self.log_message('e', 'Unexpected error while navigating to next page')
+            return False
+        return self.current_url() # return url of page we are on
+        
+    def handle_popup(self, popup: bool):
+        """This function handles a popup if it is detected
+
+        Using the config, this function closes a popup if it appears on the page. 
+
+        Args:
+            popup: A boolean to see if we need to check for a popup
+
+        Returns: 
+            None
+        """
+        if not popup:
+            return 
+        time.sleep(5)  
+        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        try:
+            popup = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.XPATH, "//div[contains(@class, 'modal__content')]")))
+            self.log_message('i', 'Popup detected!')
+            close_button = WebDriverWait(self.driver, 5).until(EC.element_to_be_clickable((By.XPATH, "//div[contains(@class, 'modal__close')]//button")))
+            close_button.click()
+            self.log_message('i', 'Popup closed.')
+        except TimeoutException:
+            self.log_message('i', 'Popup not detected or not visible, continuing...')
 
     @abstractmethod
     def scrape(self):
-        """Abstract method to be implemented by other scraper classes
-        """
-        pass
-
-    @abstractmethod
-    def next_page(self):
-        """Abstract method to be implemented by other scraper classes
-        """
-        pass
-
-    @abstractmethod
-    def handle_popup(self):
         """Abstract method to be implemented by other scraper classes
         """
         pass
