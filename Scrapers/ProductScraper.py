@@ -35,12 +35,6 @@ class ProductScraper(BaseScraper):
 
         scrape(self, key: str, xpath: str)
             Function to scrape data from a product
-
-        next_page(self, next_page: bool)
-            This function sets the next page
-
-        handle_popup(self, popup: bool)
-            This function handles a popup if it is detected
     """
 
     def iterate_urls(self, products: list) -> dict:

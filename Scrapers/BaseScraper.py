@@ -12,9 +12,6 @@ The webdriver and the config
   scraper = SiteSpecificScraper(config, driver)
     
 """
-#TODO: update the base scraper to only interect with driver
-#TDOO: update base scraper to have next_page 
-#TODO: update base scraper to have popup page
 
 from abc import ABC, abstractmethod
 from selenium.webdriver.support.ui import WebDriverWait
@@ -54,6 +51,15 @@ class BaseScraper(ABC):
 
         log_message(self,log_type: str, message: str)
             Function to log a message
+
+        get_element(self, xpath: str)
+            Function to get a element
+
+        get_elements(self, xpath: str)
+            Function to get elements
+
+        current_url(self)
+            Function to get the current url 
 
         scrape(self)
             Abstract method to be implemented by other scraper classes
@@ -138,13 +144,52 @@ class BaseScraper(ABC):
         else:
             logger.info(message)
     
-    def get_element(self):
-        pass
+    def get_element(self, xpath: str) -> str:
+        """Function to get a element
+        Args:
+            xpath: The xpath of the element we want
+            
+        Returns:
+            str
+        """
+        element = ''
+        try:
+            element = self.driver.find_elements(By.XPATH, xpath)
+        except TimeoutException:
+            self.log_message('e', f'Timeout Exception {e}')
+        except NoSuchElementException:
+            self.log_message('e', f'No such element Exception {e}')
+        except Exception as e:
+            self.log_message('e', f'Exception {e}')
+        return element
 
-    def get_elements(self):
-        pass
+    def get_elements(self, xpath: str) -> str:
+        """Function to get elements
+        Args:
+            xpath: The xpath of the elements we want
+            
+        Returns:
+            str
+        """
+        elements = ''
+        try:
+            elements = self.driver.find_elements(By.XPATH, xpath)
+        except TimeoutException:
+            self.log_message('e', f'Timeout Exception {e}')
+        except NoSuchElementException:
+            self.log_message('e', f'No such element Exception {e}')
+        except Exception as e:
+            self.log_message('e', f'Exception {e}')
+        return elements
 
     def current_url(self) -> str:
+        """Function to get the current url 
+        Args:
+            None
+
+        Returns:
+            str
+        """
         return self.driver.current_url
     
     def next_page(self, next_page: bool) -> str:

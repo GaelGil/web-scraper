@@ -38,12 +38,6 @@ class CategoriesScraper(BaseScraper):
 
         scrape(self, key: str, xpath: str)
             Function to scrape data from a product
-
-        next_page(self, next_page: bool)
-            This function sets the next page
-
-        handle_popup(self, popup: bool)
-            This function handles a popup if it is detected
     """
 
     def scrape(self, url: str) -> list:
@@ -60,7 +54,7 @@ class CategoriesScraper(BaseScraper):
             xpath:  The xpath of the categories. 
 
         Returns: 
-            None
+            list
         """
         self.get_url(url=url)
         try:

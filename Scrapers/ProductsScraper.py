@@ -32,12 +32,6 @@ class ProductsScraper(BaseScraper):
 
         scrape(self)
             Function to scrape data links from a page
-
-        next_page(self, next_page: bool)
-            This function sets the next page
-
-        handle_popup(self, popup: bool)
-            This function handles a popup if it is detected
     """
 
     def iterate_urls(self, next_page: bool, popup: bool, count: int=1, stop: int=5) -> list:
