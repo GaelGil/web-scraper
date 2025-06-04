@@ -14,11 +14,11 @@ if __name__ == "__main__":
     categories_scraper = CategoriesScraper(driver=driver_manager, config=CONFIG_GOODREADS)
     categories = categories_scraper.scrape('https://www.goodreads.com/genres')
     # generate urls
-    CONFIG_GOODREADS['URLS'] = categories_scraper.generate_urls('https://www.goodreads.com/search?page=1&q=%s&qid=x02cPlELXg&tab=books', categories)
+    CONFIG_GOODREADS['URLS'] = categories_scraper.generate_urls('https://www.goodreads.com/search?page=99&q=%s&qid=x02cPlELXg&tab=books', categories)
     
     # get products from page
     products_scraper = ProductsScraper(driver=driver_manager, config=CONFIG_GOODREADS)
-    products = products_scraper.iterate_urls(stop=2, next_page=True, popup=True)
+    products = products_scraper.iterate_urls(stop=1000, next_page=True, handle_popup=True)
 
     # # scrape individual products data
     product_scraper = ProductScraper(driver=driver_manager, config=CONFIG_GOODREADS)

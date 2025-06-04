@@ -34,7 +34,7 @@ class ProductsScraper(BaseScraper):
             Function to scrape data links from a page
     """
 
-    def iterate_urls(self, next_page: bool, popup: bool, count: int=1, stop: int=5) -> list:
+    def iterate_urls(self, next_page: bool, handle_popup: bool, count: int=1, stop: int=5) -> list:
         """Function to visit websites and scrape links to products
         
         Using the config set in the scraper. We itterate urls of pages
@@ -59,12 +59,13 @@ class ProductsScraper(BaseScraper):
             self.get_url(self.config['URLS'][i])
             products.extend(self.scrape())
             while count != stop: # while we are not done
-                self.handle_popup(popup)
+                self.handle_popup(handle_popup, self.config['POPUP'], self.config['POPUP_BUTTON'])
                 new_url = self.next_page(next_page) # go to next page
-                self.handle_popup(popup)
+                print(new_url)
+                self.handle_popup(handle_popup, self.config['POPUP'], self.config['POPUP_BUTTON'])
                 count += 1
                 if not new_url: # if we reached all pages
-                    continue 
+                    break
                 self.get_url(new_url) # set next page url
                 self.scrape() # scrape the links to those items on that page
             count = 0 # set back to zero for each url
@@ -84,7 +85,7 @@ class ProductsScraper(BaseScraper):
         """
         products = []
         self.wait_found(self.config['PRODUCTS'])
-        links = self.get_elements(By.XPATH, self.config['PRODUCTS'])
+        links = self.get_elements(self.config['PRODUCTS'])
         products.extend([link.get_attribute('href') for link in links])
         self.log_message('i', f'Found links from {self.current_url()}')
         return products

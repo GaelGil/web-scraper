@@ -17,7 +17,7 @@ from abc import ABC, abstractmethod
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import NoSuchElementException, TimeoutException
+from selenium.common.exceptions import NoSuchElementException, TimeoutException, ElementClickInterceptedException
 import logging
 import time
 
@@ -210,15 +210,18 @@ class BaseScraper(ABC):
         try:
             self.wait_click(self.config['NEXT_PAGE_BUTTON_XPATH'])
             time.sleep(3) 
-        except (NoSuchElementException, TimeoutException):
-            self.log_message('w', 'Next button not found or not clickable')
-            return False
+        except NoSuchElementException:
+            self.log_message('e', 'Next button not found or not clickable')
+            return 
+        except TimeoutException:
+            self.log_message('e', 'Time out exception')
+            return 
         except Exception as e:
-            self.log_message('e', 'Unexpected error while navigating to next page')
-            return False
+            self.log_message('e', f'Unexpected error while navigating to next page {e}')
+            return 
         return self.current_url() # return url of page we are on
         
-    def handle_popup(self, popup: bool):
+    def handle_popup(self, handle_popup: bool, popup_xpath: str, close_button_xpath: str):
         """This function handles a popup if it is detected
 
         Using the config, this function closes a popup if it appears on the page. 
@@ -229,18 +232,32 @@ class BaseScraper(ABC):
         Returns: 
             None
         """
-        if not popup:
+        if not handle_popup:
             return 
         time.sleep(5)  
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         try:
-            popup = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.XPATH, "//div[contains(@class, 'modal__content')]")))
+            popup = WebDriverWait(self.driver, 10).until(
+                EC.visibility_of_element_located((By.XPATH, popup_xpath))
+            )
             self.log_message('i', 'Popup detected!')
-            close_button = WebDriverWait(self.driver, 5).until(EC.element_to_be_clickable((By.XPATH, "//div[contains(@class, 'modal__close')]//button")))
-            close_button.click()
+
+            close_button = WebDriverWait(self.driver, 5).until(
+                EC.presence_of_element_located((By.XPATH, close_button_xpath))
+            )
+
+            self.driver.execute_script("arguments[0].scrollIntoView(true);", close_button)
+            time.sleep(1)  # Let scroll settle
+
+            try:
+                close_button.click()
+            except ElementClickInterceptedException:
+                self.driver.execute_script("arguments[0].click();", close_button)
+
             self.log_message('i', 'Popup closed.')
         except TimeoutException:
             self.log_message('i', 'Popup not detected or not visible, continuing...')
+
 
     @abstractmethod
     def scrape(self):

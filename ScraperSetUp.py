@@ -17,7 +17,9 @@ CONFIG_GOODREADS = {
     'DRIVER_PATH': './drivers/geckodriver',
     'HEADLESS': True,
     'CATEGORIES_BUTTON' : '//span[text()="Browse ▾"]',
-    'CATEGORIES' : '//ul[contains(@class, "genreList")]//li/a'
+    'CATEGORIES' : '//ul[contains(@class, "genreList")]//li/a',
+    'POPUP': '//div[contains(@class, "modal__content")]',
+    'POPUP_BUTTON': '//div[contains(@class, "modal__close")]//button'
 }
 
 
