@@ -4,7 +4,7 @@ CONFIG_GOODREADS = {
             'author' : "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[1]/h3/div/span[1]/a/span[1]",
             'rating': '//div[@class="RatingStatistics__rating"]',
             'raitings' : '//span[@data-testid="ratingsCount"]',
-            'reviews' : '//span[@2data-testid="reviewsCount"]',
+            'reviews' : '//span[@data-testid="reviewsCount"]',
             'overview' : '//div[@data-testid="description"]//span[@class="Formatted"]',
             'genres': '//ul[@class="CollapsableList"]//span[@class="Button__labelItem"]',
             'pages' : '//p[@data-testid="pagesFormat"]',
@@ -19,7 +19,7 @@ CONFIG_GOODREADS = {
     'CATEGORIES_BUTTON' : '//span[text()="Browse ▾"]',
     'CATEGORIES' : '//ul[contains(@class, "genreList")]//li/a',
     'POPUP': '//div[contains(@class, "modal__content")]',
-    'POPUP_BUTTON': '//div[contains(@class, "modal__close")]//button'
+    'POPUP_BUTTON': '//button[@class="gr-iconButton"][.//img[@alt="Dismiss"]]'
 }
 
 
