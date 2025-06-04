@@ -237,26 +237,21 @@ class BaseScraper(ABC):
         time.sleep(5)  
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         try:
-            popup = WebDriverWait(self.driver, 10).until(
-                EC.visibility_of_element_located((By.XPATH, popup_xpath))
+            popup_close = self.driver.find_element(By.XPATH, '//button[@class="gr-iconButton"][.//img[@alt="Dismiss"]]')
+            self.driver.execute_script("arguments[0].click();", popup_close)
+            time.sleep(1)
+            self.log_message('i', 'PopUp Detect attempting to close')
+        except NoSuchElementException:
+            self.log_message('e', f'No such element: {NoSuchElementException}')
+        try:
+            next_button = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, '//a[contains(@class, "next_page")]'))
             )
-            self.log_message('i', 'Popup detected!')
+            self.driver.execute_script("arguments[0].scrollIntoView(true);", next_button)
+            self.driver.execute_script("arguments[0].click();", next_button)
+        except Exception as e:
+            self.log_message('e', f'Failed to click next page: {e}')
 
-            close_button = WebDriverWait(self.driver, 5).until(
-                EC.presence_of_element_located((By.XPATH, close_button_xpath))
-            )
-
-            self.driver.execute_script("arguments[0].scrollIntoView(true);", close_button)
-            time.sleep(1)  # Let scroll settle
-
-            try:
-                close_button.click()
-            except ElementClickInterceptedException:
-                self.driver.execute_script("arguments[0].click();", close_button)
-
-            self.log_message('i', 'Popup closed.')
-        except TimeoutException:
-            self.log_message('i', 'Popup not detected or not visible, continuing...')
 
 
     @abstractmethod

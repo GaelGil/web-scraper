@@ -61,7 +61,6 @@ class ProductsScraper(BaseScraper):
             while count != stop: # while we are not done
                 self.handle_popup(handle_popup, self.config['POPUP'], self.config['POPUP_BUTTON'])
                 new_url = self.next_page(next_page) # go to next page
-                print(new_url)
                 self.handle_popup(handle_popup, self.config['POPUP'], self.config['POPUP_BUTTON'])
                 count += 1
                 if not new_url: # if we reached all pages

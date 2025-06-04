@@ -17,7 +17,7 @@ if __name__ == "__main__":
     
     # get products from page
     products_scraper = ProductsScraper(driver=driver_manager, config=CONFIG_GOODREADS)
-    products = products_scraper.iterate_urls(stop=3, next_page=True, handle_popup=True)
+    products = products_scraper.iterate_urls(stop=1, next_page=True, handle_popup=True)
 
     # # scrape individual products data
     product_scraper = ProductScraper(driver=driver_manager, config=CONFIG_GOODREADS)
