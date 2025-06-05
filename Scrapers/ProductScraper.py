@@ -82,16 +82,28 @@ class ProductScraper(BaseScraper):
         elements = ''
         if key in self.config['MULTIPLE']:
             elements = self.get_elements(xpath)
-            elements = [el.text.strip() for el in elements if el.text.strip()]
-            elements = ' '.join(elements)
+            texts = []
+            for el in elements:
+                try:
+                    text = el.text.strip()
+                    if text:
+                        texts.append(text)
+                except:
+                    self.log_message('i', f'Skipped stale element while scraping key: {key}')
+                    continue
+            elements = ' '.join(texts)
         else:
             element = self.get_element(xpath)
+            print(key)
+            print(f'element: {element}')
+            print(f'element.txt: {element.text}')
             if key == 'img':
                 img = element.get_attribute('src')
                 with open(f'{img}.png', 'wb') as f:
                     f.write(requests.get(img).content)    
                 return img
             elements = element.text.strip()
+        print()
         return elements
 
     

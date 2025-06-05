@@ -17,7 +17,9 @@ from abc import ABC, abstractmethod
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import NoSuchElementException, TimeoutException, ElementClickInterceptedException
+from selenium.common.exceptions import NoSuchElementException, TimeoutException, StaleElementReferenceException
+from typing import List
+from selenium.webdriver.remote.webelement import WebElement
 import logging
 import time
 
@@ -92,7 +94,10 @@ class BaseScraper(ABC):
         Returns:
             None
         """
-        self.driver.get(url)
+        try:
+            self.driver.get(url)
+        except TimeoutException:
+            self.log_message('e', f"Timeout while trying to load: {url}")
 
     def wait_click(self, xpath: str, time: int=15) -> None:
         """This function waits for a element to be clickable then clicks it
@@ -144,7 +149,7 @@ class BaseScraper(ABC):
         else:
             logger.info(message)
     
-    def get_element(self, xpath: str) -> str:
+    def get_element(self, xpath: str):
         """Function to get a element
         Args:
             xpath: The xpath of the element we want
@@ -152,18 +157,19 @@ class BaseScraper(ABC):
         Returns:
             str
         """
-        element = ''
         try:
-            element = self.driver.find_element(By.XPATH, xpath)
+            return self.driver.find_element(By.XPATH, xpath)
         except TimeoutException:
             self.log_message('e', f'Timeout Exception {e}')
         except NoSuchElementException:
             self.log_message('e', f'No such element Exception {e}')
+        except StaleElementReferenceException:
+            self.log_message('e', f'Stale element exception{e}')
         except Exception as e:
             self.log_message('e', f'Exception {e}')
-        return element
+        return None
 
-    def get_elements(self, xpath: str) -> str:
+    def get_elements(self, xpath: str):
         """Function to get elements
         Args:
             xpath: The xpath of the elements we want
@@ -171,16 +177,17 @@ class BaseScraper(ABC):
         Returns:
             str
         """
-        elements = ''
         try:
-            elements = self.driver.find_elements(By.XPATH, xpath)
+            return self.driver.find_elements(By.XPATH, xpath)
         except TimeoutException:
             self.log_message('e', f'Timeout Exception {e}')
         except NoSuchElementException:
             self.log_message('e', f'No such element Exception {e}')
+        except StaleElementReferenceException:
+            self.log_message('e', f'Stale element exception{e}')
         except Exception as e:
             self.log_message('e', f'Exception {e}')
-        return elements
+        return []
 
     def current_url(self) -> str:
         """Function to get the current url 
