@@ -68,7 +68,7 @@ class ProductsScraper(BaseScraper):
                 self.get_url(new_url) # set next page url
                 self.scrape() # scrape the links to those items on that page
             count = 0 # set back to zero for each url
-        return products
+        return list(set(products)) # get rid of any dupes
 
     def scrape(self) -> list:
         """Function to scrape data links from a page

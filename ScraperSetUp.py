@@ -40,7 +40,7 @@ CONFIG_GOODREADS = {
     'HEADLESS': True,
     'CATEGORIES_BUTTON' : '//span[text()="Browse ▾"]',
     'CATEGORIES' : '//ul[contains(@class, "genreList")]//li/a',
-    'POPUP': '//div[contains(@class, "modal__content")]',
+    'POPUP': '//button[@class="gr-iconButton"][.//img[@alt="Dismiss"]]',
     'POPUP_BUTTON': '//button[@class="gr-iconButton"][.//img[@alt="Dismiss"]]'
 }
 

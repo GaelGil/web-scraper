@@ -14,9 +14,9 @@ if __name__ == "__main__":
 
     # # scrape individual products data
     product_scraper = ProductScraper(driver=driver_manager, config=CONFIG_GOODREADS)
-    data = product_scraper.iterate_urls(list(set(products)))
+    data = product_scraper.iterate_urls(products)
 
-    formated_data = []
+    formated_data = [list(CONFIG_GOODREADS['PRODUCT'].keys())]
     for item in data:
         formated_data.append(list(item.get_item_values()))  
 
@@ -26,5 +26,3 @@ if __name__ == "__main__":
         writer.writerows(formated_data)
         print(f'Data written to {file_name}')
 
-    # print(f'Products: {products}')
-    # print(f'Data: {data}')

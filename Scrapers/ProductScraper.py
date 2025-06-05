@@ -53,7 +53,6 @@ class ProductScraper(BaseScraper):
             list
         """
         data = []
-        # i = 0
         for product in products: # for each link
             self.get_url(product) # set url for each link
             item = ScrapedItem() # create a scraped item instance
@@ -92,16 +91,13 @@ class ProductScraper(BaseScraper):
                     self.log_message('i', f'Skipped stale element while scraping key: {key}')
                     continue
             elements = ' '.join(texts)
+        elif key == 'img':
+            img = element.get_attribute('src')
+            with open(f'./images/{img}.png', 'wb') as f:
+                f.write(requests.get(img).content)    
+            return img
         else:
             element = self.get_element(xpath)
-            print(key)
-            print(f'element: {element}')
-            print(f'element.txt: {element.text}')
-            if key == 'img':
-                img = element.get_attribute('src')
-                with open(f'{img}.png', 'wb') as f:
-                    f.write(requests.get(img).content)    
-                return img
             elements = element.text.strip()
         print()
         return elements

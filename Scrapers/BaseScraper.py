@@ -66,13 +66,13 @@ class BaseScraper(ABC):
         scrape(self)
             Abstract method to be implemented by other scraper classes
 
-        next_page(self)
+        next_page(self, next_page: bool)
             Abstract method to be implemented by other scraper classes
 
-        handle_popup(self)
+        handle_popup(self: handle_popup: bool)
             Abstract method to be implemented by other scraper classes
     """
-    def __init__(self, driver, config):
+    def __init__(self, driver, config) -> None:
         """This function initaliazes the class
 
         Args:
@@ -203,7 +203,7 @@ class BaseScraper(ABC):
         """This function sets the next page
 
         Using the config, this function tries to find the next page button. If we
-        find it we click it. If we can't find it we return false. If we do find it
+        find it we click it. If we can't find it we return. If we do find it
         we return the url of the page we are on after clicking the next page button.
 
         Args:
@@ -228,7 +228,7 @@ class BaseScraper(ABC):
             return 
         return self.current_url() # return url of page we are on
         
-    def handle_popup(self, handle_popup: bool, popup_xpath: str, close_button_xpath: str):
+    def handle_popup(self, handle_popup: bool) -> None:
         """This function handles a popup if it is detected
 
         Using the config, this function closes a popup if it appears on the page. 
@@ -244,22 +244,12 @@ class BaseScraper(ABC):
         time.sleep(5)  
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         try:
-            popup_close = self.driver.find_element(By.XPATH, '//button[@class="gr-iconButton"][.//img[@alt="Dismiss"]]')
+            popup_close = self.driver.find_element(By.XPATH, self.config['POPUP'])
             self.driver.execute_script("arguments[0].click();", popup_close)
             time.sleep(1)
             self.log_message('i', 'PopUp Detect attempting to close')
         except NoSuchElementException:
             self.log_message('e', f'No such element: {NoSuchElementException}')
-        try:
-            next_button = WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.XPATH, '//a[contains(@class, "next_page")]'))
-            )
-            self.driver.execute_script("arguments[0].scrollIntoView(true);", next_button)
-            self.driver.execute_script("arguments[0].click();", next_button)
-        except Exception as e:
-            self.log_message('e', f'Failed to click next page: {e}')
-
-
 
     @abstractmethod
     def scrape(self):
