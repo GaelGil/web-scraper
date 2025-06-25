@@ -50,9 +50,9 @@ class DriverManager:
         options = Options()
         options.headless = headless
         service = Service(driver_path)
-        self._driver = webdriver.Firefox(service=service, options=options)
+        self._driver: webdriver = webdriver.Firefox(service=service, options=options)
 
-    def get_driver(self):
+    def get_driver(self) -> webdriver:
         """Function to get the web driver
 
         Args: 
@@ -64,7 +64,7 @@ class DriverManager:
         return self._driver
     
 
-    def quit_driver(self):
+    def quit_driver(self) -> None:
         """Function to quit the webd river
 
         Args: 
