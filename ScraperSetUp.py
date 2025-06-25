@@ -1,4 +1,4 @@
-CONFIG_GOODREADS = {
+CONFIG_GOODREADS: dict = {
     'PRODUCT': {
             'title': "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[1]/div[1]/h1",
             'author' : "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[1]/h3/div/span[1]/a/span[1]",

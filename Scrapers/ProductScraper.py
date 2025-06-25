@@ -19,7 +19,6 @@ it is used.
 
 from .BaseScraper import BaseScraper
 from ScrapedItem import ScrapedItem
-from selenium.webdriver.common.by import By
 import requests
 
 class ProductScraper(BaseScraper):

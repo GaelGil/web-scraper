@@ -52,7 +52,7 @@ class ScrapedItem:
         Returns:
             None
         """
-        self._data = {}
+        self._data: dict = {}
 
 
     def add_field(self, key: str, value: str)  -> None:

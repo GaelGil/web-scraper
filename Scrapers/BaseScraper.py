@@ -14,11 +14,11 @@ The webdriver and the config
 """
 
 from abc import ABC, abstractmethod
+from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException, TimeoutException, StaleElementReferenceException
-from typing import List
 from selenium.webdriver.remote.webelement import WebElement
 import logging
 import time
@@ -82,8 +82,8 @@ class BaseScraper(ABC):
         Returns:
             None
         """
-        self.driver = driver.get_driver()
-        self.config = config
+        self.driver: webdriver = driver.get_driver()
+        self.config: dict = config
 
     def get_url(self, url: str) -> None:
         """This function sets the url we are going to scrape
@@ -149,7 +149,7 @@ class BaseScraper(ABC):
         else:
             logger.info(message)
     
-    def get_element(self, xpath: str):
+    def get_element(self, xpath: str) -> None:
         """Function to get a element
         Args:
             xpath: The xpath of the element we want
@@ -169,7 +169,7 @@ class BaseScraper(ABC):
             self.log_message('e', f'Exception {e}')
         return None
 
-    def get_elements(self, xpath: str):
+    def get_elements(self, xpath: str) -> list:
         """Function to get elements
         Args:
             xpath: The xpath of the elements we want

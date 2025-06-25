@@ -17,7 +17,6 @@ it is used.
 """
 
 from .BaseScraper import BaseScraper
-from selenium.webdriver.common.by import By
 
 class ProductsScraper(BaseScraper):
     """
@@ -35,13 +34,15 @@ class ProductsScraper(BaseScraper):
     """
 
     def iterate_urls(self, next_page: bool, handle_popup: bool, count: int=1, stop: int=5) -> list:
-        """Function to visit websites and scrape links to products
+        """Function to visit website and its pages and return links to products
         
         Using the config set in the scraper. We itterate urls of pages
         that have products on their page. We handle popups if they appear.
         For each url we visit the next pages if there are any. In the end
         we retrun a list that looks like
-        ['product1_link', 'product2_link', ... 'productn_link'].
+        ['product1_link', 'product2_link', ... 'productn_link']. 
+        This only handles visiting each page. We call self.scrape() to
+        actually get the product links. 
 
         Args:
             next_page: A boolean to see if we need to check for next page
