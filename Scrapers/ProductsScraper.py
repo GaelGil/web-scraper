@@ -13,10 +13,11 @@ it is used.
     products_scraper = ProductsScraper(driver=driver_manager, config=CONFIG)
     products = products_scraper.iterate_urls(stop=2, next_page=True, popup=True)
     print(f'Products: {products}')
-    
+
 """
 
 from .BaseScraper import BaseScraper
+
 
 class ProductsScraper(BaseScraper):
     """
@@ -33,16 +34,18 @@ class ProductsScraper(BaseScraper):
             Function to scrape data links from a page
     """
 
-    def iterate_urls(self, next_page: bool, handle_popup: bool, count: int=1, stop: int=5) -> list:
+    def iterate_urls(
+        self, next_page: bool, handle_popup: bool, count: int = 1, stop: int = 5
+    ) -> list:
         """Function to visit website and its pages and return links to products
-        
+
         Using the config set in the scraper. We itterate urls of pages
         that have products on their page. We handle popups if they appear.
         For each url we visit the next pages if there are any. In the end
         we retrun a list that looks like
-        ['product1_link', 'product2_link', ... 'productn_link']. 
+        ['product1_link', 'product2_link', ... 'productn_link'].
         This only handles visiting each page. We call self.scrape() to
-        actually get the product links. 
+        actually get the product links.
 
         Args:
             next_page: A boolean to see if we need to check for next page
@@ -56,26 +59,26 @@ class ProductsScraper(BaseScraper):
             list
         """
         products = []
-        for i in range(len(self.config['URLS'])):
-            self.get_url(self.config['URLS'][i])
+        for i in range(len(self.config["URLS"])):
+            self.get_url(self.config["URLS"][i])
             products.extend(self.scrape())
-            while count != stop: # while we are not done
-                self.handle_popup(handle_popup, self.config['POPUP'], self.config['POPUP_BUTTON'])
-                new_url = self.next_page(next_page) # go to next page
-                self.handle_popup(handle_popup, self.config['POPUP'], self.config['POPUP_BUTTON'])
+            while count != stop:  # while we are not done
+                self.handle_popup(handle_popup, self.config["POPUP"])
+                new_url = self.next_page(next_page)  # go to next page
+                self.handle_popup(handle_popup, self.config["POPUP"])
                 count += 1
-                if not new_url: # if we reached all pages
+                if not new_url:  # if we reached all pages
                     break
-                self.get_url(new_url) # set next page url
-                self.scrape() # scrape the links to those items on that page
-            count = 0 # set back to zero for each url
-        return list(set(products)) # get rid of any dupes
+                self.get_url(new_url)  # set next page url
+                self.scrape()  # scrape the links to those items on that page
+            count = 0  # set back to zero for each url
+        return list(set(products))  # get rid of any dupes
 
     def scrape(self) -> list:
         """Function to scrape data links from a page
-        
+
         This functions scrapes the links/urls for all the products that appear in
-        the page. 
+        the page.
 
         Args:
             None
@@ -84,8 +87,8 @@ class ProductsScraper(BaseScraper):
             list
         """
         products = []
-        self.wait_found(self.config['PRODUCTS'])
-        links = self.get_elements(self.config['PRODUCTS'])
-        products.extend([link.get_attribute('href') for link in links])
-        self.log_message('i', f'Found links from {self.current_url()}')
+        self.wait_found(self.config["PRODUCTS"])
+        links = self.get_elements(self.config["PRODUCTS"])
+        products.extend([link.get_attribute("href") for link in links])
+        self.log_message("i", f"Found links from {self.current_url()}")
         return products

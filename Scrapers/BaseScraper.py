@@ -10,7 +10,7 @@ The webdriver and the config
   class SiteSpecificScraper(BaseScraper)
 
   scraper = SiteSpecificScraper(config, driver)
-    
+
 """
 
 from abc import ABC, abstractmethod
@@ -18,16 +18,19 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import NoSuchElementException, TimeoutException, StaleElementReferenceException
-from selenium.webdriver.remote.webelement import WebElement
+from selenium.common.exceptions import (
+    NoSuchElementException,
+    TimeoutException,
+    StaleElementReferenceException,
+)
 import logging
 import time
 
 logging.basicConfig(
-    level=logging.INFO,  
-    format='%(asctime)s - %(levelname)s - %(message)s'
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
 )
 logger = logging.getLogger(__name__)
+
 
 class BaseScraper(ABC):
     """
@@ -61,7 +64,7 @@ class BaseScraper(ABC):
             Function to get elements
 
         current_url(self)
-            Function to get the current url 
+            Function to get the current url
 
         scrape(self)
             Abstract method to be implemented by other scraper classes
@@ -72,6 +75,7 @@ class BaseScraper(ABC):
         handle_popup(self: handle_popup: bool)
             Abstract method to be implemented by other scraper classes
     """
+
     def __init__(self, driver, config) -> None:
         """This function initaliazes the class
 
@@ -97,31 +101,33 @@ class BaseScraper(ABC):
         try:
             self.driver.get(url)
         except TimeoutException:
-            self.log_message('e', f"Timeout while trying to load: {url}")
+            self.log_message("e", f"Timeout while trying to load: {url}")
 
-    def wait_click(self, xpath: str, time: int=15) -> None:
+    def wait_click(self, xpath: str, time: int = 15) -> None:
         """This function waits for a element to be clickable then clicks it
 
         Args:
             xpath: The xpath to the element we want to click
             time: The time we wait until we look for it
-            
+
         Returns:
             None
         """
         try:
-            button = WebDriverWait(self.driver, time).until(EC.element_to_be_clickable((By.XPATH, xpath))) 
+            button = WebDriverWait(self.driver, time).until(
+                EC.element_to_be_clickable((By.XPATH, xpath))
+            )
             button.click()
         except NoSuchElementException:
-            self.log_message('w', 'NoSuchElementException element not found')
+            self.log_message("w", "NoSuchElementException element not found")
 
-    def wait_found(self, xpath: str, time: int=15) -> None:
+    def wait_found(self, xpath: str, time: int = 15) -> None:
         """This function waits for a element to be located
 
         Args:
             xpath: The xpath to the element we want to locate
             time: The time we wait until we look for it
-            
+
         Returns:
             None
         """
@@ -129,68 +135,68 @@ class BaseScraper(ABC):
             wait = WebDriverWait(self.driver, time)
             wait.until(EC.presence_of_element_located((By.XPATH, xpath)))
         except NoSuchElementException:
-            self.log_message('w', 'NoSuchElementException element not found')
+            self.log_message("w", "NoSuchElementException element not found")
 
-    def log_message(self, log_type: str, message: str='') -> None:
+    def log_message(self, log_type: str, message: str = "") -> None:
         """Function to log a message
         Args:
             log_type: A string to represent the type of message we
                 want to log
-            message: The message we want to log. Set to an empty string 
+            message: The message we want to log. Set to an empty string
                 by default
-            
+
         Returns:
             None
         """
-        if log_type == 'e':
+        if log_type == "e":
             logger.exception(message)
-        elif log_type == 'w':
+        elif log_type == "w":
             logger.warning(message)
         else:
             logger.info(message)
-    
+
     def get_element(self, xpath: str) -> None:
         """Function to get a element
         Args:
             xpath: The xpath of the element we want
-            
+
         Returns:
             str
         """
         try:
             return self.driver.find_element(By.XPATH, xpath)
-        except TimeoutException:
-            self.log_message('e', f'Timeout Exception {e}')
-        except NoSuchElementException:
-            self.log_message('e', f'No such element Exception {e}')
-        except StaleElementReferenceException:
-            self.log_message('e', f'Stale element exception{e}')
+        except TimeoutException as e:
+            self.log_message("e", f"Timeout Exception {e}")
+        except NoSuchElementException as e:
+            self.log_message("e", f"No such element Exception {e}")
+        except StaleElementReferenceException as e:
+            self.log_message("e", f"Stale element exception{e}")
         except Exception as e:
-            self.log_message('e', f'Exception {e}')
+            self.log_message("e", f"Exception {e}")
         return None
 
     def get_elements(self, xpath: str) -> list:
         """Function to get elements
         Args:
             xpath: The xpath of the elements we want
-            
+
         Returns:
             str
         """
         try:
             return self.driver.find_elements(By.XPATH, xpath)
-        except TimeoutException:
-            self.log_message('e', f'Timeout Exception {e}')
-        except NoSuchElementException:
-            self.log_message('e', f'No such element Exception {e}')
-        except StaleElementReferenceException:
-            self.log_message('e', f'Stale element exception{e}')
+        except TimeoutException as e:
+            self.log_message("e", f"Timeout Exception {e}")
+        except NoSuchElementException as e:
+            self.log_message("e", f"No such element Exception {e}")
+        except StaleElementReferenceException as e:
+            self.log_message("e", f"Stale element exception{e}")
         except Exception as e:
-            self.log_message('e', f'Exception {e}')
+            self.log_message("e", f"Exception {e}")
         return []
 
     def current_url(self) -> str:
-        """Function to get the current url 
+        """Function to get the current url
         Args:
             None
 
@@ -198,7 +204,7 @@ class BaseScraper(ABC):
             str
         """
         return self.driver.current_url
-    
+
     def next_page(self, next_page: bool) -> str:
         """This function sets the next page
 
@@ -209,50 +215,49 @@ class BaseScraper(ABC):
         Args:
             next_page: A boolean to see if we need to check for next page
 
-        Returns: 
+        Returns:
             str
         """
         if not next_page:
             return False
         try:
-            self.wait_click(self.config['NEXT_PAGE_BUTTON_XPATH'])
-            time.sleep(3) 
+            self.wait_click(self.config["NEXT_PAGE_BUTTON_XPATH"])
+            time.sleep(3)
         except NoSuchElementException:
-            self.log_message('e', 'Next button not found or not clickable')
-            return 
+            self.log_message("e", "Next button not found or not clickable")
+            return
         except TimeoutException:
-            self.log_message('e', 'Time out exception')
-            return 
+            self.log_message("e", "Time out exception")
+            return
         except Exception as e:
-            self.log_message('e', f'Unexpected error while navigating to next page {e}')
-            return 
-        return self.current_url() # return url of page we are on
-        
-    def handle_popup(self, handle_popup: bool) -> None:
+            self.log_message("e", f"Unexpected error while navigating to next page {e}")
+            return
+        return self.current_url()  # return url of page we are on
+
+    def handle_popup(self, handle_popup: bool, popup) -> None:
         """This function handles a popup if it is detected
 
-        Using the config, this function closes a popup if it appears on the page. 
+        Using the config, this function closes a popup if it appears on the page.
 
         Args:
             popup: A boolean to see if we need to check for a popup
 
-        Returns: 
+        Returns:
             None
         """
         if not handle_popup:
-            return 
-        time.sleep(5)  
+            return
+        time.sleep(5)
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         try:
-            popup_close = self.driver.find_element(By.XPATH, self.config['POPUP'])
+            popup_close = self.driver.find_element(By.XPATH, popup)
             self.driver.execute_script("arguments[0].click();", popup_close)
             time.sleep(1)
-            self.log_message('i', 'PopUp Detect attempting to close')
+            self.log_message("i", "PopUp Detect attempting to close")
         except NoSuchElementException:
-            self.log_message('e', f'No such element: {NoSuchElementException}')
+            self.log_message("e", f"No such element: {NoSuchElementException}")
 
     @abstractmethod
     def scrape(self):
-        """Abstract method to be implemented by other scraper classes
-        """
+        """Abstract method to be implemented by other scraper classes"""
         pass
