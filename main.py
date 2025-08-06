@@ -3,6 +3,7 @@ from utils.ScraperSetUp import FUN_CHEAP
 from Scrapers.ProductScraper import ProductScraper
 from Scrapers.ProductsScraper import ProductsScraper
 from utils.db_connection import SessionLocal
+from utils.init_db import init_db
 
 import csv
 
@@ -13,7 +14,7 @@ if __name__ == "__main__":
     # get products from page
     products_scraper = ProductsScraper(driver=driver_manager, config=FUN_CHEAP)
     products = products_scraper.iterate_urls(stop=3, next_page=True, handle_popup=True)
-
+    init_db()
     session = SessionLocal()
 
     # # scrape individual products data

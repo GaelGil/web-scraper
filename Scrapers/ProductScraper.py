@@ -44,20 +44,21 @@ class ProductScraper(BaseScraper):
         Args:
             data: A list of data we want to save to a database
         """
-        book = Book(
-            title=item["title"],
-            author=item["author"],
-            rating=item["raiting"],
-            raitings=item["raitings"],
-            reviews=item["reviews"],
-            overview=item["overview"],
-            genres=item["genres"],
-            pages=item["pages"],
-            publish_date=item["publish_date"],
-        )
-        self.session.add(book)
-        self.session.commit()
-        self.session.close()
+        if item:
+            book = Book(
+                title=item["title"],
+                author=item["author"],
+                rating=item["raiting"],
+                raitings=item["raitings"],
+                reviews=item["reviews"],
+                overview=item["overview"],
+                genres=item["genres"],
+                pages=item["pages"],
+                publish_date=item["publish_date"],
+            )
+            self.session.add(book)
+            self.session.commit()
+            self.session.close()
         return
 
     def iterate_urls(self, products: list) -> dict:
