@@ -1,6 +1,0 @@
-pipdeptree==2.26.1
-PySocks==1.7.1
-requests==2.31.0
-selenium==4.32.0
-setuptools==80.8.0
-soupsieve==2.7
