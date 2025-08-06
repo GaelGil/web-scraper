@@ -131,5 +131,4 @@ class ProductScraper(BaseScraper):
         else:
             element = self.get_element(xpath)
             elements = element.text.strip()
-        print()
         return elements
