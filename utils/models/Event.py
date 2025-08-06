@@ -1,13 +1,14 @@
-from sqlalchemy import create_engine, Column, Integer, String
-from sqlalchemy.orm import declarative_base, sessionmaker
-
-# Create base model
-Base = declarative_base()
+from utils.db_connection import db
 
 
-# Define your model
-class Event(Base):
+class Event(db.Model):
     __tablename__ = "events"
 
-    id = Column(Integer, primary_key=True)
-    title = Column(String)
+    id = db.Column(db.Integer, primary_key=True)
+    password = db.Column(db.String(80), nullable=False)
+    name = db.Column(db.String(80), nullable=False)
+    date = db.Column(db.String(80), nullable=False)
+    location = db.Column(db.String(80), nullable=False)
+    address = db.Column(db.String(80), nullable=False)
+    runtime = db.Column(db.String(80), nullable=False)
+    price = db.Column(db.String(80), nullable=False)

@@ -76,7 +76,7 @@ class BaseScraper(ABC):
             Abstract method to be implemented by other scraper classes
     """
 
-    def __init__(self, driver, config) -> None:
+    def __init__(self, driver, config, session=None) -> None:
         """This function initaliazes the class
 
         Args:
@@ -88,6 +88,7 @@ class BaseScraper(ABC):
         """
         self.driver: webdriver = driver.get_driver()
         self.config: dict = config
+        self.session = session
 
     def get_url(self, url: str) -> None:
         """This function sets the url we are going to scrape
@@ -255,7 +256,7 @@ class BaseScraper(ABC):
             time.sleep(1)
             self.log_message("i", "PopUp Detect attempting to close")
         except NoSuchElementException:
-            self.log_message("e", f"No such element: {NoSuchElementException}")
+            self.log_message("e", "No popup found")
 
     @abstractmethod
     def scrape(self):

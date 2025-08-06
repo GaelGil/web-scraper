@@ -2,6 +2,8 @@ from utils.DriverManager import DriverManager
 from utils.ScraperSetUp import FUN_CHEAP
 from Scrapers.ProductScraper import ProductScraper
 from Scrapers.ProductsScraper import ProductsScraper
+from utils.db_connection import SessionLocal
+
 import csv
 
 if __name__ == "__main__":
@@ -12,8 +14,12 @@ if __name__ == "__main__":
     products_scraper = ProductsScraper(driver=driver_manager, config=FUN_CHEAP)
     products = products_scraper.iterate_urls(stop=3, next_page=True, handle_popup=True)
 
+    session = SessionLocal()
+
     # # scrape individual products data
-    product_scraper = ProductScraper(driver=driver_manager, config=FUN_CHEAP)
+    product_scraper = ProductScraper(
+        driver=driver_manager, config=FUN_CHEAP, session=session
+    )
     data = product_scraper.iterate_urls(products)
 
     formated_data = [list(FUN_CHEAP["PRODUCT"].keys())]

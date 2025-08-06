@@ -1,6 +1,8 @@
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker, declarative_base
 
+DATABASE_URL = "postgresql://postgres:password@localhost:5432/webscraper"
 
-db = SQLAlchemy()
-migrate = Migrate()
+engine = create_engine(DATABASE_URL)
+SessionLocal = sessionmaker(bind=engine)
+Base = declarative_base()

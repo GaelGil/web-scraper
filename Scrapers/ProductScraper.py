@@ -21,6 +21,7 @@ from .BaseScraper import BaseScraper
 from utils.ScrapedItem import ScrapedItem
 from selenium.common.exceptions import StaleElementReferenceException
 import requests
+from utils.models.Book import Book
 
 
 class ProductScraper(BaseScraper):
@@ -37,6 +38,27 @@ class ProductScraper(BaseScraper):
         scrape(self, key: str, xpath: str)
             Function to scrape data from a product
     """
+
+    def save_to_db(self, item: ScrapedItem) -> None:
+        """Function to save data to a database
+        Args:
+            data: A list of data we want to save to a database
+        """
+        book = Book(
+            title=item["title"],
+            author=item["author"],
+            rating=item["raiting"],
+            raitings=item["raitings"],
+            reviews=item["reviews"],
+            overview=item["overview"],
+            genres=item["genres"],
+            pages=item["pages"],
+            publish_date=item["publish_date"],
+        )
+        self.session.add(book)
+        self.session.commit()
+        self.session.close()
+        return
 
     def iterate_urls(self, products: list) -> dict:
         """Function to visit each item given a list of items
@@ -64,7 +86,8 @@ class ProductScraper(BaseScraper):
                 item.add_field(
                     key, elements
                 )  # insert the data collceted to scrapeditem
-            data.append(item)  # add item to list
+            data.append(item)
+            self.save_to_db(item)  # add item to list
         return data
 
     def scrape(self, key: str, xpath: str) -> list:
@@ -99,6 +122,7 @@ class ProductScraper(BaseScraper):
                     continue
             elements = " ".join(texts)
         elif key == "img":
+            element = self.get_element(xpath)
             img = element.get_attribute("src")
             with open(f"./images/{img}.png", "wb") as f:
                 f.write(requests.get(img).content)

@@ -6,7 +6,6 @@ FUN_CHEAP: dict = {
         "address": "//div[@id='stats']/span[@class='left']/text()[normalize-space()]",
         "runtime": "//div[@id='stats']/span[@class='left']/span/text()[1]",
         "price": "//div[@id='stats']//span[@class='cost']/text()",
-        "tags": '//span[@data-testid="reviewsCount"]',
     },
     "NEXT_PAGE_BUTTON_XPATH": "//a[contains(@class, 'nextpostslink')]",
     "PRODUCTS": "//tr[contains(@class, 'post')]//a",
@@ -14,8 +13,8 @@ FUN_CHEAP: dict = {
     "URLS": ["https://sf.funcheap.com/events/san-francisco/"],
     "DRIVER_PATH": "./drivers/geckodriver",
     "HEADLESS": True,
-    "POPUP": '//button[@class="gr-iconButton"][.//img[@alt="Dismiss"]]',
-    "POPUP_BUTTON": '//button[@class="gr-iconButton"][.//img[@alt="Dismiss"]]',
+    "POPUP": '//div[contains(@class, "sumome-react-wysiwyg-close-button")]//img',
+    "POPUP_BUTTON": '//div[contains(@class, "sumome-react-wysiwyg-close-button")]//img',
 }
 
 
