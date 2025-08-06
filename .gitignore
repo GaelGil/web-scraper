@@ -21,3 +21,6 @@ Thumbs.db
 **/rand
 **/practice
 /drivers
+.venv
+.python-version
+uv.lock
