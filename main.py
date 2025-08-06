@@ -5,8 +5,6 @@ from Scrapers.ProductsScraper import ProductsScraper
 from utils.db_connection import SessionLocal
 from utils.init_db import init_db
 
-import csv
-
 if __name__ == "__main__":
     # set the driver
     driver_manager = DriverManager(DRIVER_PATH, HEADLESS)
@@ -25,12 +23,4 @@ if __name__ == "__main__":
     # get the raw data
     data = product_scraper.iterate_urls(products)
 
-    formated_data = [list(GOODREADS["PRODUCT"].keys())]
-    for item in data:
-        formated_data.append(list(item.get_item_values()))
-
-    file_name = "./data/fun_cheap.csv"
-    with open(file_name, "w", newline="") as file:
-        writer = csv.writer(file)
-        writer.writerows(formated_data)
-        print(f"Data written to {file_name}")
+    print(f"DATA: {data}")

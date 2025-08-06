@@ -44,6 +44,7 @@ class ProductScraper(BaseScraper):
         Args:
             data: A list of data we want to save to a database
         """
+        self.log_message("i", f"Saving {item.title} to database ")
         if item:
             book = Book(
                 title=item.title,
@@ -86,7 +87,6 @@ class ProductScraper(BaseScraper):
                 elements = self.scrape(key, xpath)  # get the elements using xpath
                 current_item_dict[key] = elements
 
-            print(current_item_dict)
             item = ScrapedItem(**current_item_dict)  # create a scraped item instance
             data.append(item)
             self.save_to_db(item)  # add item to list
