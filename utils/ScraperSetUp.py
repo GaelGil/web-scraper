@@ -1,3 +1,5 @@
+DRIVER_PATH = "./drivers/geckodriver"
+HEADLESS = True
 FUN_CHEAP: dict = {
     "PRODUCT": {
         "name": "//div[starts-with(@id, 'post-')]/h1[@class='title']/text()",
@@ -11,14 +13,47 @@ FUN_CHEAP: dict = {
     "PRODUCTS": "//tr[contains(@class, 'post')]//a",
     "MULTIPLE": {"genres": 0},
     "URLS": ["https://sf.funcheap.com/events/san-francisco/"],
-    "DRIVER_PATH": "./drivers/geckodriver",
-    "HEADLESS": True,
     "POPUP": '//div[contains(@class, "sumome-react-wysiwyg-close-button")]//img',
     "POPUP_BUTTON": '//div[contains(@class, "sumome-react-wysiwyg-close-button")]//img',
 }
 
 
-CONFIG_GOODREADS: dict = {
+EVENT_BRITE: dict = {
+    "PRODUCT": {
+        "name": "//div[starts-with(@id, 'post-')]/h1[@class='title']/text()",
+        "date": "//div[@id='stats']//a[1]/text()",
+        "location": "//div[@id='stats']//a[contains(@href, '/venue/')]/text()",
+        "address": "//div[@id='stats']/span[@class='left']/text()[normalize-space()]",
+        "runtime": "//div[@id='stats']/span[@class='left']/span/text()[1]",
+        "price": "//div[@id='stats']//span[@class='cost']/text()",
+    },
+    "NEXT_PAGE_BUTTON_XPATH": "//a[contains(@class, 'nextpostslink')]",
+    "PRODUCTS": "//tr[contains(@class, 'post')]//a",
+    "MULTIPLE": {"genres": 0},
+    "URLS": ["https://sf.funcheap.com/events/san-francisco/"],
+    "POPUP": '//div[contains(@class, "sumome-react-wysiwyg-close-button")]//img',
+    "POPUP_BUTTON": '//div[contains(@class, "sumome-react-wysiwyg-close-button")]//img',
+}
+
+FUN_CHEAP: dict = {
+    "PRODUCT": {
+        "name": "//div[starts-with(@id, 'post-')]/h1[@class='title']/text()",
+        "date": "//div[@id='stats']//a[1]/text()",
+        "location": "//div[@id='stats']//a[contains(@href, '/venue/')]/text()",
+        "address": "//div[@id='stats']/span[@class='left']/text()[normalize-space()]",
+        "runtime": "//div[@id='stats']/span[@class='left']/span/text()[1]",
+        "price": "//div[@id='stats']//span[@class='cost']/text()",
+    },
+    "NEXT_PAGE_BUTTON_XPATH": "//a[contains(@class, 'nextpostslink')]",
+    "PRODUCTS": "//tr[contains(@class, 'post')]//a",
+    "MULTIPLE": {"genres": 0},
+    "URLS": ["https://sf.funcheap.com/events/san-francisco/"],
+    "POPUP": '//div[contains(@class, "sumome-react-wysiwyg-close-button")]//img',
+    "POPUP_BUTTON": '//div[contains(@class, "sumome-react-wysiwyg-close-button")]//img',
+}
+
+
+LUMA: dict = {
     "PRODUCT": {
         "title": "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[1]/div[1]/h1",
         "author": "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[1]/h3/div/span[1]/a/span[1]",
@@ -36,29 +71,7 @@ CONFIG_GOODREADS: dict = {
     "URLS": [
         "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Art",
         "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Biography",
-        "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Classics",
-        "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Comics",
-        "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Cookbooks",
-        "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Fantasy",
-        "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Fiction",
-        "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Graphic+Novels",
-        "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Historical+Fiction",
-        "https://www.goodreads.com/search?utf8=%E2%9C%93&query=History",
-        "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Horror",
-        "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Memoir",
-        "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Music",
-        "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Mystery",
-        "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Nonfiction",
-        "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Poetry",
-        "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Romance",
-        "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Science",
-        "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Science+Fiction",
-        "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Sports",
-        "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Thriller",
-        "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Young+Adult",
     ],
-    "DRIVER_PATH": "./drivers/geckodriver",
-    "HEADLESS": True,
     "CATEGORIES_BUTTON": '//span[text()="Browse ▾"]',
     "CATEGORIES": '//ul[contains(@class, "genreList")]//li/a',
     "POPUP": '//button[@class="gr-iconButton"][.//img[@alt="Dismiss"]]',
@@ -88,8 +101,6 @@ CONFIG_STOCKX = {
         "https://stockx.com/search?s==Louis+Vuitton&category=sneakers",
         "https://stockx.com/search?s==Yeezy&category=converse",
     ],
-    "DRIVER_PATH": "./drivers/geckodriver",
-    "HEADLESS": True,
     "CATEGORIES_BUTTON": "",
     "CATEGORIES": "",
 }

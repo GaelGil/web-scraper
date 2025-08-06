@@ -1,5 +1,5 @@
 from utils.DriverManager import DriverManager
-from utils.ScraperSetUp import CONFIG_GOODREADS
+from utils.ScraperSetUp import CONFIG_GOODREADS, DRIVER_PATH, HEADLESS
 from Scrapers.ProductScraper import ProductScraper
 from Scrapers.ProductsScraper import ProductsScraper
 from utils.db_connection import SessionLocal
@@ -9,9 +9,7 @@ import csv
 
 if __name__ == "__main__":
     # set the driver
-    driver_manager = DriverManager(
-        CONFIG_GOODREADS["DRIVER_PATH"], CONFIG_GOODREADS["HEADLESS"]
-    )
+    driver_manager = DriverManager(DRIVER_PATH, HEADLESS)
     # start the database
     init_db()
     session = SessionLocal()
