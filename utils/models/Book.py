@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, Text
 from utils.db_connection import Base
 
 
@@ -6,12 +6,12 @@ class Book(Base):
     __tablename__ = "books"
 
     id = Column(Integer, primary_key=True)
-    title = Column(String(80), nullable=True)
-    author = Column(String(80), nullable=True)
-    rating = Column(String(80), nullable=True)
-    raitings = Column(String(80), nullable=True)
-    reviews = Column(String(80), nullable=True)
-    overview = Column(String(80), nullable=True)
-    genres = Column(String(80), nullable=True)
-    pages = Column(String(80), nullable=True)
-    publish_date = Column(String(80), nullable=True)
+    title = Column(Text, nullable=True)
+    author = Column(Text, nullable=True)
+    rating = Column(Text, nullable=True)
+    raitings = Column(Text, nullable=True)
+    reviews = Column(Text, nullable=True)
+    overview = Column(Text, nullable=True)
+    genres = Column(Text, nullable=True)
+    pages = Column(Text, nullable=True)
+    publish_date = Column(Text, nullable=True)

@@ -1,15 +1,16 @@
 from pydantic import BaseModel
+from typing import Optional
 
 
 class ScrapedItem(BaseModel):
     """A Class to store the data we get from a product"""
 
-    title: str
-    author: str
-    raitings: int
-    raiting: float
-    reviews: int
-    overview: str
-    genres: str
-    pages: int
-    publish_date: str
+    title: Optional[str] = None
+    author: Optional[str] = None
+    raitings: Optional[str] = None
+    raiting: Optional[str] = None
+    reviews: Optional[str] = None
+    overview: Optional[str] = None
+    genres: Optional[str] = None
+    pages: Optional[str] = None
+    publish_date: Optional[str] = None
