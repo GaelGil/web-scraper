@@ -1,5 +1,5 @@
 from utils.DriverManager import DriverManager
-from utils.ScraperSetUp import FUN_CHEAP
+from utils.ScraperSetUp import CONFIG_GOODREADS
 from Scrapers.ProductScraper import ProductScraper
 from Scrapers.ProductsScraper import ProductsScraper
 from utils.db_connection import SessionLocal
@@ -9,21 +9,25 @@ import csv
 
 if __name__ == "__main__":
     # set the driver
-    driver_manager = DriverManager(FUN_CHEAP["DRIVER_PATH"], FUN_CHEAP["HEADLESS"])
-
-    # get products from page
-    products_scraper = ProductsScraper(driver=driver_manager, config=FUN_CHEAP)
-    products = products_scraper.iterate_urls(stop=3, next_page=True, handle_popup=True)
+    driver_manager = DriverManager(
+        CONFIG_GOODREADS["DRIVER_PATH"], CONFIG_GOODREADS["HEADLESS"]
+    )
+    # start the database
     init_db()
     session = SessionLocal()
 
+    # get products from page
+    products_scraper = ProductsScraper(driver=driver_manager, config=CONFIG_GOODREADS)
+    products = products_scraper.iterate_urls(stop=3, next_page=True, handle_popup=True)
+
     # # scrape individual products data
     product_scraper = ProductScraper(
-        driver=driver_manager, config=FUN_CHEAP, session=session
+        driver=driver_manager, config=CONFIG_GOODREADS, session=session
     )
+    # get the raw data
     data = product_scraper.iterate_urls(products)
 
-    formated_data = [list(FUN_CHEAP["PRODUCT"].keys())]
+    formated_data = [list(CONFIG_GOODREADS["PRODUCT"].keys())]
     for item in data:
         formated_data.append(list(item.get_item_values()))
 
