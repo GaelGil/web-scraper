@@ -1,5 +1,5 @@
 from utils.DriverManager import DriverManager
-from utils.ScraperSetUp import CONFIG_GOODREADS, DRIVER_PATH, HEADLESS
+from utils.ScraperSetUp import GOODREADS, DRIVER_PATH, HEADLESS
 from Scrapers.ProductScraper import ProductScraper
 from Scrapers.ProductsScraper import ProductsScraper
 from utils.db_connection import SessionLocal
@@ -15,17 +15,17 @@ if __name__ == "__main__":
     session = SessionLocal()
 
     # get products from page
-    products_scraper = ProductsScraper(driver=driver_manager, config=CONFIG_GOODREADS)
+    products_scraper = ProductsScraper(driver=driver_manager, config=GOODREADS)
     products = products_scraper.iterate_urls(stop=3, next_page=True, handle_popup=True)
 
     # # scrape individual products data
     product_scraper = ProductScraper(
-        driver=driver_manager, config=CONFIG_GOODREADS, session=session
+        driver=driver_manager, config=GOODREADS, session=session
     )
     # get the raw data
     data = product_scraper.iterate_urls(products)
 
-    formated_data = [list(CONFIG_GOODREADS["PRODUCT"].keys())]
+    formated_data = [list(GOODREADS["PRODUCT"].keys())]
     for item in data:
         formated_data.append(list(item.get_item_values()))
 

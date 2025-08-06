@@ -46,15 +46,15 @@ class ProductScraper(BaseScraper):
         """
         if item:
             book = Book(
-                title=item["title"],
-                author=item["author"],
-                rating=item["raiting"],
-                raitings=item["raitings"],
-                reviews=item["reviews"],
-                overview=item["overview"],
-                genres=item["genres"],
-                pages=item["pages"],
-                publish_date=item["publish_date"],
+                title=item.title,
+                author=item.author,
+                rating=item.raiting,
+                raitings=item.raitings,
+                reviews=item.reviews,
+                overview=item.overview,
+                genres=item.genres,
+                pages=item.pages,
+                publish_date=item.publish_date,
             )
             self.session.add(book)
             self.session.commit()
@@ -78,15 +78,16 @@ class ProductScraper(BaseScraper):
         """
         data = []
         for product in products:  # for each link
+            current_item_dict = {}
             self.get_url(product)  # set url for each link
-            item = ScrapedItem()  # create a scraped item instance
             for key, xpath in self.config[
                 "PRODUCT"
             ].items():  # for each item and dictionary
                 elements = self.scrape(key, xpath)  # get the elements using xpath
-                item.add_field(
-                    key, elements
-                )  # insert the data collceted to scrapeditem
+                current_item_dict[key] = elements
+
+            print(current_item_dict)
+            item = ScrapedItem(**current_item_dict)  # create a scraped item instance
             data.append(item)
             self.save_to_db(item)  # add item to list
         return data

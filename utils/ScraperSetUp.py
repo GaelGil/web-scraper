@@ -35,7 +35,7 @@ EVENT_BRITE: dict = {
     "POPUP_BUTTON": '//div[contains(@class, "sumome-react-wysiwyg-close-button")]//img',
 }
 
-FUN_CHEAP: dict = {
+LUMA: dict = {
     "PRODUCT": {
         "name": "//div[starts-with(@id, 'post-')]/h1[@class='title']/text()",
         "date": "//div[@id='stats']//a[1]/text()",
@@ -53,7 +53,7 @@ FUN_CHEAP: dict = {
 }
 
 
-LUMA: dict = {
+GOODREADS: dict = {
     "PRODUCT": {
         "title": "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[1]/div[1]/h1",
         "author": "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[1]/h3/div/span[1]/a/span[1]",
@@ -70,7 +70,7 @@ LUMA: dict = {
     "MULTIPLE": {"genres": 0},
     "URLS": [
         "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Art",
-        "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Biography",
+        # "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Biography",
     ],
     "CATEGORIES_BUTTON": '//span[text()="Browse ▾"]',
     "CATEGORIES": '//ul[contains(@class, "genreList")]//li/a',
