@@ -7,8 +7,8 @@ class ScrapedItem(BaseModel):
 
     title: Optional[str] = None
     author: Optional[str] = None
-    raitings: Optional[str] = None
-    raiting: Optional[str] = None
+    ratings: Optional[str] = None
+    rating: Optional[str] = None
     reviews: Optional[str] = None
     overview: Optional[str] = None
     genres: Optional[str] = None

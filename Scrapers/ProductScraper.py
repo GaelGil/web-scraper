@@ -42,15 +42,17 @@ class ProductScraper(BaseScraper):
     def save_to_db(self, item: ScrapedItem) -> None:
         """Function to save data to a database
         Args:
-            data: A list of data we want to save to a database
+            item: A ScrapedItem instance
         """
         self.log_message("i", f"Saving {item.title} to database ")
-        if item:
+        if not item:
+            return
+        try:
             book = Book(
                 title=item.title,
                 author=item.author,
-                rating=item.raiting,
-                raitings=item.raitings,
+                rating=item.rating,
+                ratings=item.ratings,
                 reviews=item.reviews,
                 overview=item.overview,
                 genres=item.genres,
@@ -58,9 +60,9 @@ class ProductScraper(BaseScraper):
                 publish_date=item.publish_date,
             )
             self.session.add(book)
-            self.session.commit()
-            self.session.close()
-        return
+            self.log_message("i", f"Added {item.title} to session")
+        except Exception as e:
+            self.log_message("e", f"Failed to add {item.title}: {e}")
 
     def iterate_urls(self, products: list) -> dict:
         """Function to visit each item given a list of items
@@ -89,7 +91,8 @@ class ProductScraper(BaseScraper):
 
             item = ScrapedItem(**current_item_dict)  # create a scraped item instance
             data.append(item)
-            self.save_to_db(item)  # add item to list
+            self.save_to_db(item)
+        self.session.commit()  # add item to list
         return data
 
     def scrape(self, key: str, xpath: str) -> list:
