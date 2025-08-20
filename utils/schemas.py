@@ -19,11 +19,11 @@ class ScrapedItem(BaseModel):
 class EventItem(BaseModel):
     """A Class to store the data we get from a product"""
 
-    name = Optional[str] = None
-    date = Optional[str] = None
-    time = Optional[str] = None
-    description = Optional[str] = None
-    location = Optional[str] = None
-    address = Optional[str] = None
-    runtime = Optional[str] = None
-    price = Optional[str] = None
+    name: Optional[str] = None
+    date: Optional[str] = None
+    time: Optional[str] = None
+    description: Optional[str] = None
+    location: Optional[str] = None
+    address: Optional[str] = None
+    runtime: Optional[str] = None
+    price: Optional[str] = None

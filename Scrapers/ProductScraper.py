@@ -86,7 +86,10 @@ class ProductScraper(BaseScraper):
             for key, xpath in self.config[
                 "PRODUCT"
             ].items():  # for each item and dictionary
-                elements = self.scrape(key, xpath)  # get the elements using xpath
+                # get the elements using xpath
+                elements = self.scrape(key, xpath)
+                # add the elements to the dictionary
+                # as key is the name of the element we want and value is the elements
                 current_item_dict[key] = elements
 
             item = ScrapedItem(**current_item_dict)  # create a scraped item instance
