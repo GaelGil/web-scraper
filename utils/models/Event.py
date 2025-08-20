@@ -1,14 +1,16 @@
-from utils.db_connection import db
+from sqlalchemy import Column, Integer, Text
+from utils.db_connection import Base
 
 
-class Event(db.Model):
+class Event(Base):
     __tablename__ = "events"
 
-    id = db.Column(db.Integer, primary_key=True)
-    password = db.Column(db.String(80), nullable=False)
-    name = db.Column(db.String(80), nullable=False)
-    date = db.Column(db.String(80), nullable=False)
-    location = db.Column(db.String(80), nullable=False)
-    address = db.Column(db.String(80), nullable=False)
-    runtime = db.Column(db.String(80), nullable=False)
-    price = db.Column(db.String(80), nullable=False)
+    id = Column(Integer, primary_key=True)
+    name = Column(Text, nullable=True)
+    date = Column(Text, nullable=True)
+    time = Column(Text, nullable=True)
+    description = Column(Text, nullable=True)
+    location = Column(Text, nullable=True)
+    address = Column(Text, nullable=True)
+    runtime = Column(Text, nullable=True)
+    price = Column(Text, nullable=True)
