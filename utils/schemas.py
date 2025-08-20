@@ -14,3 +14,16 @@ class ScrapedItem(BaseModel):
     genres: Optional[str] = None
     pages: Optional[str] = None
     publish_date: Optional[str] = None
+
+
+class EventItem(BaseModel):
+    """A Class to store the data we get from a product"""
+
+    name = Optional[str] = None
+    date = Optional[str] = None
+    time = Optional[str] = None
+    description = Optional[str] = None
+    location = Optional[str] = None
+    address = Optional[str] = None
+    runtime = Optional[str] = None
+    price = Optional[str] = None

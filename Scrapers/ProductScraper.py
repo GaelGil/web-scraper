@@ -18,7 +18,7 @@ it is used.
 """
 
 from .BaseScraper import BaseScraper
-from utils.ScrapedItem import ScrapedItem
+from utils.schemas import ScrapedItem
 from selenium.common.exceptions import StaleElementReferenceException
 import requests
 from utils.models.Book import Book
