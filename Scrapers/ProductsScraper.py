@@ -86,9 +86,13 @@ class ProductsScraper(BaseScraper):
         Returns:
             list
         """
-        products = []
+        products: list = []
+        # wait for products to be located
         self.wait_found(self.config["PRODUCTS"])
+        # get the elements we want
         links = self.get_elements(self.config["PRODUCTS"])
+        # extract links from the elements
         products.extend([link.get_attribute("href") for link in links])
+        # log a message
         self.log_message("i", f"Found links from {self.current_url()}")
         return products

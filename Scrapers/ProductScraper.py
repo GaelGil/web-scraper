@@ -21,7 +21,7 @@ from .BaseScraper import BaseScraper
 from utils.schemas import ScrapedItem
 from selenium.common.exceptions import StaleElementReferenceException
 import requests
-from utils.models.Book import Book
+from utils.models.Book import Sneaker
 
 
 class ProductScraper(BaseScraper):
@@ -48,23 +48,22 @@ class ProductScraper(BaseScraper):
         if not item:
             return
         try:
-            book = Book(
-                title=item.title,
-                author=item.author,
-                rating=item.rating,
-                ratings=item.ratings,
-                reviews=item.reviews,
-                overview=item.overview,
-                genres=item.genres,
-                pages=item.pages,
-                publish_date=item.publish_date,
+            sneaker = Sneaker(
+                name=item.name,
+                img=item.img,
+                retail_price=item.retail_price,
+                display_price=item.display_price,
+                release_data=item.release_data,
+                description=item.description,
+                style=item.style,
+                price_range_year=item.price_range_year,
             )
-            self.session.add(book)
+            self.session.add(sneaker)
             self.log_message("i", f"Added {item.title} to session")
         except Exception as e:
             self.log_message("e", f"Failed to add {item.title}: {e}")
 
-    def iterate_urls(self, products: list) -> dict:
+    def iterate_products(self, products: list) -> dict:
         """Function to visit each item given a list of items
 
         This functions takes in a list of products as its argument. We itterate
@@ -79,23 +78,25 @@ class ProductScraper(BaseScraper):
         Returns:
             list
         """
-        data = []
+        data: list = []
         for product in products:  # for each link
-            current_item_dict = {}
+            current_item_dict: dict = {}
             self.get_url(product)  # set url for each link
             for key, xpath in self.config[
                 "PRODUCT"
             ].items():  # for each item and dictionary
                 # get the elements using xpath
-                elements = self.scrape(key, xpath)
+                elements: list = self.scrape(key, xpath)
                 # add the elements to the dictionary
                 # as key is the name of the element we want and value is the elements
                 current_item_dict[key] = elements
-
-            item = ScrapedItem(**current_item_dict)  # create a scraped item instance
+            item: ScrapedItem = ScrapedItem(
+                **current_item_dict
+            )  # create a scraped item instance
+            self.log_message("i", f"ITEM: {item.model_dump()}")
             data.append(item)
             self.save_to_db(item)
-        self.session.commit()  # add item to list
+        self.session.commit()  # commit the session
         return data
 
     def scrape(self, key: str, xpath: str) -> list:

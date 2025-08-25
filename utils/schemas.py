@@ -16,14 +16,14 @@ class ScrapedItem(BaseModel):
     publish_date: Optional[str] = None
 
 
-class EventItem(BaseModel):
+class Sneaker(BaseModel):
     """A Class to store the data we get from a product"""
 
     name: Optional[str] = None
-    date: Optional[str] = None
-    time: Optional[str] = None
+    img: Optional[str] = None
+    retail_price: Optional[str] = None
+    display_price: Optional[str] = None
+    release_data: Optional[str] = None
     description: Optional[str] = None
-    location: Optional[str] = None
-    address: Optional[str] = None
-    runtime: Optional[str] = None
-    price: Optional[str] = None
+    style: Optional[str] = None
+    price_range_year: Optional[str] = None

@@ -1,56 +1,5 @@
 DRIVER_PATH = "./drivers/geckodriver"
 HEADLESS = True
-FUN_CHEAP: dict = {
-    "PRODUCT": {
-        "name": "//div[starts-with(@id, 'post-')]/h1[@class='title']/text()",
-        "date": "//div[@id='stats']//a[1]/text()",
-        "location": "//div[@id='stats']//a[contains(@href, '/venue/')]/text()",
-        "address": "//div[@id='stats']/span[@class='left']/text()[normalize-space()]",
-        "runtime": "//div[@id='stats']/span[@class='left']/span/text()[1]",
-        "price": "//div[@id='stats']//span[@class='cost']/text()",
-    },
-    "NEXT_PAGE_BUTTON_XPATH": "//a[contains(@class, 'nextpostslink')]",
-    "PRODUCTS": "//tr[contains(@class, 'post')]//a",
-    "MULTIPLE": {"genres": 0},
-    "URLS": ["https://sf.funcheap.com/events/san-francisco/"],
-    "POPUP": '//div[contains(@class, "sumome-react-wysiwyg-close-button")]//img',
-    "POPUP_BUTTON": '//div[contains(@class, "sumome-react-wysiwyg-close-button")]//img',
-}
-
-
-EVENT_BRITE: dict = {
-    "PRODUCT": {
-        "name": "//div[starts-with(@id, 'post-')]/h1[@class='title']/text()",
-        "date": "//div[@id='stats']//a[1]/text()",
-        "location": "//div[@id='stats']//a[contains(@href, '/venue/')]/text()",
-        "address": "//div[@id='stats']/span[@class='left']/text()[normalize-space()]",
-        "runtime": "//div[@id='stats']/span[@class='left']/span/text()[1]",
-        "price": "//div[@id='stats']//span[@class='cost']/text()",
-    },
-    "NEXT_PAGE_BUTTON_XPATH": "//a[contains(@class, 'nextpostslink')]",
-    "PRODUCTS": "//tr[contains(@class, 'post')]//a",
-    "MULTIPLE": {"genres": 0},
-    "URLS": ["https://sf.funcheap.com/events/san-francisco/"],
-    "POPUP": '//div[contains(@class, "sumome-react-wysiwyg-close-button")]//img',
-    "POPUP_BUTTON": '//div[contains(@class, "sumome-react-wysiwyg-close-button")]//img',
-}
-
-LUMA: dict = {
-    "PRODUCT": {
-        "name": "//div[starts-with(@id, 'post-')]/h1[@class='title']/text()",
-        "date": "//div[@id='stats']//a[1]/text()",
-        "location": "//div[@id='stats']//a[contains(@href, '/venue/')]/text()",
-        "address": "//div[@id='stats']/span[@class='left']/text()[normalize-space()]",
-        "runtime": "//div[@id='stats']/span[@class='left']/span/text()[1]",
-        "price": "//div[@id='stats']//span[@class='cost']/text()",
-    },
-    "NEXT_PAGE_BUTTON_XPATH": "//a[contains(@class, 'nextpostslink')]",
-    "PRODUCTS": "//tr[contains(@class, 'post')]//a",
-    "MULTIPLE": {"genres": 0},
-    "URLS": ["https://sf.funcheap.com/events/san-francisco/"],
-    "POPUP": '//div[contains(@class, "sumome-react-wysiwyg-close-button")]//img',
-    "POPUP_BUTTON": '//div[contains(@class, "sumome-react-wysiwyg-close-button")]//img',
-}
 
 
 GOODREADS: dict = {
@@ -99,11 +48,12 @@ GOODREADS: dict = {
 }
 
 
-CONFIG_STOCKX = {
+STOCKX = {
     "PRODUCT": {
         "name": '//h1[@data-component="primary-product-title"]',
         "img": '//div[@id="three-sixty-image"]//img[@data-image-type="360"]',
         "retail_price": '//div[@class="RatingStatistics__rating"]',
+        "display_price": '//h2[@data-testid="trade-box-buy-amount"]',
         "release_data": '//div[@data-component="product-trait"][.//span[text()="Release Date"]]//p',
         "description": '//div[@data-component="ProductDescription" and @data-testid="product-description"]/p',
         "style": '//div[@data-component="product-trait"][.//span[text()="Style"]]/p',
