@@ -27,3 +27,17 @@ class Sneaker(BaseModel):
     description: Optional[str] = None
     style: Optional[str] = None
     price_range_year: Optional[str] = None
+
+
+class ScrapeConfig(BaseModel):
+    TITLE = "title"
+    DESCRIPTION = "description"
+    PRICE = "price"
+
+
+class Config(BaseModel):
+    """A Class to store the data we get from a product"""
+
+    DRIVER_PATH: str
+    HEADLESS: bool
+    scrape_config: ScrapeConfig = ScrapeConfig
