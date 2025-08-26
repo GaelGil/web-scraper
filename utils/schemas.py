@@ -42,19 +42,7 @@ class Url(BaseModel):
     url: Optional[str] = None
 
 
-class GoodReads(BaseModel):
-    products: list[Product]
-    products_xpath: Optional[str]
-    urls: list[Url]
-    next_page_button_xpath: Optional[str]
-    multiple: dict
-    categories_button: Optional[str]
-    categories: Optional[str]
-    popup: Optional[str]
-    close_popup_button: Optional[str]
-
-
-class StockX(BaseModel):
+class ScraperConfig(BaseModel):
     products: list[Product]
     products_xpath: Optional[str]
     urls: list[Url]
