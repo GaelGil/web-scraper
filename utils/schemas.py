@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional
 
 
-class ScrapedItem(BaseModel):
+class BookItem(BaseModel):
     """A Class to store the data we get from a product"""
 
     title: Optional[str] = None
@@ -16,7 +16,7 @@ class ScrapedItem(BaseModel):
     publish_date: Optional[str] = None
 
 
-class Sneaker(BaseModel):
+class SneakerItem(BaseModel):
     """A Class to store the data we get from a product"""
 
     name: Optional[str] = None
@@ -29,15 +29,38 @@ class Sneaker(BaseModel):
     price_range_year: Optional[str] = None
 
 
-class ScrapeConfig(BaseModel):
-    TITLE = "title"
-    DESCRIPTION = "description"
-    PRICE = "price"
-
-
-class Config(BaseModel):
+class Product(BaseModel):
     """A Class to store the data we get from a product"""
 
-    DRIVER_PATH: str
-    HEADLESS: bool
-    scrape_config: ScrapeConfig = ScrapeConfig
+    name: Optional[str] = None
+    xpath: Optional[str] = None
+
+
+class Url(BaseModel):
+    """A Class to store the data we get from a product"""
+
+    url: Optional[str] = None
+
+
+class GoodReads(BaseModel):
+    products: list[Product]
+    products_xpath: Optional[str]
+    urls: list[Url]
+    next_page_button_xpath: Optional[str]
+    multiple: dict
+    categories_button: Optional[str]
+    categories: Optional[str]
+    popup: Optional[str]
+    close_popup_button: Optional[str]
+
+
+class StockX(BaseModel):
+    products: list[Product]
+    products_xpath: Optional[str]
+    urls: list[Url]
+    next_page_button_xpath: Optional[str]
+    multiple: dict
+    categories_button: Optional[str]
+    categories: Optional[str]
+    popup: Optional[str]
+    close_popup_button: Optional[str]

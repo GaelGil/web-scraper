@@ -18,7 +18,7 @@ it is used.
 """
 
 from .BaseScraper import BaseScraper
-from utils.schemas import ScrapedItem
+from utils.schemas import BookItem
 from selenium.common.exceptions import StaleElementReferenceException
 import requests
 from utils.models.Book import Sneaker
@@ -39,7 +39,7 @@ class ProductScraper(BaseScraper):
             Function to scrape data from a product
     """
 
-    def save_to_db(self, item: ScrapedItem) -> None:
+    def save_to_db(self, item: BookItem) -> None:
         """Function to save data to a database
         Args:
             item: A ScrapedItem instance
@@ -90,7 +90,7 @@ class ProductScraper(BaseScraper):
                 # add the elements to the dictionary
                 # as key is the name of the element we want and value is the elements
                 current_item_dict[key] = elements
-            item: ScrapedItem = ScrapedItem(
+            item: BookItem = BookItem(
                 **current_item_dict
             )  # create a scraped item instance
             self.log_message("i", f"ITEM: {item.model_dump()}")
