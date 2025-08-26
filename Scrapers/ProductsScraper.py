@@ -60,7 +60,7 @@ class ProductsScraper(BaseScraper):
         """
         products = []
         for i in range(len(self.config.urls_to_scrape)):
-            self.get_url(self.config.urls_to_scrape[i])
+            self.get_url(self.config.urls_to_scrape[i].url)
             products.extend(self.scrape())
             while count != stop:  # while we are not done
                 self.handle_popup(handle_popup, self.config.popup)

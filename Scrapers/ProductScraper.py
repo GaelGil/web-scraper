@@ -21,7 +21,7 @@ from .BaseScraper import BaseScraper
 from utils.schemas import BookItem
 from selenium.common.exceptions import StaleElementReferenceException
 import requests
-from utils.models.Book import Sneaker
+from utils.models.Book import Book
 
 
 class ProductScraper(BaseScraper):
@@ -48,17 +48,18 @@ class ProductScraper(BaseScraper):
         if not item:
             return
         try:
-            sneaker = Sneaker(
-                name=item.name,
-                img=item.img,
-                retail_price=item.retail_price,
-                display_price=item.display_price,
-                release_data=item.release_data,
-                description=item.description,
-                style=item.style,
-                price_range_year=item.price_range_year,
+            book = Book(
+                title=item.title,
+                author=item.author,
+                rating=item.rating,
+                ratings=item.ratings,
+                reviews=item.reviews,
+                overview=item.overview,
+                genres=item.genres,
+                pages=item.pages,
+                publish_date=item.publish_date,
             )
-            self.session.add(sneaker)
+            self.session.add(book)
             self.logger.info(f"Added {item.title} to database")
         except Exception as e:
             self.logger.exception(f"Failed to add {item.title}: {e}")
