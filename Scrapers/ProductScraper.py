@@ -82,17 +82,19 @@ class ProductScraper(BaseScraper):
         for product in products:  # for each link
             current_item_dict: dict = {}
             self.get_url(product)  # set url for each link
-            for key, xpath in self.config[
-                "PRODUCT"
-            ].items():  # for each item and dictionary
-                # get the elements using xpath
-                elements: list = self.scrape(key, xpath)
+            # for each item to scrape in the config
+            for info in self.config.product_info:
+                # get name and xpath
+                name: str = info.name
+                xpath: str = info.xpath
+                # scrape
+                elements: list = self.scrape(name, xpath)
                 # add the elements to the dictionary
                 # as key is the name of the element we want and value is the elements
-                current_item_dict[key] = elements
-            item: BookItem = BookItem(
-                **current_item_dict
-            )  # create a scraped item instance
+                current_item_dict[name] = elements
+            # add the scraped info
+            # create a scraped item instance
+            item: BookItem = BookItem(**current_item_dict)
             data.append(item)
             self.save_to_db(item)
         self.session.commit()  # commit the session
@@ -115,7 +117,7 @@ class ProductScraper(BaseScraper):
             list
         """
         elements = ""
-        if key in self.config["MULTIPLE"]:
+        if key in self.config.multiple:
             elements = self.get_elements(xpath)
             texts = []
             for el in elements:

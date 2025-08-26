@@ -29,23 +29,25 @@ class SneakerItem(BaseModel):
     price_range_year: Optional[str] = None
 
 
-class Product(BaseModel):
-    """A Class to store the data we get from a product"""
+class ToScrape(BaseModel):
+    """A class for the name of the product info and the xpath"""
 
     name: Optional[str] = None
     xpath: Optional[str] = None
 
 
 class Url(BaseModel):
-    """A Class to store the data we get from a product"""
+    """A class for the url"""
 
     url: Optional[str] = None
 
 
 class ScraperConfig(BaseModel):
-    products: list[Product]
-    products_xpath: Optional[str]
-    urls: list[Url]
+    """A class for the config"""
+
+    product_info: list[ToScrape]
+    products_url_xpath: Optional[str]
+    urls_to_scrape: list[Url]
     next_page_button_xpath: Optional[str]
     multiple: dict
     categories_button: Optional[str]

@@ -3,7 +3,7 @@
 ## Description
 
 This scraper was created using selenium. We scrape links off of items on a website.
-As an example it can be used on the products page of amazon or any website where there are itmems listed.
+As an example it can be used on the products page of amazon or any website where there are items listed.
 Once we have the links to each item or product. This way we can scrape data on each individual item.
 This class also has the functionality to write to a csv file if needed.
 

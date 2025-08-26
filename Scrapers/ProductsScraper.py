@@ -59,13 +59,13 @@ class ProductsScraper(BaseScraper):
             list
         """
         products = []
-        for i in range(len(self.config.urls)):
-            self.get_url(self.config.urls[i])
+        for i in range(len(self.config.urls_to_scrape)):
+            self.get_url(self.config.urls_to_scrape[i])
             products.extend(self.scrape())
             while count != stop:  # while we are not done
-                self.handle_popup(handle_popup, self.config["POPUP"])
+                self.handle_popup(handle_popup, self.config.popup)
                 new_url = self.next_page(next_page)  # go to next page
-                self.handle_popup(handle_popup, self.config["POPUP"])
+                self.handle_popup(handle_popup, self.config.popup)
                 count += 1
                 if not new_url:  # if we reached all pages
                     break
@@ -88,9 +88,9 @@ class ProductsScraper(BaseScraper):
         """
         products: list = []
         # wait for products to be located
-        self.wait_found(self.config["PRODUCTS"])
+        self.wait_found(self.config.products_url_xpath)
         # get the elements we want
-        links = self.get_elements(self.config["PRODUCTS"])
+        links = self.get_elements(self.config.products_url_xpath)
         # extract links from the elements
         products.extend([link.get_attribute("href") for link in links])
         # log a message
