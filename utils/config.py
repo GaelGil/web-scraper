@@ -3,7 +3,7 @@ from schemas import ScraperConfig, Product, Url
 DRIVER_PATH = "./drivers/geckodriver"
 HEADLESS = True
 
-GOODREADS = ScraperConfig(
+GOODREADS: ScraperConfig = ScraperConfig(
     products=[
         Product(
             xpath='//*[@id="__next"]/div[2]/main/div[1]/div[2]/div[2]/div[1]/div[1]/h1',
@@ -74,76 +74,55 @@ GOODREADS = ScraperConfig(
     close_popup_button='//button[@class="gr-iconButton"][.//img[@alt="Dismiss"]]',
 )
 
-
-GOODREADS: dict = {
-    "PRODUCT": {
-        "title": "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[1]/div[1]/h1",
-        "author": "//*[@id='__next']/div[2]/main/div[1]/div[2]/div[2]/div[2]/div[1]/h3/div/span[1]/a/span[1]",
-        "rating": '//div[@class="RatingStatistics__rating"]',
-        "ratings": '//span[@data-testid="ratingsCount"]',
-        "reviews": '//span[@data-testid="reviewsCount"]',
-        "overview": '//div[@data-testid="description"]//span[@class="Formatted"]',
-        "genres": '//div[@data-testid="genresList"]//span[@class="Button__labelItem"]',
-        "pages": '//p[@data-testid="pagesFormat"]',
-        "publish_date": '//p[@data-testid="publicationInfo"]',
-    },
-    "NEXT_PAGE_BUTTON_XPATH": '//a[@class="next_page" and @rel="next"]',
-    "PRODUCTS": '//*[@id="bodycontainer"]/div[3]/div[1]/div[2]/div[2]/table/tbody/tr/td[2]/a',
-    "MULTIPLE": {"genres": 0},
-    "URLS": [
-        # "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Art",
-        # "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Biography",
-        # "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Classics",
-        # "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Comics",
-        # "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Cookbooks",
-        # "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Fantasy",
-        # "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Fiction",
-        # "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Graphic+Novels",
-        # "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Historical+Fiction",
-        # "https://www.goodreads.com/search?utf8=%E2%9C%93&query=History",
-        # "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Horror",
-        # "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Memoir",
-        "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Music",
-        "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Mystery",
-        "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Nonfiction",
-        # "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Poetry",
-        # "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Romance",
-        # "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Science",
-        # "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Science+Fiction",
-        # "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Sports",
-        # "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Thriller",
-        # "https://www.goodreads.com/search?utf8=%E2%9C%93&query=Young+Adult",
+STOCKX: ScraperConfig = ScraperConfig(
+    products=[
+        Product(
+            xpath="name",
+            name='//h1[@data-component="primary-product-title"]',
+        ),
+        Product(
+            xpath="img",
+            name='//div[@id="three-sixty-image"]//img[@data-image-type="360"]',
+        ),
+        Product(
+            xpath="retail_price",
+            name='//div[@class="RatingStatistics__rating"]',
+        ),
+        Product(
+            xpath="display_price",
+            name='//h2[@data-testid="trade-box-buy-amount"]',
+        ),
+        Product(
+            xpath="release_data",
+            name='//div[@data-component="product-trait"][.//span[text()="Release Date"]]//p',
+        ),
+        Product(
+            xpath="description",
+            name='//div[@data-component="ProductDescription" and @data-testid="product-description"]/p',
+        ),
+        Product(
+            xpath="style",
+            name='//div[@data-component="product-trait"][.//span[text()="Style"]]/p',
+        ),
+        Product(
+            xpath="price_range_year",
+            name='//div[@data-component="product-trait"][.//span[text()="Price Range"]]//p',
+        ),
     ],
-    "CATEGORIES_BUTTON": '//span[text()="Browse ▾"]',
-    "CATEGORIES": '//ul[contains(@class, "genreList")]//li/a',
-    "POPUP": '//button[@class="gr-iconButton"][.//img[@alt="Dismiss"]]',
-    "POPUP_BUTTON": '//button[@class="gr-iconButton"][.//img[@alt="Dismiss"]]',
-}
-
-
-STOCKX = {
-    "PRODUCT": {
-        "name": '//h1[@data-component="primary-product-title"]',
-        "img": '//div[@id="three-sixty-image"]//img[@data-image-type="360"]',
-        "retail_price": '//div[@class="RatingStatistics__rating"]',
-        "display_price": '//h2[@data-testid="trade-box-buy-amount"]',
-        "release_data": '//div[@data-component="product-trait"][.//span[text()="Release Date"]]//p',
-        "description": '//div[@data-component="ProductDescription" and @data-testid="product-description"]/p',
-        "style": '//div[@data-component="product-trait"][.//span[text()="Style"]]/p',
-        "price_range_year": '//div[contains(@class, "chakra-stat")]//dt[span[text()="Price Range"] and span[@class="chakra-text css-1oadxzv" and text()="Last 12 Months"]]/following-sibling::dd',
-    },
-    "NEXT_PAGE_BUTTON_XPATH": '//a[@aria-label="Next"]',
-    "PRODUCTS": '//a[@data-testid="productTile-ProductSwitcherLink"]/@href',
-    "MULTIPLE": None,
-    "URLS": [
-        "https://stockx.com/search?s==adidas&category=sneakers",
-        "https://stockx.com/search?s==Air+Jordan&category=sneakers",
-        "https://stockx.com/search?s==ASICS&category=sneakers",
-        "https://stockx.com/search?s==New Balance&category=sneakers",
-        "https://stockx.com/search?s==Nike&category=sneakers",
-        "https://stockx.com/search?s==Louis+Vuitton&category=sneakers",
-        "https://stockx.com/search?s==Yeezy&category=converse",
+    products_xpath='//a[@data-testid="productTile-ProductSwitcherLink"]/@href',
+    urls=[
+        Url(url="https://stockx.com/search?s==adidas&category=sneakers"),
+        Url(url="https://stockx.com/search?s==Air+Jordan&category=sneakers"),
+        Url(url="https://stockx.com/search?s==ASICS&category=sneakers"),
+        Url(url="https://stockx.com/search?s==New Balance&category=sneakers"),
+        Url(url="https://stockx.com/search?s==Nike&category=sneakers"),
+        Url(url="https://stockx.com/search?s==Louis+Vuitton&category=sneakers"),
+        Url(url="https://stockx.com/search?s==Yeezy&category=converse"),
     ],
-    "CATEGORIES_BUTTON": "",
-    "CATEGORIES": "",
-}
+    next_page_button_xpath='//a[@aria-label="Next"]',
+    multiple={},
+    categories_button="",
+    categories="",
+    popup="",
+    close_popup_button="",
+)
