@@ -94,5 +94,5 @@ class ProductsScraper(BaseScraper):
         # extract links from the elements
         products.extend([link.get_attribute("href") for link in links])
         # log a message
-        self.log_message("i", f"Found links from {self.current_url()}")
+        self.logger.info(f"Found links from {self.current_url()}")
         return products

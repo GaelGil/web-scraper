@@ -44,7 +44,7 @@ class ProductScraper(BaseScraper):
         Args:
             item: A ScrapedItem instance
         """
-        self.log_message("i", f"Saving {item.title} to database ")
+        self.logger.info(f"Saving {item.title} to database")
         if not item:
             return
         try:
@@ -59,9 +59,9 @@ class ProductScraper(BaseScraper):
                 price_range_year=item.price_range_year,
             )
             self.session.add(sneaker)
-            self.log_message("i", f"Added {item.title} to session")
+            self.logger.info(f"Added {item.title} to database")
         except Exception as e:
-            self.log_message("e", f"Failed to add {item.title}: {e}")
+            self.logger.exception(f"Failed to add {item.title}: {e}")
 
     def iterate_products(self, products: list) -> dict:
         """Function to visit each item given a list of items
@@ -93,7 +93,6 @@ class ProductScraper(BaseScraper):
             item: BookItem = BookItem(
                 **current_item_dict
             )  # create a scraped item instance
-            self.log_message("i", f"ITEM: {item.model_dump()}")
             data.append(item)
             self.save_to_db(item)
         self.session.commit()  # commit the session
@@ -125,9 +124,7 @@ class ProductScraper(BaseScraper):
                     if text:
                         texts.append(text)
                 except StaleElementReferenceException:
-                    self.log_message(
-                        "i", f"Skipped stale element while scraping key: {key}"
-                    )
+                    self.logger.info(f"Skipped stale element while scraping key: {key}")
                     continue
             elements = " ".join(texts)
         elif key == "img":
