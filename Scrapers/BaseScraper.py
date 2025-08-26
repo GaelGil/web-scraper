@@ -23,6 +23,7 @@ from selenium.common.exceptions import (
     TimeoutException,
     StaleElementReferenceException,
 )
+from utils.schemas import ScraperConfig
 import logging
 import time
 
@@ -76,7 +77,7 @@ class BaseScraper(ABC):
             Abstract method to be implemented by other scraper classes
     """
 
-    def __init__(self, driver, config, session=None) -> None:
+    def __init__(self, driver, config: ScraperConfig, session=None) -> None:
         """This function initaliazes the class
 
         Args:
@@ -87,8 +88,9 @@ class BaseScraper(ABC):
             None
         """
         self.driver: webdriver = driver.get_driver()
-        self.config: dict = config
+        self.config = config
         self.session = session
+        self.logger: logging = logger
 
     def get_url(self, url: str) -> None:
         """This function sets the url we are going to scrape
@@ -222,7 +224,7 @@ class BaseScraper(ABC):
         if not next_page:
             return False
         try:
-            self.wait_click(self.config["NEXT_PAGE_BUTTON_XPATH"])
+            self.wait_click(self.config.next_page_button_xpath)
             time.sleep(3)
         except NoSuchElementException:
             self.log_message("e", "Next button not found or not clickable")
