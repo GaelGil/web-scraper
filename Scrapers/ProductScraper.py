@@ -60,7 +60,7 @@ class ProductScraper(BaseScraper):
                 publish_date=item.publish_date,
             )
             self.session.add(book)
-            self.logger.info(f"Added {item.title} to database")
+            self.logger.info(f"Saved {item.title} to database")
         except Exception as e:
             self.logger.exception(f"Failed to add {item.title}: {e}")
 

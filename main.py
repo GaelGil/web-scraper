@@ -23,5 +23,5 @@ if __name__ == "__main__":
         )
         # get the raw data
         data = product_scraper.iterate_products(products)
-
-        print(f"DATA: {data}")
+        print(f"DATALENGTH: {len(data)}")
+        # print(f"DATA: {data}")

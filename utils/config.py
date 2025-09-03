@@ -44,14 +44,14 @@ GOODREADS: ScraperConfig = ScraperConfig(
     ],
     products_url_xpath='//*[@id="bodycontainer"]/div[3]/div[1]/div[2]/div[2]/table/tbody/tr/td[2]/a',
     urls_to_scrape=[
-        Url(url="https://www.goodreads.com/search?page=4&utf8=%E2%9C%93&query=Art"),
-        Url(
-            url="https://www.goodreads.com/search?page=4&utf8=%E2%9C%93&query=Biography"
-        ),
-        Url(
-            url="https://www.goodreads.com/search?page=4&utf8=%E2%9C%93&query=Classics"
-        ),
-        Url(url="https://www.goodreads.com/search?page=4&utf8=%E2%9C%93&query=Comics"),
+        # Url(url="https://www.goodreads.com/search?page=4&utf8=%E2%9C%93&query=Art"),
+        # Url(
+        #     url="https://www.goodreads.com/search?page=4&utf8=%E2%9C%93&query=Biography"
+        # ),
+        # Url(
+        #     url="https://www.goodreads.com/search?page=4&utf8=%E2%9C%93&query=Classics"
+        # ),
+        # Url(url="https://www.goodreads.com/search?page=4&utf8=%E2%9C%93&query=Comics"),
         # Url(
         #     url="https://www.goodreads.com/search?page=4&utf8=%E2%9C%93&query=Cookbooks"
         # ),
@@ -64,21 +64,21 @@ GOODREADS: ScraperConfig = ScraperConfig(
         # Url(url="https://www.goodreads.com/search?page=4&utf8=%E2%9C%93&query=History"),
         # Url(url="https://www.goodreads.com/search?page=4&utf8=%E2%9C%93&query=Horror"),
         # Url(url="https://www.goodreads.com/search?page=4&utf8=%E2%9C%93&query=Mystery"),
-        # Url(
-        #     url="https://www.goodreads.com/search?page=4&utf8=%E2%9C%93&query=Nonfiction"
-        # ),
-        # Url(url="https://www.goodreads.com/search?page=4&utf8=%E2%9C%93&query=Poetry"),
-        # Url(url="https://www.goodreads.com/search?page=4&utf8=%E2%9C%93&query=Romance"),
-        # Url(url="https://www.goodreads.com/search?page=4&utf8=%E2%9C%93&query=Science"),
-        # Url(
-        #     url="https://www.goodreads.com/search?page=4&utf8=%E2%9C%93&query=Science+Fiction"
-        # ),
-        # Url(
-        #     url="https://www.goodreads.com/search?page=4&utf8=%E2%9C%93&query=Thriller"
-        # ),
-        # Url(
-        #     url="https://www.goodreads.com/search?page=4&utf8=%E2%9C%93&query=Young+Adult"
-        # ),
+        Url(
+            url="https://www.goodreads.com/search?page=4&utf8=%E2%9C%93&query=Nonfiction"
+        ),
+        Url(url="https://www.goodreads.com/search?page=4&utf8=%E2%9C%93&query=Poetry"),
+        Url(url="https://www.goodreads.com/search?page=4&utf8=%E2%9C%93&query=Romance"),
+        Url(url="https://www.goodreads.com/search?page=4&utf8=%E2%9C%93&query=Science"),
+        Url(
+            url="https://www.goodreads.com/search?page=4&utf8=%E2%9C%93&query=Science+Fiction"
+        ),
+        Url(
+            url="https://www.goodreads.com/search?page=4&utf8=%E2%9C%93&query=Thriller"
+        ),
+        Url(
+            url="https://www.goodreads.com/search?page=4&utf8=%E2%9C%93&query=Young+Adult"
+        ),
     ],
     next_page_button_xpath='//a[@class="next_page" and @rel="next"]',
     multiple={"genres": 0},

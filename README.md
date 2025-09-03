@@ -95,7 +95,7 @@ if __name__ == "__main__":
     with db.session_scope() as session:
         # get links to products from page
         products_scraper = ProductsScraper(driver=driver, config=GOODREADS)
-        # stop after 3 pages
+        # for each url stop after 3 pages
         # next pages are available to go to them
         # there is a popup so we handle it
         products = products_scraper.iterate_urls(
@@ -107,6 +107,7 @@ if __name__ == "__main__":
         )
         # get the raw data
         data = product_scraper.iterate_products(products)
+        print(f'DATALENGTH: {len(data)}')
 
         print(f"DATA: {data}")
 
@@ -116,5 +117,5 @@ if __name__ == "__main__":
 ### Run
 
 ```
-python3 main.py
+uv run main.py
 ```
